@@ -1,0 +1,1301 @@
+<!doctype html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# " class="no-js"> 
+ <head> 
+  <meta charset="utf-8">
+  <script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam-cell.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"07d404edfe",applicationID:"837425331"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script> 
+  <noscript>
+   <style>form.antibot * :not(.antibot-message) { display: none !important; }</style> 
+  </noscript>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-3051875-19"></script> 
+  <script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments)};gtag("js", new Date());gtag("set", "developer_id.dMDhkMT", true);gtag("config", "UA-3051875-19", {"groups":"default","anonymize_ip":true,"page_placeholder":"PLACEHOLDER_page_path","allow_ad_personalization_signals":false});</script> 
+  <link rel="canonical" href="https://housing.ucr.edu/"> 
+  <link rel="shortlink" href="https://housing.ucr.edu/"> 
+  <meta name="description" content="Our three housing options – Residence Halls, UCR Campus Apartments and Family Housing – provide you with a convenient, student-centered environment to complement university education."> 
+  <meta name="abstract" content="Our three housing options – Residence Halls, UCR Campus Apartments and Family Housing – provide you with a convenient, student-centered environment to complement university education."> 
+  <meta property="og:site_name" content="Housing Services"> 
+  <meta property="og:url" content="https://housing.ucr.edu/"> 
+  <meta property="og:title" content="Housing Services"> 
+  <meta property="og:description" content="Safety | Integrity | Inclusivity | Excellence"> 
+  <meta name="twitter:card" content="summary"> 
+  <meta name="twitter:description" content="Safety | Integrity | Inclusivity | Excellence"> 
+  <meta name="twitter:title" content="Find UCR Campus Housing | Housing Services"> 
+  <meta name="twitter:url" content="https://housing.ucr.edu/"> 
+  <meta name="Generator" content="Drupal 9 (https://www.drupal.org)"> 
+  <meta name="MobileOptimized" content="width"> 
+  <meta name="HandheldFriendly" content="true"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="shortcut icon" href="/themes/custom/ucr_design_1/favicon.ico" type=""> 
+  <link rel="revision" href="https://housing.ucr.edu/home"> 
+  <script>window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overlays=[];a2a_config.templates={};</script> 
+  <title>UCR Housing Services</title> 
+  <link rel="stylesheet" media="all" href="/sites/g/files/rcwecm2301/files/css/css_86pU2rfIvQhdrI_d4mHMecL03Gr2GrNUz6pUz7T7lX4.css"> 
+  <link rel="stylesheet" media="all" href="https://fonts.googleapis.com/css?family=Montserrat:700|Roboto+Slab:400,700|Roboto:400,700"> 
+  <link rel="stylesheet" media="all" href="/sites/g/files/rcwecm2301/files/css/css_99XbYUj-Zt6O9fxZ4fn2thrvelHuj8rdzrLt7S3yACw.css"> 
+  <style type="text/css">
+    <!--
+     h3.pageHeadline {color: #637ea4 !important;
+    font-weight: 700 !important;
+    font-size: 1.3rem !important;
+font-style: italic;
+    line-height: 1.10526 !important;
+text-align:center;}
+
+.pageSubHeadline {color: #5D89C1 !important;
+    font-weight: 700 !important;
+    font-size: 1rem !important;
+font-style: italic;
+    line-height: .15 !important;
+padding-bottom: 30px;}
+
+.announcementsHeadline {
+font-size: 13pt !important;
+font-weight: bold !important;
+color:#022a6b;
+margin-bottom: 10px !important;
+margin-left: -20px !important;}
+
+.announcementsCopy {
+font-size: 11pt !important;
+color:#7e8489;
+margin-left: -18px !important;}
+
+/* YouTube Embeds*/
+.youtube-embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; }
+
+.embedded-entity {
+  width: -webkit-fit-content !important;
+  width: -moz-fit-content !important;
+  width: fit-content !important;
+}     -->
+    </style> 
+ </head> 
+ <body class="layout path-frontpage node--type-page"> 
+  <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas> 
+   <div class="webpage-content"> 
+    <header role="banner" data-sticky-container> 
+     <div class="header-sticky-container" data-ucr-sticky="0" data-ucr-mobile-sticky="0"> 
+      <div class="grid-container full"> 
+       <div class="grid-x"> 
+        <div class="cell text-center ucr-site-alerts"> 
+         <div id="block-customglobalcssdonotremove-2" data-block-plugin-id="block_content:6610d7bd-35c3-413b-a658-e948c0710e3f" class="ucr-custom-block"> 
+          <div class="grid-container full"> 
+           <div class="grid-x grid-padding-x"> 
+            <div class="cell"> 
+             <style type="text/css">
+<!--/*--><![CDATA[/* ><!--*/
+/**** hiding the block with those code to remove it from rendering ****/
+#block-customglobalcssdonotremove {margin:0 !important;height:0;}
+
+.masthead-container .slogan {
+    width: 120%;
+    margin-left: -95px;
+}
+
+#main-menu a.custom-housing {
+    display: block !important;
+    color: #86BAFF;
+    font-size: 1.15em;
+}
+
+#main-menu span.custom-housing.custom-housing-audience {
+    display: block !important;
+    color: #fff;
+    background: #436391;
+    padding: 7px 10px;
+}
+
+#main-menu span.custom-housing-audience+div {
+    background: #547db8;
+    padding-bottom: 13px;
+    padding-top: 5px; 
+}
+
+#main-menu span.custom-housing-audience+div ul {
+	border-top: 0px none;
+    margin-top: 0;
+}
+
+#main-menu span.custom-housing-audience+div ul li {
+	border-bottom: none;
+}
+
+#main-menu span.custom-housing-audience+div ul li a {
+	border-bottom: none;
+    padding: 5px 10px;
+	text-transform: none;
+}
+
+/*--><!]]>*/
+</style> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+         <div id="block-covid19alert" data-block-plugin-id="block_content:74341436-ca50-41c4-86b1-872aa1e766b7" class="ucr-custom-block"> 
+          <div class="grid-container full"> 
+           <div class="grid-x"> 
+            <div class="cell"> 
+             <div class="ucr-custom-block ucr-custom-alerts callout warning"> 
+              <div>
+               <div style="background-color: #a50909; margin: 0 auto; padding: 25px 30px 20px 30px; color: #fff; width: 100%; margin: 0 auto; display:table; text-align:center;"> 
+                <p><!-- BEGIN HIDE The Status of <a href="/covid19" style="color:#fff !important; text-decoration: underline;" title="Status of Housing During the COVID-19 Pandemic">UCR Housing During Covid-19</a>&nbsp;&nbsp; |&nbsp;&nbsp; END HIDE -->For information how UCR is managing Covid-19, <a href="https://campusreturn.ucr.edu/" style="color:#fff !important; text-decoration: underline;" target="_blank" title="How UCR is managing COVID-19">visit here</a></p> 
+               </div> 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="grid-x"> 
+        <div class="cell small-order-2 medium-order-1 audience-container"> 
+         <div class="grid-container audience-menu-bar"> 
+          <div class="grid-x align-middle"> 
+           <div class="cell medium-shrink show-for-medium global-header-menu"> <a class="skip-main" href="#main">Skip to main content</a> 
+            <nav aria-label="global header menu"> 
+             <ul class="menu"> 
+              <li><a href="https://www.ucr.edu/alpha" target="_blank">A to Z Listing</a></li> 
+              <li><a href="https://campusmap.ucr.edu" target="_blank">Campus Map</a></li> 
+              <li><a href="https://profiles.ucr.edu" target="_blank">Find People</a></li> 
+              <li><a href="https://news.ucr.edu" target="_blank">News</a></li> 
+              <li><a href="https://www.ucr.edu" target="_blank">UCR Home</a></li> 
+             </ul> 
+            </nav> 
+           </div> 
+           <div id="block-ucr-design-1-organizationname" data-block-plugin-id="ucr_global_organization_name" class="cell auto hide-for-medium org-name"> <a class="skip-main" href="#main">Skip to main content</a> 
+            <p class="parent-org-title"> <a href="https://ucr.edu">University of California, Riverside</a> </p> 
+           </div> 
+           <div id="block-ucr-design-1-ucriversideaudiencesearchblock" data-block-plugin-id="ucr_global_audience_search" class="cell medium-shrink show-for-medium"> 
+            <section class="google-search"> <button class="button audience-search-button" data-open="gscSearchFormModal">Search</button> 
+            </section> 
+           </div> 
+           <div id="audience-links-desktop-view" data-block-plugin-id="system_menu_block:ucr-audience-menu" class="cell medium-shrink show-for-medium audience-links-desktop" aria-label="Audience Links desktop view"> 
+            <nav class="audience-links"> 
+             <ul class="vertical medium-horizontal menu" data-responsive-menu="accordion medium-dropdown" data-closing-time="100" data-alignment="left"> 
+              <li class="audience-button is-dropdown-submenu-parent"> <a href="" target="_self">Quick Links</a> 
+               <ul class="vertical menu"> 
+                <li> <a href="/get-housing" data-drupal-link-system-path="node/81">Submit an Application or Contract</a> </li> 
+                <li> <a href="/help-desk/pay-bill" data-drupal-link-system-path="node/256">Make a Payment</a> </li> 
+                <li> <a href="/help-desk/off-campus-housing" data-drupal-link-system-path="node/306">Off-Campus Housing</a> </li> 
+                <li> <a href="/help-desk/request-repair" data-drupal-link-system-path="node/261">Request a Repair</a> </li> 
+               </ul> </li> 
+             </ul> 
+            </nav> 
+           </div> 
+           <div class="cell shrink hide-for-medium" data-responsive-toggle="main-menu-container" data-hide-for="medium"> <button class="mdi mdi-menu button mobile-menu-expander" id="mobile-menu-expander" type="button" data-toggle="main-menu-container"> </button> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="cell small-order-1 medium-order-2 masthead-container"> 
+         <div class="grid-container"> 
+          <div class="grid-x align-middle"> 
+           <div class="cell shrink"> <a class="masthead-logo-line" href="/"> <span class="show-for-sr">UC Riverside</span> </a> 
+           </div> 
+           <div class="cell auto"> 
+            <h1 class="masthead-title"> <a href="/"> Housing Services </a> </h1> 
+           </div> 
+           <div class="cell auto show-for-medium"> 
+            <p class="slogan">Safety | Integrity | Inclusivity | Excellence</p> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="cell small-order-3 medium-order-3 main-nav-bar"> 
+         <div class="grid-container" id="main-menu-container" data-animate="fade-in fade-out"> 
+          <div class="grid-x"> 
+           <div id="block-ucr-design-1-ucriversideaudiencesearchblock-2" data-block-plugin-id="ucr_global_audience_search" class="cell hide-for-medium"> 
+            <section class="google-search"> <button class="button audience-search-button" data-open="gscSearchFormModal">Search</button> 
+            </section> 
+           </div> 
+           <div id="block-ucr-design-1-meganav-main" data-block-plugin-id="menu_block:meganav-main" class="cell main-menu-cell"> 
+            <ul id="main-menu"> 
+             <li> <a href="/living-at-ucr" target="_self" class="drop-down-arrow" data-drupal-link-system-path="node/41">Living @ UCR</a> 
+              <div> 
+               <ul class="accessible-megamenu-panel-group"> 
+                <li> <span class="custom-housing custom-housing-audience">Find Information For...</span> 
+                 <div> 
+                  <ul class="accessible-megamenu-panel-group"> 
+                   <li> <a href="/prospective-students" data-drupal-link-system-path="node/51">Prospective Students</a> </li> 
+                   <li> <a href="/current-students" data-drupal-link-system-path="node/56">Current Students</a> </li> 
+                   <li> <a href="/graduate-students" data-drupal-link-system-path="node/441">Graduate Students</a> </li> 
+                   <li> <a href="/international-students" data-drupal-link-system-path="node/301">International Students</a> </li> 
+                   <li> <a href="/students-families" data-drupal-link-system-path="node/291">Students with Family</a> </li> 
+                   <li> <a href="/parents" data-drupal-link-system-path="node/26">Parents / Guardians</a> </li> 
+                   <li> <a href="/faculty-staff" data-drupal-link-system-path="node/296">Faculty / Staff</a> </li> 
+                  </ul> 
+                 </div> </li> 
+                <li> <span>Column 2</span> 
+                 <div> 
+                  <ul class="accessible-megamenu-panel-group"> 
+                   <li> <a href="/get-housing" class="custom-housing" data-drupal-link-system-path="node/81">Get Housing</a> </li> 
+                   <li> <a href="/get-housing/applications-contracts" data-drupal-link-system-path="node/201">Applications &amp; Contracts</a> </li> 
+                   <li> <a href="/get-housing/important-dates-deadlines" data-drupal-link-system-path="node/206">Important Dates &amp; Deadlines</a> </li> 
+                   <li> <a href="/get-housing/rates-billing-terms" data-drupal-link-system-path="node/211">Rates, Billing &amp; Terms</a> </li> 
+                   <li> <a href="/get-housing/schedule-tour" data-drupal-link-system-path="node/216">Schedule a Tour</a> </li> 
+                  </ul> 
+                 </div> </li> 
+                <li> <span>Column 3</span> 
+                 <div> 
+                  <ul class="accessible-megamenu-panel-group"> 
+                   <li> <a href="/living-at-ucr/academic-success" data-drupal-link-system-path="node/111">Academic Success</a> </li> 
+                   <li> <a href="/living-at-ucr/campus-safety" data-drupal-link-system-path="node/116">Campus Safety</a> </li> 
+                   <li> <a href="/living-at-ucr/dining-options" data-drupal-link-system-path="node/121">Dining Options</a> </li> 
+                   <li> <a href="/living-at-ucr/living-learning-communities" data-drupal-link-system-path="node/126">Living-Learning Communities</a> </li> 
+                   <li> <a href="/gender-inclusive-housing" title="Gender-Inclusive Housing" data-drupal-link-system-path="node/496">Gender-Inclusive Housing</a> </li> 
+                   <li> <a href="/living-at-ucr/sustainability" data-drupal-link-system-path="node/131">Sustainability</a> </li> 
+                  </ul> 
+                 </div> </li> 
+               </ul> 
+              </div> </li> 
+             <li> <a href="/ucr-housing-options" class="drop-down-arrow" data-drupal-link-system-path="node/286">UCR Housing Options</a> 
+              <div> 
+               <ul class="accessible-megamenu-panel-group"> 
+                <li> <span>Column 1</span> 
+                 <div> 
+                  <ul class="accessible-megamenu-panel-group"> 
+                   <li> <a href="/ucr-housing-options/residence-halls" class="custom-housing" data-drupal-link-system-path="node/136">Residence Halls</a> </li> 
+                   <li> <a href="/ucr-housing-options/residence-halls/aberdeen-inverness" data-drupal-link-system-path="node/141">Aberdeen-Inverness</a> </li> 
+                   <li> <a href="/ucr-housing-options/residence-halls/lothian" data-drupal-link-system-path="node/146">Lothian</a> </li> 
+                   <li> <a href="/ucr-housing-options/residence-halls/pentland-hills" data-drupal-link-system-path="node/151">Pentland Hills</a> </li> 
+                   <li> <a href="/ucr-housing-options/residence-halls/dundee" title="Dundee Residence Hall" data-drupal-link-system-path="node/436">Dundee</a> </li> 
+                  </ul> 
+                 </div> </li> 
+                <li> <span>Column 2</span> 
+                 <div> 
+                  <ul class="accessible-megamenu-panel-group"> 
+                   <li> <a href="/ucr-housing-options/campus-apartments" class="custom-housing" data-drupal-link-system-path="node/156">Campus Apartments</a> </li> 
+                   <li> <a href="/ucr-housing-options/campus-apartments/bannockburn-village" data-drupal-link-system-path="node/161">Bannockburn Village</a> </li> 
+                   <li> <a href="/ucr-housing-options/campus-apartments/falkirk" data-drupal-link-system-path="node/166">Falkirk</a> </li> 
+                   <li> <a href="/ucr-housing-options/campus-apartments/glen-mor" data-drupal-link-system-path="node/171">Glen Mor</a> </li> 
+                   <li> <a href="/ucr-housing-options/campus-apartments/north-district" title="North District" data-drupal-link-system-path="node/481">North District</a> </li> 
+                   <li> <a href="/ucr-housing-options/campus-apartments/the-plaza" data-drupal-link-system-path="node/181">The Plaza</a> </li> 
+                   <li> <a href="/ucr-housing-options/campus-apartments/stonehaven" data-drupal-link-system-path="node/186">Stonehaven</a> </li> 
+                  </ul> 
+                 </div> </li> 
+                <li> <span>Column 3</span> 
+                 <div> 
+                  <ul class="accessible-megamenu-panel-group"> 
+                   <li> <a href="/ucr-housing-options/family-housing" data-drupal-link-system-path="node/191">Family Housing</a> </li> 
+                  </ul> 
+                 </div> </li> 
+                <li> <span class="housing-custom">Find Information For...</span> 
+                 <div> 
+                  <ul class="accessible-megamenu-panel-group"> 
+                   <li> <a href="/ucr-housing-options/summer-housing" data-drupal-link-system-path="node/196">Summer Housing</a> </li> 
+                  </ul> 
+                 </div> </li> 
+               </ul> 
+              </div> </li> 
+             <li> <a href="/residential-life" class="drop-down-arrow" data-drupal-link-system-path="node/86">Residential Life</a> 
+              <div> 
+               <ul class="accessible-megamenu-panel-group"> 
+                <li> <span>Column 1</span> 
+                 <div> 
+                  <ul class="accessible-megamenu-panel-group"> 
+                   <li> <a href="/residential-life/todays-menu-dining-dollars" data-drupal-link-system-path="node/221">Today's Menu &amp; Dining Dollars</a> </li> 
+                   <li> <a href="/residential-life/programs-activities" data-drupal-link-system-path="node/226">Programs &amp; Activities</a> </li> 
+                   <li> <a href="/residential-life/health-wellness" data-drupal-link-system-path="node/231">Health &amp; Wellness</a> </li> 
+                  </ul> 
+                 </div> </li> 
+                <li> <span>Column 2</span> 
+                 <div> 
+                  <ul class="accessible-megamenu-panel-group"> 
+                   <li> <a href="/residential-life/roommates" data-drupal-link-system-path="node/236">Roommates</a> </li> 
+                   <li> <a href="/residential-life/handbooks-policies" data-drupal-link-system-path="node/241">Handbooks &amp; Policies</a> </li> 
+                   <li> <a href="/residential-life/computers-gaming" data-drupal-link-system-path="node/251">Computers &amp; Gaming</a> </li> 
+                   <li> <a href="/residential-life/resident-associations" data-drupal-link-system-path="node/246">Resident Associations</a> </li> 
+                  </ul> 
+                 </div> </li> 
+               </ul> 
+              </div> </li> 
+             <li> <a href="/help-desk" class="drop-down-arrow" data-drupal-link-system-path="node/91">Help Desk</a> 
+              <div> 
+               <ul class="accessible-megamenu-panel-group"> 
+                <li> <span>Column 1</span> 
+                 <div> 
+                  <ul class="accessible-megamenu-panel-group"> 
+                   <li> <a href="/help-desk/pay-bill" data-drupal-link-system-path="node/256">Pay a Bill</a> </li> 
+                   <li> <a href="/help-desk/request-repair" data-drupal-link-system-path="node/261">Request a Repair</a> </li> 
+                   <li> <a href="/help-desk/resolve-conflict" data-drupal-link-system-path="node/266">Resolve a Conflict</a> </li> 
+                  </ul> 
+                 </div> </li> 
+                <li> <span>Column 2</span> 
+                 <div> 
+                  <ul class="accessible-megamenu-panel-group"> 
+                   <li> <a href="/residence-hall-move-in" data-drupal-link-system-path="node/466">Residence Hall Move-In</a> </li> 
+                   <li> <a href="/campus-apartment-check-in" data-drupal-link-system-path="node/471">Campus Apartment Check-In</a> </li> 
+                   <li> <a href="/move-out" title="UCR Housing Move-Out" data-drupal-link-system-path="node/501">Move-Out</a> </li> 
+                   <li> <a href="/help-desk/bikes-parking-transportation" data-drupal-link-system-path="node/271">Bikes, Parking &amp; Transportation</a> </li> 
+                   <li> <a href="/help-desk/off-campus-housing" data-drupal-link-system-path="node/306">Off-Campus Housing</a> </li> 
+                  </ul> 
+                 </div> </li> 
+               </ul> 
+              </div> </li> 
+             <li> <a href="/about-us" class="drop-down-arrow" data-drupal-link-system-path="node/101">About Us</a> 
+              <div> 
+               <ul class="accessible-megamenu-panel-group"> 
+                <li> <span>Column 1</span> 
+                 <div> 
+                  <ul class="accessible-megamenu-panel-group"> 
+                   <li> <a href="/about-us/resident-services-office" data-drupal-link-system-path="node/326">Resident Services Office</a> </li> 
+                   <li> <a href="/about-us/residential-life-staff" data-drupal-link-system-path="node/331">Residential Life Staff</a> </li> 
+                  </ul> 
+                 </div> </li> 
+                <li> <span>Column 2</span> 
+                 <div> 
+                  <ul class="accessible-megamenu-panel-group"> 
+                   <li> <a href="/about-us/employment" class="custom-housing" data-drupal-link-system-path="node/36">Employment</a> </li> 
+                   <li> <a href="/about-us/employment/career-opportunities" data-drupal-link-system-path="node/311">Career Opportunities</a> </li> 
+                   <li> <a href="/about-us/employment/student-jobs" data-drupal-link-system-path="node/316">Student Jobs</a> </li> 
+                  </ul> 
+                 </div> </li> 
+               </ul> 
+              </div> </li> 
+             <li> <a href="/frequently-asked-questions" data-drupal-link-system-path="node/106">FAQs</a> </li> 
+            </ul> 
+           </div> 
+           <div id="block-ucr-design-1-meganav-main-mobile" data-block-plugin-id="menu_block:meganav-main" class="cell main-menu-mobile-cell"> 
+            <ul id="meganav-main-menu-mobile" class="vertical medium-horizontal menu align-center-middle" data-responsive-menu="accordion medium-dropdown" data-closing-time="100"> 
+             <li> <a href="/living-at-ucr" target="_self" class="drop-down-arrow" data-drupal-link-system-path="node/41">Living @ UCR</a> 
+              <ul class="vertical menu submenu"> 
+               <li> <a href="/prospective-students" data-drupal-link-system-path="node/51">Prospective Students</a> </li> 
+               <li> <a href="/current-students" data-drupal-link-system-path="node/56">Current Students</a> </li> 
+               <li> <a href="/graduate-students" data-drupal-link-system-path="node/441">Graduate Students</a> </li> 
+               <li> <a href="/international-students" data-drupal-link-system-path="node/301">International Students</a> </li> 
+               <li> <a href="/students-families" data-drupal-link-system-path="node/291">Students with Family</a> </li> 
+               <li> <a href="/parents" data-drupal-link-system-path="node/26">Parents / Guardians</a> </li> 
+               <li> <a href="/faculty-staff" data-drupal-link-system-path="node/296">Faculty / Staff</a> </li> 
+               <li> <a href="/get-housing" class="custom-housing" data-drupal-link-system-path="node/81">Get Housing</a> </li> 
+               <li> <a href="/get-housing/applications-contracts" data-drupal-link-system-path="node/201">Applications &amp; Contracts</a> </li> 
+               <li> <a href="/get-housing/important-dates-deadlines" data-drupal-link-system-path="node/206">Important Dates &amp; Deadlines</a> </li> 
+               <li> <a href="/get-housing/rates-billing-terms" data-drupal-link-system-path="node/211">Rates, Billing &amp; Terms</a> </li> 
+               <li> <a href="/get-housing/schedule-tour" data-drupal-link-system-path="node/216">Schedule a Tour</a> </li> 
+               <li> <a href="/living-at-ucr/academic-success" data-drupal-link-system-path="node/111">Academic Success</a> </li> 
+               <li> <a href="/living-at-ucr/campus-safety" data-drupal-link-system-path="node/116">Campus Safety</a> </li> 
+               <li> <a href="/living-at-ucr/dining-options" data-drupal-link-system-path="node/121">Dining Options</a> </li> 
+               <li> <a href="/living-at-ucr/living-learning-communities" data-drupal-link-system-path="node/126">Living-Learning Communities</a> </li> 
+               <li> <a href="/gender-inclusive-housing" title="Gender-Inclusive Housing" data-drupal-link-system-path="node/496">Gender-Inclusive Housing</a> </li> 
+               <li> <a href="/living-at-ucr/sustainability" data-drupal-link-system-path="node/131">Sustainability</a> </li> 
+              </ul> </li> 
+             <li> <a href="/ucr-housing-options" data-drupal-link-system-path="node/286">UCR Housing Options</a> 
+              <ul class="vertical menu submenu"> 
+               <li> <a href="/ucr-housing-options/residence-halls" class="custom-housing" data-drupal-link-system-path="node/136">Residence Halls</a> </li> 
+               <li> <a href="/ucr-housing-options/residence-halls/aberdeen-inverness" data-drupal-link-system-path="node/141">Aberdeen-Inverness</a> </li> 
+               <li> <a href="/ucr-housing-options/residence-halls/lothian" data-drupal-link-system-path="node/146">Lothian</a> </li> 
+               <li> <a href="/ucr-housing-options/residence-halls/pentland-hills" data-drupal-link-system-path="node/151">Pentland Hills</a> </li> 
+               <li> <a href="/ucr-housing-options/residence-halls/dundee" title="Dundee Residence Hall" data-drupal-link-system-path="node/436">Dundee</a> </li> 
+               <li> <a href="/ucr-housing-options/campus-apartments" class="custom-housing" data-drupal-link-system-path="node/156">Campus Apartments</a> </li> 
+               <li> <a href="/ucr-housing-options/campus-apartments/bannockburn-village" data-drupal-link-system-path="node/161">Bannockburn Village</a> </li> 
+               <li> <a href="/ucr-housing-options/campus-apartments/falkirk" data-drupal-link-system-path="node/166">Falkirk</a> </li> 
+               <li> <a href="/ucr-housing-options/campus-apartments/glen-mor" data-drupal-link-system-path="node/171">Glen Mor</a> </li> 
+               <li> <a href="/ucr-housing-options/campus-apartments/north-district" title="North District" data-drupal-link-system-path="node/481">North District</a> </li> 
+               <li> <a href="/ucr-housing-options/campus-apartments/the-plaza" data-drupal-link-system-path="node/181">The Plaza</a> </li> 
+               <li> <a href="/ucr-housing-options/campus-apartments/stonehaven" data-drupal-link-system-path="node/186">Stonehaven</a> </li> 
+               <li> <a href="/ucr-housing-options/family-housing" data-drupal-link-system-path="node/191">Family Housing</a> </li> 
+               <li> <a href="/ucr-housing-options/summer-housing" data-drupal-link-system-path="node/196">Summer Housing</a> </li> 
+              </ul> </li> 
+             <li> <a href="/residential-life" data-drupal-link-system-path="node/86">Residential Life</a> 
+              <ul class="vertical menu submenu"> 
+               <li> <a href="/residential-life/todays-menu-dining-dollars" data-drupal-link-system-path="node/221">Today's Menu &amp; Dining Dollars</a> </li> 
+               <li> <a href="/residential-life/programs-activities" data-drupal-link-system-path="node/226">Programs &amp; Activities</a> </li> 
+               <li> <a href="/residential-life/health-wellness" data-drupal-link-system-path="node/231">Health &amp; Wellness</a> </li> 
+               <li> <a href="/residential-life/roommates" data-drupal-link-system-path="node/236">Roommates</a> </li> 
+               <li> <a href="/residential-life/handbooks-policies" data-drupal-link-system-path="node/241">Handbooks &amp; Policies</a> </li> 
+               <li> <a href="/residential-life/computers-gaming" data-drupal-link-system-path="node/251">Computers &amp; Gaming</a> </li> 
+               <li> <a href="/residential-life/resident-associations" data-drupal-link-system-path="node/246">Resident Associations</a> </li> 
+              </ul> </li> 
+             <li> <a href="/help-desk" data-drupal-link-system-path="node/91">Help Desk</a> 
+              <ul class="vertical menu submenu"> 
+               <li> <a href="/help-desk/pay-bill" data-drupal-link-system-path="node/256">Pay a Bill</a> </li> 
+               <li> <a href="/help-desk/request-repair" data-drupal-link-system-path="node/261">Request a Repair</a> </li> 
+               <li> <a href="/help-desk/resolve-conflict" data-drupal-link-system-path="node/266">Resolve a Conflict</a> </li> 
+               <li> <a href="/residence-hall-move-in" data-drupal-link-system-path="node/466">Residence Hall Move-In</a> </li> 
+               <li> <a href="/campus-apartment-check-in" data-drupal-link-system-path="node/471">Campus Apartment Check-In</a> </li> 
+               <li> <a href="/move-out" title="UCR Housing Move-Out" data-drupal-link-system-path="node/501">Move-Out</a> </li> 
+               <li> <a href="/help-desk/bikes-parking-transportation" data-drupal-link-system-path="node/271">Bikes, Parking &amp; Transportation</a> </li> 
+               <li> <a href="/help-desk/off-campus-housing" data-drupal-link-system-path="node/306">Off-Campus Housing</a> </li> 
+              </ul> </li> 
+             <li> <a href="/about-us" data-drupal-link-system-path="node/101">About Us</a> 
+              <ul class="vertical menu submenu"> 
+               <li> <a href="/about-us/resident-services-office" data-drupal-link-system-path="node/326">Resident Services Office</a> </li> 
+               <li> <a href="/about-us/residential-life-staff" data-drupal-link-system-path="node/331">Residential Life Staff</a> </li> 
+               <li> <a href="/about-us/employment" class="custom-housing" data-drupal-link-system-path="node/36">Employment</a> </li> 
+               <li> <a href="/about-us/employment/career-opportunities" data-drupal-link-system-path="node/311">Career Opportunities</a> </li> 
+               <li> <a href="/about-us/employment/student-jobs" data-drupal-link-system-path="node/316">Student Jobs</a> </li> 
+              </ul> </li> 
+             <li> <a href="/frequently-asked-questions" data-drupal-link-system-path="node/106">FAQs</a> </li> 
+            </ul> 
+           </div> 
+           <div class="cell global-header-menu show-for-small-only"> 
+            <nav aria-label="global header menu"> 
+             <ul class="menu"> 
+              <li class="ucr-home-link-mobile "><a href="https://www.ucr.edu" target="_blank">UCR Home</a></li> 
+             </ul> 
+            </nav> 
+           </div> 
+           <div id="audience-links-mobile-view" data-block-plugin-id="system_menu_block:ucr-audience-menu" class="cell hide-for-medium audience-links-mobile" aria-label="Audience Links mobile view"> 
+            <nav class="audience-links"> 
+             <ul class="vertical medium-horizontal menu" data-responsive-menu="accordion medium-dropdown" data-closing-time="100" data-alignment="left"> 
+              <li class="audience-button is-dropdown-submenu-parent"> <a href="" target="_self">Quick Links</a> 
+               <ul class="vertical menu"> 
+                <li> <a href="/get-housing" data-drupal-link-system-path="node/81">Submit an Application or Contract</a> </li> 
+                <li> <a href="/help-desk/pay-bill" data-drupal-link-system-path="node/256">Make a Payment</a> </li> 
+                <li> <a href="/help-desk/off-campus-housing" data-drupal-link-system-path="node/306">Off-Campus Housing</a> </li> 
+                <li> <a href="/help-desk/request-repair" data-drupal-link-system-path="node/261">Request a Repair</a> </li> 
+               </ul> </li> 
+             </ul> 
+            </nav> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </header> 
+    <main> 
+     <div id="content-container"> 
+      <div id="hero-panel-area"> 
+       <div id="block-housing" data-block-plugin-id="block_content:9ed7bed7-7d4f-4e26-9ec8-cf56552dfd37" class="ucr-custom-block ucr-custom-block-custom-margins margin-vertical-0"> 
+        <div class="grid-container full"> 
+         <div class="grid-x"> 
+          <div class="cell"> 
+           <div data-blazy="" class="slick blazy slick--field slick--field-sliders slick--field-sliders--default slick--skin--grid slick--optionset--hero-slider-ui" id="slick-block-content-carousel-slider-sliders-default-1011-1"> 
+            <div id="slick-block-content-carousel-slider-sliders-default-1011-1-slider" data-slick="{&quot;mobileFirst&quot;:true,&quot;adaptiveHeight&quot;:true,&quot;autoplay&quot;:true,&quot;autoplaySpeed&quot;:10000,&quot;dots&quot;:true,&quot;draggable&quot;:false,&quot;lazyLoad&quot;:&quot;blazy&quot;}" class="slick__slider"> 
+             <div class="slick__slide slide slide--0"> 
+              <div class="paragraph paragraph--type--carousel-slider paragraph--view-mode--default carousel-slider"> 
+               <img src="/sites/g/files/rcwecm2301/files/lease-renewal-campus-apartments-header-2022-2023_0.jpg" width="1902" height="450" alt="Campus Apartment Lease Renewal 2022-2023" loading="lazy" typeof="foaf:Image"> 
+              </div> 
+             </div> 
+             <div class="slick__slide slide slide--1"> 
+              <div class="paragraph paragraph--type--carousel-slider paragraph--view-mode--default carousel-slider"> 
+               <img src="/sites/g/files/rcwecm2301/files/returning-resident-res-halls-header-2022-2023_0.jpg" width="1920" height="450" alt="Returning Residents Take the Next Step" loading="lazy" typeof="foaf:Image"> 
+              </div> 
+             </div> 
+             <div class="slick__slide slide slide--2"> 
+              <div class="paragraph paragraph--type--carousel-slider paragraph--view-mode--default carousel-slider"> 
+               <img src="/sites/g/files/rcwecm2301/files/mental-health-header-2021-2022.jpeg" width="1920" height="450" alt="You're Not Alone" loading="lazy" typeof="foaf:Image"> 
+              </div> 
+             </div> 
+             <div class="slick__slide slide slide--3"> 
+              <div class="paragraph paragraph--type--carousel-slider paragraph--view-mode--default carousel-slider"> 
+               <img src="/sites/g/files/rcwecm2301/files/homepage-slider-dundee-promo.jpg" width="1920" height="450" alt="Dundee: UCR's newest residence hall" loading="lazy" typeof="foaf:Image"> 
+              </div> 
+             </div> 
+             <div class="slick__slide slide slide--4"> 
+              <div class="paragraph paragraph--type--carousel-slider paragraph--view-mode--default carousel-slider"> 
+               <img src="/sites/g/files/rcwecm2301/files/shs-immunization-zoom-banner-1920x450.png" width="1920" height="450" alt="Immunizations Zoom Appointments" loading="lazy" typeof="foaf:Image"> 
+              </div> 
+             </div> 
+             <div class="slick__slide slide slide--5"> 
+              <div class="paragraph paragraph--type--carousel-slider paragraph--view-mode--default carousel-slider"> 
+               <img src="/sites/g/files/rcwecm2301/files/homepage-slider-north-district-promo.jpg" width="1920" height="450" alt="Introducing the North District Campus Apartment for Fall 2021" loading="lazy" typeof="foaf:Image"> 
+              </div> 
+             </div> 
+            </div> 
+            <nav role="navigation" class="slick__arrow"> <button type="button" data-role="none" class="slick-prev" aria-label="Previous" tabindex="0">Previous</button> <button type="button" data-role="none" class="slick-next" aria-label="Next" tabindex="0">Next</button> 
+            </nav> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="views-element-container" id="block-ucr-design-1-head-image-title-block" data-block-plugin-id="views_block:content_views-content_head_image_title_block"> 
+        <div>
+         <div class="js-view-dom-id-91c62eda449b9f34205000493c411e7e70231270e609518c666f929592b30d3d"> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="grid-container"> 
+       <div class="grid-x grid-padding-x grid-padding-y primary-content-header"> 
+       </div> 
+       <div class="grid-x grid-padding-x system-admin-controls"> 
+       </div> 
+      </div> 
+      <div id="main" class="grid-container full primary-content-area"> 
+       <div class="grid-x"> 
+        <div class="cell large-auto small-order-3 medium-order-3 large-order-2 pca-content"> 
+         <div> 
+          <div id="block-ucr-design-1-content" data-block-plugin-id="system_main_block"> 
+           <article role="article" about="/home"> 
+            <div> 
+             <div class="layout layout-two-col grid-container"> 
+              <div class="grid-x grid-padding-x"> 
+               <div class="cell medium-8"> 
+                <div class="layout__region layout__region--column-1"> 
+                 <div data-block-plugin-id="field_block:node:page:body"> 
+                  <div class="basic-body"> <span></span> 
+                  </div> 
+                 </div> 
+                 <div data-block-plugin-id="block_content:d753c34e-9b1f-4b38-841a-e32b6356b4eb" class="ucr-custom-block"> 
+                  <div class="grid-container full"> 
+                   <div class="grid-x grid-padding-x"> 
+                    <div class="cell"> 
+                     <div alt="Open for Fall 2021!" data-embed-button="media_browser" data-entity-embed-display="media_image" data-entity-type="media" data-entity-uuid="337ac43f-52ba-4325-803b-48619458d5e6" data-langcode="en" style="margin-top:25px;" title="open-for-fall-2021-homepage-header" class="embedded-entity"> 
+                      <img src="/sites/g/files/rcwecm2301/files/open-for-fall-2021-homepage-header.jpg" alt="Open for Fall 2021!" title="open-for-fall-2021-homepage-header" typeof="foaf:Image">
+                     </div> 
+                     <h2 style="margin-top:30px">OPEN FOR 2021-22!</h2> 
+                     <p>We are excited to confirm that campus housing will be offered for the 2021-22 academic year in a format that prioritizes safety, while providing convenient access to campus resources and an experience close to the pre-pandemic “normal.” The promotion and expectation of healthy behaviors coupled with a return to robust in-person programming will again be the hallmark of on-campus living as we continue to progress past the worst of the pandemic.</p> 
+                     <p>Yes, there may be residual uncertainties. But there will also be friendship, community, school spirit, and the ideal environment for academic success.</p> 
+                     <p>No matter your class level, we have a “fit” for you.</p> 
+                     <p>Our <strong>Residence Halls</strong> are home primarily to UCR’s First Time Freshmen, but are also available to Transfer and Continuing UCR students, and returning residents. <a href="http://myhousing.ucr.edu/" target="_blank" title="Contracts are now available">Contracts are now available</a>.</p> 
+                     <p>The <strong>Campus Apartments</strong> are available for all Continuing, Transfer and Graduate students. <a href="http://myhousing.ucr.edu" target="_blank" title="Apply at My Housing at UCR">Apply now.</a></p> 
+                     <p><strong>Family Housing</strong> is available for Freshman, Transfer, Graduate &amp; Continuing students with families of their own. <a href="/ucr-housing-options/ucr-family-housing" title="UCR Family Housing">Apply now</a>.</p> 
+                     <p>Check out our <a href="http://auxiliarydocs.ucr.edu/housing/guide-to-on-campus-ucr-housing-brochure.pdf" target="_blank" title="2021-22 Guide to Campus Housing">2021-22 Guide to Campus Housing</a> brochure.</p> <!-- BEGIN HIDE BUTTON
+<p><a class="btn-ucr" href="/fall-2021" title="View the 2021-2022 Frequently Asked Housing Questions">2021-2022 Frequently Asked Questions</a></p>
+END HIDE BUTTON --> 
+                     <p><a class="button-item btn-ucr" href="https://www.vpix.net/index.php?tour=103925" target="_blank" text-align:center="">Take a 360° Virtual Tour</a></p> 
+                     <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen height="206" src="https://www.youtube.com/embed/1QndanUN-60" title="Learn the Benefits of UCR Housing!" width="367"></iframe></p> 
+                     <p>&nbsp;</p> 
+                     <hr> 
+                    </div> 
+                   </div> 
+                  </div> 
+                 </div> 
+                 <div data-block-plugin-id="block_content:7d60e496-cd91-4c62-b4b7-e0bb87048fef" class="ucr-custom-block"> 
+                  <div class="dynamic-columns dc-full padding-horizontal-1 dc-standard " style="overflow:hidden; "> 
+                   <div class="grid-container full"> 
+                    <div class="grid-x grid-padding-x grid-padding-y small-up-1 medium-up-2 large-up-2 align-center"> 
+                     <div class="paragraph paragraph--type--ucr-columns paragraph--view-mode--default cell" style=""> 
+                      <div class="ucr-custom-block" data-block-plugin-id="block_content:d0bf40d2-9617-464c-a37b-fe63d6b9c370" id="block-bewellsidebar"> 
+                       <div> 
+                        <div class="cell small-12 large-3"> 
+                         <div class="text-align-center" style="background-color: #fc8014; padding: 20px 25px 5px 25px"> 
+                          <h2><strong><span style="color:#ffffff;">be well</span></strong></h2> 
+                          <p class="text-align-center"><a href="http://studentwellness.ucr.edu" style="text-decoration: none !important; color:#f76200; display: inline-flex; font-size:16px;" target="_blank" title="Be Well Student Health and Wellness Services"><span style="color:#ffffff;">&nbsp;&nbsp;&nbsp;&nbsp;STUDENT HEALTH AND<br> &nbsp;&nbsp;&nbsp;&nbsp;WELLNESS SERVICES</span></a></p> 
+                         </div> 
+                         <div class="text-align-center" style="background-color: #1B75BB; padding: 10px 10px 10px 10px">
+                          <a href="https://casemanagement.ucr.edu" style="text-decoration: none !important; color:#1CA6DF; display: inline-flex;" target="_blank"><span style="color:#ffffff;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Case Manager</span></a>
+                         </div> 
+                         <div class="text-align-center" style="background-color: #14609b; padding: 10px 10px 10px 10px">
+                          <a href="http://counseling.ucr.edu/" style="text-decoration: none !important; color:#1B75BB; display: inline-flex;" target="_blank"><span style="color:#ffffff;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Counseling &amp; Psychological Services</span></a>
+                         </div> 
+                         <div class="text-align-center" style="background-color: #1B75BB; padding: 10px 10px 10px 10px">
+                          <a href="http://recreation.ucr.edu/" style="text-decoration: none !important; color:#1CA6DF; display: inline-flex;" target="_blank"><span style="color:#ffffff;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Recreation</span></a>
+                         </div> 
+                         <div class="text-align-center" style="background-color: #14609b; padding: 10px 10px 10px 10px">
+                          <a href="http://studenthealth.ucr.edu/" style="text-decoration: none !important; color:#1B75BB; display: inline-flex;" target="_blank"><span style="color:#ffffff;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Student Health Services</span></a>
+                         </div> 
+                         <div class="text-align-center" style="background-color: #1B75BB; padding: 10px 10px 10px 10px">
+                          <a href="http://sdrc.ucr.edu" style="text-decoration: none !important; color:#1CA6DF; display: inline-flex;" target="_blank"><span style="color:#ffffff;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Student Disability Resource Center</span></a>
+                         </div> 
+                         <div class="text-align-center" style="background-color: #14609b; padding: 10px 10px 10px 10px">
+                          <a href="http://well.ucr.edu/" style="text-decoration: none !important; color:#1B75BB; display: inline-flex;" target="_blank"><span style="color:#ffffff;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The Well</span></a>
+                         </div> 
+                        </div> 
+                       </div> 
+                      </div> 
+                     </div> 
+                     <div class="paragraph paragraph--type--ucr-columns paragraph--view-mode--default cell" style=""> 
+                      <div style="background-color: #57c2b6; padding: 60px 20px 10px 20px; border-bottom: 5px solid #45a398;"> 
+                       <article class="embedded-entity align-center">
+                        <img alt="It's On Us Campaign Logo" src="/sites/g/files/rcwecm1711/files/caps_article_itsonus_390x302.png" title="HOME - Img:ItsOnUs390x390" typeof="foaf:Image" width="310px">
+                       </article>
+                       <p class="text-align-center"><a href="http://go.ucr.edu/saam/#itsonus" target="_blank" title="UCR It's On Us Website"><strong><span style="color:#ffffff; padding-bottom:40px;">TAKE THE PLEDGE TO STOP SEXUAL ASSAULT</span></strong></a></p> 
+                      </div> 
+                     </div> 
+                    </div> 
+                   </div> 
+                  </div> 
+                 </div> 
+                 <div data-block-plugin-id="block_content:cf089b48-b92d-47ce-b943-682a9d7d1377" class="ucr-custom-block"> 
+                  <div class="grid-container full"> 
+                   <div class="grid-x grid-padding-x"> 
+                    <div class="cell"> 
+                     <script type="text/javascript" src="https://ai.fatv.us/embed/standard/caf13cf6-2c33-4087-b3f8-067d3646c092?ha=right&amp;hv=16px&amp;va=bottom&amp;vv=16px&amp;ts=0&amp;bs=calloutBubble&amp;av=0"></script> 
+                    </div> 
+                   </div> 
+                  </div> 
+                 </div> 
+                </div> 
+               </div> 
+               <div class="cell medium-4"> 
+                <div class="layout__region layout__region--column-2"> 
+                 <div data-block-plugin-id="block_content:1e3c7edd-601f-488f-8709-dec4beb0344f" class="ucr-custom-block ucr-custom-block-custom-margins margin-top-2"> 
+                  <div class="grid-container full"> 
+                   <div class="grid-x grid-padding-x"> 
+                    <div class="cell"> 
+                     <ul class="tabs ucr-tabs" data-deep-link="true" data-update-history="true" data-deep-link-smudge="true" data-tabs id="tabs-84755e16f852eb73750c13449eea11fc"> 
+                      <li class="tabs-title is-active"><a href="#announcements">Announcements</a></li> 
+                      <li class="tabs-title"><a href="#events">Events</a></li> 
+                     </ul> 
+                    </div> 
+                    <div class="cell"> 
+                     <div class="tabs-content" data-tabs-content="tabs-84755e16f852eb73750c13449eea11fc"> 
+                      <div> 
+                       <div> 
+                        <div class="paragraph paragraph--type--tab paragraph--view-mode--default tabs-panel is-active" id="announcements"> 
+                         <p class="announcementsHeadline">Interim Covid-19 Policies</p> 
+                         <p class="announcementsCopy"><a aria-label="Read More on UCR Housing about Interim COVID-19 Policies" data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="c9ab8e88-bd13-45c8-9d12-20ca5865f590" href="/covid19" title="Read More on UCR Housing about Interim COVID-19 Policies">Read More on UCR Housing</a></p> 
+                         <hr>
+                         <p class="announcementsHeadline">Spring Quarter 2022 COVID Requirements</p> 
+                         <p class="announcementsCopy"><a aria-label="Read More on UCR Housing about Spring Quarter 2022 COVID Requirements" data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="5b2a8c33-2252-4301-8cf5-5c8ffb52fb19" href="/spring-quarter-2022" title="Read More on UCR Housing about Spring Quarter 2022 COVID Requirements">Read More on UCR Housing</a></p> 
+                         <hr>
+                         <p class="announcementsHeadline">Students Return to Campus Housing</p> 
+                         <p class="announcementsCopy"><a href="https://insideucr.ucr.edu/stories/2021/09/22/students-return-campus-housing" target="_blank" title="UCR Students Return to Campus Housing">Read More from Inside UCR</a></p> 
+                         <hr>
+                         <p class="announcementsHeadline">North District Opens to Students</p> 
+                         <p class="announcementsCopy"><a href="https://insideucr.ucr.edu/stories/2021/09/22/north-district-opens-students" target="_blank" title="North District Opens to UCR Students">Read More from Inside UCR</a></p> 
+                         <hr>
+                         <p class="announcementsHeadline">New Residents Return in Old Numbers</p> 
+                         <p class="announcementsCopy"><a href="https://insideucr.ucr.edu/announcements/2021/09/13/new-residents-return-old-numbers" target="_blank" title="New UCR residents return in old numbers">Read More from Inside UCR</a></p> 
+                         <hr>
+                         <p class="announcementsHeadline">‘Little Free Pantry’ now available to student parents at Oban Family Housing</p> 
+                         <p class="announcementsCopy"><a href="https://news.ucr.edu/articles/2021/03/17/little-free-pantry-now-available-student-parents-oban-family-housing" target="_blank" title="Little Free Pantry now available to student parents at Oban Family Housing">Read More on UCR News</a></p> 
+                         <hr>
+                         <p class="announcementsHeadline">City of Riverside Honors Dundee at Its Beautification Awards!</p> 
+                         <p class="announcementsCopy"><a href="http://www.krcb.com/awards.cfm" target="_blank" title="City of Riverside Honors Dundee at Its Beautification Awards">Read More from Keep Riverside Clean &amp; Beautiful</a></p> 
+                         <p>&nbsp;</p> 
+                         <hr> 
+                        </div> 
+                       </div> 
+                       <div> 
+                        <div class="paragraph paragraph--type--tab paragraph--view-mode--default tabs-panel" id="events"> 
+                         <p>&nbsp;</p> 
+                         <p>.</p> 
+                        </div> 
+                       </div> 
+                      </div> 
+                     </div> 
+                    </div> 
+                   </div> 
+                  </div> 
+                 </div> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+             <div class="layout layout-one-col grid-container"> 
+              <div class="grid-x grid-padding-x"> 
+               <div class="cell"> 
+                <div class="layout__region layout__region--main"> 
+                 <div data-block-plugin-id="block_content:d93b56d5-3134-4306-a605-7b603613326a" class="ucr-custom-block ucr-custom-block-custom-margins margin-bottom-1"> 
+                  <div class="grid-container full"> 
+                   <div class="grid-x grid-padding-x"> 
+                    <div class="cell">
+                     <h2>Choose a Campus Housing Community</h2>
+                    </div> 
+                   </div> 
+                   <div class="grid-x grid-padding-x"> 
+                    <div class="cell"> 
+                     <div style="font-size:13px;">
+                      *Dundee is owned by American Campus Communities (ACC) and operated cooperatively by ACC and UCR Housing.
+                     </div> 
+                     <div style="font-size:13px;">
+                      **North District is owned and operated by American Campus Communities (ACC).
+                     </div> 
+                     <div style="font-size:13px;">
+                      ***Stonehaven is owned and operated by EAH.
+                     </div> 
+                    </div> 
+                   </div> 
+                   <div class="grid-x grid-padding-x"> 
+                    <div class="cell"> 
+                     <div class="grid-container full"> 
+                      <div class="grid-x small-up-1 medium-up-2 large-up-4 cta-image-describe-display align-center"> 
+                       <div class="paragraph paragraph--type--cta-item paragraph--view-mode--default cell cta-item ctaItem_1749735391"> <a href="/ucr-housing-options/residence-halls/aberdeen-inverness" target=""> 
+                         <div class="cta-bg-image"> 
+                          <article> <picture> 
+                            <source srcset="/sites/g/files/rcwecm2301/files/styles/cta_image_large/public/reshall-aberdeen_1.jpg?h=ab622562&amp;itok=v5LXAptO 1x" media="all and (min-width: 1401px)" type="image/jpeg"> 
+                            <source srcset="/sites/g/files/rcwecm2301/files/styles/cta_image_large/public/reshall-aberdeen_1.jpg?h=ab622562&amp;itok=v5LXAptO 1x" media="all and (min-width: 1025px) and (max-width: 1400px)" type="image/jpeg"> 
+                            <source srcset="/sites/g/files/rcwecm2301/files/styles/cta_image_medium/public/reshall-aberdeen_1.jpg?h=ab622562&amp;itok=vN7Hno5C 1x" media="all and (min-width: 768px) and (max-width: 1024px)" type="image/jpeg"> 
+                            <source srcset="/sites/g/files/rcwecm2301/files/styles/cta_image_small/public/reshall-aberdeen_1.jpg?h=ab622562&amp;itok=qjSSCOwQ 1x" type="image/jpeg"> 
+                            <img src="/sites/g/files/rcwecm2301/files/styles/cta_image_small/public/reshall-aberdeen_1.jpg?h=ab622562&amp;itok=qjSSCOwQ" alt="Aberdeen-Inverness buidlings" typeof="foaf:Image"> 
+                           </picture> 
+                          </article> 
+                          <div class="cta-bg-dark-overlay"></div> 
+                         </div> 
+                         <div class="cta-bg-color-overlay" style="background-color: #329af0;"></div> 
+                         <div class="cta-text-area"> 
+                          <div class="cta-title"> 
+                           <div>
+                             Aberdeen-Inverness 
+                           </div> <span class="cta-title-border"></span> 
+                          </div> 
+                          <div class="cta-description"></div> 
+                         </div> 
+                         <div class="cta-caption-bar" style="background-color: #329af0; color: #FEF4F6;"> 
+                          <div class="cta-caption">
+                            Residence Hall 
+                          </div> 
+                         </div> </a> 
+                       </div> 
+                       <style type="text/css">
+            <!--
+            .cta-image-color-display .ctaItem_1749735391 a .cta-text-area { color: #FEF4F6; }
+            .cta-image-color-display .ctaItem_1749735391 a .cta-text-area .cta-title .cta-title-border { background-color: #FEF4F6; }
+
+            .cta-image-display .ctaItem_1749735391 a .cta-text-area { color: #FEF4F6; }
+            .cta-image-display .ctaItem_1749735391 a .cta-text-area .cta-title .cta-title-border { background-color: #FEF4F6; }
+            .cta-image-display .ctaItem_1749735391 a:hover .cta-text-area { color: #FEF4F6; }
+            .cta-image-display .ctaItem_1749735391 a:hover .cta-text-area .cta-title .cta-title-border { background-color: #FEF4F6; }
+
+            .cta-color-display .ctaItem_1749735391 a .cta-text-area { color: #FEF4F6; }
+            .cta-color-display .ctaItem_1749735391 a .cta-text-area .cta-title .cta-title-border { background-color: #FEF4F6; }
+            -->
+        </style> 
+                       <div class="paragraph paragraph--type--cta-item paragraph--view-mode--default cell cta-item ctaItem_625565283"> <a href="/ucr-housing-options/residence-halls/dundee" target=""> 
+                         <div class="cta-bg-image"> 
+                          <article> <picture> 
+                            <source srcset="/sites/g/files/rcwecm2301/files/styles/cta_image_large/public/reshall-dundee_1.jpg?h=ab622562&amp;itok=UWVkAseT 1x" media="all and (min-width: 1401px)" type="image/jpeg"> 
+                            <source srcset="/sites/g/files/rcwecm2301/files/styles/cta_image_large/public/reshall-dundee_1.jpg?h=ab622562&amp;itok=UWVkAseT 1x" media="all and (min-width: 1025px) and (max-width: 1400px)" type="image/jpeg"> 
+                            <source srcset="/sites/g/files/rcwecm2301/files/styles/cta_image_medium/public/reshall-dundee_1.jpg?h=ab622562&amp;itok=IPn1VKNh 1x" media="all and (min-width: 768px) and (max-width: 1024px)" type="image/jpeg"> 
+                            <source srcset="/sites/g/files/rcwecm2301/files/styles/cta_image_small/public/reshall-dundee_1.jpg?h=ab622562&amp;itok=Roi5Qex8 1x" type="image/jpeg"> 
+                            <img src="/sites/g/files/rcwecm2301/files/styles/cta_image_small/public/reshall-dundee_1.jpg?h=ab622562&amp;itok=Roi5Qex8" alt="Dundee" typeof="foaf:Image"> 
+                           </picture> 
+                          </article> 
+                          <div class="cta-bg-dark-overlay"></div> 
+                         </div> 
+                         <div class="cta-bg-color-overlay" style="background-color: #329af0;"></div> 
+                         <div class="cta-text-area"> 
+                          <div class="cta-title"> 
+                           <div>
+                             Dundee 
+                           </div> <span class="cta-title-border"></span> 
+                          </div> 
+                          <div class="cta-description"></div> 
+                         </div> 
+                         <div class="cta-caption-bar" style="background-color: #329af0; color: #FEF4F6;"> 
+                          <div class="cta-caption">
+                            Residence Hall* 
+                          </div> 
+                         </div> </a> 
+                       </div> 
+                       <style type="text/css">
+            <!--
+            .cta-image-color-display .ctaItem_625565283 a .cta-text-area { color: #FEF4F6; }
+            .cta-image-color-display .ctaItem_625565283 a .cta-text-area .cta-title .cta-title-border { background-color: #FEF4F6; }
+
+            .cta-image-display .ctaItem_625565283 a .cta-text-area { color: #FEF4F6; }
+            .cta-image-display .ctaItem_625565283 a .cta-text-area .cta-title .cta-title-border { background-color: #FEF4F6; }
+            .cta-image-display .ctaItem_625565283 a:hover .cta-text-area { color: #FEF4F6; }
+            .cta-image-display .ctaItem_625565283 a:hover .cta-text-area .cta-title .cta-title-border { background-color: #FEF4F6; }
+
+            .cta-color-display .ctaItem_625565283 a .cta-text-area { color: #FEF4F6; }
+            .cta-color-display .ctaItem_625565283 a .cta-text-area .cta-title .cta-title-border { background-color: #FEF4F6; }
+            -->
+        </style> 
+                       <div class="paragraph paragraph--type--cta-item paragraph--view-mode--default cell cta-item ctaItem_1869635002"> <a href="/ucr-housing-options/residence-halls/lothian" target=""> 
+                         <div class="cta-bg-image"> 
+                          <article> <picture> 
+                            <source srcset="/sites/g/files/rcwecm2301/files/styles/cta_image_large/public/lothian-slider1_0.jpg?h=6236415f&amp;itok=cWAHgCim 1x" media="all and (min-width: 1401px)" type="image/jpeg"> 
+                            <source srcset="/sites/g/files/rcwecm2301/files/styles/cta_image_large/public/lothian-slider1_0.jpg?h=6236415f&amp;itok=cWAHgCim 1x" media="all and (min-width: 1025px) and (max-width: 1400px)" type="image/jpeg"> 
+                            <source srcset="/sites/g/files/rcwecm2301/files/styles/cta_image_medium/public/lothian-slider1_0.jpg?h=6236415f&amp;itok=E8PQ1pMX 1x" media="all and (min-width: 768px) and (max-width: 1024px)" type="image/jpeg"> 
+                            <source srcset="/sites/g/files/rcwecm2301/files/styles/cta_image_small/public/lothian-slider1_0.jpg?h=6236415f&amp;itok=lwhfyzJJ 1x" type="image/jpeg"> 
+                            <img src="/sites/g/files/rcwecm2301/files/styles/cta_image_small/public/lothian-slider1_0.jpg?h=6236415f&amp;itok=lwhfyzJJ" alt="Lothian entrance" typeof="foaf:Image"> 
+                           </picture> 
+                          </article> 
+                          <div class="cta-bg-dark-overlay"></div> 
+                         </div> 
+                         <div class="cta-bg-color-overlay" style="background-color: #329af0;"></div> 
+                         <div class="cta-text-area"> 
+                          <div class="cta-title"> 
+                           <div>
+                             Lothian 
+                           </div> <span class="cta-title-border"></span> 
+                          </div> 
+                          <div class="cta-description"></div> 
+                         </div> 
+                         <div class="cta-caption-bar" style="background-color: #329af0; color: #FEF4F6;"> 
+                          <div class="cta-caption">
+                            Residence Hall 
+                          </div> 
+                         </div> </a> 
+                       </div> 
+                       <style type="text/css">
+            <!--
+            .cta-image-color-display .ctaItem_1869635002 a .cta-text-area { color: #FEF4F6; }
+            .cta-image-color-display .ctaItem_1869635002 a .cta-text-area .cta-title .cta-title-border { background-color: #FEF4F6; }
+
+            .cta-image-display .ctaItem_1869635002 a .cta-text-area { color: #FEF4F6; }
+            .cta-image-display .ctaItem_1869635002 a .cta-text-area .cta-title .cta-title-border { background-color: #FEF4F6; }
+            .cta-image-display .ctaItem_1869635002 a:hover .cta-text-area { color: #FEF4F6; }
+            .cta-image-display .ctaItem_1869635002 a:hover .cta-text-area .cta-title .cta-title-border { background-color: #FEF4F6; }
+
+            .cta-color-display .ctaItem_1869635002 a .cta-text-area { color: #FEF4F6; }
+            .cta-color-display .ctaItem_1869635002 a .cta-text-area .cta-title .cta-title-border { background-color: #FEF4F6; }
+            -->
+        </style> 
+                       <div class="paragraph paragraph--type--cta-item paragraph--view-mode--default cell cta-item ctaItem_1436649830"> <a href="/ucr-housing-options/residence-halls/pentland-hills" target=""> 
+                         <div class="cta-bg-image"> 
+                          <article> <picture> 
+                            <source srcset="/sites/g/files/rcwecm2301/files/styles/cta_image_large/public/reshall-pentland-hills_1.jpg?h=ab622562&amp;itok=5stWcMpR 1x" media="all and (min-width: 1401px)" type="image/jpeg"> 
+                            <source srcset="/sites/g/files/rcwecm2301/files/styles/cta_image_large/public/reshall-pentland-hills_1.jpg?h=ab622562&amp;itok=5stWcMpR 1x" media="all and (min-width: 1025px) and (max-width: 1400px)" type="image/jpeg"> 
+                            <source srcset="/sites/g/files/rcwecm2301/files/styles/cta_image_medium/public/reshall-pentland-hills_1.jpg?h=ab622562&amp;itok=hjGhurS8 1x" media="all and (min-width: 768px) and (max-width: 1024px)" type="image/jpeg"> 
+                            <source srcset="/sites/g/files/rcwecm2301/files/styles/cta_image_small/public/reshall-pentland-hills_1.jpg?h=ab622562&amp;itok=YL9X6bwV 1x" type="image/jpeg"> 
+                            <img src="/sites/g/files/rcwecm2301/files/styles/cta_image_small/public/reshall-pentland-hills_1.jpg?h=ab622562&amp;itok=YL9X6bwV" alt="Pentland Hills buildings" typeof="foaf:Image"> 
+                           </picture> 
+                          </article> 
+                          <div class="cta-bg-dark-overlay"></div> 
+                         </div> 
+                         <div class="cta-bg-color-overlay" style="background-color: #329af0;"></div> 
+                         <div class="cta-text-area"> 
+                          <div class="cta-title"> 
+                           <div>
+                             Pentland Hills 
+                           </div> <span class="cta-title-border"></span> 
+                          </div> 
+                          <div class="cta-description"></div> 
+                         </div> 
+                         <div class="cta-caption-bar" style="background-color: #329af0; color: #FEF4F6;"> 
+                          <div class="cta-caption">
+                            Residence Hall 
+                          </div> 
+                         </div> </a> 
+                       </div> 
+                       <style type="text/css">
+            <!--
+            .cta-image-color-display .ctaItem_1436649830 a .cta-text-area { color: #FEF4F6; }
+            .cta-image-color-display .ctaItem_1436649830 a .cta-text-area .cta-title .cta-title-border { background-color: #FEF4F6; }
+
+            .cta-image-display .ctaItem_1436649830 a .cta-text-area { color: #FEF4F6; }
+            .cta-image-display .ctaItem_1436649830 a .cta-text-area .cta-title .cta-title-border { background-color: #FEF4F6; }
+            .cta-image-display .ctaItem_1436649830 a:hover .cta-text-area { color: #FEF4F6; }
+            .cta-image-display .ctaItem_1436649830 a:hover .cta-text-area .cta-title .cta-title-border { background-color: #FEF4F6; }
+
+            .cta-color-display .ctaItem_1436649830 a .cta-text-area { color: #FEF4F6; }
+            .cta-color-display .ctaItem_1436649830 a .cta-text-area .cta-title .cta-title-border { background-color: #FEF4F6; }
+            -->
+        </style> 
+                       <div class="paragraph paragraph--type--cta-item paragraph--view-mode--default cell cta-item ctaItem_649158591"> <a href="/ucr-housing-options/campus-apartments/bannockburn-village" target=""> 
+                         <div class="cta-bg-image"> 
+                          <article> <picture> 
+                            <source srcset="/sites/g/files/rcwecm2301/files/styles/cta_image_large/public/bannockburnpricing_1.jpg?h=ab622562&amp;itok=dcD98RF5 1x" media="all and (min-width: 1401px)" type="image/jpeg"> 
+                            <source srcset="/sites/g/files/rcwecm2301/files/styles/cta_image_large/public/bannockburnpricing_1.jpg?h=ab622562&amp;itok=dcD98RF5 1x" media="all and (min-width: 1025px) and (max-width: 1400px)" type="image/jpeg"> 
+                            <source srcset="/sites/g/files/rcwecm2301/files/styles/cta_image_medium/public/bannockburnpricing_1.jpg?h=ab622562&amp;itok=g2leBAT6 1x" media="all and (min-width: 768px) and (max-width: 1024px)" type="image/jpeg"> 
+                            <source srcset="/sites/g/files/rcwecm2301/files/styles/cta_image_small/public/bannockburnpricing_1.jpg?h=ab622562&amp;itok=0fIB6oAo 1x" type="image/jpeg"> 
+                            <img src="/sites/g/files/rcwecm2301/files/styles/cta_image_small/public/bannockburnpricing_1.jpg?h=ab622562&amp;itok=0fIB6oAo" alt="Bannockburn residents at pool " typeof="foaf:Image"> 
+                           </picture> 
+                          </article> 
+                          <div class="cta-bg-dark-overlay"></div> 
+                         </div> 
+                         <div class="cta-bg-color-overlay" style="background-color: #f18200;"></div> 
+                         <div class="cta-text-area"> 
+                          <div class="cta-title"> 
+                           <div>
+                             Bannockburn Village 
+                           </div> <span class="cta-title-border"></span> 
+                          </div> 
+                          <div class="cta-description"></div> 
+                         </div> 
+                         <div class="cta-caption-bar" style="background-color: #f18200; color: #FEF4F6;"> 
+                          <div class="cta-caption">
+                            Campus Apartment 
+                          </div> 
+                         </div> </a> 
+                       </div> 
+                       <style type="text/css">
+            <!--
+            .cta-image-color-display .ctaItem_649158591 a .cta-text-area { color: #FEF4F6; }
+            .cta-image-color-display .ctaItem_649158591 a .cta-text-area .cta-title .cta-title-border { background-color: #FEF4F6; }
+
+            .cta-image-display .ctaItem_649158591 a .cta-text-area { color: #FEF4F6; }
+            .cta-image-display .ctaItem_649158591 a .cta-text-area .cta-title .cta-title-border { background-color: #FEF4F6; }
+            .cta-image-display .ctaItem_649158591 a:hover .cta-text-area { color: #FEF4F6; }
+            .cta-image-display .ctaItem_649158591 a:hover .cta-text-area .cta-title .cta-title-border { background-color: #FEF4F6; }
+
+            .cta-color-display .ctaItem_649158591 a .cta-text-area { color: #FEF4F6; }
+            .cta-color-display .ctaItem_649158591 a .cta-text-area .cta-title .cta-title-border { background-color: #FEF4F6; }
+            -->
+        </style> 
+                       <div class="paragraph paragraph--type--cta-item paragraph--view-mode--default cell cta-item ctaItem_428052998"> <a href="/ucr-housing-options/campus-apartments/falkirk" target=""> 
+                         <div class="cta-bg-image"> 
+                          <article> <picture> 
+                            <source srcset="/sites/g/files/rcwecm2301/files/styles/cta_image_large/public/falkirkpricing_1.jpg?h=ab622562&amp;itok=fLu8EQo- 1x" media="all and (min-width: 1401px)" type="image/jpeg"> 
+                            <source srcset="/sites/g/files/rcwecm2301/files/styles/cta_image_large/public/falkirkpricing_1.jpg?h=ab622562&amp;itok=fLu8EQo- 1x" media="all and (min-width: 1025px) and (max-width: 1400px)" type="image/jpeg"> 
+                            <source srcset="/sites/g/files/rcwecm2301/files/styles/cta_image_medium/public/falkirkpricing_1.jpg?h=ab622562&amp;itok=rgsMzzHI 1x" media="all and (min-width: 768px) and (max-width: 1024px)" type="image/jpeg"> 
+                            <source srcset="/sites/g/files/rcwecm2301/files/styles/cta_image_small/public/falkirkpricing_1.jpg?h=ab622562&amp;itok=jckZVEfC 1x" type="image/jpeg"> 
+                            <img src="/sites/g/files/rcwecm2301/files/styles/cta_image_small/public/falkirkpricing_1.jpg?h=ab622562&amp;itok=jckZVEfC" alt="Falkirk apartments" typeof="foaf:Image"> 
+                           </picture> 
+                          </article> 
+                          <div class="cta-bg-dark-overlay"></div> 
+                         </div> 
+                         <div class="cta-bg-color-overlay" style="background-color: #f18200;"></div> 
+                         <div class="cta-text-area"> 
+                          <div class="cta-title"> 
+                           <div>
+                             Falkirk 
+                           </div> <span class="cta-title-border"></span> 
+                          </div> 
+                          <div class="cta-description"></div> 
+                         </div> 
+                         <div class="cta-caption-bar" style="background-color: #f18200; color: #FEF4F6;"> 
+                          <div class="cta-caption">
+                            Campus Apartment 
+                          </div> 
+                         </div> </a> 
+                       </div> 
+                       <style type="text/css">
+            <!--
+            .cta-image-color-display .ctaItem_428052998 a .cta-text-area { color: #FEF4F6; }
+            .cta-image-color-display .ctaItem_428052998 a .cta-text-area .cta-title .cta-title-border { background-color: #FEF4F6; }
+
+            .cta-image-display .ctaItem_428052998 a .cta-text-area { color: #FEF4F6; }
+            .cta-image-display .ctaItem_428052998 a .cta-text-area .cta-title .cta-title-border { background-color: #FEF4F6; }
+            .cta-image-display .ctaItem_428052998 a:hover .cta-text-area { color: #FEF4F6; }
+            .cta-image-display .ctaItem_428052998 a:hover .cta-text-area .cta-title .cta-title-border { background-color: #FEF4F6; }
+
+            .cta-color-display .ctaItem_428052998 a .cta-text-area { color: #FEF4F6; }
+            .cta-color-display .ctaItem_428052998 a .cta-text-area .cta-title .cta-title-border { background-color: #FEF4F6; }
+            -->
+        </style> 
+                       <div class="paragraph paragraph--type--cta-item paragraph--view-mode--default cell cta-item ctaItem_699791473"> <a href="/ucr-housing-options/campus-apartments/glen-mor" target=""> 
+                         <div class="cta-bg-image"> 
+                          <article> <picture> 
+                            <source srcset="/sites/g/files/rcwecm2301/files/styles/cta_image_large/public/glenmorpricing_1.jpg?h=ab622562&amp;itok=D3s0cdbc 1x" media="all and (min-width: 1401px)" type="image/jpeg"> 
+                            <source srcset="/sites/g/files/rcwecm2301/files/styles/cta_image_large/public/glenmorpricing_1.jpg?h=ab622562&amp;itok=D3s0cdbc 1x" media="all and (min-width: 1025px) and (max-width: 1400px)" type="image/jpeg"> 
+                            <source srcset="/sites/g/files/rcwecm2301/files/styles/cta_image_medium/public/glenmorpricing_1.jpg?h=ab622562&amp;itok=paeB30on 1x" media="all and (min-width: 768px) and (max-width: 1024px)" type="image/jpeg"> 
+                            <source srcset="/sites/g/files/rcwecm2301/files/styles/cta_image_small/public/glenmorpricing_1.jpg?h=ab622562&amp;itok=PSqQG-WI 1x" type="image/jpeg"> 
+                            <img src="/sites/g/files/rcwecm2301/files/styles/cta_image_small/public/glenmorpricing_1.jpg?h=ab622562&amp;itok=PSqQG-WI" alt="Glen Mor apartments" typeof="foaf:Image"> 
+                           </picture> 
+                          </article> 
+                          <div class="cta-bg-dark-overlay"></div> 
+                         </div> 
+                         <div class="cta-bg-color-overlay" style="background-color: #f18200;"></div> 
+                         <div class="cta-text-area"> 
+                          <div class="cta-title"> 
+                           <div>
+                             Glen Mor 
+                           </div> <span class="cta-title-border"></span> 
+                          </div> 
+                          <div class="cta-description"></div> 
+                         </div> 
+                         <div class="cta-caption-bar" style="background-color: #f18200; color: #FEF4F6;"> 
+                          <div class="cta-caption">
+                            Residential Apartment 
+                          </div> 
+                         </div> </a> 
+                       </div> 
+                       <style type="text/css">
+            <!--
+            .cta-image-color-display .ctaItem_699791473 a .cta-text-area { color: #FEF4F6; }
+            .cta-image-color-display .ctaItem_699791473 a .cta-text-area .cta-title .cta-title-border { background-color: #FEF4F6; }
+
+            .cta-image-display .ctaItem_699791473 a .cta-text-area { color: #FEF4F6; }
+            .cta-image-display .ctaItem_699791473 a .cta-text-area .cta-title .cta-title-border { background-color: #FEF4F6; }
+            .cta-image-display .ctaItem_699791473 a:hover .cta-text-area { color: #FEF4F6; }
+            .cta-image-display .ctaItem_699791473 a:hover .cta-text-area .cta-title .cta-title-border { background-color: #FEF4F6; }
+
+            .cta-color-display .ctaItem_699791473 a .cta-text-area { color: #FEF4F6; }
+            .cta-color-display .ctaItem_699791473 a .cta-text-area .cta-title .cta-title-border { background-color: #FEF4F6; }
+            -->
+        </style> 
+                       <div class="paragraph paragraph--type--cta-item paragraph--view-mode--default cell cta-item ctaItem_1441375153"> <a href="/ucr-housing-options/campus-apartments/north-district" target=""> 
+                         <div class="cta-bg-image"> 
+                          <article> <picture> 
+                            <source srcset="/sites/g/files/rcwecm2301/files/styles/cta_image_large/public/north-district-render-homepage-block.jpg?h=ab622562&amp;itok=HYUk-B6C 1x" media="all and (min-width: 1401px)" type="image/jpeg"> 
+                            <source srcset="/sites/g/files/rcwecm2301/files/styles/cta_image_large/public/north-district-render-homepage-block.jpg?h=ab622562&amp;itok=HYUk-B6C 1x" media="all and (min-width: 1025px) and (max-width: 1400px)" type="image/jpeg"> 
+                            <source srcset="/sites/g/files/rcwecm2301/files/styles/cta_image_medium/public/north-district-render-homepage-block.jpg?h=ab622562&amp;itok=y60MmAmu 1x" media="all and (min-width: 768px) and (max-width: 1024px)" type="image/jpeg"> 
+                            <source srcset="/sites/g/files/rcwecm2301/files/styles/cta_image_small/public/north-district-render-homepage-block.jpg?h=ab622562&amp;itok=WE93Z4-R 1x" type="image/jpeg"> 
+                            <img src="/sites/g/files/rcwecm2301/files/styles/cta_image_small/public/north-district-render-homepage-block.jpg?h=ab622562&amp;itok=WE93Z4-R" alt="North District" typeof="foaf:Image"> 
+                           </picture> 
+                          </article> 
+                          <div class="cta-bg-dark-overlay"></div> 
+                         </div> 
+                         <div class="cta-bg-color-overlay" style="background-color: #f18200;"></div> 
+                         <div class="cta-text-area"> 
+                          <div class="cta-title"> 
+                           <div>
+                             North District 
+                           </div> <span class="cta-title-border"></span> 
+                          </div> 
+                          <div class="cta-description"></div> 
+                         </div> 
+                         <div class="cta-caption-bar" style="background-color: #f18200; color: #FEF4F6;"> 
+                          <div class="cta-caption">
+                            Campus Apartment** 
+                          </div> 
+                         </div> </a> 
+                       </div> 
+                       <style type="text/css">
+            <!--
+            .cta-image-color-display .ctaItem_1441375153 a .cta-text-area { color: #FEF4F6; }
+            .cta-image-color-display .ctaItem_1441375153 a .cta-text-area .cta-title .cta-title-border { background-color: #FEF4F6; }
+
+            .cta-image-display .ctaItem_1441375153 a .cta-text-area { color: #FEF4F6; }
+            .cta-image-display .ctaItem_1441375153 a .cta-text-area .cta-title .cta-title-border { background-color: #FEF4F6; }
+            .cta-image-display .ctaItem_1441375153 a:hover .cta-text-area { color: #FEF4F6; }
+            .cta-image-display .ctaItem_1441375153 a:hover .cta-text-area .cta-title .cta-title-border { background-color: #FEF4F6; }
+
+            .cta-color-display .ctaItem_1441375153 a .cta-text-area { color: #FEF4F6; }
+            .cta-color-display .ctaItem_1441375153 a .cta-text-area .cta-title .cta-title-border { background-color: #FEF4F6; }
+            -->
+        </style> 
+                       <div class="paragraph paragraph--type--cta-item paragraph--view-mode--default cell cta-item ctaItem_1495247421"> <a href="/ucr-housing-options/campus-apartments/the-plaza" target=""> 
+                         <div class="cta-bg-image"> 
+                          <article> <picture> 
+                            <source srcset="/sites/g/files/rcwecm2301/files/styles/cta_image_large/public/plazapricing_1.jpg?h=ab622562&amp;itok=zuLYLWbE 1x" media="all and (min-width: 1401px)" type="image/jpeg"> 
+                            <source srcset="/sites/g/files/rcwecm2301/files/styles/cta_image_large/public/plazapricing_1.jpg?h=ab622562&amp;itok=zuLYLWbE 1x" media="all and (min-width: 1025px) and (max-width: 1400px)" type="image/jpeg"> 
+                            <source srcset="/sites/g/files/rcwecm2301/files/styles/cta_image_medium/public/plazapricing_1.jpg?h=ab622562&amp;itok=CJujPBSK 1x" media="all and (min-width: 768px) and (max-width: 1024px)" type="image/jpeg"> 
+                            <source srcset="/sites/g/files/rcwecm2301/files/styles/cta_image_small/public/plazapricing_1.jpg?h=ab622562&amp;itok=OfEoGvgs 1x" type="image/jpeg"> 
+                            <img src="/sites/g/files/rcwecm2301/files/styles/cta_image_small/public/plazapricing_1.jpg?h=ab622562&amp;itok=OfEoGvgs" alt="Plaza apartments" typeof="foaf:Image"> 
+                           </picture> 
+                          </article> 
+                          <div class="cta-bg-dark-overlay"></div> 
+                         </div> 
+                         <div class="cta-bg-color-overlay" style="background-color: #f18200;"></div> 
+                         <div class="cta-text-area"> 
+                          <div class="cta-title"> 
+                           <div>
+                             The Plaza 
+                           </div> <span class="cta-title-border"></span> 
+                          </div> 
+                          <div class="cta-description"></div> 
+                         </div> 
+                         <div class="cta-caption-bar" style="background-color: #f18200; color: #FEF4F6;"> 
+                          <div class="cta-caption">
+                            Campus Apartment 
+                          </div> 
+                         </div> </a> 
+                       </div> 
+                       <style type="text/css">
+            <!--
+            .cta-image-color-display .ctaItem_1495247421 a .cta-text-area { color: #FEF4F6; }
+            .cta-image-color-display .ctaItem_1495247421 a .cta-text-area .cta-title .cta-title-border { background-color: #FEF4F6; }
+
+            .cta-image-display .ctaItem_1495247421 a .cta-text-area { color: #FEF4F6; }
+            .cta-image-display .ctaItem_1495247421 a .cta-text-area .cta-title .cta-title-border { background-color: #FEF4F6; }
+            .cta-image-display .ctaItem_1495247421 a:hover .cta-text-area { color: #FEF4F6; }
+            .cta-image-display .ctaItem_1495247421 a:hover .cta-text-area .cta-title .cta-title-border { background-color: #FEF4F6; }
+
+            .cta-color-display .ctaItem_1495247421 a .cta-text-area { color: #FEF4F6; }
+            .cta-color-display .ctaItem_1495247421 a .cta-text-area .cta-title .cta-title-border { background-color: #FEF4F6; }
+            -->
+        </style> 
+                       <div class="paragraph paragraph--type--cta-item paragraph--view-mode--default cell cta-item ctaItem_1690166279"> <a href="/ucr-housing-options/campus-apartments/stonehaven" target=""> 
+                         <div class="cta-bg-image"> 
+                          <article> <picture> 
+                            <source srcset="/sites/g/files/rcwecm2301/files/styles/cta_image_large/public/stonehavenpricing_1.jpg?h=ab622562&amp;itok=1AL1Y4LT 1x" media="all and (min-width: 1401px)" type="image/jpeg"> 
+                            <source srcset="/sites/g/files/rcwecm2301/files/styles/cta_image_large/public/stonehavenpricing_1.jpg?h=ab622562&amp;itok=1AL1Y4LT 1x" media="all and (min-width: 1025px) and (max-width: 1400px)" type="image/jpeg"> 
+                            <source srcset="/sites/g/files/rcwecm2301/files/styles/cta_image_medium/public/stonehavenpricing_1.jpg?h=ab622562&amp;itok=hyNuh6h4 1x" media="all and (min-width: 768px) and (max-width: 1024px)" type="image/jpeg"> 
+                            <source srcset="/sites/g/files/rcwecm2301/files/styles/cta_image_small/public/stonehavenpricing_1.jpg?h=ab622562&amp;itok=6vetYT0t 1x" type="image/jpeg"> 
+                            <img src="/sites/g/files/rcwecm2301/files/styles/cta_image_small/public/stonehavenpricing_1.jpg?h=ab622562&amp;itok=6vetYT0t" alt="Stonehaven apartments" typeof="foaf:Image"> 
+                           </picture> 
+                          </article> 
+                          <div class="cta-bg-dark-overlay"></div> 
+                         </div> 
+                         <div class="cta-bg-color-overlay" style="background-color: #f18200;"></div> 
+                         <div class="cta-text-area"> 
+                          <div class="cta-title"> 
+                           <div>
+                             Stonehaven 
+                           </div> <span class="cta-title-border"></span> 
+                          </div> 
+                          <div class="cta-description"></div> 
+                         </div> 
+                         <div class="cta-caption-bar" style="background-color: #f18200; color: #FEF4F6;"> 
+                          <div class="cta-caption">
+                            Campus Apartment*** 
+                          </div> 
+                         </div> </a> 
+                       </div> 
+                       <style type="text/css">
+            <!--
+            .cta-image-color-display .ctaItem_1690166279 a .cta-text-area { color: #FEF4F6; }
+            .cta-image-color-display .ctaItem_1690166279 a .cta-text-area .cta-title .cta-title-border { background-color: #FEF4F6; }
+
+            .cta-image-display .ctaItem_1690166279 a .cta-text-area { color: #FEF4F6; }
+            .cta-image-display .ctaItem_1690166279 a .cta-text-area .cta-title .cta-title-border { background-color: #FEF4F6; }
+            .cta-image-display .ctaItem_1690166279 a:hover .cta-text-area { color: #FEF4F6; }
+            .cta-image-display .ctaItem_1690166279 a:hover .cta-text-area .cta-title .cta-title-border { background-color: #FEF4F6; }
+
+            .cta-color-display .ctaItem_1690166279 a .cta-text-area { color: #FEF4F6; }
+            .cta-color-display .ctaItem_1690166279 a .cta-text-area .cta-title .cta-title-border { background-color: #FEF4F6; }
+            -->
+        </style> 
+                       <div class="paragraph paragraph--type--cta-item paragraph--view-mode--default cell cta-item ctaItem_1544533610"> <a href="/ucr-housing-options/family-housing" target=""> 
+                         <div class="cta-bg-image"> 
+                          <article> <picture> 
+                            <source srcset="/sites/g/files/rcwecm2301/files/styles/cta_image_large/public/obanpricing_0.jpg?h=ab622562&amp;itok=GKecSH8S 1x" media="all and (min-width: 1401px)" type="image/jpeg"> 
+                            <source srcset="/sites/g/files/rcwecm2301/files/styles/cta_image_large/public/obanpricing_0.jpg?h=ab622562&amp;itok=GKecSH8S 1x" media="all and (min-width: 1025px) and (max-width: 1400px)" type="image/jpeg"> 
+                            <source srcset="/sites/g/files/rcwecm2301/files/styles/cta_image_medium/public/obanpricing_0.jpg?h=ab622562&amp;itok=7VPL6oHk 1x" media="all and (min-width: 768px) and (max-width: 1024px)" type="image/jpeg"> 
+                            <source srcset="/sites/g/files/rcwecm2301/files/styles/cta_image_small/public/obanpricing_0.jpg?h=ab622562&amp;itok=TbcilzDI 1x" type="image/jpeg"> 
+                            <img src="/sites/g/files/rcwecm2301/files/styles/cta_image_small/public/obanpricing_0.jpg?h=ab622562&amp;itok=TbcilzDI" alt="Oban Family Housing" typeof="foaf:Image"> 
+                           </picture> 
+                          </article> 
+                          <div class="cta-bg-dark-overlay"></div> 
+                         </div> 
+                         <div class="cta-bg-color-overlay" style="background-color: #d6336b;"></div> 
+                         <div class="cta-text-area"> 
+                          <div class="cta-title"> 
+                           <div>
+                             Oban Family Housing 
+                           </div> <span class="cta-title-border"></span> 
+                          </div> 
+                          <div class="cta-description"></div> 
+                         </div> 
+                         <div class="cta-caption-bar" style="background-color: #d6336b; color: #FEF4F6;"> 
+                          <div class="cta-caption">
+                            Family Housing 
+                          </div> 
+                         </div> </a> 
+                       </div> 
+                       <style type="text/css">
+            <!--
+            .cta-image-color-display .ctaItem_1544533610 a .cta-text-area { color: #FEF4F6; }
+            .cta-image-color-display .ctaItem_1544533610 a .cta-text-area .cta-title .cta-title-border { background-color: #FEF4F6; }
+
+            .cta-image-display .ctaItem_1544533610 a .cta-text-area { color: #FEF4F6; }
+            .cta-image-display .ctaItem_1544533610 a .cta-text-area .cta-title .cta-title-border { background-color: #FEF4F6; }
+            .cta-image-display .ctaItem_1544533610 a:hover .cta-text-area { color: #FEF4F6; }
+            .cta-image-display .ctaItem_1544533610 a:hover .cta-text-area .cta-title .cta-title-border { background-color: #FEF4F6; }
+
+            .cta-color-display .ctaItem_1544533610 a .cta-text-area { color: #FEF4F6; }
+            .cta-color-display .ctaItem_1544533610 a .cta-text-area .cta-title .cta-title-border { background-color: #FEF4F6; }
+            -->
+        </style> 
+                      </div> 
+                     </div> 
+                    </div> 
+                   </div> 
+                  </div> 
+                 </div> 
+                 <div data-block-plugin-id="block_content:afcf321e-6ae7-4ead-9747-d8e8a4093df7" class="ucr-custom-block"> 
+                  <div class="info-card-container   " style=""> 
+                   <div class="grid-container full"> 
+                    <div class="grid-x grid-padding-x grid-padding-y small-up-1 medium-up-2 large-up-3 info-card-box text-center align-center" data-equalizer data-equalize-on="medium" data-equalize-by-row="true"> 
+                     <div class="cell"> <a href="/live-ucr/green-your-scene" target="" title="" class="info-card-full-link"> </a>
+                      <div class="paragraph paragraph--type--info-card paragraph--view-mode--default info-card" data-equalizer-watch>
+                       <a href="/live-ucr/green-your-scene" target="" title="" class="info-card-full-link"> </a>
+                       <div class="card-body">
+                        <a href="/live-ucr/green-your-scene" target="" title="" class="info-card-full-link"> <p><img alt="738k Gallons" src="/sites/g/files/rcwecm2301/files/738KGallons.png"></p> </a>
+                        <p><a href="/live-ucr/green-your-scene" target="" title="" class="info-card-full-link">We save more than 738,000 gallons annually through retrofitted appliances and 9,000 gallons a week with low-flow toilets.&nbsp;</a><a href="/living-at-ucr/sustainability">Explore our initiatives for sustainable living.</a></p> 
+                       </div> 
+                      </div>  
+                     </div> 
+                     <div class="cell"> <a href="/live-ucr/campus-safety" target="" title="" class="info-card-full-link"> </a>
+                      <div class="paragraph paragraph--type--info-card paragraph--view-mode--default info-card" data-equalizer-watch>
+                       <a href="/live-ucr/campus-safety" target="" title="" class="info-card-full-link"> </a>
+                       <div class="card-body">
+                        <a href="/live-ucr/campus-safety" target="" title="" class="info-card-full-link"> <p><img alt="24 Hour Assistance" src="/sites/g/files/rcwecm2301/files/24_7Assistance.png"></p> </a>
+                        <p><a href="/live-ucr/campus-safety" target="" title="" class="info-card-full-link">For emergency assistance, Residential Life staff is available 24 hours a day, seven days a week.&nbsp;</a><a href="/living-at-ucr/campus-safety">See more safety services available to residents.</a></p> 
+                       </div> 
+                      </div>  
+                     </div> 
+                     <div class="cell"> <a href="/live-ucr/academic-success" target="" title="" class="info-card-full-link"> </a>
+                      <div class="paragraph paragraph--type--info-card paragraph--view-mode--default info-card" data-equalizer-watch>
+                       <a href="/live-ucr/academic-success" target="" title="" class="info-card-full-link"> </a>
+                       <div class="card-body">
+                        <a href="/live-ucr/academic-success" target="" title="" class="info-card-full-link"> <p><img alt="65 Percent" src="/sites/g/files/rcwecm2301/files/65Percent.png"></p> </a>
+                        <p><a href="/live-ucr/academic-success" target="" title="" class="info-card-full-link">Students who live on campus have a 65% better chance to complete a degree in four years than students who live off campus.&nbsp;</a><a href="/living-at-ucr/academic-success">See how our Residence Halls promote academic success.</a></p> 
+                       </div> 
+                      </div>  
+                     </div> 
+                    </div> 
+                   </div> 
+                  </div> 
+                 </div> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+            </div> 
+           </article> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </main> 
+    <footer> 
+     <div class="footer-container"> 
+      <div class="footer-content-area"> 
+       <div class="grid-container"> 
+        <div class="grid-x grid-padding-x align-center"> 
+         <div id="block-ucr-design-1-ucriversidefootersearchblock" data-block-plugin-id="ucr_global_footer_search" class="cell show-for-medium footer-search"> 
+          <section class="google-search"> <button class="button footer-search-button" data-open="gscSearchFormModal">Search</button> 
+          </section> 
+         </div> 
+        </div> 
+        <div class="grid-x grid-padding-x footer-columns"> 
+         <div class="cell medium-auto"> 
+          <section class="footer-item ucr-footer-info"> <span class="footer-logo"><span class="show-for-sr">University of California, Riverside</span></span> 
+           <address> <p>900 University Ave.<br> Riverside, CA 92521</p> <p>Tel: (951) 827-1012</p> </address> 
+           <ul class="footer-links"> 
+            <li><a href="https://library.ucr.edu/" target="_blank">UCR Library</a></li> 
+            <li><a href="https://campusstatus.ucr.edu/" target="_blank">Campus Status</a></li> 
+            <li><a href="https://ucr.bncollege.com/shop/ucr/home" target="_blank">Campus Store</a></li> 
+            <li><a href="https://jobs.ucr.edu" target="_blank">Career Opportunities</a></li> 
+            <li><a href="https://diversity.ucr.edu/" target="_blank">Diversity</a></li> 
+            <li><a href="https://campusmap.ucr.edu/" target="_blank">Maps and Directions</a></li> 
+            <li><a href="https://www.ucr.edu/about/visitors" target="_blank">Visit UCR</a></li> 
+           </ul> 
+          </section> 
+         </div> 
+         <div class="cell medium-auto"> 
+          <section id="block-ucr-design-1-ucriversidefooterdeptinformationblock" data-block-plugin-id="ucr_global_footer_dept_info" class="footer-item footer-dept-info"> 
+           <h2>UCR Housing Services</h2> 
+           <address class="address_2"> <p> <a href="https://campusmap.ucr.edu/?find=P5581" target="_blank"> 3595 Canyon Crest Dr. <br>Riverside, CA 92521 </a></p> <p> tel: (951) 827-6350<br> fax: (951) 827-3807<br> email: <a href="mailto:housinginfo@ucr.edu">housinginfo@ucr.edu</a> </p> </address> 
+          </section> 
+         </div> 
+         <div class="cell medium-auto"> 
+          <section class="footer-item"> 
+           <p class="social-title">Follow US:</p> 
+           <div class="social-link"> <a href="https://facebook.com/ucrhousing" target="_blank" class="social-btn mdi mdi-facebook" title="UCR Housing on Facebook" aria-label="link to facebook"><span class="show-for-sr">UCR Housing on Facebook</span></a> <a href="https://instagram.com/ucrhousing" target="_blank" class="social-btn mdi mdi-instagram" title="UCR Housing on Instagram" aria-label="link to instagram"><span class="show-for-sr">UCR Housing on Instagram</span></a> 
+           </div> 
+          </section> 
+          <div id="block-annualsecurityandfiresafetyreportpagefooter" data-block-plugin-id="block_content:3019111b-089b-4a3a-98d1-5140940a0d9a" class="ucr-custom-block"> 
+           <div class="grid-container full"> 
+            <div class="grid-x grid-padding-x"> 
+             <div class="cell"> 
+              <p style="text-transform: uppercase; margin-bottom: 1.5em; margin-top: 1.5em; padding-bottom: 0.25rem; border-bottom: 1px solid #FFB81C; font-size: 0.625rem; font-weight: 700; line-height: 1.444; letter-spacing: 0.0625rem;"><strong>Annual Security and Fire Safety Report</strong></p> 
+              <p><a href="https://compliance.ucr.edu/clery-act-compliance" style="color:#FFF !important; text-decoration: underline;" target="_blank" title="Clery Act Compliance Report">The Jeanne CLERY Disclosure of Campus Security Policy and Campus Crime Statistics Act of 1998</a>, commonly referred to as the "CLERY Act," requires institutions of higher education receiving federal financial aid to report specified crime statistics on college campuses and to provide other safety and crime information to members of the campus community. This report is available on the <a href="https://compliance.ucr.edu/clery-act-compliance" style="color:#FFF !important; text-decoration: underline;" target="_blank" title="UCR Chief Compliance website">UC Riverside Chief Compliance website</a>.</p> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="site-legal-footer"> 
+       <div class="grid-container"> 
+        <div class="grid-x grid-padding-x"> 
+         <div class="cell"> 
+          <ul> 
+           <li><a href="http://www.ucr.edu/privacy.html">Privacy and Accessibility</a></li> 
+           <li><a href="http://www.ucr.edu/terms.html">Terms and Conditions</a></li> 
+           <li>© 2022 Regents of the University of California</li> 
+          </ul> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </footer> 
+   </div> 
+   <div class="large reveal" id="gscSearchFormModal" role="search" data-reveal data-animation-in="fade-in" data-animation-out="fade-out"> 
+    <div class="gsc-modal-top"> <button class="close-button" data-close aria-label="Close Search Window" type="button"><span aria-hidden="true">×</span></button> 
+    </div> 
+    <form id="audience-search-form" name="gsc-search-form" action="/results"> 
+     <div class="gsc-modal-body"> 
+      <div class="grid-container full"> 
+       <div class="grid-x grid-padding-x grid-padding-y align-center-middle text-center"> 
+        <div class="gsc-text-wrapper"> <span class="gsc-welcome-text">Let us help you with your search</span> 
+        </div> 
+        <div class="cell"> <label id="searchbox-label" class="hidden" aria-label="Enter your Search Criteria.">Enter your Search Criteria.</label> 
+         <input type="text" maxlength="255" id="audience-search" name="q" value="" aria-labelledby="searchbox-label" placeholder="Search for..."> 
+        </div> 
+        <div class="cell medium-4"> <button class="button gsc-modal-button-submit" type="submit" name="search-by" value="all">Search All UCR</button> 
+        </div> 
+        <div class="cell medium-4"> <button class="button gsc-modal-button-submit" type="submit" name="search-by" value="housing.ucr.edu">Search This Site</button> 
+        </div> 
+        <div class="cell medium-4"> <button type="button" class="button gsc-modal-button-close" data-close>Cancel</button> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </form> 
+   </div> 
+  </div> 
+  <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/1","currentPathIsAdmin":false,"isFront":true,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"bu":{"notify_ie":-2,"notify_firefox":-2,"notify_opera":-2,"notify_safari":-2,"notify_chrome":-2,"insecure":true,"unsupported":false,"mobile":true,"position":"top","visibility_type":"hide","visibility_pages":"admin\/*","test_mode":false,"new_window":true,"no_close":false,"text_override":"","reminder":6,"reminder_closed":6,"url":"","source":"\/\/browser-update.org\/update.min.js","show_source":""},"google_analytics":{"account":{},"trackOutbound":true,"trackMailto":true,"trackTel":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"blazy":{"loadInvisible":false,"offset":100,"saveViewportOffsetDelay":50,"loader":true,"unblazy":null},"blazyIo":{"disconnect":false,"rootMargin":"0px","threshold":[0,0.25,0.5,0.75,1]},"slick":{"accessibility":true,"adaptiveHeight":false,"autoplay":false,"autoplaySpeed":3000,"pauseOnHover":true,"pauseOnDotsHover":false,"arrows":true,"downArrow":false,"downArrowTarget":"","downArrowOffset":0,"centerMode":false,"centerPadding":"50px","dots":false,"dotsClass":"slick-dots","draggable":true,"fade":false,"focusOnSelect":false,"infinite":true,"initialSlide":0,"lazyLoad":"ondemand","mouseWheel":false,"randomize":false,"rtl":false,"rows":1,"slidesPerRow":1,"slide":"","slidesToShow":1,"slidesToScroll":1,"speed":500,"swipe":true,"swipeToSlide":false,"edgeFriction":0.34999999999999998,"touchMove":true,"touchThreshold":5,"useCSS":true,"cssEase":"ease","cssEaseBezier":"","cssEaseOverride":"","useTransform":true,"easing":"linear","variableWidth":false,"vertical":false,"verticalSwiping":false,"waitForAnimate":true,"pauseOnFocus":true},"ajax":[],"user":{"uid":0,"permissionsHash":"e6e4bf0e657e2e88df2734439f00a68d279383f7a84f38c8a7a54e028c68a141"}}</script> 
+  <script src="/sites/g/files/rcwecm2301/files/js/js_r_tvmcRfssEz7gjoYj_82F-X-lk8EWp6DkIYRmwUKcM.js"></script> 
+  <script src="https://static.addtoany.com/menu/page.js" async></script> 
+  <script src="/sites/g/files/rcwecm2301/files/js/js_PaQCdIIQD0knvQWKjZ1HS9WZGZklaLKq60eSWa0sohA.js"></script> 
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"07d404edfe","applicationID":"837425331","transactionName":"MVZSYRNWCxBZB0wIWggccVYVXgoNFyBKFEUHX2xbDlMAP3sLVhVHCV9cUBNrKwxcAW4IUBFwX1sVRQoPVAFKTAsQWlVC","queueTime":0,"applicationTime":677,"atts":"HRFRF1tMGB4=","errorBeacon":"bam-cell.nr-data.net","agent":""}</script> 
+ </body>
+</html>

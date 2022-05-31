@@ -1,0 +1,1 @@
+MAJOR FINDER HOME {{app.majorsService.getNumberOfFavorites()}} FAVORITES ADMISSIONS

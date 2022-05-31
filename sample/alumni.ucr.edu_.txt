@@ -1,0 +1,670 @@
+<!doctype html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# " class="no-js"> 
+ <head> 
+  <meta charset="utf-8">
+  <script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam-cell.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"07d404edfe",applicationID:"837425331"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script> 
+  <noscript>
+   <style>form.antibot * :not(.antibot-message) { display: none !important; }</style> 
+  </noscript>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-3051875-1"></script> 
+  <script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments)};gtag("js", new Date());gtag("set", "developer_id.dMDhkMT", true);gtag("config", "UA-3051875-1", {"groups":"default","anonymize_ip":true,"page_placeholder":"PLACEHOLDER_page_path","allow_ad_personalization_signals":false});</script> 
+  <link rel="canonical" href="https://alumni.ucr.edu/"> 
+  <link rel="shortlink" href="https://alumni.ucr.edu/"> 
+  <meta name="description" content=""> 
+  <meta property="og:site_name" content="ALUMNI"> 
+  <meta property="og:url" content="https://alumni.ucr.edu/"> 
+  <meta property="og:title" content="ALUMNI"> 
+  <meta property="og:description" content=""> 
+  <meta name="twitter:card" content="summary"> 
+  <meta name="twitter:description" content=""> 
+  <meta name="twitter:title" content="Help Build the UCR Career Network | ALUMNI"> 
+  <meta name="twitter:url" content="https://alumni.ucr.edu/"> 
+  <meta name="Generator" content="Drupal 9 (https://www.drupal.org)"> 
+  <meta name="MobileOptimized" content="width"> 
+  <meta name="HandheldFriendly" content="true"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="shortcut icon" href="/themes/custom/ucr_design_1/favicon.ico" type=""> 
+  <link rel="revision" href="https://alumni.ucr.edu/home"> 
+  <script>window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overlays=[];a2a_config.templates={};</script> 
+  <title>ALUMNI |</title> 
+  <link rel="stylesheet" media="all" href="/sites/g/files/rcwecm771/files/css/css_Tptmz6YS_cml9beM2vhlTRWJgAZdmIjTFrmP643_J5c.css"> 
+  <link rel="stylesheet" media="all" href="https://fonts.googleapis.com/css?family=Montserrat:700|Roboto+Slab:400,700|Roboto:400,700"> 
+  <link rel="stylesheet" media="all" href="/sites/g/files/rcwecm771/files/css/css_Q2v2UQ8QFjyJWvHcsMKGY_tqvguQmAupujMsVlANjGc.css"> 
+ </head> 
+ <body class="layout path-frontpage node--type-page"> 
+  <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas> 
+   <div class="webpage-content"> 
+    <header role="banner" data-sticky-container> 
+     <div class="header-sticky-container" data-ucr-sticky="1" data-ucr-mobile-sticky=""> 
+      <div class="grid-container full"> 
+       <div class="grid-x"> 
+        <div class="cell text-center ucr-site-alerts"> 
+         <div id="block-alumnicoronavirus" data-block-plugin-id="block_content:99eefe70-15c7-4171-840b-cec2dd84f9a0" class="ucr-custom-block"> 
+          <div class="grid-container full"> 
+           <div class="grid-x"> 
+            <div class="cell"> 
+             <div class="ucr-custom-block ucr-custom-alerts callout info" data-closable> 
+              <div>
+               <p><strong>Coronavirus (COVID-19)</strong>&nbsp;<b><a href="https://ehs.ucr.edu/coronavirus">information and resources</a>.</b>&nbsp;</p> 
+              </div> <button class="close-button" aria-label="Dismiss alert" type="button" data-close> <span aria-hidden="true">×</span> </button> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="grid-x"> 
+        <div class="cell small-order-2 medium-order-1 audience-container"> 
+         <div class="grid-container audience-menu-bar"> 
+          <div class="grid-x align-middle"> 
+           <div class="cell medium-shrink show-for-medium global-header-menu"> <a class="skip-main" href="#main">Skip to main content</a> 
+            <nav aria-label="global header menu"> 
+             <ul class="menu"> 
+              <li><a href="https://www.ucr.edu/alpha" target="_blank">A to Z Listing</a></li> 
+              <li><a href="https://campusmap.ucr.edu" target="_blank">Campus Map</a></li> 
+              <li><a href="https://profiles.ucr.edu" target="_blank">Find People</a></li> 
+              <li><a href="https://news.ucr.edu" target="_blank">News</a></li> 
+              <li><a href="https://www.ucr.edu" target="_blank">UCR Home</a></li> 
+             </ul> 
+            </nav> 
+           </div> 
+           <div id="block-ucr-design-1-organizationname" data-block-plugin-id="ucr_global_organization_name" class="cell auto hide-for-medium org-name"> <a class="skip-main" href="#main">Skip to main content</a> 
+            <p class="parent-org-title"> <a href="https://ucr.edu">University of California, Riverside</a> </p> 
+           </div> 
+           <div id="block-ucr-design-1-ucriversideaudiencesearchblock" data-block-plugin-id="ucr_global_audience_search" class="cell medium-shrink show-for-medium"> 
+            <section class="google-search"> <button class="button audience-search-button" data-open="gscSearchFormModal">Search</button> 
+            </section> 
+           </div> 
+           <div id="audience-links-desktop-view" data-block-plugin-id="system_menu_block:ucr-audience-menu" class="cell medium-shrink show-for-medium audience-links-desktop" aria-label="Audience Links desktop view"> 
+            <nav class="audience-links"> 
+             <ul class="vertical medium-horizontal menu" data-responsive-menu="accordion medium-dropdown" data-closing-time="100" data-alignment="left"> 
+              <li class="audience-button is-dropdown-submenu-parent"> <a href="" target="_self">Quick Links</a> 
+               <ul class="vertical menu"> 
+                <li> <a href="https://myadv.ucr.edu/forms/AlumniUpdate">Update Your Information</a> </li> 
+                <li> <a href="https://www.ucr.edu/giving" target="_blank">Make a Gift</a> </li> 
+                <li> <a href="https://www.ucr.edu/about/ranks-and-facts" target="_blank">Ranks and Impacts</a> </li> 
+                <li> <a href="/contact-us" data-drupal-link-system-path="node/111">Visit</a> </li> 
+                <li> <a href="https://parents.ucr.edu/" target="_blank">Parents Association</a> </li> 
+                <li> <a href="https://saa.ucr.edu/" target="_blank">Student Alumni Association</a> </li> 
+                <li> <a href="https://scholarships.ucr.edu/" target="_blank">Scholarships</a> </li> 
+               </ul> </li> 
+             </ul> 
+            </nav> 
+           </div> 
+           <div class="cell shrink hide-for-medium" data-responsive-toggle="main-menu-container" data-hide-for="medium"> <button class="mdi mdi-menu button mobile-menu-expander" id="mobile-menu-expander" type="button" data-toggle="main-menu-container"> </button> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="cell small-order-1 medium-order-2 masthead-container"> 
+         <div class="grid-container"> 
+          <div class="grid-x align-middle"> 
+           <div class="cell shrink"> <a class="masthead-logo-line" href="/"> <span class="show-for-sr">UC Riverside</span> </a> 
+           </div> 
+           <div class="cell auto"> 
+            <h1 class="masthead-title"> <a href="/"> ALUMNI </a> </h1> 
+           </div> 
+           <div class="cell auto show-for-medium"> 
+            <p class="slogan"> </p> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="cell small-order-3 medium-order-3 main-nav-bar"> 
+         <div class="grid-container" id="main-menu-container" data-animate="fade-in fade-out"> 
+          <div class="grid-x"> 
+           <div id="block-ucr-design-1-ucriversideaudiencesearchblock-2" data-block-plugin-id="ucr_global_audience_search" class="cell hide-for-medium"> 
+            <section class="google-search"> <button class="button audience-search-button" data-open="gscSearchFormModal">Search</button> 
+            </section> 
+           </div> 
+           <div id="block-ucr-design-1-main-menu" data-block-plugin-id="menu_block:main" class="cell main-menu-cell"> 
+            <nav id="primary-site-menu" aria-labelledby="primary-site-menu"> 
+             <ul class="standard-menu vertical medium-horizontal menu align-center-middle" data-responsive-menu="accordion medium-dropdown" data-closing-time="200"> 
+              <li> <a href="/home" target="_self" data-drupal-link-system-path="node/1" class="is-active">Home</a> </li> 
+              <li> <a href="/get-involved" target="_self" data-drupal-link-system-path="node/21">Get Involved</a> 
+               <ul class="vertical menu submenu"> 
+                <li> <a href="/get-involved" data-drupal-link-system-path="node/21">Get Involved Overview</a> </li> 
+                <li> <a href="/alumni-networks" target="_self" data-drupal-link-system-path="node/56">Alumni Networks</a> </li> 
+                <li> <a href="/advocacy" data-drupal-link-system-path="node/121">Advocacy</a> </li> 
+                <li> <a href="/board-directors" target="_self">Board of Directors</a> </li> 
+                <li> <a href="/give" target="_self">Give</a> </li> 
+                <li> <a href="/volunteer" target="_self" data-drupal-link-system-path="node/71">Volunteer</a> </li> 
+                <li> <a href="/travel-fellow-highlanders" target="_self" data-drupal-link-system-path="node/126">Travel with Fellow Highlanders</a> </li> 
+               </ul> </li> 
+              <li> <a href="/career-services" target="_self" data-drupal-link-system-path="node/26">Career Services</a> </li> 
+              <li> <a href="/membership" target="_self">Membership</a> </li> 
+              <li> <a href="/students" target="_self">Students</a> 
+               <ul class="vertical menu submenu"> 
+                <li> <a href="/student-alumni-association" data-drupal-link-system-path="node/116">Students Overview</a> </li> 
+                <li> <a href="/executive-board" target="_self">SAA Executive Board</a> </li> 
+                <li> <a href="/programs" target="_self">SAA Programs</a> </li> 
+                <li> <a href="/saa-events" data-drupal-link-system-path="node/186">SAA Events</a> </li> 
+                <li> <a href="/scholarships" data-drupal-link-system-path="node/36">Scholarships</a> </li> 
+                <li> <a href="/care-packages-students" title="Care Packages for Students" data-drupal-link-system-path="node/51">Care Packages for Students</a> </li> 
+               </ul> </li> 
+              <li> <a href="https://events.ucr.edu/department/ucr_alumni_association" target="_self">Events</a> </li> 
+              <li> <a href="/about-ucr-alumni-association" target="_self" data-drupal-link-system-path="node/46">About</a> 
+               <ul class="vertical menu submenu"> 
+                <li> <a href="/about-ucr-alumni-association" data-drupal-link-system-path="node/46">About Overview</a> </li> 
+                <li> <a href="/board-directors" target="_self">Board of Directors</a> </li> 
+                <li> <a href="/notable-alumni" target="_self" data-drupal-link-system-path="node/101">Notable Alumni</a> </li> 
+                <li> <a href="/alumni-awards" target="_self">Alumni Awards</a> </li> 
+                <li> <a href="/FAQs" target="_self">FAQs</a> </li> 
+                <li> <a href="/contact-us" target="_self" data-drupal-link-system-path="node/111">Contact Us</a> </li> 
+               </ul> </li> 
+             </ul> 
+            </nav> 
+           </div> 
+           <div class="cell global-header-menu show-for-small-only"> 
+            <nav aria-label="global header menu"> 
+             <ul class="menu"> 
+              <li class="ucr-home-link-mobile "><a href="https://www.ucr.edu" target="_blank">UCR Home</a></li> 
+             </ul> 
+            </nav> 
+           </div> 
+           <div id="audience-links-mobile-view" data-block-plugin-id="system_menu_block:ucr-audience-menu" class="cell hide-for-medium audience-links-mobile" aria-label="Audience Links mobile view"> 
+            <nav class="audience-links"> 
+             <ul class="vertical medium-horizontal menu" data-responsive-menu="accordion medium-dropdown" data-closing-time="100" data-alignment="left"> 
+              <li class="audience-button is-dropdown-submenu-parent"> <a href="" target="_self">Quick Links</a> 
+               <ul class="vertical menu"> 
+                <li> <a href="https://myadv.ucr.edu/forms/AlumniUpdate">Update Your Information</a> </li> 
+                <li> <a href="https://www.ucr.edu/giving" target="_blank">Make a Gift</a> </li> 
+                <li> <a href="https://www.ucr.edu/about/ranks-and-facts" target="_blank">Ranks and Impacts</a> </li> 
+                <li> <a href="/contact-us" data-drupal-link-system-path="node/111">Visit</a> </li> 
+                <li> <a href="https://parents.ucr.edu/" target="_blank">Parents Association</a> </li> 
+                <li> <a href="https://saa.ucr.edu/" target="_blank">Student Alumni Association</a> </li> 
+                <li> <a href="https://scholarships.ucr.edu/" target="_blank">Scholarships</a> </li> 
+               </ul> </li> 
+             </ul> 
+            </nav> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </header> 
+    <main> 
+     <div id="content-container"> 
+      <div id="hero-panel-area"> 
+       <div class="views-element-container" id="block-ucr-design-1-head-image-title-block" data-block-plugin-id="views_block:content_views-content_head_image_title_block"> 
+        <div>
+         <div class="js-view-dom-id-fd9623b07b952ae02a05e87d52bcb9dd9335d7418ffe53c35e3da86a6e1e6e4d"> 
+          <div class="grid-container full content-head-image-title-container"> 
+           <div class="grid-x"> 
+            <div class="cell"> 
+             <div class="hia-area"> 
+              <div class="hia-image"> <picture> 
+                <source srcset="/sites/g/files/rcwecm771/files/styles/header_with_video_xlarge/public/homepage-hero-fall.jpg?h=73c22c0b&amp;itok=QkVr6bh_ 1x" media="all and (min-width: 1401px)" type="image/jpeg"> 
+                <source srcset="/sites/g/files/rcwecm771/files/styles/header_with_video_large/public/homepage-hero-fall.jpg?h=73c22c0b&amp;itok=4Za5qYaR 1x" media="all and (min-width: 1025px) and (max-width: 1400px)" type="image/jpeg"> 
+                <source srcset="/sites/g/files/rcwecm771/files/styles/header_with_video_medium/public/homepage-hero-fall.jpg?h=73c22c0b&amp;itok=6VOhMMLc 1x" media="all and (min-width: 768px) and (max-width: 1024px)" type="image/jpeg"> 
+                <source srcset="/sites/g/files/rcwecm771/files/styles/header_with_video_small/public/homepage-hero-fall.jpg?h=73c22c0b&amp;itok=umA2SfCD 1x" type="image/jpeg"> 
+                <img src="/sites/g/files/rcwecm771/files/styles/header_with_video_xlarge/public/homepage-hero-fall.jpg?h=73c22c0b&amp;itok=QkVr6bh_" alt="campus fall image" typeof="foaf:Image"> 
+               </picture> 
+              </div> 
+              <div class="hero-video"> 
+               <video class="hero-video-player" autoplay="true" loop="true" muted="true"> 
+                <source src="https://vimeo.com/329192359/a8f442e240" type="video/mp4"> 
+               </video> 
+              </div> 
+              <div class="video-overlay-title overlay-title-bottom-left" style="display:block;"> 
+               <h1>Help Build the UCR Career Network</h1> <a href="https://careernetwork.ucr.edu">Sign up now</a> 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="block-heroslider-3" data-block-plugin-id="block_content:f285aed7-d452-447b-ac0c-c2ad653b2a57"> 
+        <div class="grid-container full"> 
+         <div class="grid-x"> 
+          <div class="cell"> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="grid-container"> 
+       <div class="grid-x grid-padding-x grid-padding-y primary-content-header"> 
+        <div id="block-ucr-design-1-breadcrumbs" data-block-plugin-id="system_breadcrumb_block" class="cell"> 
+         <div>
+          <span id="system-breadcrumb" class="visually-hidden">Breadcrumb</span>
+         </div> 
+         <div class="grid-container full"> 
+          <div class="grid-x breadcrumb-container"> 
+           <div class="shrink cell breadcrumb-home"> <a href="/"><span class="mdi mdi-home breadcrumb-home-icon" aria-label="Redirects to the homepage of this site."></span></a> 
+           </div> 
+           <div class="auto cell breadcrumb-list"> 
+            <nav aria-labelledby="system-breadcrumb"> 
+             <ul class="breadcrumbs"> 
+              <li class="list-no-display"><span>&nbsp;</span></li> 
+             </ul> 
+            </nav> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+        <div id="block-ucr-design-1-page-title" data-block-plugin-id="page_title_block" class="cell"> 
+        </div> 
+       </div> 
+       <div class="grid-x grid-padding-x system-admin-controls"> 
+       </div> 
+      </div> 
+      <div id="main" class="grid-container full primary-content-area"> 
+       <div class="grid-x"> 
+        <div class="cell large-auto small-order-3 medium-order-3 large-order-2 pca-content"> 
+         <div> 
+          <div id="block-ucr-design-1-content" data-block-plugin-id="system_main_block"> 
+           <article role="article" about="/home"> 
+            <div> 
+             <div class="layout layout-one-col grid-container"> 
+              <div class="grid-x grid-padding-x grid-padding-y grid-margin-x grid-margin-y"> 
+               <div class="cell"> 
+                <div class="layout__region layout__region--main"> 
+                 <div data-block-plugin-id="field_block:node:page:body"> 
+                  <div class="basic-body"> <span><h2 class="text-align-center"><strong>We’re proud to be more than 130,000 Highlanders Strong!&nbsp;</strong></h2> <p>&nbsp;</p> <h4 class="text-align-center"><span style="color:#1d3a61;">As a&nbsp;graduate of America’s fastest rising ranked university, you're part of a young, vibrant alumni community that is changing the world in extraordinary ways! </span></h4> <p>&nbsp;</p> <h6 class="text-align-center"><span style="color:#1d3a61;">Discover the many networking opportunities, online career resources, educational conferences, travel experiences, and fun family-friendly events that we have to offer. Make new friends, volunteer for an awesome cause, launch a new business, catch a game, or let our visionary artists, musicians, and writers inspire you. </span></h6> <h6 class="text-align-center"><span style="color:#1d3a61;">Explore the many ways UCR’s people and research are transforming California and beyond. And know that your involvement and support empowers the dreams of the next generation.</span></h6> <h6>&nbsp;</h6> 
+                    <hr><h2 class="separator-line-before"><span style="color:null;">Events</span></h2> <p>&nbsp;</p> </span> 
+                  </div> 
+                 </div> 
+                 <div data-block-plugin-id="extra_field_block:node:page:content_moderation_control"> 
+                 </div> 
+                 <div data-block-plugin-id="block_content:85e3134f-2071-4e79-96f6-e229338b3672" class="ucr-custom-block"> 
+                  <div class="grid-container"> 
+                   <div class="grid-x grid-padding-x"> 
+                    <div class="cell localist-events-container"> 
+                     <div class="localist-widget" id="localist-widget-77249695">
+                      &nbsp;
+                     </div> 
+                     <script defer type="text/javascript" src="https://events.ucr.edu/widget/view?schools=ucr&amp;departments=ucr_alumni_association&amp;days=365&amp;num=5&amp;container=localist-widget-77249695&amp;template=card"></script> 
+                    </div> 
+                   </div> 
+                  </div> 
+                 </div> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+             <div class="layout layout-one-col grid-container full"> 
+              <div class="grid-x"> 
+               <div class="cell"> 
+                <div class="layout__region layout__region--main"> 
+                 <div data-block-plugin-id="block_content:346d3d83-9ffc-4b18-954a-19dc0c2b021f" class="ucr-custom-block ucr-custom-block-custom-margins ucr-custom-block-custom-paddings" style="background: linear-gradient(rgba(29,54,97,0.7),rgba(29,54,97,0.7)), url(/sites/g/files/rcwecm771/files/alumni-greyscale-1400x450.jpg); background-size: cover;"> 
+                  <div class="grid-container ucr-custom-block-font-white margin-vertical-1 padding-vertical-4" style="background: linear-gradient(rgba(29,54,97,0),rgba(29,54,97,0));"> 
+                   <div class="grid-x grid-padding-x"> 
+                    <div class="cell"> 
+                     <h2 class="text-align-center"><span style="color:null;"><strong><span style="font-size:2em;">Find Your Place.</span></strong></span></h2> 
+                     <h2 class="text-align-center"><span style="color:#ffffff;"><strong>Highlanders are everywhere, and there are multiple networks for you to join. Find a group in your area or connect with others that share your interests.</strong></span><br> &nbsp;</h2> 
+                     <p class="text-align-center"><br><a alumni-networks="" btn-ucr=" href=" class="btn-ucr-alt" href="/alumni-networks">Learn More</a></p> 
+                    </div> 
+                   </div> 
+                  </div> 
+                 </div> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+             <div class="layout layout-one-col grid-container"> 
+              <div class="grid-x grid-padding-x"> 
+               <div class="cell"> 
+                <div class="layout__region layout__region--main"> 
+                 <div data-block-plugin-id="block_content:5b83bc3e-fe41-4662-a9d0-872c53da1c67" class="ucr-custom-block"> 
+                  <div class="grid-container full"> 
+                   <div class="grid-x grid-padding-x"> 
+                    <div class="cell"> 
+                     <h3>&nbsp;</h3> 
+                     <h3>Stay Connected</h3> 
+                     <p>Become a member of the UCR Alumni Association and enjoy the many benefits – both on and off-campus.</p> 
+                     <p><a class="btn-ucr" href="/membership">Join Today</a></p> 
+                     <hr>
+                     <h3>We’re Here to Help You Excel in Your Career</h3> 
+                     <p>Find out what career resources are available to you.&nbsp;</p> 
+                     <p><a class="btn-ucr" href="/career-services">Explore More</a></p> 
+                     <hr>
+                     <h3>Give Back While Connecting with Fellow Highlanders</h3> 
+                     <p>Become a mentor, share your expertise, serve on a committee or participate in Highlander Day of Service.</p> 
+                     <p><a class="btn-ucr" href="/volunteer">Learn More</a></p> 
+                     <hr>
+                     <h3>Travel with Us</h3> 
+                     <p>Take advantage of the UCRAA’s travel program with discounts on international trips.</p> 
+                     <p><a class="btn-ucr" href="/travel-fellow-highlanders">Plan Your Next Vacation</a></p> 
+                     <hr>
+                     <h3>Tell us About your Exciting Event</h3> 
+                     <p>We want to recognize the milestones and achievements of our alumni.</p> 
+                     <p><a class="btn-ucr" href="https://myadv.ucr.edu/forms/Class-Notes">Share your Accomplishments</a></p> 
+                     <hr> 
+                    </div> 
+                   </div> 
+                  </div> 
+                 </div> 
+                 <div data-block-plugin-id="block_content:b396d66a-ea51-4eca-8818-d6c7a8e2d25b" class="ucr-custom-block ucr-custom-block-custom-margins ucr-custom-block-font-white margin-bottom-3"> 
+                  <div class="grid-container full teaser-callout-intro"> 
+                   <div class="grid-x grid-padding-x"> 
+                    <div class="cell"> 
+                     <h3 class="separator-line-before"><span style="color:#329af0;">Notable Alumni</span></h3> 
+                     <p>&nbsp;</p> 
+                    </div> 
+                   </div> 
+                  </div> 
+                  <div class="grid-container full teaser-callout" style="background: url(/sites/g/files/rcwecm771/files/alumni-showcase-verret.jpg) 0 0/cover;"> 
+                   <div class="grid-x align-stretch"> 
+                    <div class="auto cell align-self-middle show-for-medium"> 
+                     <div class="ts-option text-center"> 
+                     </div> 
+                    </div> 
+                    <div class="medium-5 cell"> 
+                     <div class="ts-text" style=" background: linear-gradient(rgba(45,108,192,1),rgba(45,108,192,1));"> 
+                      <h2>Denise Verret '88</h2> 
+                      <p>Denise is the CEO and zoo director of the Los Angeles Zoo and Botanical Gardens. She is the first African American woman to lead a major U.S. zoo.</p> 
+                      <ul class="ts-url-list"> 
+                       <li><a href="/notable-alumni" target="_self">More Notable Alumni</a></li> 
+                      </ul> 
+                     </div> 
+                    </div> 
+                   </div> 
+                  </div> 
+                 </div> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+             <div class="layout layout-one-col grid-container"> 
+              <div class="grid-x"> 
+               <div class="cell"> 
+                <div class="layout__region layout__region--main"> 
+                 <div data-block-plugin-id="block_content:838384ef-64ec-4f67-8b38-35858410df91" class="ucr-custom-block"> 
+                  <div class="grid-container full"> 
+                   <div class="grid-x grid-padding-x"> 
+                    <div class="cell"> 
+                     <h3 class="separator-line-before">Latest News</h3> 
+                    </div> 
+                   </div> 
+                  </div> 
+                  <div class="views-element-container">
+                   <div class="js-view-dom-id-381b309f8da288a73d5d4804ab3983af8c6384a91c681ab45df6ddc92b79c141"> 
+                    <div class="feed-import-view-container"> 
+                     <div class="grid-container full"> 
+                      <div class="grid-x grid-padding-x grid-padding-y small-up-1 medium-up-2 large-up-4 align-center" data-equalizer data-equalize-on="medium" data-equalize-by-row="true"> 
+                       <div class="cell"> 
+                        <div class="feed-article"> 
+                         <div class="article-image"> 
+                          <img src="https://news.ucr.edu/sites/g/files/rcwecm1816/files/styles/news_article_featured_l/public/2022-03/SEARCH%20header.jpeg?h=dbcb9c80&amp;itok=pvokAW3G" alt="A UCR SEARCH Center staffer works with an autistic child" typeof="Image"> 
+                         </div> 
+                         <div class="article-date"> <span class="date">March 29, 2022</span> 
+                         </div> 
+                         <div class="article-title">
+                           Families of children with autism can get free help from UC Riverside’s SEARCH Center 
+                         </div> 
+                         <div class="article-body">
+                           Inland Empire families don’t have to wade through school and service systems alone 
+                         </div> 
+                         <div class="article-link"> <a href="https://news.ucr.edu/articles/2022/03/29/families-children-autism-can-get-free-help-uc-riversides-search-center" target="_blank" aria-label="Read more about Families of children with autism can get free help from UC Riverside’s SEARCH Center">Read More »</a> 
+                         </div> 
+                        </div> 
+                       </div> 
+                       <div class="cell"> 
+                        <div class="feed-article"> 
+                         <div class="article-image"> 
+                          <img src="https://news.ucr.edu/sites/g/files/rcwecm1816/files/styles/news_article_featured_l/public/2021-10/ivan-diaz-_ts3NfjvaXo-unsplash.jpg?h=7bcbffb3&amp;itok=6JrsGzkg" alt="A syringe injecting a vaccine into a ball with pins that represents the covid-19 virus" typeof="Image"> 
+                         </div> 
+                         <div class="article-date"> <span class="date">March 28, 2022</span> 
+                         </div> 
+                         <div class="article-title">
+                           Should you get a second booster shot for COVID-19? 
+                         </div> 
+                         <div class="article-body">
+                           UC Riverside’s Dr. David Lo, a vaccine expert, shares his thoughts 
+                         </div> 
+                         <div class="article-link"> <a href="https://news.ucr.edu/articles/2022/03/28/should-you-get-second-booster-shot-covid-19" target="_blank" aria-label="Read more about Should you get a second booster shot for COVID-19?">Read More »</a> 
+                         </div> 
+                        </div> 
+                       </div> 
+                       <div class="cell"> 
+                        <div class="feed-article"> 
+                         <div class="article-image"> 
+                          <img src="https://news.ucr.edu/sites/g/files/rcwecm1816/files/styles/news_article_featured_l/public/2022-03/Allison%20Adelle%20Hedge%20Coke%E2%80%99s%20new%20book%2C%20%E2%80%9CLook%20at%20This%20Blue%2C%E2%80%9D%20is%20set%20to%20release%20on%20March%2029%20by%20Coffee%20House%20Press_007.JPG?h=d73b4fec&amp;itok=OpiahsLW" alt="Allison Adelle Hedge Coke’s new book, “Look at This Blue,” is set to release on March 29 by Coffee House Press. (UCR/Stan Lim)" typeof="Image"> 
+                         </div> 
+                         <div class="article-date"> <span class="date">March 24, 2022</span> 
+                         </div> 
+                         <div class="article-title">
+                           New book by Allison Adelle Hedge Coke, ‘Look at This Blue,’ is a tough love letter to California&nbsp; 
+                         </div> 
+                         <div class="article-body">
+                           Poetry collection captures the author's own life, as well as many of the golden state’s overlooked truths: genocide, environmental degradation, and climate change. 
+                         </div> 
+                         <div class="article-link"> <a href="https://news.ucr.edu/articles/2022/03/24/new-book-allison-adelle-hedge-coke-look-blue-tough-love-letter-california" target="_blank" aria-label="Read more about New book by Allison Adelle Hedge Coke, ‘Look at This Blue,’ is a tough love letter to California&nbsp;">Read More »</a> 
+                         </div> 
+                        </div> 
+                       </div> 
+                       <div class="cell"> 
+                        <div class="feed-article"> 
+                         <div class="article-image"> 
+                          <img src="https://news.ucr.edu/sites/g/files/rcwecm1816/files/styles/news_article_featured_l/public/2022-03/angry%20stressed.jpg?h=170ba4b8&amp;itok=lNoAM8GE" alt="An angry or stressed man screaming" typeof="Image"> 
+                         </div> 
+                         <div class="article-date"> <span class="date">March 23, 2022</span> 
+                         </div> 
+                         <div class="article-title">
+                           Study highlights need to address race and racism in teacher education programs 
+                         </div> 
+                         <div class="article-body">
+                           UCR research shows race evasiveness harms teacher educators and charts a path toward identifying and disrupting racism 
+                         </div> 
+                         <div class="article-link"> <a href="https://news.ucr.edu/articles/2022/03/23/study-highlights-need-address-race-and-racism-teacher-education-programs" target="_blank" aria-label="Read more about Study highlights need to address race and racism in teacher education programs">Read More »</a> 
+                         </div> 
+                        </div> 
+                       </div> 
+                      </div> 
+                     </div> 
+                    </div> 
+                   </div> 
+                  </div> 
+                  <div class="grid-container full"> 
+                   <div class="grid-x grid-padding-x"> 
+                    <div class="cell padding-top-1"> 
+                     <div class="more-link"> <a href="http://news.ucr.edu">More News</a> 
+                     </div> 
+                    </div> 
+                   </div> 
+                  </div> 
+                 </div> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+             <div class="layout layout-one-col grid-container full"> 
+              <div class="grid-x"> 
+               <div class="cell"> 
+                <div class="layout__region layout__region--main"> 
+                 <div data-block-plugin-id="block_content:c19b176e-9a57-4710-8ce4-22426f870d53" class="ucr-custom-block ucr-custom-block-custom-margins ucr-custom-block-custom-paddings" style="background: linear-gradient(rgba(45,108,192,0.8),rgba(45,108,192,0.8)), url(/sites/g/files/rcwecm771/files/campus-aerial-01.jpg); background-size: cover;"> 
+                  <div class="grid-container ucr-custom-block-font-white margin-top-4 margin-bottom-2 padding-top-4 padding-bottom-0 padding-horizontal-3" style="background: linear-gradient(rgba(45,108,192,0),rgba(45,108,192,0));"> 
+                   <div class="grid-x grid-padding-x"> 
+                    <div class="cell"> 
+                     <div alt="Cam Calkin" data-embed-button="media_browser" data-entity-embed-display="media_image" data-entity-type="media" data-entity-uuid="86d2bacf-19c3-4fb5-943a-3b8981c563c2" title="Cam Calkin Quote Image" data-langcode="en" class="embedded-entity align-left"> 
+                      <img src="/sites/g/files/rcwecm771/files/calkin-350x350-margin-top-bottom.jpg" alt="Cam Calkin" title="Cam Calkin Quote Image" typeof="foaf:Image">
+                     </div> 
+                     <h3><strong>Your Gift Supports</strong></h3> 
+                     <h5>When you give to UCR, you're supporting academic excellence, research, and student success.<br> &nbsp;</h5> 
+                     <h3>"This is a way to say thank-you. I want to thank UCR because it made me who I am today."</h3> 
+                     <h5><strong>— Cam Calkins</strong></h5> 
+                     <p>&nbsp;</p> 
+                     <p><a class="btn-ucr" href="https://myadv.ucr.edu/">Give Now</a></p> 
+                    </div> 
+                   </div> 
+                  </div> 
+                 </div> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+             <div class="layout layout-one-col grid-container"> 
+              <div class="grid-x grid-padding-x"> 
+               <div class="cell"> 
+                <div class="layout__region layout__region--main"> 
+                 <div data-block-plugin-id="block_content:adeb37c1-003d-44d7-afda-b032ea12cf71" class="ucr-custom-block ucr-custom-block-custom-margins margin-top-2"> 
+                  <div class="grid-container"> 
+                   <div class="button-bar btn-justified-100"> 
+                    <div class="grid-x grid-margin-x grid-padding-y small-up-1 medium-up-3 text-center align-center" data-equalizer data-equalize-on="medium" data-equalize-by-row="true"> 
+                     <div class="paragraph paragraph--type--button-bar paragraph--view-mode--default cell align-center-middle"> 
+                      <div class="button-item btn-ucr-alt" data-equalizer-watch> <a href="https://magazine.ucr.edu" target="_blank">UCR Magazine</a> 
+                      </div> 
+                     </div> 
+                     <div class="paragraph paragraph--type--button-bar paragraph--view-mode--default cell align-center-middle"> 
+                      <div class="button-item btn-ucr-alt" data-equalizer-watch> <a href="https://library.ucr.edu/">UCR Library</a> 
+                      </div> 
+                     </div> 
+                     <div class="paragraph paragraph--type--button-bar paragraph--view-mode--default cell align-center-middle"> 
+                      <div class="button-item btn-ucr-alt" data-equalizer-watch> <a href="https://www.extension.ucr.edu/">UCR Extension</a> 
+                      </div> 
+                     </div> 
+                    </div> 
+                   </div> 
+                  </div> 
+                 </div> 
+                 <div data-block-plugin-id="inline_block:basic" class="ucr-custom-block ucr-custom-block-custom-margins ucr-custom-block-custom-paddings"> 
+                  <div class="grid-container margin-vertical-1 medium-margin-horizontal-0 padding-0"> 
+                   <div class="grid-x grid-padding-x"> 
+                    <div class="cell"> 
+                     <hr>
+                     <h3 class="text-align-center">Affinity Partners</h3> 
+                    </div> 
+                   </div> 
+                  </div> 
+                 </div> 
+                 <div data-block-plugin-id="inline_block:ucr_columns" class="ucr-custom-block ucr-custom-block-custom-margins ucr-custom-block-custom-paddings"> 
+                  <div class="dynamic-columns dc-centered dc-standard margin-top-0 margin-bottom-3 medium-margin-horizontal-0 padding-0" style="overflow:hidden; "> 
+                   <div class="grid-container"> 
+                    <div class="grid-x grid-padding-x grid-padding-y small-up-1 medium-up-3 large-up-3 align-center"> 
+                     <div class="paragraph paragraph--type--ucr-columns paragraph--view-mode--default cell" style=""> 
+                      <div style=" padding: 0px 50px 0px 0px; border-right: 0px solid #cccccc;"> 
+                       <p style="text-align:center"><a href="https://www.geico.com/landingpage/member-discount/?logo=70578" style="text-decoration: none !important; color: rgba(0, 0, 0, 0.0); " target="_blank"><img alt="Geico Alumni Discount" src="/sites/g/files/rcwecm771/files/geico-alumni-disscount-logo_0.png"></a></p> 
+                      </div> 
+                     </div> 
+                     <div class="paragraph paragraph--type--ucr-columns paragraph--view-mode--default cell" style=""> 
+                      <div style=" padding: 0px 0px 0px 0px; border-left: 0px solid #cccccc;"> 
+                       <p style="text-align:center"><a href="https://ucr.meyerandassoc.com/" style="text-decoration: none !important; color: rgba(0, 0, 0, 0.0); " target="_blank"><img alt="Meyer and Associates" src="/sites/g/files/rcwecm771/files/Meyer-logo.png"></a></p> 
+                      </div> 
+                     </div> 
+                     <div class="paragraph paragraph--type--ucr-columns paragraph--view-mode--default cell" style=""> 
+                      <div style=" padding: 0px 0px 0px 0px; border-left: 0px solid #cccccc;"> 
+                       <p style="text-align:center"><a href="https://www.jasonmata.com/uc-riverside" style="text-decoration: none !important; color: rgba(0, 0, 0, 0.0); " target="_blank"><img alt="American Pacific Mortgage" src="/sites/g/files/rcwecm771/files/american-pacific-mortgage.png"></a></p> 
+                      </div> 
+                     </div> 
+                    </div> 
+                   </div> 
+                  </div> 
+                 </div> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+            </div> 
+           </article> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </main> 
+    <footer> 
+     <div class="footer-container"> 
+      <div class="footer-content-area"> 
+       <div class="grid-container"> 
+        <div class="grid-x grid-padding-x align-center"> 
+         <div id="block-ucr-design-1-ucriversidefootersearchblock" data-block-plugin-id="ucr_global_footer_search" class="cell show-for-medium footer-search"> 
+          <section class="google-search"> <button class="button footer-search-button" data-open="gscSearchFormModal">Search</button> 
+          </section> 
+         </div> 
+        </div> 
+        <div class="grid-x grid-padding-x footer-columns"> 
+         <div class="cell medium-auto"> 
+          <section class="footer-item ucr-footer-info"> <span class="footer-logo"><span class="show-for-sr">University of California, Riverside</span></span> 
+           <address> <p>900 University Ave.<br> Riverside, CA 92521</p> <p>Tel: (951) 827-1012</p> </address> 
+           <ul class="footer-links"> 
+            <li><a href="https://library.ucr.edu/" target="_blank">UCR Library</a></li> 
+            <li><a href="https://campusstatus.ucr.edu/" target="_blank">Campus Status</a></li> 
+            <li><a href="https://ucr.bncollege.com/shop/ucr/home" target="_blank">Campus Store</a></li> 
+            <li><a href="https://jobs.ucr.edu" target="_blank">Career Opportunities</a></li> 
+            <li><a href="https://diversity.ucr.edu/" target="_blank">Diversity</a></li> 
+            <li><a href="https://campusmap.ucr.edu/" target="_blank">Maps and Directions</a></li> 
+            <li><a href="https://www.ucr.edu/about/visitors" target="_blank">Visit UCR</a></li> 
+           </ul> 
+          </section> 
+         </div> 
+         <div class="cell medium-auto"> 
+          <section id="block-ucr-design-1-ucriversidefooterdeptinformationblock" data-block-plugin-id="ucr_global_footer_dept_info" class="footer-item footer-dept-info"> 
+           <h2>Alumni Engagement</h2> 
+           <address class="address_2"> <p> <a href="https://campusmap.ucr.edu" target="_blank"> 2203 Alumni &amp; Visitors Center <br>Riverside, CA 92521 </a></p> <p> tel: (951) 827-2586 (UCR-ALUMNI)<br> fax: (951) 398-4887<br> email: <a href="mailto:ucralum@ucr.edu">ucralum@ucr.edu</a> </p> </address> 
+          </section> 
+          <section class="footer-item"> 
+           <p class="social-title">Follow US:</p> 
+           <div class="social-link"> <a href="https://www.facebook.com/ucralumni" target="_blank" class="social-btn mdi mdi-facebook" title="Alumni Facebook Page" aria-label="link to facebook"><span class="show-for-sr">Alumni Facebook Page</span></a> <a href="https://twitter.com/ucralum" target="_blank" class="social-btn mdi mdi-twitter" title="UCR Alumni Twitter" aria-label="link to twitter"><span class="show-for-sr">UCR Alumni Twitter</span></a> <a href="https://www.instagram.com/ucralumni/" target="_blank" class="social-btn mdi mdi-instagram" title="UCR Alumni Instagram" aria-label="link to instagram"><span class="show-for-sr">UCR Alumni Instagram</span></a> <a href="https://www.linkedin.com/groups/97683/" target="_blank" class="social-btn mdi mdi-linkedin" title="UCR Alumni LinkedIn" aria-label="link to linkedin"><span class="show-for-sr">UCR Alumni LinkedIn</span></a> 
+           </div> 
+          </section> 
+         </div> 
+         <div class="cell medium-auto"> 
+          <section id="block-ucr-design-1-ucriversiderelatedlinks" data-block-plugin-id="system_menu_block:ucr-related-links-menu" class="footer-item footer-related-links"> 
+           <h3>Related Links</h3> 
+           <nav role="navigation" aria-labelledby="related-links-menu"> 
+            <ul class="vertical menu"> 
+             <li><a href="" target="_blank">Student Alumni Association</a> </li> 
+             <li><a href="https://parents.ucr.edu/" target="_blank">Parents Association</a> </li> 
+             <li><a href="https://myadv.ucr.edu/forms/AlumniUpdate" target="_blank">Update Contact Information</a> </li> 
+             <li><a href="https://www.ucr.edu/giving" target="_blank">Give Now</a> </li> 
+            </ul> 
+           </nav> 
+          </section> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="site-legal-footer"> 
+       <div class="grid-container"> 
+        <div class="grid-x grid-padding-x"> 
+         <div class="cell"> 
+          <ul> 
+           <li><a href="http://www.ucr.edu/privacy.html">Privacy and Accessibility</a></li> 
+           <li><a href="http://www.ucr.edu/terms.html">Terms and Conditions</a></li> 
+           <li>© 2022 Regents of the University of California</li> 
+          </ul> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </footer> 
+   </div> 
+   <div class="large reveal" id="gscSearchFormModal" role="search" data-reveal data-animation-in="fade-in" data-animation-out="fade-out"> 
+    <div class="gsc-modal-top"> <button class="close-button" data-close aria-label="Close Search Window" type="button"><span aria-hidden="true">×</span></button> 
+    </div> 
+    <form id="audience-search-form" name="gsc-search-form" action="https://www.ucr.edu/search-results"> 
+     <div class="gsc-modal-body"> 
+      <div class="grid-container full"> 
+       <div class="grid-x grid-padding-x grid-padding-y align-center-middle text-center"> 
+        <div class="gsc-text-wrapper"> <span class="gsc-welcome-text">Let us help you with your search</span> 
+        </div> 
+        <div class="cell"> <label id="searchbox-label" class="hidden" aria-label="Enter your Search Criteria.">Enter your Search Criteria.</label> 
+         <input type="text" maxlength="255" id="audience-search" name="q" value="" aria-labelledby="searchbox-label" placeholder="Search for..."> 
+        </div> 
+        <div class="cell medium-4"> <button class="button gsc-modal-button-submit" type="submit" name="search-by" value="all">Search All UCR</button> 
+        </div> 
+        <div class="cell medium-4"> <button class="button gsc-modal-button-submit" type="submit" name="search-by" value="alumni.ucr.edu">Search This Site</button> 
+        </div> 
+        <div class="cell medium-4"> <button type="button" class="button gsc-modal-button-close" data-close>Cancel</button> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </form> 
+   </div> 
+  </div> 
+  <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/1","currentPathIsAdmin":false,"isFront":true,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"bu":{"notify_ie":-2,"notify_firefox":-2,"notify_opera":-2,"notify_safari":-2,"notify_chrome":-2,"insecure":true,"unsupported":false,"mobile":true,"position":"top","visibility_type":"hide","visibility_pages":"admin\/*","test_mode":false,"new_window":true,"no_close":false,"text_override":"","reminder":6,"reminder_closed":6,"url":"","source":"\/\/browser-update.org\/update.min.js","show_source":""},"google_analytics":{"account":{},"trackOutbound":true,"trackMailto":true,"trackTel":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"ajax":[],"user":{"uid":0,"permissionsHash":"d7bdbdfed7826ba74159ff6349e5fa541b083e9b470bd2cae8ff973bb5f28cc5"}}</script> 
+  <script src="/sites/g/files/rcwecm771/files/js/js_XHDPTJ76dHOVA6ZHbvgvwX0R1GI7472xWXAHlrG1CLA.js"></script> 
+  <script src="https://static.addtoany.com/menu/page.js" async></script> 
+  <script src="/sites/g/files/rcwecm771/files/js/js_nSo_BluoJ8wxbZo_mB9_btqx0-axJsmvrWDXqX_FK5A.js"></script> 
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"07d404edfe","applicationID":"837425331","transactionName":"MVZSYRNWCxBZB0wIWggccVYVXgoNFxRZBlA5UFFWCVI=","queueTime":0,"applicationTime":58,"atts":"HRFRF1tMGB4=","errorBeacon":"bam-cell.nr-data.net","agent":""}</script> 
+ </body>
+</html>

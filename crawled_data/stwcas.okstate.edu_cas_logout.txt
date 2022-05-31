@@ -1,0 +1,1 @@
+OSU A&M System CAS Central Authentication Service Actuator Endpoints Documentation Pull Requests Contributor Guidelines Support Mailing Lists Chatroom Blog OK Logout successful You have successfully logged out of the Central Authentication Service. You may log in again. For security reasons, exit your web browser.
