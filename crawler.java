@@ -150,11 +150,53 @@ public class Crawler implements Runnable {
 
     public static void main(String[] args) {
         ArrayList<String> seeds = new ArrayList<String>();
-        seeds.add("https://go.okstate.edu/");
-        seeds.add("https://www.baylor.edu/");
-        seeds.add("https://www.utexas.edu/");
-        seeds.add("https://www.tamu.edu/");
-        seeds.add("https://www.ttu.edu/");
+        seeds.add("https://www.ecu.edu/");
+        seeds.add("https://www.smu.edu/");
+        seeds.add("https://www.temple.edu/");
+        seeds.add("https://tulane.edu/");
+        seeds.add("https://www.ucf.edu/");
+        seeds.add("https://www.uc.edu/");
+        seeds.add("https://www.uh.edu/");
+        seeds.add("https://www.memphis.edu/");
+        seeds.add("https://utulsa.edu/");
+        seeds.add("https://www.wichita.edu/");
+        seeds.add("https://www.bc.edu/");
+        seeds.add("https://www.clemson.edu/");
+        seeds.add("https://www.fsu.edu//");
+        seeds.add("https://louisville.edu/");
+        seeds.add("https://www.ncsu.edu/");
+
+        seeds.add("https://www.nd.edu/");
+        seeds.add("https://www.syracuse.edu/");
+        seeds.add("https://duke.edu/");
+        seeds.add("https://www.gatech.edu/");
+        seeds.add("https://welcome.miami.edu/");
+        seeds.add("https://www.unc.edu/");
+        seeds.add("https://www.pitt.edu/");
+        seeds.add("https://www.virginia.edu/");
+        seeds.add("https://vt.edu/");
+        seeds.add("https://www.butler.edu/");
+        seeds.add("https://uconn.edu/");
+        seeds.add("https://www.creighton.edu/");
+        seeds.add("https://www.depaul.edu/");
+        seeds.add("https://www.georgetown.edu/");
+        seeds.add("https://www.marquette.edu/");
+
+        seeds.add("https://www.providence.edu/");
+        seeds.add("https://www.stjohns.edu/");
+        seeds.add("https://www.shu.edu/");
+        seeds.add("https://www1.villanova.edu/");
+        seeds.add("https://www.xavier.edu/");
+        seeds.add("https://www.indiana.edu/");
+        seeds.add("https://www.umd.edu/");
+        seeds.add("https://msu.edu/");
+        seeds.add("https://umich.edu/");
+        seeds.add("https://www.osu.edu/");
+        seeds.add("https://www.psu.edu/");
+        seeds.add("https://www.rutgers.edu/");
+        seeds.add("https://illinois.edu/");
+        seeds.add("https://twin-cities.umn.edu/");
+        seeds.add("https://www.wisc.edu/");
 
         // Put seeds into frontier
         for (String s : seeds) {

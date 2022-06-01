@@ -1,0 +1,1 @@
+Multiple Choices The document name you requested (/administration/ogc/policies/) could not be found on this server. However, we found documents with names similar to the one you requested. Available documents: /administration/ogc/policies.html/ (common basename)
