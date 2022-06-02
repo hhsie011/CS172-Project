@@ -1,0 +1,1 @@
+Brown University Select your login source This application allows logins using both Brown authentication and Google. However, you should only select Google if you do not have a Brown username and password. Brown University Google

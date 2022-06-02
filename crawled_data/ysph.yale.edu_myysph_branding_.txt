@@ -1,0 +1,1 @@
+Yale School of Medicine Yale School of Medicine Welcome Please authenticate using one of the methods below If you have a Yale NetID, please select "NetID" to log in with Yale CAS. Otherwise, you may create an account using an existing email account Yale NetIDorOther Email

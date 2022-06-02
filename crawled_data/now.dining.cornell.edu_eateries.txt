@@ -1,0 +1,1 @@
+Toggle navigation Cornell Dining Now Eateries Eatery Map Feedback NetNutrition {{ page.title }} Add Funds © {{ now|date:'yyyy' }} Cornell University - Student and Campus Life

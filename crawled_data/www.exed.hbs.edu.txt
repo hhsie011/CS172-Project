@@ -1,0 +1,45 @@
+<form runat="server"></form>
+<WebPartPages:SPWebPartManager runat="server"/>
+ Skip to Main Content HBS Home About Academic Programs Alumni Faculty & Research Baker Library Giving Harvard Business Review Initiatives News Recruit Map / Directions HBS Home About Academic Programs Alumni Faculty & Research Baker Library Campaign Harvard Business Review Initiatives News Recruit Map / Directions Executive Education Apply / Log-in Program Finder Blog Subscribe Health & Safety FAQs Executive Education Programs for IndividualsPrograms for OrganizationsHBS ExperienceFacultyAdmissionsParticipant Stories Programs for Individuals Dropdown Comprehensive Leadership Programs Topic-Focused Programs Regional Programs Virtual Programs Certificate of Management Excellence Corporate Director Certificate Programs for Organizations HBS Experience Dropdown The Value The Learning Experience The Virtual Experience Alumni Network Admitted? Plan Your Stay Insights Faculty Admissions Dropdown Admissions Requirements Admissions Process International Applicants Payment, Cancellation, and Deferral Already Admitted Participant Stories Executive Education Harvard Business School Right arrow Executive Education Harvard Business School Right arrow Executive Education Programs for Individuals Explore powerful learning opportunities that help you achieve your potential. Learn More Programs for Organizations Develop the agile leaders your organization needs to drive successful transformation. Learn More Program Finder Identify the program that is right for you. Use our Program Finder, View Full Program Schedule or contact a Program Advisor 
+                {
+                  "wid": "_1423662",
+                  "uiconf_id": 41182131,
+                  "flashvars": {
+                        "topBarContainer": {
+                            "plugin": false,
+                            "hover": false
+                        },
+                        "controlBarContainer": {
+                            "plugin": true,
+                            "hover": true
+                        },
+                        "playPauseBtn": {
+                            "plugin": true,
+                            "enabled": true
+                        },
+                        "volumeControl": {
+                            "showSlider": true,
+                            "layout": "horizontal",
+                            "pinVolumeBar": false,
+                            "accessibleControls": true,
+                            "accessibleVolumeChange": 0.1,
+                            "plugin": true
+                        },
+                        "closedCaptions": {
+                            "plugin": true,
+                            "enabled": true
+                        },
+                        "durationLabel": {
+                            "plugin": true
+                        },
+                        "currentTimeLabel": {
+                            "plugin": true
+                        },
+                        "autoPlay": false,
+                        "autoMute": true,
+                        "kalturaLogo.visible":false
+                  },
+                  "cache_st": 1512339741,
+                  "entry_id": "1_wy8b6bzj"
+                }
+                Play video "Career-changing, life-changing…where passionate leaders become the change." Recent Participants Watch the Video "Digital technology has changed how customers search, buy, and interact with businesses." Sunil Gupta, Faculty Cochair; Rajiv Lal, Faculty Cochair Read More Are You Responsible for Learning and Development? Learn how we can partner with your organization to develop the agile leaders needed to drive successful transformation. Download Brochure See James' Story The HBS Difference Discover the advantages of a global peer network, our world-renowned faculty, and an unmatched learning environment. Learn More The HBS Difference Discover the advantages of a global peer network, our world-renowned faculty, and an unmatched learning environment. Learn More The HBS Difference Discover the advantages of a global peer network, our world-renowned faculty, and an unmatched learning environment. Learn More The HBS Difference Discover the advantages of a global peer network, our world-renowned faculty, and an unmatched learning environment. Learn More Upcoming Programs Leading Global Businesses—Virtual Date 05–10 JUN 2022 Format Virtual Download Download Brochure PLD Module 5: Earning HBS Alumni Status Limited Availability Date 19 JUN–01 JUL 2022 Format In-Person Location HBS Campus Download Download Brochure Disruptive Innovation: Strategies for a Successful Enterprise Limited Availability Date 20–25 JUN 2022 Format In-Person Location HBS Campus Download Download Brochure The HR-Executive Suite Connection Date 26–29 JUN 2022 Format In-Person Location HBS Campus Download Download Brochure Leading Professional Service Firms Limited Availability Date 26 JUN–01 JUL 2022 Format In-Person Location HBS Campus Download Download Brochure Driving Corporate Performance: Aligning Scorecards and Structure fo... Date 10–15 JUL 2022 Format In-Person Location HBS Campus Download Download Brochure View Frequently Asked Questions Subscribe to Our Emails Back to Top Arrow up ǁ Executive Education Harvard Business School Soldiers Field Boston, MA 02163 Contact Us →Virtual Tour →Map & Directions →More Contact Information Make a Gift Site Map Jobs Harvard University Trademarks Policies Digital Accessibility Copyright © President & Fellows of Harvard College
