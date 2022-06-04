@@ -1,0 +1,578 @@
+Skip to main content Search Search Search Toggle navigation Cornell University Registrar Classes + Enrollment Class Roster Courses of Study Courses of Study Archive Student Essentials Gateway Courses Prorated Tuition Student Center FAQ Classes and Enrollment FAQ University Registration Calendars + Exams Academic Calendar Final Exam Policies Spring Prelim Schedule Spring Final Exam Schedule Fall Prelim Exam Schedule Fall Final Exam Schedule Grades + Transcripts Grading Median Grades Ordering Transcripts Transcript FAQ Transcript Keys Validating an eTranscript Service + Resources Apostille Certifications University Registrar Directory College Advising Directory College Registrar Directory Diploma Information Disability Accommodations FERPA ID Cards Mental Health at Cornell Names and Name Changes Use of Student Data Veteran Education Benefits Building Codes Faculty + Staff Faculty Center/Advisor Center Advisor Center FAQ Opscan Scanning Service Changing CIP Codes Data Requests Program Registration For Registrar Staff Spring Prelim Schedule NOTE: These dates may include Religious Holidays for some students. NYS Education Law §224-A mandates that faculty make available an opportunity to make up any examination missed because of religious beliefs. In order to facilitate preparation of makeup exams, students intending to be absent in order to observe any of these holidays are requested to notify the instructor by Friday, February 4. For more information, see Religious Accommodations. Attention Faculty and Department Staff: Many campus buildings and rooms are locked evenings and weekends. To find a building coordinator: Facilities and Campus Services ---Enter a building name ---Search ---The facility code in the query response links to a building details page ---Select Facility Contacts from the left menu ---From the table: Contact UFD (unit facilities rep), Primary To find local tech support: IT Classroom Technology Key to Building Codes Prelim exams begin at 7:30 p.m. 
+Exam                 Date         Room[s]
+
+AEM 2210             2/17/2022    KND116
+AEM 2210             3/22/2022    KND116     
+
+AEM 2225             2/22/2022    WRN175
+AEM 2225             3/29/2022    WRN175     
+
+AEM 2240             2/24/2022    KND116
+AEM 2240             3/31/2022    KND116
+AEM 2240             5/5/2022     KND116     
+
+AEM 2241             2/22/2022    KND116
+AEM 2241             3/29/2022    KND116
+AEM 2241             5/5/2022     STL185     
+
+AEM 2300             3/10/2022    ONLINE
+AEM 2300             4/12/2022    ONLINE     
+
+AEM 2601             3/8/2022     WRN151, WRN175, WRNB25
+AEM 2601             4/19/2022    KND116     
+
+AEM 3100             3/22/2022    WRN175     
+
+AEM 3230             3/3/2022     PLS233, WRNB25
+AEM 3230             4/14/2022    KND116     
+
+AEM 5241             2/22/2022    KND116
+AEM 5241             3/29/2022    KND116
+AEM 5241             5/5/2022     STL185     
+
+AEP 3200             3/10/2022    GSHG76     
+
+AEP 4340             3/17/2022    RCK230     
+
+AEP 4400             3/22/2022    RCK230     
+
+AEP 4840             3/3/2022     PHL219     
+
+AEP 5100             3/10/2022    GSHG76     
+
+AEP 5340             3/17/2022    RCK230     
+
+AEP 5400             3/22/2022    RCK230     
+
+ANSC 2210            3/3/2022     MRS146
+ANSC 2210            4/12/2022    MRS146     
+
+ANSC 3400            3/22/2022    STK146     
+
+BEE 2220             2/22/2022    RRB400
+BEE 2220             3/24/2022    RRB400     
+
+BEE 4530             3/15/2022    RRB105
+BEE 4530             4/19/2022    RRB105     
+
+BIOAP 3160           2/22/2022    ONLINE
+BIOAP 3160           3/31/2022    ONLINE
+BIOAP 3160           5/5/2022     ONLINE     
+
+BIOAP 4140           2/24/2022    VECS1166
+BIOAP 4140           3/31/2022    VECS1166   
+
+BIOEE 1780           3/3/2022     BKL200, BKL219, BKL335
+BIOEE 1780           4/19/2022    RCK201, RCK203, RCK230
+
+BIOEE 1781           3/3/2022     ONLINE
+BIOEE 1781           4/19/2022    ONLINE     
+
+BIOMG 2801           3/22/2022    PLS233
+
+BIOMG 3300           2/24/2022    WRN175, WRNB25
+BIOMG 3300           3/24/2022    KND116     
+
+BIOMG 3350           3/17/2022    KND116     
+
+BIOMG 4320           3/8/2022     MVRG151, MVRG155
+BIOMG 4320           4/19/2022    PLS233     
+
+BIOMG 6300           2/24/2022    WRN175, WRNB25
+BIOMG 6300           3/24/2022    KND116     
+
+BIOMI 2900           3/15/2022    KND116     
+
+BIOMI 4040           3/8/2022     MRS146     
+
+BIOMS 3160           2/22/2022    ONLINE
+BIOMS 3160           3/31/2022    ONLINE
+BIOMS 3160           5/5/2022     ONLINE     
+
+BIOMS 4040           3/8/2022     MRS146     
+
+BIOMS 4140           2/24/2022    VECS1166
+BIOMS 4140           3/31/2022    VECS1166   
+
+BIONB 4140           2/24/2022    VECS1166
+BIONB 4140           3/31/2022    VECS1166   
+
+BME 2110             3/15/2022    GSH132
+BME 2110             4/19/2022    HLSB14     
+
+BME 4020             3/15/2022    MLT253
+BME 4020             4/19/2022    MCG165     
+
+BTRY 3020            2/24/2022    PLS233
+BTRY 3020            3/24/2022    PLS233     
+
+BTRY 4090            3/3/2022     MLT253
+BTRY 4090            4/14/2022    IVS105     
+
+CEE 1130             3/10/2022    KMBB11     
+
+CEE 3200             3/10/2022    THR203     
+
+CEE 3510             3/17/2022    KMBB11
+CEE 3510             4/19/2022    KMBB11     
+
+CEE 3710             3/8/2022     THR203
+CEE 3710             4/21/2022    THR203     
+
+CEE 4750             2/17/2022    GTSG01
+CEE 4750             3/17/2022    GTSG01
+CEE 4750             4/14/2022    GTSG01     
+
+CEE 5900             3/17/2022    IVS105, IVS305        
+
+CEE 6075             2/17/2022    GTSG01
+CEE 6075             3/17/2022    GTSG01
+CEE 6075             4/14/2022    GTSG01     
+
+CEE 6750             2/17/2022    GTSG01
+CEE 6750             3/17/2022    GTSG01
+CEE 6750             4/14/2022    GTSG01     
+
+CEE 6910             3/17/2022    IVS105, IVS305        
+
+CEE 7740             2/22/2022    HLS206
+CEE 7740             3/22/2022    HLS206
+CEE 7740             4/19/2022    HLS206     
+
+CHEM 1570            2/15/2022    BKL200, BKL219, BKL335
+CHEM 1570            3/10/2022    BKL200, BKL219
+CHEM 1570            4/14/2022    BKL200, BKL219, BKL335
+
+CHEM 2080            2/24/2022    IVS105, IVS305, STL185, STL196, URHG01
+CHEM 2080            3/31/2022    BKL119, BKL135, BKL200, BKL219, BKL335, STL185, STL196    
+
+CHEM 2090            3/8/2022     BKL200
+CHEM 2090            4/19/2022    BKL200     
+
+CHEM 2880            3/10/2022    BKL135
+CHEM 2880            4/14/2022    BKL135     
+
+CHEM 3580            2/15/2022    KND116, IVS305, RCK201, RCK203
+CHEM 3580            3/10/2022    BKL335, KND116, STL185, STL196, URHG01
+CHEM 3580            4/21/2022    KND116, STL185, STL196, URHG01          
+
+CHEM 3590            2/24/2022    BKL119, BKL135
+CHEM 3590            3/24/2022    BKL200
+CHEM 3590            4/21/2022    RCK203     
+
+CHEM 3900            3/8/2022     BKL119, BKL135, BKL219
+CHEM 3900            4/14/2022    MVRG151, MVRG155      
+
+CHEM 4100            3/8/2022     RCK230, RCK231
+CHEM 4100            4/14/2022    RCK230, RCK231        
+
+CHEME 3230           3/3/2022     OLH255
+CHEME 3230           4/12/2022    OLH165     
+
+CHEME 3320           3/10/2022    OLH245
+CHEME 3320           4/14/2022    OLH245     
+
+CHEME 3720           3/8/2022     OLH165
+CHEME 3720           5/3/2022     OLH165     
+
+CHEME 3900           3/15/2022    OLH245
+CHEME 3900           4/19/2022    OLH245     
+
+CHEME 5862           2/24/2022    KMBB11
+CHEME 5862           3/31/2022    KMBB11     
+
+CHEME 7130           3/3/2022     OLH165
+CHEME 7130           4/19/2022    OLH165     
+
+COGST 2310           3/3/2022     GSHG64
+COGST 2310           4/14/2022    GSHG64     
+
+CS 1110              3/8/2022     BLY101
+CS 1110              4/19/2022    BLY101     
+
+CS 1112              3/17/2022    URHG01
+CS 1112              4/19/2022    OLH155, OLH255        
+
+CS 2110              3/8/2022     IVS305, STL185, URHG01
+CS 2110              4/19/2022    IVS305, STL185, URHG01
+
+CS 2800              3/17/2022    STL185, STL196
+CS 2800              4/21/2022    BKL119, BKL135, BKL200, BKL219, BKL335  
+
+CS 3410              3/15/2022    BKL200, BKL219, BKL335
+CS 3410              4/26/2022    STL185     
+
+CS 3420              3/15/2022    OLH155, OLH255
+CS 3420              4/26/2022    OLH155, OLH255        
+
+CS 4120              3/17/2022    GSH132
+CS 4120              5/3/2022     GSH132     
+
+CS 4410              3/10/2022    OLH155, OLH255
+CS 4410              4/21/2022    OLH155, OLH255        
+
+CS 4670              3/10/2022    RCK201, RCK203, RCK230
+
+CS 4700              3/15/2022    GSHG64, KLRKG70       
+
+CS 4780              3/17/2022    BKL200, BKL219, BKL335
+
+CS 4789              3/22/2022    PHL101     
+
+CS 4820              2/22/2022    BKL200, BKL219, BKL335
+CS 4820              4/12/2022    BKL200, BKL219, BKL335
+
+CS 5120              3/17/2022    GSH132
+CS 5120              5/3/2022     GSH132     
+
+CS 5410              3/10/2022    OLH155, OLH255
+CS 5410              4/21/2022    OLH155, OLH255        
+
+CS 5670              3/10/2022    RCK201, RCK203, RCK230
+
+CS 5700              3/15/2022    GSHG64, KLRKG70       
+
+CS 5780              3/17/2022    BKL200, BKL219, BKL335
+
+CS 5820              2/22/2022    BKL200, BKL219, BKL335
+CS 5820              4/12/2022    BKL200, BKL219, BKL335
+
+EAS 3420             3/8/2022     PHL219     
+
+EAS 5420             3/8/2022     PHL219     
+
+ECE 1210             2/22/2022    OLH155, OLH165
+ECE 1210             3/31/2022    OLH155, OLH165        
+
+ECE 2100             2/17/2022    PHL101
+ECE 2100             3/24/2022    PHL101     
+
+ECE 2300             2/24/2022    PHL101
+ECE 2300             4/12/2022    KMBB11     
+
+ECE 2720             2/22/2022    OLH255
+ECE 2720             3/31/2022    OLH255    
+
+ECE 3100             3/8/2022     PHL101
+ECE 3100             4/12/2022    PHL101     
+
+ECE 3140             3/15/2022    OLH155, OLH255
+ECE 3140             4/26/2022    OLH155, OLH255        
+
+ECE 3150             3/17/2022    PHL101     
+
+ECE 4370             3/17/2022    PHL219     
+
+ECE 4520             3/24/2022    PHL219     
+
+ECE 4840             3/3/2022     PHL219     
+
+ECE 5550             3/24/2022    PHL219     
+
+ECE 5745             3/31/2022    PHL219     
+
+ECON 1120            3/3/2022     GSH132, GSHG76, KLRKG70, KND116
+ECON 1120            4/19/2022    GSH132, GSHG64, GSHG76, KLRKG70, MRS146, RRB125    
+
+ECON 2300            3/10/2022    ONLINE
+ECON 2300            4/12/2022    ONLINE     
+
+ECON 3030            3/8/2022     PLS143, PLS233
+ECON 3030            4/14/2022    PLS143, PLS233        
+
+ECON 3110            3/24/2022    IVS305     
+
+ECON 3120            2/24/2022    GSH132, GSHG76
+ECON 3120            3/29/2022    GSHG64, KLRKG70       
+
+ENGRD 2020           2/24/2022    OLH155
+ENGRD 2020           3/22/2022    OLH155     
+
+ENGRD 2100           2/17/2022    PHL101
+ENGRD 2100           3/24/2022    PHL101     
+
+ENGRD 2110           3/8/2022     IVS305, STL185, URHG01
+ENGRD 2110           4/19/2022    IVS305, STL185, URHG01
+
+ENGRD 2300           2/24/2022    PHL101
+ENGRD 2300           4/12/2022    KMBB11     
+
+ENGRD 2620           2/24/2022    KMBB11
+ENGRD 2620           3/31/2022    KMBB11     
+
+ENGRD 3200           3/10/2022    THR203     
+
+ENGRI 1101           2/22/2022    OLH245
+ENGRI 1101           3/31/2022    OLH245     
+
+ENGRI 1130           3/10/2022    KMBB11     
+
+ENGRI 1190           3/10/2022    PHL101     
+
+ENGRI 1210           2/22/2022    OLH155, OLH165
+ENGRI 1210           3/31/2022    OLH155, OLH165        
+
+HADM 1150 001        3/22/2022    STL365     
+
+HADM 1150 002        3/22/2022    STL365     
+
+HADM 1210            2/24/2022    STL165, STL198, STL396, STL398
+HADM 1210            3/29/2022    STL165, STL198, STL396, STL398          
+
+HADM 1350            3/8/2022     STL165, STL198, STL391, STL396          
+
+HADM 1360            2/22/2022    STL165, STL196, STL396
+HADM 1360            4/19/2022    STL165, STL196, STL396
+
+HADM 1410            2/17/2022    STL185
+HADM 1410            3/24/2022    STL185     
+
+HADM 1740            3/3/2022     STL365
+HADM 1740            3/31/2022    STL365     
+
+HADM 2210            3/10/2022    STL165, STL198, STL396, STL398
+HADM 2210            4/14/2022    IVS305     
+
+HADM 2230            2/24/2022    GSHG64, KLRKG70
+HADM 2230            3/31/2022    GSHG64, KLRKG70       
+
+HADM 2360            3/17/2022    KLRKG70    
+
+HADM 2550            2/17/2022    KLRKG70
+HADM 2550            3/24/2022    URHG01     
+
+HADM 2740            3/3/2022     STL365
+HADM 2740            3/31/2022    STL365     
+
+HADM 3365            2/22/2022    STL398
+HADM 3365            4/19/2022    STL398     
+
+HADM 3870            3/3/2022     ONLINE
+HADM 3870            3/31/2022    GSH132     
+
+HADM 3880            3/8/2022     STL398
+HADM 3880            4/14/2022    ONLINE     
+
+HADM 4300            3/15/2022    ONLINE     
+
+HADM 4375            3/24/2022    STL196     
+
+HADM 5760            3/10/2022    STL365     
+
+ILRLE 2400 004       3/22/2022    IVS105     
+
+ILRLR 2010 002       3/10/2022    IVS305     
+
+ILRLR 5010           3/8/2022     IVS105     
+
+ILRST 2100           2/22/2022    IVS105, IVS217, IVS305, STL185
+ILRST 2100           4/12/2022    IVS105, IVS217, IVS305, STL185          
+
+ILRST 2110           3/31/2022    IVS105     
+
+ILRST 3110           3/24/2022    IVS305     
+
+ILRST 5110           3/31/2022    IVS105     
+
+MAE 2020             2/24/2022    OLH155
+MAE 2020             3/22/2022    OLH155     
+
+MAE 2030             2/17/2022    URHG01
+MAE 2030             3/15/2022    URHG01     
+
+MAE 3130             2/17/2022    OLH255
+MAE 3130             3/8/2022     GTSG01
+MAE 3130             4/19/2022    IVS105     
+
+MAE 3240             3/15/2022    HLSB14, KMBB11
+MAE 3240             4/12/2022    URHG01     
+
+MAE 3260             3/17/2022    OLH155, OLH165
+MAE 3260             4/14/2022    OLH155, OLH165        
+
+MAE 4230             3/22/2022    KMBB11
+MAE 4230             4/19/2022    GTSG01     
+
+MAE 4231             3/22/2022    KMBB11
+MAE 4231             4/19/2022    GTSG01     
+
+MAE 4510             2/17/2022    KMBB11
+MAE 4510             3/29/2022    KMBB11     
+
+MAE 4530             3/15/2022    RRB105
+MAE 4530             4/19/2022    RRB105     
+
+MAE 4590             3/3/2022     PHL219     
+
+MAE 4860             3/10/2022    HLSB14
+MAE 4860             4/21/2022    KMBB11     
+
+MAE 4861             3/10/2022    HLSB14
+MAE 4861             4/21/2022    KMBB11     
+
+MAE 5230             3/22/2022    KMBB11
+MAE 5230             4/19/2022    GTSG01     
+
+MAE 5510             2/17/2022    KMBB11
+MAE 5510             3/29/2022    KMBB11     
+
+MAE 5860             3/10/2022    HLSB14
+MAE 5860             4/21/2022    KMBB11     
+
+MATH 1106            3/8/2022     HLS110, HLSB14, KMBB11
+MATH 1106            4/14/2022    HLS110, HLSB14, KMBB11
+
+MATH 1110            3/8/2022     RCK201, RCK203
+MATH 1110            4/14/2022    RCK201, RCK203        
+
+MATH 1120            3/10/2022    MLT228, MLT251, MLT253
+MATH 1120            4/14/2022    MLT228, MLT251, MLT253
+
+MATH 1910            3/3/2022     STL265
+MATH 1910            4/14/2022    STL265     
+
+MATH 1920            3/3/2022     OLH155, STL185, STL196, URHG01
+MATH 1920            4/14/2022    OLH255, STL185, STL196, URHG01          
+
+MATH 2130            3/15/2022    MLT251     
+
+MATH 2210            3/10/2022    KLRKG70
+MATH 2210            4/14/2022    PHL101, PHL219        
+
+MATH 2220            3/10/2022    WRNB25
+MATH 2220            4/14/2022    GSHG76     
+
+MATH 2930            3/15/2022    STL185, STL196
+MATH 2930            4/14/2022    KLRKG70, WRN151, WRN175, WRNB25         
+
+MATH 2940            2/15/2022    STL185, URHG01
+MATH 2940            3/29/2022    STL185, URHG01        
+
+MATH 3110            3/3/2022     MLT228     
+
+MSE 1190             3/10/2022    PHL101     
+
+MSE 2060             2/17/2022    OLH255
+MSE 2060             3/8/2022     GTSG01
+MSE 2060             4/19/2022    IVS105     
+
+MSE 2620             2/24/2022    KMBB11
+MSE 2620             3/31/2022    KMBB11     
+
+MSE 3040             2/17/2022    OLH155
+MSE 3040             4/26/2022    KMBB11     
+
+MSE 3050             3/17/2022    HLSB14
+MSE 3050             5/5/2022     HLSB14     
+
+MSE 5210             3/8/2022     THR205
+MSE 5210             4/12/2022    THR205     
+
+MSE 5802             3/15/2022    PHL101     
+
+MSE 5840             2/17/2022    OLH155
+MSE 5840             4/26/2022    KMBB11     
+
+MSE 5850             3/17/2022    HLSB14
+MSE 5850             5/5/2022     HLSB14     
+
+MSE 5860             2/17/2022    OLH255
+MSE 5860             3/8/2022     GTSG01
+MSE 5860             4/19/2022    IVS105     
+
+MSE 5862             2/24/2022    KMBB11
+MSE 5862             3/31/2022    KMBB11     
+
+NS 2600              3/3/2022     MVRG151, MVRG155      
+
+NSE 4840             3/3/2022     PHL219     
+
+NTRES 1201           3/10/2022    WRN175     
+
+NTRES 3250           3/22/2022    WRN151     
+
+NTRES 6250           3/22/2022    WRN151     
+
+ORIE 3120            2/22/2022    URHG01
+ORIE 3120            3/29/2022    OLH155, OLH255        
+
+ORIE 3310            2/24/2022    HLS110, HLSB14
+ORIE 3310            4/12/2022    OLH155     
+
+ORIE 3510            3/24/2022    OLH155     
+
+ORIE 4350            3/10/2022    GSH132
+ORIE 4350            4/21/2022    PHL101     
+
+ORIE 4600            3/8/2022     MLT228
+ORIE 4600            4/21/2022    GTSG01     
+
+ORIE 4740            3/22/2022    URHG01
+ORIE 4740            4/28/2022    URHG01     
+
+ORIE 5310            2/24/2022    HLS110, HLSB14
+ORIE 5310            4/12/2022    OLH155     
+
+ORIE 5510            3/24/2022    OLH155     
+
+ORIE 5740            3/22/2022    URHG01
+ORIE 5740            4/28/2022    URHG01     
+
+PAM 2030             3/10/2022    MVRG151, MVRG155      
+
+PHIL 2310            3/3/2022     GSHG64
+PHIL 2310            4/14/2022    GSHG64     
+
+PHIL 2830            3/17/2022    GSH142     
+
+PHYS 1112            2/24/2022    BKL200, RCK201, RCK203, RCK230, RCK231
+PHYS 1112            3/29/2022    BKL200, RCK201, RCK203, RCK230, RCK231  
+
+PHYS 1116            2/17/2022    RCK230
+PHYS 1116            3/31/2022    RCK230     
+
+PHYS 2208            3/3/2022     IVS105, IVS305, PHL101, RCK230
+PHYS 2208            3/31/2022    IVS305, URHG01        
+
+PHYS 2213            2/22/2022    RCK201, RCK203, RCK230
+PHYS 2213            3/31/2022    RCK201, RCK203, RCK231
+
+PHYS 2214            3/3/2022     RCK201, RCK203
+PHYS 2214            3/31/2022    PLS233, WRNB25        
+
+PHYS 2218            3/22/2022    RCK122
+
+PHYS 4443            3/24/2022    RCK230
+
+STSCI 2100           2/22/2022    IVS105, IVS217, IVS305, STL185
+STSCI 2100           4/12/2022    IVS105, IVS217, IVS305, STL185          
+
+STSCI 2110           3/31/2022    IVS105     
+
+STSCI 2150           3/8/2022     OLH155, OLH255
+STSCI 2150           3/29/2022    MLT228, MLT251, MLT253
+STSCI 2150           4/19/2022    MLT228, MLT251, MLT253
+
+STSCI 3110           3/24/2022    IVS305     
+
+STSCI 3200           2/24/2022    PLS233
+STSCI 3200           3/24/2022    PLS233     
+
+STSCI 3510           3/24/2022    OLH155     
+
+STSCI 4060           3/17/2022    MLT251     
+
+STSCI 4090           3/3/2022     MLT253
+STSCI 4090           4/14/2022    IVS105     
+
+STSCI 5045           3/17/2022    MLT251     
+
+STSCI 5065           3/31/2022    MLT253     
+
+STSCI 5110           3/31/2022    IVS105     
+
+STSCI 5150           3/8/2022     OLH155, OLH255
+STSCI 5150           3/29/2022    MLT228, MLT251, MLT253
+STSCI 5150           4/19/2022    MLT228, MLT251, MLT253
+
+ Office of the University Registrar Cornell University, 245 Day Hall Ithaca, NY 14853 Office Hours: Monday - Thursday; 9:00 AM - 1:00 PM and 2:00 PM - 4:00PM Get Directions univreg@cornell.edu (607) 255-4232; Phone Hours: Monday - Friday; 10:00 AM - 1:00 PM and 2:00 PM - 4:00 PM EST (607) 255-6262 If you have a disability and are having trouble accessing information in this website or need materials in an alternate format, contact web-accessibility@cornell.edu for assistance. © 2017 Cornell University

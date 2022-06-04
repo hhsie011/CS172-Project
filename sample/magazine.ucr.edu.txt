@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# " class="no-js"> 
+ <head> 
+  <meta charset="utf-8">
+  <script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam-cell.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"07d404edfe",applicationID:"837425331"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script> 
+  <noscript>
+   <style>form.antibot * :not(.antibot-message) { display: none !important; }</style> 
+  </noscript>
+  <script>window.dataLayer = window.dataLayer || []; window.dataLayer.push({"drupalLanguage":"en","drupalCountry":"US","siteName":"News","entityCreated":"1644536912","entityLangcode":"en","entityStatus":"1","entityUid":"3841","entityUuid":"ff24b2b7-63ce-41a1-b770-f99d2d4668a7","entityVid":"72436","entityName":"johnny","entityType":"node","entityBundle":"page","entityId":"10746","entityTitle":"UCR Magazine","userUid":0});</script> 
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-0000000-0"></script> 
+  <script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments)};gtag("js", new Date());gtag("set", "developer_id.dMDhkMT", true);gtag("config", "UA-0000000-0", {"groups":"default","anonymize_ip":true,"page_placeholder":"PLACEHOLDER_page_path","allow_ad_personalization_signals":false});</script> 
+  <link rel="canonical" href="https://news.ucr.edu/ucr-magazine"> 
+  <link rel="image_src" href="https://news.ucr.edu/sites/g/files/rcwecm1816/files/2022-02/ucr-magazine_image.jpg"> 
+  <meta name="description" content="&nbsp; &nbsp;"> 
+  <meta property="og:site_name" content="News"> 
+  <meta property="og:type" content="Basic page"> 
+  <meta property="og:url" content="https://news.ucr.edu/ucr-magazine"> 
+  <meta property="og:title" content="UCR Magazine"> 
+  <meta property="og:description" content="&nbsp; &nbsp;"> 
+  <meta property="og:image" content="https://news.ucr.edu/sites/g/files/rcwecm1816/files/2022-02/ucr-magazine_image.jpg"> 
+  <meta property="og:updated_time" content="2022-02-24T14:28:19-0800"> 
+  <meta name="twitter:card" content="summary_large_image"> 
+  <meta name="twitter:description" content="&nbsp; &nbsp;"> 
+  <meta name="twitter:title" content="UCR Magazine"> 
+  <meta name="twitter:url" content="https://news.ucr.edu/ucr-magazine"> 
+  <meta name="twitter:image:alt" content="UCR Magazine: Preview Image"> 
+  <meta name="twitter:image" content="https://news.ucr.edu/sites/g/files/rcwecm1816/files/2022-02/ucr-magazine_image.jpg"> 
+  <meta name="Generator" content="Drupal 9 (https://www.drupal.org)"> 
+  <meta name="MobileOptimized" content="width"> 
+  <meta name="HandheldFriendly" content="true"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="shortcut icon" href="/profiles/custom/ucr_news_profile/themes/custom/ucr_news/favicon.ico" type=""> 
+  <link rel="revision" href="https://news.ucr.edu/ucr-magazine"> 
+  <script src="/sites/g/files/rcwecm1816/files/google_tag/primary/google_tag.script.js?rbbk37" defer></script> 
+  <script>window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overlays=[];a2a_config.templates={};</script> 
+  <title>UCR Magazine</title> 
+  <link rel="stylesheet" media="all" href="/sites/g/files/rcwecm1816/files/css/css_5E5dyyh9cv-iuxz7HXN5iHIEyKSTMcMF1fBdLL2kdnY.css"> 
+  <link rel="stylesheet" media="all" href="https://fonts.googleapis.com/css?family=Montserrat:700|Roboto+Slab:400,700|Roboto:400,700"> 
+  <link rel="stylesheet" media="all" href="/sites/g/files/rcwecm1816/files/css/css_1HhBoMXktZGmLoaVGg-iZi9Cft1FMnsEY7ntpI5ptwg.css"> 
+  <style type="text/css">
+    <!--
+     figure.embedded-entity.align-right {
+    width: max-content !important;
+}
+
+figure.embedded-entity.align-left{
+    width: max-content !important;
+}
+
+div.una-article-post-content p{
+font-size: 1.125em;
+}
+
+div.social-link a{
+height: 1.75em;
+}     -->
+    </style> 
+ </head> 
+ <body class="layout path-node node--type-page"> 
+  <noscript aria-hidden="true">
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KJC62T6" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript> 
+  <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas> 
+   <div class="webpage-content"> 
+    <header role="banner" data-sticky-container> 
+     <div class="header-sticky-container" data-ucr-sticky="0" data-ucr-mobile-sticky="0"> 
+      <div class="grid-container full"> 
+       <div class="grid-x"> 
+        <div class="cell text-center ucr-emergency-alerts"> 
+         <div id="block-covid19alert" data-block-plugin-id="block_content:bbf9ab36-33a6-4c58-82de-7f29027cec5d" class="ucr-custom-block"> 
+          <div class="grid-container full"> 
+           <div class="grid-x"> 
+            <div class="cell"> 
+             <div class="ucr-custom-block ucr-custom-alerts callout error" data-closable> 
+              <div>
+               <p><b data-stringify-type="bold">COVID-19 and return to campus <a href="http://campusreturn.ucr.edu">information</a>.</b>&nbsp;</p> 
+              </div> <button class="close-button" aria-label="Dismiss alert" type="button" data-close> <span aria-hidden="true">×</span> </button> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="grid-x"> 
+        <div class="cell small-order-2 medium-order-1 audience-container"> 
+         <div class="grid-container audience-menu-bar"> 
+          <div class="grid-x align-middle"> 
+           <div id="block-ucr-news-organization-name" data-block-plugin-id="ucr_global_organization_name" class="cell auto org-name"> <a class="skip-main" href="#main">Skip to main content</a> 
+            <p class="parent-org-title"> <a href="https://www.ucr.edu">University of California, Riverside</a> </p> 
+           </div> 
+           <div class="cell medium-shrink show-for-medium"> 
+            <section class="google-search"> <button class="button audience-search-button" data-open="gscSearchFormModal">Search</button> 
+            </section> 
+           </div> 
+           <div class="cell shrink hide-for-medium" data-responsive-toggle="main-menu-container" data-hide-for="medium"> <button class="mdi mdi-menu button mobile-menu-expander" id="mobile-menu-expander" type="button" data-toggle="main-menu-container"> </button> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="cell small-order-1 medium-order-2 masthead-container"> 
+         <div class="grid-container"> 
+          <div class="grid-x align-middle"> 
+           <div class="cell shrink"> <a class="masthead-logo" href="/"> <span class="show-for-sr">UC Riverside</span> </a> 
+           </div> 
+           <div class="cell auto"> 
+            <h1 class="masthead-title" aria-label="Welcome to  News "> <a href="/"> News </a> </h1> 
+           </div> 
+           <div class="cell auto show-for-medium"> 
+            <p class="slogan"></p> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="cell small-order-3 medium-order-3 main-nav-bar"> 
+         <div class="grid-container" id="main-menu-container" data-animate="fade-in fade-out"> 
+          <div class="grid-x"> 
+           <div class="cell hide-for-medium"> 
+            <section class="google-search"> <button class="button audience-search-button" data-open="gscSearchFormModal">Search</button> 
+            </section> 
+           </div> 
+           <div id="block-ucr-news-main-menu" data-block-plugin-id="system_menu_block:main" class="cell main-menu-cell"> 
+            <nav id="primary-site-menu" aria-labelledby="primary-site-menu"> 
+             <ul class="standard-menu vertical medium-horizontal menu align-center-middle" data-responsive-menu="accordion medium-dropdown" data-closing-time="200"> 
+              <li> <a href="/" data-drupal-link-system-path="<front>">Home</a> </li> 
+              <li> <a href="/articles" target="_self" data-drupal-link-system-path="articles">Latest Articles</a> 
+               <ul class="vertical menu submenu"> 
+                <li> <a href="/topic/arts-culture" target="_self" data-drupal-link-system-path="taxonomy/term/1">Arts / Culture</a> </li> 
+                <li> <a href="/topic/athletics" target="_self" data-drupal-link-system-path="taxonomy/term/6">Athletics</a> </li> 
+                <li> <a href="/topic/business" target="_self" data-drupal-link-system-path="taxonomy/term/11">Business</a> </li> 
+                <li> <a href="/topic/health" target="_self" data-drupal-link-system-path="taxonomy/term/16">Health</a> </li> 
+                <li> <a href="/topic/science-technology" target="_self" data-drupal-link-system-path="taxonomy/term/21">Science / Technology</a> </li> 
+                <li> <a href="/topic/social-science-education" target="_self" data-drupal-link-system-path="taxonomy/term/26">Social Science / Education</a> </li> 
+                <li> <a href="/topic/students" target="_self" data-drupal-link-system-path="taxonomy/term/31">Students</a> </li> 
+                <li> <a href="/topic/university" target="_self" data-drupal-link-system-path="taxonomy/term/36">University</a> </li> 
+               </ul> </li> 
+              <li> <a href="https://events.ucr.edu/" target="_blank">Calendar</a> </li> 
+              <li> <a href="/topic/experts" target="_self" data-drupal-link-system-path="taxonomy/term/5256">Experts</a> </li> 
+              <li> <a href="/external-news" target="_self" data-drupal-link-system-path="external-news">In the News</a> </li> 
+              <li> <a href="/media-information" target="_self" data-drupal-link-system-path="node/9236">Info for Media</a> </li> 
+              <li> <a href="https://insideucr.ucr.edu" target="_blank">Inside UCR</a> </li> 
+              <li> <a href="/ucr-magazine" title="UCR Magazine" data-drupal-link-system-path="node/10746" class="is-active">UCR Magazine</a> 
+               <ul class="vertical menu submenu"> 
+                <li> <a href="/ucr-magazine/winter-2022" title="Winter 2022" data-drupal-link-system-path="node/10741">Winter 2022</a> </li> 
+                <li> <a href="/ucr-magazine/fall-2021" title="Fall 2021" data-drupal-link-system-path="node/10456">Fall 2021</a> </li> 
+               </ul> </li> 
+             </ul> 
+            </nav> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </header> 
+    <main> 
+     <div id="content-container"> 
+      <div id="hero-panel-area"> 
+       <div class="views-element-container" id="block-ucr-news-head-image-title-block" data-block-plugin-id="views_block:content_views-content_head_image_title_block"> 
+        <div>
+         <div class="js-view-dom-id-0a354a36ccaf2bfbb5d70f5fa8888360de7f526b5fde4b0b11b814642c333448"> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="grid-container"> 
+       <div class="grid-x grid-padding-x sub-nav-social"> 
+        <div class="cell large-8 xlarge-9 small-order-2 large-order-1 region-breadcrumbs"> 
+         <div id="block-ucr-news-breadcrumbs" data-block-plugin-id="system_breadcrumb_block" class="cell"> 
+          <div>
+           <span id="system-breadcrumb" class="visually-hidden">Breadcrumb</span>
+          </div> 
+          <div class="grid-container full"> 
+           <div class="grid-x breadcrumb-container"> 
+            <div class="shrink cell breadcrumb-home"> <a href="/"><span class="mdi mdi-home breadcrumb-home-icon" aria-label="Redirects to the homepage of this site."></span></a> 
+            </div> 
+            <div class="auto cell breadcrumb-list"> 
+             <nav aria-labelledby="system-breadcrumb"> 
+              <ul class="breadcrumbs"> 
+               <li class="list-no-display"><span>&nbsp;</span></li> 
+               <li> <span>UCR Magazine</span> </li> 
+              </ul> 
+             </nav> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="cell auto text-right small-order-1 large-order-2 social-media-header"> 
+         <section class="footer-item"> 
+          <p class="social-title">Follow US:</p> 
+          <div class="social-link"> <a href="http://www.facebook.com/UCRiverside" target="_blank" class="social-btn mdi mdi-facebook" title="" aria-label="link to facebook"><span class="show-for-sr"></span></a> <a href="http://twitter.com/UCRiverside" target="_blank" class="social-btn mdi mdi-twitter" title="" aria-label="link to twitter"><span class="show-for-sr"></span></a> <a href="http://www.youtube.com/UCRiverside" target="_blank" class="social-btn mdi mdi-youtube-play" title="" aria-label="link to youtube"><span class="show-for-sr"></span></a> <a href="https://www.instagram.com/ucriversideofficial" target="_blank" class="social-btn mdi mdi-instagram" title="" aria-label="link to instagram"><span class="show-for-sr"></span></a> <a href="https://news.ucr.edu/rss.xml" target="_blank" class="social-btn mdi mdi-rss" title="" aria-label="link to rss"><span class="show-for-sr"></span></a> 
+          </div> 
+         </section> 
+        </div> 
+       </div> 
+       <div class="grid-x grid-padding-x grid-padding-y system-admin-controls"> 
+       </div> 
+      </div> 
+      <div id="main" class="grid-container primary-content-area"> 
+       <div class="grid-x grid-padding-x"> 
+        <div class="cell large-auto small-order-3 medium-order-3 large-order-2 pca-content"> 
+         <div> 
+          <div id="block-ucr-news-main-content" data-block-plugin-id="system_main_block"> 
+           <article role="article" about="/ucr-magazine"> 
+            <div> 
+             <div class="layout layout-one-col grid-container"> 
+              <div class="grid-x grid-padding-x grid-padding-y grid-margin-x grid-margin-y"> 
+               <div class="cell"> 
+                <div class="layout__region layout__region--main"> 
+                 <div data-block-plugin-id="field_block:node:page:body"> 
+                  <div class="basic-body"> <span><p></p>
+                    <div alt="UCR Magazine Logo" data-embed-button="media_browser" data-entity-embed-display="media_image" data-entity-type="media" data-entity-uuid="1b669fdf-bdc8-4c97-a9cb-0ef4243fc9cf" data-langcode="en" title="UCR Magazine Logo" class="embedded-entity align-center"> 
+                     <img src="/sites/g/files/rcwecm1816/files/2022-01/ucr_magazine_title.png" alt="UCR Magazine Logo" title="UCR Magazine Logo" typeof="foaf:Image">
+                    </div> <p>&nbsp;</p> 
+                    <hr><p>&nbsp;</p> 
+                    <div class="grid-container"> 
+                     <div class="grid-x grid-margin-x grid-padding-y"> 
+                      <div class="cell small-12 medium-6 large-6"> 
+                       <p style="text-align:center"><a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="140ba14c-d184-4a03-b2f3-9a26b9db0d1e" href="/ucr-magazine/winter-2022"><img alt="UCR Magazine: Winter 2022" height="500" src="/sites/g/files/rcwecm1816/files/2022-02/ucr-magazine_winter-2022.jpg" style="padding-bottom: 15px;" width="386"></a></p> 
+                       <p class="text-align-center"><a class="btn-ucr-gold" data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="140ba14c-d184-4a03-b2f3-9a26b9db0d1e" href="/ucr-magazine/winter-2022"><strong>UCR Magazine: Winter 2022</strong></a></p> 
+                      </div> 
+                      <div class="cell small-12 medium-6 large-6"> 
+                       <p style="text-align:center"><a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="fdc94616-8137-4338-98dc-24b85256b763" href="/ucr-magazine/fall-2021"><img alt="UCR Magazine: Fall 2021" height="500" src="/sites/g/files/rcwecm1816/files/2022-02/ucr-magazine_fall-2021.jpg" style="padding-bottom: 15px;" width="386"></a></p> 
+                       <p class="text-align-center"><a class="btn-ucr-gold" data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="fdc94616-8137-4338-98dc-24b85256b763" href="/ucr-magazine/fall-2021"><strong>UCR Magazine: Fall 2021</strong></a></p> 
+                      </div> 
+                     </div> 
+                    </div> <p>&nbsp;</p> </span> 
+                  </div> 
+                 </div> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+            </div> 
+           </article> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </main> 
+    <footer> 
+     <div class="footer-container"> 
+      <div class="footer-content-area"> 
+       <div class="grid-container"> 
+        <div class="grid-x grid-padding-x align-center"> 
+         <div id="block-ucr-news-footer-search" data-block-plugin-id="ucr_global_footer_search" class="cell show-for-medium footer-search"> 
+          <section class="google-search"> <button class="button footer-search-button" data-open="gscSearchFormModal">Search</button> 
+          </section> 
+         </div> 
+        </div> 
+        <div class="grid-x grid-padding-x footer-columns"> 
+         <div class="cell medium-auto"> 
+          <section class="footer-item ucr-footer-info"> <span class="footer-logo"><span class="show-for-sr">University of California, Riverside</span></span> 
+           <address> <p>900 University Ave.<br> Riverside, CA 92521</p> <p>Tel: (951) 827-1012</p> </address> 
+           <ul class="footer-links"> 
+            <li><a href="https://library.ucr.edu/" target="_blank">UCR Library</a></li> 
+            <li><a href="https://campusstatus.ucr.edu/" target="_blank">Campus Status</a></li> 
+            <li><a href="https://ucr.bncollege.com/shop/ucr/home" target="_blank">Campus Store</a></li> 
+            <li><a href="https://jobs.ucr.edu" target="_blank">Career Opportunities</a></li> 
+            <li><a href="https://diversity.ucr.edu/" target="_blank">Diversity</a></li> 
+            <li><a href="https://campusmap.ucr.edu/" target="_blank">Maps and Directions</a></li> 
+            <li><a href="https://www.ucr.edu/about/visitors" target="_blank">Visit UCR</a></li> 
+           </ul> 
+          </section> 
+         </div> 
+         <div class="cell medium-auto"> 
+          <section id="block-ucr-news-footer-dept" data-block-plugin-id="ucr_global_footer_dept_info" class="footer-item footer-dept-info"> 
+           <h2>University of California, Riverside</h2> 
+           <address class="address_2"> <p> <a href="https://campusmap.ucr.edu" target="_blank"> 900 University Ave. <br>Riverside, CA 92521 </a></p> <p> tel: (951) 827-0000<br> email: <a href="mailto:webmaster@ucr.edu">webmaster@ucr.edu</a> </p> </address> 
+           <p> <a class="link-img link-img-location" href="https://campusmap.ucr.edu" target="_blank"> Find Us<br><br> <img src="/themes/custom/ucr_default/images/googlemap.png" alt="Campus map image"></a> </p> 
+          </section> 
+         </div> 
+         <div class="cell medium-auto"> 
+          <section id="block-ucr-news-related-links" data-block-plugin-id="system_menu_block:ucr-news-related-links" class="footer-item footer-related-links"> 
+           <h3>Related Links</h3> 
+           <nav role="navigation" aria-labelledby="general-navigation"> 
+            <ul class="vertical menu"> 
+             <li><a href="https://ucrtoday.ucr.edu/55186" target="_blank">UCR News Archive</a> </li> 
+             <li><a href="https://soundcloud.com/sciencetoday" target="_blank">Science Today</a> </li> 
+             <li><a href="http://espanol.ucanr.edu/" target="_blank">Servicio de Información en Español</a> </li> 
+             <li><a href="http://ucanr.edu/" target="_blank">UC Agricultural and Natural Resources news</a> </li> 
+             <li><a href="https://www.universityofcalifornia.edu/news/" target="_blank">UC Newsroom</a> </li> 
+             <li><a href="/feeds" data-drupal-link-system-path="node/1366">Available Feeds</a> </li> 
+             <li><a href="https://creatorstate.ucr.edu">Creator State Podcast</a> </li> 
+            </ul> 
+           </nav> 
+          </section> 
+         </div> 
+         <div class="cell medium-auto"> 
+          <div id="block-footersocialmedialinksfull" data-block-plugin-id="block_content:d4e45209-6c76-4ece-94a7-25e9382699ac" class="ucr-custom-block"> 
+           <div class="grid-container full"> 
+            <div class="grid-x grid-padding-x"> 
+             <div class="cell"> 
+              <section class="footer-item"> 
+               <p class="social-title">Follow Us:</p> 
+               <div class="social-link" style="display: inline-flex; margin-left:0px;">
+                <a alt="Facebook" href="https://www.facebook.com/UCRiverside" style="text-decoration: none !important; color: rgba(0, 0, 0, 0.0); display: inline-flex;" target="_blank" title="Facebook"><span class="mdi mdi-facebook-box" onmouseout="this.style.color='#FFB81C'" onmouseover="this.style.color='#ffffff'" onmouseup="this.style.color='#7A8FAB'" style="color:#FFB81C; font-size: 3em;">&nbsp;</span></a> <a alt="Twitter" href="https://twitter.com/UCRiverside" style="text-decoration: none !important; color: rgba(0, 0, 0, 0.0); display: inline-flex;" target="_blank" title="Twitter"><span class="mdi mdi-twitter-box" onmouseout="this.style.color='#FFB81C'" onmouseover="this.style.color='#ffffff'" onmouseup="this.style.color='#7A8FAB'" style="color:#FFB81C; font-size: 3em;">&nbsp;</span></a> <a alt="Youtube" href="https://www.youtube.com/UCRiverside" style="text-decoration: none !important; color: rgba(0, 0, 0, 0.0); display: inline-flex;" target="_blank" title="Youtube"><span class="mdi mdi-youtube-play" onmouseout="this.style.color='#FFB81C'" onmouseover="this.style.color='#ffffff'" onmouseup="this.style.color='#7A8FAB'" style="color:#FFB81C; font-size: 3em;">&nbsp;</span></a> <a alt="Instagram" href="https://www.instagram.com/ucriversideofficial" style="text-decoration: none !important; color: rgba(0, 0, 0, 0.0); display: inline-flex;" target="_blank" title="Instagram"><span class="mdi mdi-instagram" onmouseout="this.style.color='#FFB81C'" onmouseover="this.style.color='#ffffff'" onmouseup="this.style.color='#7A8FAB'" style="color:#FFB81C; font-size: 3em;">&nbsp;</span></a> <a alt="LinkedIn" href="https://www.linkedin.com/school/university-of-california-riverside/mycompany/" style="text-decoration: none !important; color: rgba(0, 0, 0, 0.0); display: inline-flex;" target="_blank" title="LinkedIn"><span class="mdi mdi-linkedin-box" onmouseout="this.style.color='#FFB81C'" onmouseover="this.style.color='#ffffff'" onmouseup="this.style.color='#7A8FAB'" style="color:#FFB81C; font-size: 3em;">&nbsp;</span></a> <a alt="TikTok" href="https://www.tiktok.com/@ucriverside?" style="text-decoration: none !important; color: rgba(0, 0, 0, 0.0); display: inline-flex;" target="_blank" title="TikTok"><span class="mdi mdi-music-box" onmouseout="this.style.color='#FFB81C'" onmouseover="this.style.color='#ffffff'" onmouseup="this.style.color='#7A8FAB'" style="color:#FFB81C; font-size: 3em;">&nbsp;</span></a>
+               </div> 
+              </section> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="site-legal-footer"> 
+       <div class="grid-container"> 
+        <div class="grid-x grid-padding-x"> 
+         <div class="cell"> 
+          <ul> 
+           <li><a href="http://www.ucr.edu/privacy.html">Privacy and Accessibility</a></li> 
+           <li><a href="http://www.ucr.edu/terms.html">Terms and Conditions</a></li> 
+           <li>© 2022 Regents of the University of California</li> 
+          </ul> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </footer> 
+   </div> 
+   <div class="large reveal" id="gscSearchFormModal" role="search" data-reveal data-animation-in="fade-in" data-animation-out="fade-out"> 
+    <div class="gsc-modal-top"> <span>Search</span> <button class="close-button" data-close aria-label="Close Search Window" type="button"><span aria-hidden="true">×</span></button> 
+    </div> 
+    <form id="audience-search-form" name="gsc-search-form" action="/results"> 
+     <div class="gsc-modal-body"> 
+      <div class="grid-container full"> 
+       <div class="grid-x grid-padding-x grid-padding-y align-center-middle text-center"> 
+        <div class="gsc-text-wrapper"> <span class="gsc-welcome-text">Let us help you with your search</span> 
+        </div> 
+        <div class="cell"> <label id="searchbox-label" class="hidden" aria-label="Enter your Search Criteria.">Enter your Search Criteria.</label> 
+         <input type="text" maxlength="255" id="audience-search" name="q" value="" aria-labelledby="searchbox-label" placeholder="Search for..."> 
+        </div> 
+        <div class="cell medium-4"> <button class="button gsc-modal-button-submit" type="submit" name="search-by" value="all">Search All UCR</button> 
+        </div> 
+        <div class="cell medium-4"> <button class="button gsc-modal-button-submit" type="submit" name="search-by" value="news.ucr.edu">Search This Site</button> 
+        </div> 
+        <div class="cell medium-4"> <button type="button" class="button gsc-modal-button-close" data-close>Cancel</button> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </form> 
+   </div> 
+  </div> 
+  <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/10746","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"bu":{"notify_ie":-2,"notify_firefox":-2,"notify_opera":-2,"notify_safari":-2,"notify_chrome":-2,"insecure":true,"unsupported":false,"mobile":true,"position":"top","visibility_type":"hide","visibility_pages":"admin\/*","test_mode":false,"new_window":true,"no_close":false,"text_override":"","reminder":6,"reminder_closed":6,"url":"","source":"\/\/browser-update.org\/update.min.js","show_source":""},"dataLayer":{"defaultLang":"en","languages":{"en":{"id":"en","name":"English","direction":"ltr","weight":0}}},"google_analytics":{"account":{},"trackOutbound":true,"trackMailto":true,"trackTel":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"ajax":[],"user":{"uid":0,"permissionsHash":"e9779a959376c7fcf7d5be2a1dbc6dd990efc88fb5525762a267856637645487"}}</script> 
+  <script src="/sites/g/files/rcwecm1816/files/js/js_dM5mp5TKBJtXvAw2vuwnL0gCqP4MHsQofCzcm21klk0.js"></script> 
+  <script src="https://static.addtoany.com/menu/page.js" async></script> 
+  <script src="/sites/g/files/rcwecm1816/files/js/js_KYnPp8FBWxbF6eZVpEeFz5ZiA_sY1PP25c9Zajv3wH8.js"></script> 
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"07d404edfe","applicationID":"837425331","transactionName":"MVZSYRNWCxBZB0wIWggccVYVXgoNFxRZBlA5UFFWCVI=","queueTime":0,"applicationTime":52,"atts":"HRFRF1tMGB4=","errorBeacon":"bam-cell.nr-data.net","agent":""}</script> 
+ </body>
+</html>

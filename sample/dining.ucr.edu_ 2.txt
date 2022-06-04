@@ -1,0 +1,663 @@
+<!doctype html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# " class="no-js"> 
+ <head> 
+  <meta charset="utf-8">
+  <script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam-cell.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"07d404edfe",applicationID:"837425331"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script> 
+  <noscript>
+   <style>form.antibot * :not(.antibot-message) { display: none !important; }</style> 
+  </noscript>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-3051875-19"></script> 
+  <script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments)};gtag("js", new Date());gtag("set", "developer_id.dMDhkMT", true);gtag("config", "UA-3051875-19", {"groups":"default","anonymize_ip":true,"page_placeholder":"PLACEHOLDER_page_path","allow_ad_personalization_signals":false});</script> 
+  <link rel="canonical" href="https://dining.ucr.edu/"> 
+  <link rel="shortlink" href="https://dining.ucr.edu/"> 
+  <meta name="description" content="The UCR Dining Services Team has a long-standing history of providing students, faculty and staff with outstanding food and service in a welcoming environment. We look forward to serving you!"> 
+  <meta name="abstract" content="The UCR Dining Services Team has a long-standing history of providing students, faculty and staff with outstanding food and service in a welcoming environment. We look forward to serving you!"> 
+  <meta property="og:site_name" content="Dining Services"> 
+  <meta property="og:url" content="https://dining.ucr.edu/"> 
+  <meta property="og:title" content="Dining Services"> 
+  <meta property="og:description" content="Delicious | Nutritious | Sustainable"> 
+  <meta name="twitter:card" content="summary"> 
+  <meta name="twitter:description" content="Delicious | Nutritious | Sustainable"> 
+  <meta name="twitter:title" content="Welcome to Dining @ UCR | Dining Services"> 
+  <meta name="twitter:url" content="https://dining.ucr.edu/"> 
+  <meta name="Generator" content="Drupal 9 (https://www.drupal.org)"> 
+  <meta name="MobileOptimized" content="width"> 
+  <meta name="HandheldFriendly" content="true"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="shortcut icon" href="/themes/custom/ucr_design_1/favicon.ico" type=""> 
+  <link rel="revision" href="https://dining.ucr.edu/home"> 
+  <script>window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overlays=[];a2a_config.templates={};</script> 
+  <title>UCR Dining Services</title> 
+  <link rel="stylesheet" media="all" href="/sites/g/files/rcwecm2846/files/css/css_xnoPElP1DG_gWtQJnf6mX6v_WLiVbQWO8FQ12HPxS5E.css"> 
+  <link rel="stylesheet" media="all" href="https://fonts.googleapis.com/css?family=Montserrat:700|Roboto+Slab:400,700|Roboto:400,700"> 
+  <link rel="stylesheet" media="all" href="/sites/g/files/rcwecm2846/files/css/css_Q2v2UQ8QFjyJWvHcsMKGY_tqvguQmAupujMsVlANjGc.css"> 
+  <style type="text/css">
+    <!--
+     h2.boldBlack {color: #000000 !important;
+    font-weight: 800 !important;
+    font-size: 1.45rem !important;
+    line-height: 1.10526 !important;}
+
+h2.announcements {color: #003DA5 !important;
+    font-weight: bolder;
+    font-size: 1.4rem !important;
+    line-height: 1.10526 !important;}
+
+p.finePrint {color: #808080 !important;
+    font-weight: normal !important;
+    font-size: 13px !important;
+    line-height: .75 !important;}
+
+/* YouTube Embeds*/
+.youtube-embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; }
+.youtube-embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; padding: 10px;}
+
+.embedded-entity {
+  width: -webkit-fit-content !important;
+  width: -moz-fit-content !important;
+  width: fit-content !important;
+}     -->
+    </style> 
+ </head> 
+ <body class="layout path-frontpage node--type-page"> 
+  <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas> 
+   <div class="webpage-content"> 
+    <header role="banner" data-sticky-container> 
+     <div class="header-sticky-container" data-ucr-sticky="0" data-ucr-mobile-sticky="0"> 
+      <div class="grid-container full"> 
+       <div class="grid-x"> 
+        <div class="cell text-center ucr-site-alerts"> 
+         <div id="block-customglobalcssdonotremove-2" data-block-plugin-id="block_content:eb41834b-395e-4dfb-bcc0-01afb196bbeb" class="ucr-custom-block"> 
+          <div class="grid-container full"> 
+           <div class="grid-x grid-padding-x"> 
+            <div class="cell"> 
+             <style type="text/css">
+<!--/*--><![CDATA[/* ><!--*/
+/**** hiding the block with those code to remove it from rendering ****/
+#block-customglobalcssdonotremove {margin:0 !important;height:0;}
+
+#main-menu span.custom-dining {
+    display: block !important;
+    color: #86BAFF;
+    font-size: 1.3em;
+}
+
+.path-frontpage .more-link {
+    display:none;
+}
+
+/*--><!]]>*/
+</style> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="grid-x"> 
+        <div class="cell small-order-2 medium-order-1 audience-container"> 
+         <div class="grid-container audience-menu-bar"> 
+          <div class="grid-x align-middle"> 
+           <div class="cell medium-shrink show-for-medium global-header-menu"> <a class="skip-main" href="#main">Skip to main content</a> 
+            <nav aria-label="global header menu"> 
+             <ul class="menu"> 
+              <li><a href="https://www.ucr.edu/alpha" target="_blank">A to Z Listing</a></li> 
+              <li><a href="https://campusmap.ucr.edu" target="_blank">Campus Map</a></li> 
+              <li><a href="https://profiles.ucr.edu" target="_blank">Find People</a></li> 
+              <li><a href="https://news.ucr.edu" target="_blank">News</a></li> 
+              <li><a href="https://www.ucr.edu" target="_blank">UCR Home</a></li> 
+             </ul> 
+            </nav> 
+           </div> 
+           <div id="block-ucr-design-1-organizationname" data-block-plugin-id="ucr_global_organization_name" class="cell auto hide-for-medium org-name"> <a class="skip-main" href="#main">Skip to main content</a> 
+            <p class="parent-org-title"> <a href="https://ucr.edu">University of California, Riverside</a> </p> 
+           </div> 
+           <div id="block-ucr-design-1-ucriversideaudiencesearchblock" data-block-plugin-id="ucr_global_audience_search" class="cell medium-shrink show-for-medium"> 
+            <section class="google-search"> <button class="button audience-search-button" data-open="gscSearchFormModal">Search</button> 
+            </section> 
+           </div> 
+           <div class="cell shrink hide-for-medium" data-responsive-toggle="main-menu-container" data-hide-for="medium"> <button class="mdi mdi-menu button mobile-menu-expander" id="mobile-menu-expander" type="button" data-toggle="main-menu-container"> </button> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="cell small-order-1 medium-order-2 masthead-container"> 
+         <div class="grid-container"> 
+          <div class="grid-x align-middle"> 
+           <div class="cell shrink"> <a class="masthead-logo-line" href="/"> <span class="show-for-sr">UC Riverside</span> </a> 
+           </div> 
+           <div class="cell auto"> 
+            <h1 class="masthead-title"> <a href="/"> Dining Services </a> </h1> 
+           </div> 
+           <div class="cell auto show-for-medium"> 
+            <p class="slogan">Delicious | Nutritious | Sustainable</p> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="cell small-order-3 medium-order-3 main-nav-bar"> 
+         <div class="grid-container" id="main-menu-container" data-animate="fade-in fade-out"> 
+          <div class="grid-x"> 
+           <div id="block-ucr-design-1-ucriversideaudiencesearchblock-2" data-block-plugin-id="ucr_global_audience_search" class="cell hide-for-medium"> 
+            <section class="google-search"> <button class="button audience-search-button" data-open="gscSearchFormModal">Search</button> 
+            </section> 
+           </div> 
+           <div id="block-ucr-design-1-meganav-main" data-block-plugin-id="menu_block:meganav-main" class="cell main-menu-cell"> 
+            <ul id="main-menu"> 
+             <li> <a href="" class="drop-down-arrow">Venues</a> 
+              <div> 
+               <ul class="accessible-megamenu-panel-group"> 
+                <li> <span>Column 1</span> 
+                 <div> 
+                  <ul class="accessible-megamenu-panel-group"> 
+                   <li> <a href="/campus-dining" data-drupal-link-system-path="node/46">Campus Dining</a> </li> 
+                   <li> <a href="/campus-dining/hub-plaza-dining" data-drupal-link-system-path="node/131">HUB Plaza Dining</a> </li> 
+                   <li> <a href="/residential-dining" data-drupal-link-system-path="node/121">Residential Dining</a> </li> 
+                   <li> <a href="/campus-dining/market-at-glen-mor" data-drupal-link-system-path="node/61">The Market at Glen Mor</a> </li> 
+                  </ul> 
+                 </div> </li> 
+                <li> <span>Column 2</span> 
+                 <div> 
+                  <ul class="accessible-megamenu-panel-group"> 
+                   <li> <a href="/retail/scottys-convenience-stores" data-drupal-link-system-path="node/76">Scotty's Convenience Stores </a> </li> 
+                   <li> <a href="/campus-dining/the-barn" data-drupal-link-system-path="node/136">The Barn</a> </li> 
+                  </ul> 
+                 </div> </li> 
+               </ul> 
+              </div> </li> 
+             <li> <a href="/dining-hours" title="Dining Hours" data-drupal-link-system-path="node/401">Dining Hours</a> </li> 
+             <li> <a href="/menus" data-drupal-link-system-path="node/341">Menus </a> </li> 
+             <li> <a href="/dining-plan-options" data-drupal-link-system-path="node/361">Dining Plans</a> </li> 
+             <li> <a href="/catering" class="drop-down-arrow" data-drupal-link-system-path="node/56">Catering</a> 
+              <div> 
+               <ul class="accessible-megamenu-panel-group"> 
+                <li> <span>Column 1</span> 
+                 <div> 
+                  <ul class="accessible-megamenu-panel-group"> 
+                   <li> <a href="/catering/citrus-grove-catering" data-drupal-link-system-path="node/96">Citrus Grove Catering</a> </li> 
+                   <li> <a href="/catering/crate-citrus-grove-catering" data-drupal-link-system-path="node/171">CRATE by Citrus Grove Catering</a> </li> 
+                   <li> <a href="https://hospitality.ucr.edu/" target="_blank">UCR Hospitality Services</a> </li> 
+                  </ul> 
+                 </div> </li> 
+               </ul> 
+              </div> </li> 
+             <li> <a href="https://citrusgifts.ucr.edu/" target="_blank" title="Citrus Gifts">Citrus Gifts</a> </li> 
+             <li> <a href="/about-us" class="drop-down-arrow" data-drupal-link-system-path="node/81">About Us</a> 
+              <div> 
+               <ul class="accessible-megamenu-panel-group"> 
+                <li> <span>Column 1</span> 
+                 <div> 
+                  <ul class="accessible-megamenu-panel-group"> 
+                   <li> <a href="https://jobs.ucr.edu/" target="_blank">Career Opportunities</a> </li> 
+                   <li> <a href="/employment/student-employment" data-drupal-link-system-path="node/241">Student Jobs</a> </li> 
+                   <li> <a href="/form/customer-feedback-form" data-drupal-link-system-path="webform/customer_feedback_form">Customer Feedback</a> </li> 
+                   <li> <a href="/news" title="UCR Dining News &amp; Announcements" data-drupal-link-system-path="node/316">News</a> </li> 
+                  </ul> 
+                 </div> </li> 
+                <li> <span>Column 2</span> 
+                 <div> 
+                  <ul class="accessible-megamenu-panel-group"> 
+                   <li> <a href="/nutrition" title="Nutrition" data-drupal-link-system-path="node/386">Nutrition</a> </li> 
+                   <li> <a href="/sustainability" data-drupal-link-system-path="node/306">Sustainability</a> </li> 
+                   <li> <a href="/ethical-sustainable-coffee" data-drupal-link-system-path="node/311">Ethical Coffee</a> </li> 
+                   <li> <a href="/food-insecurity" title="Food Insecurity" data-drupal-link-system-path="node/301">Food Insecurity</a> </li> 
+                  </ul> 
+                 </div> </li> 
+               </ul> 
+              </div> </li> 
+            </ul> 
+           </div> 
+           <div id="block-ucr-design-1-meganav-main-mobile" data-block-plugin-id="menu_block:meganav-main" class="cell main-menu-mobile-cell"> 
+            <ul id="meganav-main-menu-mobile" class="vertical medium-horizontal menu align-center-middle" data-responsive-menu="accordion medium-dropdown" data-closing-time="100"> 
+             <li> <a href="">Venues</a> 
+              <ul class="vertical menu submenu"> 
+               <li> <a href="/campus-dining" data-drupal-link-system-path="node/46">Campus Dining</a> </li> 
+               <li> <a href="/campus-dining/hub-plaza-dining" data-drupal-link-system-path="node/131">HUB Plaza Dining</a> </li> 
+               <li> <a href="/residential-dining" data-drupal-link-system-path="node/121">Residential Dining</a> </li> 
+               <li> <a href="/campus-dining/market-at-glen-mor" data-drupal-link-system-path="node/61">The Market at Glen Mor</a> </li> 
+               <li> <a href="/retail/scottys-convenience-stores" data-drupal-link-system-path="node/76">Scotty's Convenience Stores </a> </li> 
+               <li> <a href="/campus-dining/the-barn" data-drupal-link-system-path="node/136">The Barn</a> </li> 
+              </ul> </li> 
+             <li> <a href="/dining-hours" title="Dining Hours" data-drupal-link-system-path="node/401">Dining Hours</a> </li> 
+             <li> <a href="/menus" data-drupal-link-system-path="node/341">Menus </a> </li> 
+             <li> <a href="/dining-plan-options" data-drupal-link-system-path="node/361">Dining Plans</a> </li> 
+             <li> <a href="/catering" data-drupal-link-system-path="node/56">Catering</a> 
+              <ul class="vertical menu submenu"> 
+               <li> <a href="/catering/citrus-grove-catering" data-drupal-link-system-path="node/96">Citrus Grove Catering</a> </li> 
+               <li> <a href="/catering/crate-citrus-grove-catering" data-drupal-link-system-path="node/171">CRATE by Citrus Grove Catering</a> </li> 
+               <li> <a href="https://hospitality.ucr.edu/" target="_blank">UCR Hospitality Services</a> </li> 
+              </ul> </li> 
+             <li> <a href="https://citrusgifts.ucr.edu/" target="_blank" title="Citrus Gifts">Citrus Gifts</a> </li> 
+             <li> <a href="/about-us" data-drupal-link-system-path="node/81">About Us</a> 
+              <ul class="vertical menu submenu"> 
+               <li> <a href="https://jobs.ucr.edu/" target="_blank">Career Opportunities</a> </li> 
+               <li> <a href="/employment/student-employment" data-drupal-link-system-path="node/241">Student Jobs</a> </li> 
+               <li> <a href="/form/customer-feedback-form" data-drupal-link-system-path="webform/customer_feedback_form">Customer Feedback</a> </li> 
+               <li> <a href="/news" title="UCR Dining News &amp; Announcements" data-drupal-link-system-path="node/316">News</a> </li> 
+               <li> <a href="/nutrition" title="Nutrition" data-drupal-link-system-path="node/386">Nutrition</a> </li> 
+               <li> <a href="/sustainability" data-drupal-link-system-path="node/306">Sustainability</a> </li> 
+               <li> <a href="/ethical-sustainable-coffee" data-drupal-link-system-path="node/311">Ethical Coffee</a> </li> 
+               <li> <a href="/food-insecurity" title="Food Insecurity" data-drupal-link-system-path="node/301">Food Insecurity</a> </li> 
+              </ul> </li> 
+            </ul> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </header> 
+    <main> 
+     <div id="content-container"> 
+      <div id="hero-panel-area"> 
+       <div class="views-element-container" id="block-ucr-design-1-head-image-title-block" data-block-plugin-id="views_block:content_views-content_head_image_title_block"> 
+        <div>
+         <div class="js-view-dom-id-4838391627ed0cdebe32a81d1218bc836a30c759647fd4f21bd69503a203d8fa"> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="block-herosliderfordininghomepage2021" data-block-plugin-id="block_content:f285aed7-d452-447b-ac0c-c2ad653b2a57" class="ucr-custom-block"> 
+        <div class="grid-container full"> 
+         <div class="grid-x"> 
+          <div class="cell"> 
+           <div data-blazy="" class="slick blazy slick--field slick--field-sliders slick--field-sliders--default unslick slick--skin--grid slick--optionset--hero-slider-ui slick--less" id="slick-block-content-carousel-slider-sliders-default-1-2"> 
+            <div class="slick__slide slide slide--0"> 
+             <div class="paragraph paragraph--type--carousel-slider paragraph--view-mode--default carousel-slider"> 
+              <img src="/sites/g/files/rcwecm2846/files/1_0.png" width="1920" height="450" alt="Test 4" loading="lazy" typeof="foaf:Image"> 
+              <div class="slider-text-bg-container hs-left"> 
+               <div class="slider-text-container"> 
+                <div class="slider-text-area"> 
+                 <div class="slider-title">
+                   UCR Dining is Hiring! 
+                 </div> 
+                 <div class="slider-subtitle">
+                   Visit our student careers page to apply for open positions. 
+                 </div> 
+                 <div class="slider-button-area"> 
+                  <div class="slider_button">
+                   <a href="https://dining.ucr.edu/employment/student-employment" target="_self">Apply Today!</a>
+                  </div> 
+                 </div> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="grid-container"> 
+       <div class="grid-x grid-padding-x grid-padding-y primary-content-header"> 
+       </div> 
+       <div class="grid-x grid-padding-x system-admin-controls"> 
+       </div> 
+      </div> 
+      <div id="main" class="grid-container full primary-content-area"> 
+       <div class="grid-x"> 
+        <div class="cell large-auto small-order-3 medium-order-3 large-order-2 pca-content"> 
+         <div> 
+          <div id="block-ucr-design-1-content" data-block-plugin-id="system_main_block"> 
+           <article role="article" about="/home"> 
+            <div> 
+             <div class="layout layout-one-col grid-container"> 
+              <div class="grid-x grid-padding-x"> 
+               <div class="cell"> 
+                <div class="layout__region layout__region--main"> 
+                 <div data-block-plugin-id="block_content:9cd74945-ef2f-43e9-a8f5-6c6cd0c1f9cc" class="ucr-custom-block"> 
+                  <div class="grid-container full"> 
+                   <div class="grid-x"> 
+                    <div class="cell"> 
+                     <div data-blazy="" class="slick blazy slick--field slick--field-sliders slick--field-sliders--default slick--skin--grid slick--optionset--hero-slider-ui" id="slick-block-content-carousel-slider-sliders-default-1591-1"> 
+                      <div id="slick-block-content-carousel-slider-sliders-default-1591-1-slider" data-slick="{&quot;mobileFirst&quot;:true,&quot;adaptiveHeight&quot;:true,&quot;autoplay&quot;:true,&quot;autoplaySpeed&quot;:10000,&quot;dots&quot;:true,&quot;draggable&quot;:false,&quot;lazyLoad&quot;:&quot;blazy&quot;}" class="slick__slider"> 
+                       <div class="slick__slide slide slide--0"> 
+                        <div class="paragraph paragraph--type--carousel-slider paragraph--view-mode--default carousel-slider"> 
+                         <img src="/sites/g/files/rcwecm2846/files/slider-dining-plans-20.jpg" width="1170" height="500" alt="Students Dining on the Patio" loading="lazy" typeof="foaf:Image"> 
+                        </div> 
+                       </div> 
+                       <div class="slick__slide slide slide--1"> 
+                        <div class="paragraph paragraph--type--carousel-slider paragraph--view-mode--default carousel-slider"> 
+                         <img src="/sites/g/files/rcwecm2846/files/slider-dining-plans-04.jpg" width="1170" height="500" alt="Staff Dining at the Barn" loading="lazy" typeof="foaf:Image"> 
+                        </div> 
+                       </div> 
+                       <div class="slick__slide slide slide--2"> 
+                        <div class="paragraph paragraph--type--carousel-slider paragraph--view-mode--default carousel-slider"> 
+                         <img src="/sites/g/files/rcwecm2846/files/slider-dining-plans-01.jpg" width="1170" height="500" alt="Barn Patio" loading="lazy" typeof="foaf:Image"> 
+                        </div> 
+                       </div> 
+                       <div class="slick__slide slide slide--3"> 
+                        <div class="paragraph paragraph--type--carousel-slider paragraph--view-mode--default carousel-slider"> 
+                         <img src="/sites/g/files/rcwecm2846/files/slider-dining-plans-02.jpg" width="1170" height="500" alt="Staff Dining" loading="lazy" typeof="foaf:Image"> 
+                        </div> 
+                       </div> 
+                       <div class="slick__slide slide slide--4"> 
+                        <div class="paragraph paragraph--type--carousel-slider paragraph--view-mode--default carousel-slider"> 
+                         <img src="/sites/g/files/rcwecm2846/files/slider-dining-plans-03.jpg" width="1170" height="500" alt="Emerbee's" loading="lazy" typeof="foaf:Image"> 
+                        </div> 
+                       </div> 
+                       <div class="slick__slide slide slide--5"> 
+                        <div class="paragraph paragraph--type--carousel-slider paragraph--view-mode--default carousel-slider"> 
+                         <img src="/sites/g/files/rcwecm2846/files/slider-dining-plans-05.jpg" width="1170" height="500" alt="Barn Veggie Burger" loading="lazy" typeof="foaf:Image"> 
+                        </div> 
+                       </div> 
+                       <div class="slick__slide slide slide--6"> 
+                        <div class="paragraph paragraph--type--carousel-slider paragraph--view-mode--default carousel-slider"> 
+                         <img src="/sites/g/files/rcwecm2846/files/slider-dining-plans-06_0.jpg" width="1170" height="500" alt="Students at Glasgow" loading="lazy" typeof="foaf:Image"> 
+                        </div> 
+                       </div> 
+                       <div class="slick__slide slide slide--7"> 
+                        <div class="paragraph paragraph--type--carousel-slider paragraph--view-mode--default carousel-slider"> 
+                         <img src="/sites/g/files/rcwecm2846/files/slider-dining-plans-07.jpg" width="1170" height="500" alt="Staff Talking and Dining" loading="lazy" typeof="foaf:Image"> 
+                        </div> 
+                       </div> 
+                       <div class="slick__slide slide slide--8"> 
+                        <div class="paragraph paragraph--type--carousel-slider paragraph--view-mode--default carousel-slider"> 
+                         <img src="/sites/g/files/rcwecm2846/files/slider-dining-plans-08.jpg" width="1170" height="500" alt="Students Dining Together" loading="lazy" typeof="foaf:Image"> 
+                        </div> 
+                       </div> 
+                       <div class="slick__slide slide slide--9"> 
+                        <div class="paragraph paragraph--type--carousel-slider paragraph--view-mode--default carousel-slider"> 
+                         <img src="/sites/g/files/rcwecm2846/files/slider-dining-plans-09.jpg" width="1170" height="500" alt="Glasgow Residential Restaurant" loading="lazy" typeof="foaf:Image"> 
+                        </div> 
+                       </div> 
+                       <div class="slick__slide slide slide--10"> 
+                        <div class="paragraph paragraph--type--carousel-slider paragraph--view-mode--default carousel-slider"> 
+                         <img src="/sites/g/files/rcwecm2846/files/slider-dining-plans-10.jpg" width="1170" height="500" alt="Staff at Salad Bar" loading="lazy" typeof="foaf:Image"> 
+                        </div> 
+                       </div> 
+                       <div class="slick__slide slide slide--11"> 
+                        <div class="paragraph paragraph--type--carousel-slider paragraph--view-mode--default carousel-slider"> 
+                         <img src="/sites/g/files/rcwecm2846/files/slider-dining-plans-11.jpg" width="1170" height="500" alt="Student Ordering at Glasgow" loading="lazy" typeof="foaf:Image"> 
+                        </div> 
+                       </div> 
+                       <div class="slick__slide slide slide--12"> 
+                        <div class="paragraph paragraph--type--carousel-slider paragraph--view-mode--default carousel-slider"> 
+                         <img src="/sites/g/files/rcwecm2846/files/slider-dining-plans-12.jpg" width="1170" height="500" alt="Students Dining Together and Smiling" loading="lazy" typeof="foaf:Image"> 
+                        </div> 
+                       </div> 
+                       <div class="slick__slide slide slide--13"> 
+                        <div class="paragraph paragraph--type--carousel-slider paragraph--view-mode--default carousel-slider"> 
+                         <img src="/sites/g/files/rcwecm2846/files/slider-dining-plans-13.jpg" width="1170" height="500" alt="Staff Ordering at Lothian" loading="lazy" typeof="foaf:Image"> 
+                        </div> 
+                       </div> 
+                       <div class="slick__slide slide slide--14"> 
+                        <div class="paragraph paragraph--type--carousel-slider paragraph--view-mode--default carousel-slider"> 
+                         <img src="/sites/g/files/rcwecm2846/files/slider-dining-plans-14.jpg" width="1170" height="500" alt="Barn Chicken Sandwich" loading="lazy" typeof="foaf:Image"> 
+                        </div> 
+                       </div> 
+                       <div class="slick__slide slide slide--15"> 
+                        <div class="paragraph paragraph--type--carousel-slider paragraph--view-mode--default carousel-slider"> 
+                         <img src="/sites/g/files/rcwecm2846/files/slider-dining-plans-15.jpg" width="1170" height="500" alt="Student Choosing Meal at Glasgow" loading="lazy" typeof="foaf:Image"> 
+                        </div> 
+                       </div> 
+                       <div class="slick__slide slide slide--16"> 
+                        <div class="paragraph paragraph--type--carousel-slider paragraph--view-mode--default carousel-slider"> 
+                         <img src="/sites/g/files/rcwecm2846/files/slider-dining-plans-16.jpg" width="1170" height="500" alt="Staff Serving a Student at the Barn" loading="lazy" typeof="foaf:Image"> 
+                        </div> 
+                       </div> 
+                       <div class="slick__slide slide slide--17"> 
+                        <div class="paragraph paragraph--type--carousel-slider paragraph--view-mode--default carousel-slider"> 
+                         <img src="/sites/g/files/rcwecm2846/files/slider-dining-plans-17.jpg" width="1170" height="500" alt="Staff Choosing a Wrap at Lothian" loading="lazy" typeof="foaf:Image"> 
+                        </div> 
+                       </div> 
+                       <div class="slick__slide slide slide--18"> 
+                        <div class="paragraph paragraph--type--carousel-slider paragraph--view-mode--default carousel-slider"> 
+                         <img src="/sites/g/files/rcwecm2846/files/slider-dining-plans-18.jpg" width="1170" height="500" alt="Students Eating and Laughing at Lothian" loading="lazy" typeof="foaf:Image"> 
+                        </div> 
+                       </div> 
+                       <div class="slick__slide slide slide--19"> 
+                        <div class="paragraph paragraph--type--carousel-slider paragraph--view-mode--default carousel-slider"> 
+                         <img src="/sites/g/files/rcwecm2846/files/slider-dining-plans-19.jpg" width="1170" height="500" alt="Staff Dining at Lothian" loading="lazy" typeof="foaf:Image"> 
+                        </div> 
+                       </div> 
+                       <div class="slick__slide slide slide--20"> 
+                        <div class="paragraph paragraph--type--carousel-slider paragraph--view-mode--default carousel-slider"> 
+                         <img src="/sites/g/files/rcwecm2846/files/slider-dining-plans-21.jpg" width="1170" height="500" alt="Barn Cheeseburger" loading="lazy" typeof="foaf:Image"> 
+                        </div> 
+                       </div> 
+                       <div class="slick__slide slide slide--21"> 
+                        <div class="paragraph paragraph--type--carousel-slider paragraph--view-mode--default carousel-slider"> 
+                         <img src="/sites/g/files/rcwecm2846/files/slider-dining-plans-22.jpg" width="1170" height="500" alt="Student Enjoying Their Meal" loading="lazy" typeof="foaf:Image"> 
+                        </div> 
+                       </div> 
+                       <div class="slick__slide slide slide--22"> 
+                        <div class="paragraph paragraph--type--carousel-slider paragraph--view-mode--default carousel-slider"> 
+                         <img src="/sites/g/files/rcwecm2846/files/slider-dining-plans-23.jpg" width="1170" height="500" alt="Student Dining on the Patio" loading="lazy" typeof="foaf:Image"> 
+                        </div> 
+                       </div> 
+                       <div class="slick__slide slide slide--23"> 
+                        <div class="paragraph paragraph--type--carousel-slider paragraph--view-mode--default carousel-slider"> 
+                         <img src="/sites/g/files/rcwecm2846/files/slider-dining-plans-24.jpg" width="1170" height="500" alt="Staff and Faculty Dining at UCR" loading="lazy" typeof="foaf:Image"> 
+                        </div> 
+                       </div> 
+                      </div> 
+                      <nav role="navigation" class="slick__arrow"> <button type="button" data-role="none" class="slick-prev" aria-label="Previous" tabindex="0">Previous</button> <button type="button" data-role="none" class="slick-next" aria-label="Next" tabindex="0">Next</button> 
+                      </nav> 
+                     </div> 
+                    </div> 
+                   </div> 
+                  </div> 
+                 </div> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+             <div class="layout layout-two-col grid-container"> 
+              <div class="grid-x grid-padding-x"> 
+               <div class="cell medium-6"> 
+                <div class="layout__region layout__region--column-1"> 
+                 <div data-block-plugin-id="field_block:node:page:body"> 
+                  <div class="basic-body"> <span><h6>&nbsp;</h6> <p>The UCR Housing, Dining &amp; Hospitality Services Team has a long-standing history of providing students, faculty and staff with outstanding food and service in a welcoming environment. We look forward to serving you!</p> 
+                    <hr></span> 
+                  </div> 
+                 </div> 
+                 <div data-block-plugin-id="block_content:50c307b9-d42c-4ca3-abe6-0315fda7e4a4" class="ucr-custom-block ucr-custom-block-custom-margins margin-top-2"> 
+                  <div class="grid-container full"> 
+                   <div class="grid-x grid-padding-x"> 
+                    <div class="cell"> 
+                     <h2 class="announcements">UCR Opens a New Lounge at The Barn</h2> 
+                     <p>A new lounge called the Stable has opened at UC Riverside.<br><a href="https://www.pe.com/2021/12/08/uc-riverside-opens-a-new-lounge-at-the-barn/" target="_blank" title="Read More on The Press-Enterprise">Read more on The Press-Enterprise</a></p> <!--BEGIN HIDE
+<h2 class="announcements">Glasgow Welcome Everyone During Lunch</h2>
+
+<drupal-entity alt="Savor is relocating to Lothian Announcement" data-embed-button="media_browser" data-entity-embed-display="media_image" data-entity-embed-display-settings="{&quot;image_style&quot;:&quot;&quot;,&quot;image_link&quot;:&quot;&quot;}" data-entity-type="media" data-entity-uuid="3036cbe2-4be0-407f-8300-26fd498c6af6" data-langcode="en" style="padding-bottom:8px" title="savor-location-change-to-lothian-announcement-2021-22"></drupal-entity>
+
+<p><strong>Effective January 3, 2022:</strong> Glasgow is now open for all, during lunch only. Breakfast Brunch, and Dinner meal periods remain reserved exclusively for meal plan holders only. Enjoy all your lunch favorites at our all-you-care-to-eat residential restaurant.</p>
+
+<hr />
+END HIDE --> 
+                     <hr>
+                     <h2 class="announcements">We Now Accept Purchase Orders</h2> 
+                     <div alt="We Now Accept Purchase Orders at Chronic Tacos, Panda Express, and The Habit Burger Grill" data-embed-button="media_browser" data-entity-embed-display="media_image" data-entity-embed-display-settings="scale_367" data-entity-type="media" data-entity-uuid="dc0e83c4-12e4-419f-abb8-45e602918400" data-langcode="en" style="padding-bottom:8px;" title="we-accept-purchase-orders-promo-thumbnail" class="embedded-entity"> 
+                      <img src="/sites/g/files/rcwecm2846/files/styles/scale_367/public/we-accept-purchase-orders-promo-thumbnail_0.jpg?itok=9N4GnLYK" alt="We Now Accept Purchase Orders at Chronic Tacos, Panda Express, and The Habit Burger Grill" title="we-accept-purchase-orders-promo-thumbnail" typeof="foaf:Image">
+                     </div> 
+                     <p>As an added convenience to the campus community, the following locations will accept UCR departmental POs as a form of payment: The Habit, Panda Express, and Chronic Tacos. <a href="https://auxiliarydocs.ucr.edu/dining/we-accept-purchase-orders.pdf" target="_blank" title="We Now Accept Purchase Orders at Panda Express, Chronic Tacos, and The Habit Burger Grill">See more</a></p> 
+                     <hr>
+                     <h2 class="announcements">We're Cashless</h2> 
+                     <div alt="UCR Dining is Cashless" data-embed-button="media_browser" data-entity-embed-display="media_image" data-entity-type="media" data-entity-uuid="fc88eb83-e4c3-45ee-b143-8cd3682888d2" data-langcode="en" style="padding-bottom:8px" title="cashless-homepage-announcement" class="embedded-entity"> 
+                      <img src="/sites/g/files/rcwecm2846/files/cashless-homepage-announcement.jpg" alt="UCR Dining is Cashless" title="cashless-homepage-announcement" typeof="foaf:Image">
+                     </div> 
+                     <p>UCR dining is now cashless at all campus dining locations.</p> 
+                     <hr>
+                     <h2 class="announcements">Loyal E. Horton Dining Awards</h2> 
+                     <div alt="Loyal E. Horton Awards Go to UCR Dining!" data-embed-button="media_browser" data-entity-embed-display="media_image" data-entity-type="media" data-entity-uuid="a90b49ff-fbda-4fc9-a2dd-92e0b690d6e6" data-langcode="en" style="padding-bottom:8px" title="loyal-e-horton-award-NACUFS-announcement" class="embedded-entity"> 
+                      <img src="/sites/g/files/rcwecm2846/files/loyal-e-horton-award-NACUFS-announcement.jpg" alt="Loyal E. Horton Awards Go to UCR Dining!" title="loyal-e-horton-award-NACUFS-announcement" typeof="foaf:Image">
+                     </div> 
+                     <p>We won Silver for a new retail concept, Emerbee's, and we won Bronze for our catering special event, "Taste of Citrus Grove." These are our first two NACUFS Horton Awards!</p> 
+                     <p><a class="btn-ucr" href="https://www.nacufs.org/Awards/LoyalEHortonDiningAwards" target="_blank" title="Read more on the NACUFS website">Read more on the NACUFS website</a></p> 
+                     <hr>
+                     <h2 class="announcements">Dining Gift Card Expirations Extended!</h2> 
+                     <div alt="Dining Gift Card Extension Announcement" data-embed-button="media_browser" data-entity-embed-display="media_image" data-entity-type="media" data-entity-uuid="c0cedeb2-f576-4f14-bc4c-f31a6da37a1c" data-langcode="en" style="padding-bottom:8px" title="gift-card-extension-announcement" class="embedded-entity"> 
+                      <img src="/sites/g/files/rcwecm2846/files/gift-card-extension-announcement.jpg" alt="Dining Gift Card Extension Announcement" title="gift-card-extension-announcement" typeof="foaf:Image">
+                     </div> 
+                     <p>August 2020, 2021 expirations may now be used through August 2022!</p> 
+                     <hr> 
+                    </div> 
+                   </div> 
+                  </div> 
+                 </div> 
+                </div> 
+               </div> 
+               <div class="cell medium-6"> 
+                <div class="layout__region layout__region--column-2"> 
+                 <div data-block-plugin-id="block_content:6815e36f-5bd1-423b-962f-964ca4dfa471" class="ucr-custom-block"> 
+                  <div class="grid-container full"> 
+                   <div class="grid-x grid-padding-x"> 
+                    <div class="cell">
+                     <h2>Dining Hours</h2>
+                    </div> 
+                    <div class="cell"> 
+                     <ul class="tabs ucr-tabs" data-deep-link="true" data-update-history="true" data-deep-link-smudge="true" data-tabs id="tabs-2a1b8a450fb50df6002fe09eab9ff8b7"> 
+                      <li class="tabs-title is-active"><a href="#dining_hours">Dining Hours</a></li> 
+                     </ul> 
+                    </div> 
+                    <div class="cell"> 
+                     <div class="tabs-content" data-tabs-content="tabs-2a1b8a450fb50df6002fe09eab9ff8b7"> 
+                      <div> 
+                       <div> 
+                        <div class="paragraph paragraph--type--tab paragraph--view-mode--default tabs-panel is-active" id="dining_hours"> 
+                         <div alt="V2_SpringDining_Hours" data-embed-button="media_browser" data-entity-embed-display="media_image" data-entity-type="media" data-entity-uuid="cf77ca7c-8599-4308-9bb0-4595c5593386" data-langcode="en" title="V2_SpringDining_Hours" class="embedded-entity"> 
+                          <img src="/sites/g/files/rcwecm2846/files/v2regular-dining-hours-2021-2022-spring-quarter_0.png" alt="V2_SpringDining_Hours" title="V2_SpringDining_Hours" typeof="foaf:Image">
+                         </div> 
+                         <p style="margin-top:15px"><a href="https://auxiliarydocs.ucr.edu/dining/dining-hours.pdf" target="_blank" title="Dining Hours">View or Print Dining Hours</a></p> 
+                        </div> 
+                       </div> 
+                      </div> 
+                     </div> 
+                    </div> 
+                   </div> 
+                  </div> 
+                 </div> 
+                 <div data-block-plugin-id="block_content:006fec37-2506-46e5-88e8-cb96add3bd75" class="ucr-custom-block"> 
+                  <div class="grid-container full"> 
+                   <div class="grid-x grid-padding-x"> 
+                    <div class="cell"> 
+                     <div style="height: auto; width: 80%; border: 1px solid black; padding: 20px 20px 20px 20px; margin: auto; background-image: URL(../sites/g/files/rcwecm2846/files/tartan-bg-for-surveys.png); background-repeat: repeat; background-size: 300px 300px;"> 
+                      <p style="font-weight: bold; text-align: left; font-size: 25px; color: rgb(255, 255, 255); text-shadow: rgb(0, 0, 0) 2px 2px 2px;">Take Our Survey</p> 
+                      <script>
+<!--//--><![CDATA[// ><!--
+(function(t,e,s,n){var o,a,c;t.SMCX=t.SMCX||[],e.getElementById(n)||(o=e.getElementsByTagName(s),a=o[o.length-1],c=e.createElement(s),c.type="text/javascript",c.async=!0,c.id=n,c.src="https://widget.surveymonkey.com/collect/website/js/tRaiETqnLgj758hTBazgd381trHw8kX_2F59nZWplfSuMjzW9KCt8_2BCtnGPKaV89F_2B.js",a.parentNode.insertBefore(c,a))})(window,document,"script","smcx-sdk");
+//--><!]]>
+</script><a href="https://www.surveymonkey.com" style="font: 12px Helvetica, sans-serif; color: #808080; text-decoration: none;">Create your own user feedback survey </a>
+                     </div> 
+                    </div> 
+                   </div> 
+                  </div> 
+                 </div> 
+                 <div data-block-plugin-id="block_content:f798f0ad-7ce0-49b8-aec2-bb748a560314" class="ucr-custom-block"> 
+                  <div class="grid-container full"> 
+                   <div class="grid-x grid-padding-x"> 
+                    <div class="cell"> 
+                     <h2 class="announcements" style="text-align:center; margin-top:35px">Maintain Your Campus Connection<br><span style="white-space: nowrap;">with UCR Citrus Gifts!</span></h2> 
+                     <p style="text-align:center">Purchase on campus at <span style="white-space: nowrap;"><a href="https://dining.ucr.edu/campus-dining/market-at-glen-mor" title="The Market at Glen Mor">The Market @ Glen Mor</a></span>&nbsp;or&nbsp;<a href="https://dining.ucr.edu/retail/scottys-convenience-stores" title="HUB Scotty's Convenience Store">HUB Scotty’s</a>.</p> 
+                     <p style="text-align:center"><a href="https://citrusgifts.ucr.edu" target="_blank" title="Visit the UCR Citrus Gifts website">Visit the UCR Citrus Gifts website</a> to view our collection.</p> 
+                     <div alt="Purchase Your Citrus Gifts at these two locations on campus at UCR." data-embed-button="media_browser" data-entity-embed-display="media_image" data-entity-type="media" data-entity-uuid="0f60a234-0ce1-4bcf-9480-05467ba7e39f" data-langcode="en" title="citrus-gifts-purchase-on-campus-homepage-promo" class="embedded-entity align-center"> 
+                      <img src="/sites/g/files/rcwecm2846/files/citrus-gifts-purchase-on-campus-homepage-promo_0.jpg" alt="Purchase Your Citrus Gifts at these two locations on campus at UCR." title="citrus-gifts-purchase-on-campus-homepage-promo" typeof="foaf:Image">
+                     </div> 
+                    </div> 
+                   </div> 
+                  </div> 
+                 </div> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+            </div> 
+           </article> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </main> 
+    <footer> 
+     <div class="footer-container"> 
+      <div class="footer-content-area"> 
+       <div class="grid-container"> 
+        <div class="grid-x grid-padding-x align-center"> 
+         <div id="block-ucr-design-1-ucriversidefootersearchblock" data-block-plugin-id="ucr_global_footer_search" class="cell show-for-medium footer-search"> 
+          <section class="google-search"> <button class="button footer-search-button" data-open="gscSearchFormModal">Search</button> 
+          </section> 
+         </div> 
+        </div> 
+        <div class="grid-x grid-padding-x footer-columns"> 
+         <div class="cell medium-auto"> 
+          <section class="footer-item ucr-footer-info"> <span class="footer-logo"><span class="show-for-sr">University of California, Riverside</span></span> 
+           <address> <p>900 University Ave.<br> Riverside, CA 92521</p> <p>Tel: (951) 827-1012</p> </address> 
+           <ul class="footer-links"> 
+            <li><a href="https://library.ucr.edu/" target="_blank">UCR Library</a></li> 
+            <li><a href="https://campusstatus.ucr.edu/" target="_blank">Campus Status</a></li> 
+            <li><a href="https://ucr.bncollege.com/shop/ucr/home" target="_blank">Campus Store</a></li> 
+            <li><a href="https://jobs.ucr.edu" target="_blank">Career Opportunities</a></li> 
+            <li><a href="https://diversity.ucr.edu/" target="_blank">Diversity</a></li> 
+            <li><a href="https://campusmap.ucr.edu/" target="_blank">Maps and Directions</a></li> 
+            <li><a href="https://www.ucr.edu/about/visitors" target="_blank">Visit UCR</a></li> 
+           </ul> 
+          </section> 
+         </div> 
+         <div class="cell medium-auto"> 
+          <section id="block-ucr-design-1-ucriversidefooterdeptinformationblock" data-block-plugin-id="ucr_global_footer_dept_info" class="footer-item footer-dept-info"> 
+           <h2>UCR Dining</h2> 
+           <address class="address_2"> <p> <a href="https://campusmap.ucr.edu/?find=P5581" target="_blank"> 3595 Canyon Crest Drive <br>Riverside, CA 92507 </a></p> <p> tel: (951) 827-3456<br> email: <a href="mailto:diningservices@ucr.edu">diningservices@ucr.edu</a> </p> </address> 
+          </section> 
+         </div> 
+         <div class="cell medium-auto"> 
+          <section class="footer-item"> 
+           <p class="social-title">Follow US:</p> 
+           <div class="social-link"> <a href="https://www.facebook.com/UCRDining" target="_blank" class="social-btn mdi mdi-facebook" title="UCR Dining on Facebook" aria-label="link to facebook"><span class="show-for-sr">UCR Dining on Facebook</span></a> <a href="https://www.instagram.com/UCRDining" target="_blank" class="social-btn mdi mdi-instagram" title="UCR Dining on Instagram" aria-label="link to instagram"><span class="show-for-sr">UCR Dining on Instagram</span></a> 
+           </div> 
+          </section> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="site-legal-footer"> 
+       <div class="grid-container"> 
+        <div class="grid-x grid-padding-x"> 
+         <div class="cell"> 
+          <ul> 
+           <li><a href="http://www.ucr.edu/privacy.html">Privacy and Accessibility</a></li> 
+           <li><a href="http://www.ucr.edu/terms.html">Terms and Conditions</a></li> 
+           <li>© 2022 Regents of the University of California</li> 
+          </ul> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </footer> 
+   </div> 
+   <div class="large reveal" id="gscSearchFormModal" role="search" data-reveal data-animation-in="fade-in" data-animation-out="fade-out"> 
+    <div class="gsc-modal-top"> <button class="close-button" data-close aria-label="Close Search Window" type="button"><span aria-hidden="true">×</span></button> 
+    </div> 
+    <form id="audience-search-form" name="gsc-search-form" action="/results"> 
+     <div class="gsc-modal-body"> 
+      <div class="grid-container full"> 
+       <div class="grid-x grid-padding-x grid-padding-y align-center-middle text-center"> 
+        <div class="gsc-text-wrapper"> <span class="gsc-welcome-text">Let us help you with your search</span> 
+        </div> 
+        <div class="cell"> <label id="searchbox-label" class="hidden" aria-label="Enter your Search Criteria.">Enter your Search Criteria.</label> 
+         <input type="text" maxlength="255" id="audience-search" name="q" value="" aria-labelledby="searchbox-label" placeholder="Search for..."> 
+        </div> 
+        <div class="cell medium-4"> <button class="button gsc-modal-button-submit" type="submit" name="search-by" value="all">Search All UCR</button> 
+        </div> 
+        <div class="cell medium-4"> <button class="button gsc-modal-button-submit" type="submit" name="search-by" value="dining.ucr.edu">Search This Site</button> 
+        </div> 
+        <div class="cell medium-4"> <button type="button" class="button gsc-modal-button-close" data-close>Cancel</button> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </form> 
+   </div> 
+  </div> 
+  <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/1","currentPathIsAdmin":false,"isFront":true,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"bu":{"notify_ie":-2,"notify_firefox":-2,"notify_opera":-2,"notify_safari":-2,"notify_chrome":-2,"insecure":true,"unsupported":false,"mobile":true,"position":"top","visibility_type":"hide","visibility_pages":"admin\/*","test_mode":false,"new_window":true,"no_close":false,"text_override":"","reminder":6,"reminder_closed":6,"url":"","source":"\/\/browser-update.org\/update.min.js","show_source":""},"google_analytics":{"account":{},"trackOutbound":true,"trackMailto":true,"trackTel":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"blazy":{"loadInvisible":false,"offset":100,"saveViewportOffsetDelay":50,"loader":true,"unblazy":null},"blazyIo":{"disconnect":false,"rootMargin":"0px","threshold":[0,0.25,0.5,0.75,1]},"slick":{"accessibility":true,"adaptiveHeight":false,"autoplay":false,"autoplaySpeed":3000,"pauseOnHover":true,"pauseOnDotsHover":false,"arrows":true,"downArrow":false,"downArrowTarget":"","downArrowOffset":0,"centerMode":false,"centerPadding":"50px","dots":false,"dotsClass":"slick-dots","draggable":true,"fade":false,"focusOnSelect":false,"infinite":true,"initialSlide":0,"lazyLoad":"ondemand","mouseWheel":false,"randomize":false,"rtl":false,"rows":1,"slidesPerRow":1,"slide":"","slidesToShow":1,"slidesToScroll":1,"speed":500,"swipe":true,"swipeToSlide":false,"edgeFriction":0.34999999999999998,"touchMove":true,"touchThreshold":5,"useCSS":true,"cssEase":"ease","cssEaseBezier":"","cssEaseOverride":"","useTransform":true,"easing":"linear","variableWidth":false,"vertical":false,"verticalSwiping":false,"waitForAnimate":true,"pauseOnFocus":true},"ajax":[],"user":{"uid":0,"permissionsHash":"d7ea708a8182101a985c4e722cffeb15452257d964a5458d15ed6bd0deafdca8"}}</script> 
+  <script src="/sites/g/files/rcwecm2846/files/js/js_0F6Y_GIYmn0xqk4FwmvIuRfpDBmBOV_uAAazDz_HEKY.js"></script> 
+  <script src="https://static.addtoany.com/menu/page.js" async></script> 
+  <script src="/sites/g/files/rcwecm2846/files/js/js_PaQCdIIQD0knvQWKjZ1HS9WZGZklaLKq60eSWa0sohA.js"></script> 
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"07d404edfe","applicationID":"837425331","transactionName":"MVZSYRNWCxBZB0wIWggccVYVXgoNFxRZBlA5UFFWCVI=","queueTime":0,"applicationTime":63,"atts":"HRFRF1tMGB4=","errorBeacon":"bam-cell.nr-data.net","agent":""}</script> 
+ </body>
+</html>

@@ -1,0 +1,890 @@
+<!doctype html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# " class="no-js"> 
+ <head> 
+  <meta charset="utf-8">
+  <script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam-cell.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"07d404edfe",applicationID:"837425331"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script> 
+  <noscript>
+   <style>form.antibot * :not(.antibot-message) { display: none !important; }</style> 
+  </noscript>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-3051875-1"></script> 
+  <script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments)};gtag("js", new Date());gtag("set", "developer_id.dMDhkMT", true);gtag("config", "UA-3051875-1", {"groups":"default","anonymize_ip":true,"page_placeholder":"PLACEHOLDER_page_path","allow_ad_personalization_signals":false});</script> 
+  <link rel="canonical" href="https://insideucr.ucr.edu/"> 
+  <link rel="shortlink" href="https://insideucr.ucr.edu/"> 
+  <meta name="Generator" content="Drupal 9 (https://www.drupal.org)"> 
+  <meta name="MobileOptimized" content="width"> 
+  <meta name="HandheldFriendly" content="true"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="shortcut icon" href="/profiles/custom/ucr_news_profile/themes/custom/ucr_news/favicon.ico" type=""> 
+  <script>window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overlays=[];a2a_config.templates={};</script> 
+  <title>| Inside UCR</title> 
+  <link rel="stylesheet" media="all" href="/sites/g/files/rcwecm2196/files/css/css_1hgOdDANG81JXEdujGA5ydl-BdBuHhZxwu8TsbFHRw4.css"> 
+  <link rel="stylesheet" media="all" href="https://fonts.googleapis.com/css?family=Montserrat:700|Roboto+Slab:400,700|Roboto:400,700"> 
+  <link rel="stylesheet" media="all" href="/sites/g/files/rcwecm2196/files/css/css_1HhBoMXktZGmLoaVGg-iZi9Cft1FMnsEY7ntpI5ptwg.css"> 
+  <style type="text/css">
+    <!--
+     figure.embedded-entity.align-right {
+    width: max-content !important;
+}
+
+figure.embedded-entity.align-left{
+    width: max-content !important;
+}     -->
+    </style> 
+ </head> 
+ <body class="layout path-frontpage"> 
+  <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas> 
+   <div class="webpage-content"> 
+    <header role="banner" data-sticky-container> 
+     <div class="header-sticky-container" data-ucr-sticky="0" data-ucr-mobile-sticky="0"> 
+      <div class="grid-container full"> 
+       <div class="grid-x"> 
+        <div class="cell text-center ucr-site-alerts"> 
+         <div id="block-covid19alert" data-block-plugin-id="block_content:9596cf75-23ec-4e4e-a519-c0b766fd6679" class="ucr-custom-block"> 
+          <div class="grid-container full"> 
+           <div class="grid-x"> 
+            <div class="cell"> 
+             <div class="ucr-custom-block ucr-custom-alerts callout error" data-closable> 
+              <div>
+               <p><b data-stringify-type="bold">More information about COVID-19 and return to campus available on the <a href="https://campusreturn.ucr.edu">Campus Return</a> website.</b></p> 
+              </div> <button class="close-button" aria-label="Dismiss alert" type="button" data-close> <span aria-hidden="true">×</span> </button> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="grid-x"> 
+        <div class="cell small-order-2 medium-order-1 audience-container"> 
+         <div class="grid-container audience-menu-bar"> 
+          <div class="grid-x align-middle"> 
+           <div id="block-ucr-news-organization-name" data-block-plugin-id="ucr_global_organization_name" class="cell auto org-name"> <a class="skip-main" href="#main">Skip to main content</a> 
+            <p class="parent-org-title"> <a href="https://www.ucr.edu">University of California, Riverside</a> </p> 
+           </div> 
+           <div class="cell medium-shrink show-for-medium"> 
+            <section class="google-search"> <button class="button audience-search-button" data-open="gscSearchFormModal">Search</button> 
+            </section> 
+           </div> 
+           <div class="cell shrink hide-for-medium" data-responsive-toggle="main-menu-container" data-hide-for="medium"> <button class="mdi mdi-menu button mobile-menu-expander" id="mobile-menu-expander" type="button" data-toggle="main-menu-container"> </button> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="cell small-order-1 medium-order-2 masthead-container"> 
+         <div class="grid-container"> 
+          <div class="grid-x align-middle"> 
+           <div class="cell shrink"> <a class="masthead-logo" href="/"> <span class="show-for-sr">UC Riverside</span> </a> 
+           </div> 
+           <div class="cell auto"> 
+            <h1 class="masthead-title" aria-label="Welcome to  Inside UCR "> <a href="/"> Inside UCR </a> </h1> 
+           </div> 
+           <div class="cell auto show-for-medium"> 
+            <p class="slogan"></p> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="cell small-order-3 medium-order-3 main-nav-bar"> 
+         <div class="grid-container" id="main-menu-container" data-animate="fade-in fade-out"> 
+          <div class="grid-x"> 
+           <div class="cell hide-for-medium"> 
+            <section class="google-search"> <button class="button audience-search-button" data-open="gscSearchFormModal">Search</button> 
+            </section> 
+           </div> 
+           <div id="block-ucr-news-main-menu" data-block-plugin-id="system_menu_block:main" class="cell main-menu-cell"> 
+            <nav id="primary-site-menu" aria-labelledby="primary-site-menu"> 
+             <ul class="standard-menu vertical medium-horizontal menu align-center-middle" data-responsive-menu="accordion medium-dropdown" data-closing-time="200"> 
+              <li> <a href="/" data-drupal-link-system-path="<front>" class="is-active">Home</a> </li> 
+              <li> <a href="/stories" data-drupal-link-system-path="stories">Stories</a> </li> 
+              <li> <a href="/awards" data-drupal-link-system-path="awards">Awards &amp; Honors</a> </li> 
+              <li> <a href="/announcements" data-drupal-link-system-path="announcements">Announcements</a> </li> 
+              <li> <a href="/scotmemos" data-drupal-link-system-path="scotmemos">ScotMemos</a> </li> 
+              <li> <a href="/tag/research-blog" data-drupal-link-system-path="taxonomy/term/681">Research Blog</a> </li> 
+              <li> <a href="https://events.ucr.edu/" target="_blank">Events</a> </li> 
+             </ul> 
+            </nav> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </header> 
+    <main> 
+     <div id="content-container"> 
+      <div class="grid-container"> 
+       <div class="grid-x grid-padding-x sub-nav-social"> 
+        <div class="cell auto text-right small-order-1 large-order-2 social-media-header"> 
+         <section class="footer-item"> 
+          <p class="social-title">Follow US:</p> 
+          <div class="social-link"> <a href="http://www.facebook.com/UCRiverside" target="_blank" class="social-btn mdi mdi-facebook" title="" aria-label="link to facebook"><span class="show-for-sr"></span></a> <a href="http://twitter.com/UCRiverside" target="_blank" class="social-btn mdi mdi-twitter" title="" aria-label="link to twitter"><span class="show-for-sr"></span></a> <a href="http://www.youtube.com/UCRiverside" target="_blank" class="social-btn mdi mdi-youtube-play" title="" aria-label="link to youtube"><span class="show-for-sr"></span></a> <a href="https://www.instagram.com/ucriversideofficial" target="_blank" class="social-btn mdi mdi-instagram" title="" aria-label="link to instagram"><span class="show-for-sr"></span></a> <a href="https://www.linkedin.com/school/university-of-california-riverside/" target="_blank" class="social-btn mdi mdi-linkedin" title="" aria-label="link to linkedin"><span class="show-for-sr"></span></a> 
+          </div> 
+         </section> 
+        </div> 
+       </div> 
+       <div class="grid-x grid-padding-x grid-padding-y system-admin-controls"> 
+       </div> 
+      </div> 
+      <div id="main" class="grid-container primary-content-area"> 
+       <div class="grid-x grid-padding-x grid-padding-y frontpage-container"> 
+        <div class="cell"> 
+         <div class="views-element-container ucr-custom-block" id="block-views-block-news-stories-views-ucr-news-stories-featured" data-block-plugin-id="views_block:news_stories_views-ucr_news_stories_featured"> 
+          <div>
+           <div class="js-view-dom-id-885810bd4af4aa21861de0668b89583cdbd5524ee24953c2594442c679b160f4"> 
+            <div class="una-stories-featured-slider margin-bottom-2" data-slick="{&quot;dots&quot;:true,&quot;infinite&quot;:true,&quot;speed&quot;:800,&quot;fade&quot;:true,&quot;cssEase&quot;:&quot;linear&quot;,&quot;autoplay&quot;:true,&quot;autoplaySpeed&quot;:8000,&quot;draggable&quot;:false}"> 
+             <div class="featured-item">
+              <div class="slider-background-image"> <picture> 
+                <source srcset="/sites/g/files/rcwecm2196/files/styles/news_article_featured_l/public/2022-05/2022-04-27%20Goat%20Yoga%20041.jpeg?h=c3635fa2&amp;itok=QUawmUDk 1x" media="all and (min-width: 1401px)" type="image/jpeg"> 
+                <source srcset="/sites/g/files/rcwecm2196/files/styles/news_article_featured_l/public/2022-05/2022-04-27%20Goat%20Yoga%20041.jpeg?h=c3635fa2&amp;itok=QUawmUDk 1x" media="all and (min-width: 1025px) and (max-width: 1400px)" type="image/jpeg"> 
+                <source srcset="/sites/g/files/rcwecm2196/files/styles/news_article_featured_m/public/2022-05/2022-04-27%20Goat%20Yoga%20041.jpeg?h=c3635fa2&amp;itok=ZwTv96jk 1x" media="all and (min-width: 768px) and (max-width: 1024px)" type="image/jpeg"> 
+                <source srcset="/sites/g/files/rcwecm2196/files/styles/news_article_featured_s/public/2022-05/2022-04-27%20Goat%20Yoga%20041.jpeg?h=c3635fa2&amp;itok=KsF4ouPs 1x" type="image/jpeg"> 
+                <img src="/sites/g/files/rcwecm2196/files/styles/news_article_featured_l/public/2022-05/2022-04-27%20Goat%20Yoga%20041.jpeg?h=c3635fa2&amp;itok=QUawmUDk" alt="Goat and staff practicing yoga outdoors." typeof="foaf:Image"> 
+               </picture> 
+              </div> 
+              <div class="slider-overlay"> 
+               <div class="slider-overlay-content"> <!--
+    <div class="slider-category-display">
+      <div class="category-box"></div>
+    </div>
+    --> 
+                <div class="slider-title-content"> <a href="/stories/2022/05/03/campus-celebrates-staff-appreciation-goat-yoga" class="slider-link-to-content"> <span class="slider-title-display"> <span class="slider-title-date">May 3, 2022</span> <h2>Campus celebrates staff appreciation with goat yoga </h2> 
+                   <div class="slider-title-subtitle">
+                    <p>Highlanders thank staff with weeklong activities</p>
+                   </div> </span> </a> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+             <div class="featured-item">
+              <div class="slider-background-image"> <picture> 
+                <source srcset="/sites/g/files/rcwecm2196/files/styles/news_article_featured_l/public/2022-04/2022-04-20%20Campus%20Nooner.jpg?h=686c9ac4&amp;itok=ktfDX5ph 1x" media="all and (min-width: 1401px)" type="image/jpeg"> 
+                <source srcset="/sites/g/files/rcwecm2196/files/styles/news_article_featured_l/public/2022-04/2022-04-20%20Campus%20Nooner.jpg?h=686c9ac4&amp;itok=ktfDX5ph 1x" media="all and (min-width: 1025px) and (max-width: 1400px)" type="image/jpeg"> 
+                <source srcset="/sites/g/files/rcwecm2196/files/styles/news_article_featured_m/public/2022-04/2022-04-20%20Campus%20Nooner.jpg?h=686c9ac4&amp;itok=QcCfm6k8 1x" media="all and (min-width: 768px) and (max-width: 1024px)" type="image/jpeg"> 
+                <source srcset="/sites/g/files/rcwecm2196/files/styles/news_article_featured_s/public/2022-04/2022-04-20%20Campus%20Nooner.jpg?h=686c9ac4&amp;itok=2xOPa_UZ 1x" type="image/jpeg"> 
+                <img src="/sites/g/files/rcwecm2196/files/styles/news_article_featured_l/public/2022-04/2022-04-20%20Campus%20Nooner.jpg?h=686c9ac4&amp;itok=ktfDX5ph" alt="student at nooners" typeof="foaf:Image"> 
+               </picture> 
+              </div> 
+              <div class="slider-overlay"> 
+               <div class="slider-overlay-content"> <!--
+    <div class="slider-category-display">
+      <div class="category-box"></div>
+    </div>
+    --> 
+                <div class="slider-title-content"> <a href="/stories/2022/04/28/ucr-among-best-value-colleges" class="slider-link-to-content"> <span class="slider-title-display"> <span class="slider-title-date">April 28, 2022</span> <h2>UCR among ‘Best Value Colleges’</h2> 
+                   <div class="slider-title-subtitle">
+                    <p>Campus ranked No. 23 among public universities</p>
+                   </div> </span> </a> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+             <div class="featured-item">
+              <div class="slider-background-image"> <picture> 
+                <source srcset="/sites/g/files/rcwecm2196/files/styles/news_article_featured_l/public/2022-04/dei%20crowdfunding%20photo.JPG?h=a141e9ea&amp;itok=gx-ufT2D 1x" media="all and (min-width: 1401px)" type="image/jpeg"> 
+                <source srcset="/sites/g/files/rcwecm2196/files/styles/news_article_featured_l/public/2022-04/dei%20crowdfunding%20photo.JPG?h=a141e9ea&amp;itok=gx-ufT2D 1x" media="all and (min-width: 1025px) and (max-width: 1400px)" type="image/jpeg"> 
+                <source srcset="/sites/g/files/rcwecm2196/files/styles/news_article_featured_m/public/2022-04/dei%20crowdfunding%20photo.JPG?h=a141e9ea&amp;itok=Bq3QiNw5 1x" media="all and (min-width: 768px) and (max-width: 1024px)" type="image/jpeg"> 
+                <source srcset="/sites/g/files/rcwecm2196/files/styles/news_article_featured_s/public/2022-04/dei%20crowdfunding%20photo.JPG?h=a141e9ea&amp;itok=lEIjdv4w 1x" type="image/jpeg"> 
+                <img src="/sites/g/files/rcwecm2196/files/styles/news_article_featured_l/public/2022-04/dei%20crowdfunding%20photo.JPG?h=a141e9ea&amp;itok=gx-ufT2D" alt="students" typeof="foaf:Image"> 
+               </picture> 
+              </div> 
+              <div class="slider-overlay"> 
+               <div class="slider-overlay-content"> <!--
+    <div class="slider-category-display">
+      <div class="category-box"></div>
+    </div>
+    --> 
+                <div class="slider-title-content"> <a href="/stories/2022/04/26/crowdfunding-initiative-promotes-diversity" class="slider-link-to-content"> <span class="slider-title-display"> <span class="slider-title-date">April 26, 2022</span> <h2>Crowdfunding initiative promotes diversity</h2> 
+                   <div class="slider-title-subtitle">
+                    <p>Programs expanding student access highlighted</p>
+                   </div> </span> </a> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+             <div class="featured-item">
+              <div class="slider-background-image"> <picture> 
+                <source srcset="/sites/g/files/rcwecm2196/files/styles/news_article_featured_l/public/2022-04/highlander-newspaper-archives_2560x1440.jpg?h=a92f03cd&amp;itok=lONtVS4B 1x" media="all and (min-width: 1401px)" type="image/jpeg"> 
+                <source srcset="/sites/g/files/rcwecm2196/files/styles/news_article_featured_l/public/2022-04/highlander-newspaper-archives_2560x1440.jpg?h=a92f03cd&amp;itok=lONtVS4B 1x" media="all and (min-width: 1025px) and (max-width: 1400px)" type="image/jpeg"> 
+                <source srcset="/sites/g/files/rcwecm2196/files/styles/news_article_featured_m/public/2022-04/highlander-newspaper-archives_2560x1440.jpg?h=a92f03cd&amp;itok=R6MHZqha 1x" media="all and (min-width: 768px) and (max-width: 1024px)" type="image/jpeg"> 
+                <source srcset="/sites/g/files/rcwecm2196/files/styles/news_article_featured_s/public/2022-04/highlander-newspaper-archives_2560x1440.jpg?h=a92f03cd&amp;itok=XfOCXsyB 1x" type="image/jpeg"> 
+                <img src="/sites/g/files/rcwecm2196/files/styles/news_article_featured_l/public/2022-04/highlander-newspaper-archives_2560x1440.jpg?h=a92f03cd&amp;itok=lONtVS4B" alt="Highlander front pages" typeof="foaf:Image"> 
+               </picture> 
+              </div> 
+              <div class="slider-overlay"> 
+               <div class="slider-overlay-content"> <!--
+    <div class="slider-category-display">
+      <div class="category-box"></div>
+    </div>
+    --> 
+                <div class="slider-title-content"> <a href="/stories/2022/04/25/digitized-newspaper-archives-offer-record-ucr-history" class="slider-link-to-content"> <span class="slider-title-display"> <span class="slider-title-date">April 25, 2022</span> <h2>Digitized newspaper archives offer a record of UCR history</h2> 
+                   <div class="slider-title-subtitle">
+                    <p>The UCR Library has made a complete record of the Highlander available</p>
+                   </div> </span> </a> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+             <div class="featured-item">
+              <div class="slider-background-image"> <picture> 
+                <source srcset="/sites/g/files/rcwecm2196/files/styles/news_article_featured_l/public/2022-04/RivCoParksxUCR-SER.jpeg?h=1ce2cf88&amp;itok=tZMerHge 1x" media="all and (min-width: 1401px)" type="image/jpeg"> 
+                <source srcset="/sites/g/files/rcwecm2196/files/styles/news_article_featured_l/public/2022-04/RivCoParksxUCR-SER.jpeg?h=1ce2cf88&amp;itok=tZMerHge 1x" media="all and (min-width: 1025px) and (max-width: 1400px)" type="image/jpeg"> 
+                <source srcset="/sites/g/files/rcwecm2196/files/styles/news_article_featured_m/public/2022-04/RivCoParksxUCR-SER.jpeg?h=1ce2cf88&amp;itok=U4qpcIeC 1x" media="all and (min-width: 768px) and (max-width: 1024px)" type="image/jpeg"> 
+                <source srcset="/sites/g/files/rcwecm2196/files/styles/news_article_featured_s/public/2022-04/RivCoParksxUCR-SER.jpeg?h=1ce2cf88&amp;itok=2Yhtp8JN 1x" type="image/jpeg"> 
+                <img src="/sites/g/files/rcwecm2196/files/styles/news_article_featured_l/public/2022-04/RivCoParksxUCR-SER.jpeg?h=1ce2cf88&amp;itok=tZMerHge" alt="Students with UCR parks team" typeof="foaf:Image"> 
+               </picture> 
+              </div> 
+              <div class="slider-overlay"> 
+               <div class="slider-overlay-content"> <!--
+    <div class="slider-category-display">
+      <div class="category-box"></div>
+    </div>
+    --> 
+                <div class="slider-title-content"> <a href="/stories/2022/04/20/student-org-plants-240-trees-southern-california-park" class="slider-link-to-content"> <span class="slider-title-display"> <span class="slider-title-date">April 20, 2022</span> <h2>Student org plants 240 trees at Southern California park</h2> 
+                   <div class="slider-title-subtitle">
+                    <p>UCR’s Society for Ecological Restoration talk native vs. nasty plants in Riverside County</p>
+                   </div> </span> </a> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+             <div class="featured-item">
+              <div class="slider-background-image"> <picture> 
+                <source srcset="/sites/g/files/rcwecm2196/files/styles/news_article_featured_l/public/2022-04/Earth%20month.JPG?h=790be497&amp;itok=l04FcQzg 1x" media="all and (min-width: 1401px)" type="image/jpeg"> 
+                <source srcset="/sites/g/files/rcwecm2196/files/styles/news_article_featured_l/public/2022-04/Earth%20month.JPG?h=790be497&amp;itok=l04FcQzg 1x" media="all and (min-width: 1025px) and (max-width: 1400px)" type="image/jpeg"> 
+                <source srcset="/sites/g/files/rcwecm2196/files/styles/news_article_featured_m/public/2022-04/Earth%20month.JPG?h=790be497&amp;itok=np6suLu6 1x" media="all and (min-width: 768px) and (max-width: 1024px)" type="image/jpeg"> 
+                <source srcset="/sites/g/files/rcwecm2196/files/styles/news_article_featured_s/public/2022-04/Earth%20month.JPG?h=790be497&amp;itok=kuGH2PGL 1x" type="image/jpeg"> 
+                <img src="/sites/g/files/rcwecm2196/files/styles/news_article_featured_l/public/2022-04/Earth%20month.JPG?h=790be497&amp;itok=l04FcQzg" alt="Earth Month" typeof="foaf:Image"> 
+               </picture> 
+              </div> 
+              <div class="slider-overlay"> 
+               <div class="slider-overlay-content"> <!--
+    <div class="slider-category-display">
+      <div class="category-box"></div>
+    </div>
+    --> 
+                <div class="slider-title-content"> <a href="/stories/2022/04/08/how-engage-earth-month-ucr" class="slider-link-to-content"> <span class="slider-title-display"> <span class="slider-title-date">April 8, 2022</span> <h2>How to engage in Earth Month at UCR</h2> 
+                   <div class="slider-title-subtitle">
+                    <p>Tree planting, panels, and fairs are among the activities planned</p>
+                   </div> </span> </a> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+             <div class="featured-item">
+              <div class="slider-background-image"> <picture> 
+                <source srcset="/sites/g/files/rcwecm2196/files/styles/news_article_featured_l/public/2022-04/2022-03-29%20Glasgow%20Dining%20017.JPG?h=10d202d3&amp;itok=dc8350bD 1x" media="all and (min-width: 1401px)" type="image/jpeg"> 
+                <source srcset="/sites/g/files/rcwecm2196/files/styles/news_article_featured_l/public/2022-04/2022-03-29%20Glasgow%20Dining%20017.JPG?h=10d202d3&amp;itok=dc8350bD 1x" media="all and (min-width: 1025px) and (max-width: 1400px)" type="image/jpeg"> 
+                <source srcset="/sites/g/files/rcwecm2196/files/styles/news_article_featured_m/public/2022-04/2022-03-29%20Glasgow%20Dining%20017.JPG?h=10d202d3&amp;itok=j3aviHHx 1x" media="all and (min-width: 768px) and (max-width: 1024px)" type="image/jpeg"> 
+                <source srcset="/sites/g/files/rcwecm2196/files/styles/news_article_featured_s/public/2022-04/2022-03-29%20Glasgow%20Dining%20017.JPG?h=10d202d3&amp;itok=zZPsRseG 1x" type="image/jpeg"> 
+                <img src="/sites/g/files/rcwecm2196/files/styles/news_article_featured_l/public/2022-04/2022-03-29%20Glasgow%20Dining%20017.JPG?h=10d202d3&amp;itok=dc8350bD" alt="Glasgow Residential Restaurant" typeof="foaf:Image"> 
+               </picture> 
+              </div> 
+              <div class="slider-overlay"> 
+               <div class="slider-overlay-content"> <!--
+    <div class="slider-category-display">
+      <div class="category-box"></div>
+    </div>
+    --> 
+                <div class="slider-title-content"> <a href="/stories/2022/04/05/lunch-all-glasgow" class="slider-link-to-content"> <span class="slider-title-display"> <span class="slider-title-date">April 5, 2022</span> <h2>“Lunch for All” at Glasgow</h2> 
+                   <div class="slider-title-subtitle">
+                    <p>Campus restaurant now open for lunch to employees and all students</p>
+                   </div> </span> </a> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+             <div class="featured-item">
+              <div class="slider-background-image"> <picture> 
+                <source srcset="/sites/g/files/rcwecm2196/files/styles/news_article_featured_l/public/2022-03/divine-9-cover-promo.jpg?h=f024b34e&amp;itok=qRnPVuBT 1x" media="all and (min-width: 1401px)" type="image/jpeg"> 
+                <source srcset="/sites/g/files/rcwecm2196/files/styles/news_article_featured_l/public/2022-03/divine-9-cover-promo.jpg?h=f024b34e&amp;itok=qRnPVuBT 1x" media="all and (min-width: 1025px) and (max-width: 1400px)" type="image/jpeg"> 
+                <source srcset="/sites/g/files/rcwecm2196/files/styles/news_article_featured_m/public/2022-03/divine-9-cover-promo.jpg?h=f024b34e&amp;itok=nuJvF-14 1x" media="all and (min-width: 768px) and (max-width: 1024px)" type="image/jpeg"> 
+                <source srcset="/sites/g/files/rcwecm2196/files/styles/news_article_featured_s/public/2022-03/divine-9-cover-promo.jpg?h=f024b34e&amp;itok=210kyNmb 1x" type="image/jpeg"> 
+                <img src="/sites/g/files/rcwecm2196/files/styles/news_article_featured_l/public/2022-03/divine-9-cover-promo.jpg?h=f024b34e&amp;itok=qRnPVuBT" alt="Divine Nine exhibition at UC Riverside. (UCR)" typeof="foaf:Image"> 
+               </picture> 
+              </div> 
+              <div class="slider-overlay"> 
+               <div class="slider-overlay-content"> <!--
+    <div class="slider-category-display">
+      <div class="category-box"></div>
+    </div>
+    --> 
+                <div class="slider-title-content"> <a href="/stories/2022/03/29/black-greek-letter-organizations-exhibition-tomas-rivera-library" class="slider-link-to-content"> <span class="slider-title-display"> <span class="slider-title-date">March 29, 2022</span> <h2>Black Greek Letter Organizations exhibition at Tomás Rivera Library</h2> 
+                   <div class="slider-title-subtitle">
+                    <p>The exhibition tells the collective story of the Divine Nine, the first Black Greek fraternities and sororities in the U.S. and their impact at UCR and the Inland Empire</p>
+                   </div> </span> </a> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+         <div class="views-element-container ucr-custom-block" id="block-views-block-news-stories-views-ucr-news-stories-latest" data-block-plugin-id="views_block:news_stories_views-ucr_news_stories_latest"> 
+          <div>
+           <div class="js-view-dom-id-4003b7ea8e3b81f574338897cc9acfe632bdbf7e39ee9aed00886cc3ffabb506"> 
+            <div class="grid-container full margin-bottom-2"> 
+             <div class="grid-x grid-margin-y"> 
+              <div class="cell margin-bottom-0"> 
+               <h3 class="una-stories-titles">Latest Stories</h3> 
+               <div class="una-stories-titles-icon">
+                <span class="una-ati-border"><i class="mdi mdi-web"></i></span>
+               </div> 
+              </div> 
+             </div> 
+             <div class="grid-x grid-margin-x grid-margin-y small-up-1 medium-up-2 large-up-3 una-stories-latest"> 
+              <div class="cell">
+               <div class="latest-stories-list"> <a href="/stories/2022/05/06/school-education-launches-black-community-education-promise-program" class="lal-link-url"> 
+                 <div class="lal-background-image"> <picture> 
+                   <source srcset="/sites/g/files/rcwecm2196/files/styles/news_article_latest_l/public/2018-11/UCR_2018_03_13_day3-107-386x257.jpg?h=f010beb6&amp;itok=NjazFYzK 1x" media="all and (min-width: 1401px)" type="image/jpeg"> 
+                   <source srcset="/sites/g/files/rcwecm2196/files/styles/news_article_latest_l/public/2018-11/UCR_2018_03_13_day3-107-386x257.jpg?h=f010beb6&amp;itok=NjazFYzK 1x" media="all and (min-width: 1025px) and (max-width: 1400px)" type="image/jpeg"> 
+                   <source srcset="/sites/g/files/rcwecm2196/files/styles/news_article_latest_m/public/2018-11/UCR_2018_03_13_day3-107-386x257.jpg?h=f010beb6&amp;itok=X722yE2k 1x" media="all and (min-width: 768px) and (max-width: 1024px)" type="image/jpeg"> 
+                   <source srcset="/sites/g/files/rcwecm2196/files/styles/news_article_latest_s/public/2018-11/UCR_2018_03_13_day3-107-386x257.jpg?h=f010beb6&amp;itok=QFrv5zmA 1x" type="image/jpeg"> 
+                   <img src="/sites/g/files/rcwecm2196/files/styles/news_article_latest_l/public/2018-11/UCR_2018_03_13_day3-107-386x257.jpg?h=f010beb6&amp;itok=NjazFYzK" alt="Students walking to campus" typeof="foaf:Image"> 
+                  </picture> 
+                 </div> 
+                 <div class="lal-background-cover" style="background-color: "></div> <!--
+    <div class="lal-category-display">
+      <div class="category-box"></div>
+    </div>
+    --> 
+                 <div class="lal-title-content"> 
+                  <h3>School of Education launches Black Community Education Promise Program</h3> 
+                  <p>The program supports incoming School of Education freshman or transfer students who are dedicated to serving the Black community via education upon graduation from UCR</p> 
+                  <div>
+                   <span class="lal-title-author">By Holly Ober</span> | <span class="lal-title-date">May 6, 2022</span>
+                  </div> 
+                 </div> </a> 
+               </div> 
+              </div> 
+              <div class="cell">
+               <div class="latest-stories-list"> <a href="/stories/2022/05/03/campus-celebrates-staff-appreciation-goat-yoga" class="lal-link-url"> 
+                 <div class="lal-background-image"> <picture> 
+                   <source srcset="/sites/g/files/rcwecm2196/files/styles/news_article_latest_l/public/2022-05/2022-04-27%20Goat%20Yoga%20041.jpeg?h=c3635fa2&amp;itok=704p4wzO 1x" media="all and (min-width: 1401px)" type="image/jpeg"> 
+                   <source srcset="/sites/g/files/rcwecm2196/files/styles/news_article_latest_l/public/2022-05/2022-04-27%20Goat%20Yoga%20041.jpeg?h=c3635fa2&amp;itok=704p4wzO 1x" media="all and (min-width: 1025px) and (max-width: 1400px)" type="image/jpeg"> 
+                   <source srcset="/sites/g/files/rcwecm2196/files/styles/news_article_latest_m/public/2022-05/2022-04-27%20Goat%20Yoga%20041.jpeg?h=c3635fa2&amp;itok=GDYunCGn 1x" media="all and (min-width: 768px) and (max-width: 1024px)" type="image/jpeg"> 
+                   <source srcset="/sites/g/files/rcwecm2196/files/styles/news_article_latest_s/public/2022-05/2022-04-27%20Goat%20Yoga%20041.jpeg?h=c3635fa2&amp;itok=Fl2gUp6Y 1x" type="image/jpeg"> 
+                   <img src="/sites/g/files/rcwecm2196/files/styles/news_article_latest_l/public/2022-05/2022-04-27%20Goat%20Yoga%20041.jpeg?h=c3635fa2&amp;itok=704p4wzO" alt="Goat and staff practicing yoga outdoors." typeof="foaf:Image"> 
+                  </picture> 
+                 </div> 
+                 <div class="lal-background-cover" style="background-color: "></div> <!--
+    <div class="lal-category-display">
+      <div class="category-box"></div>
+    </div>
+    --> 
+                 <div class="lal-title-content"> 
+                  <h3>Campus celebrates staff appreciation with goat yoga </h3> 
+                  <p>Highlanders thank staff with weeklong activities</p> 
+                  <div>
+                   <span class="lal-title-author">By Malinn Loeung</span> | <span class="lal-title-date">May 3, 2022</span>
+                  </div> 
+                 </div> </a> 
+               </div> 
+              </div> 
+              <div class="cell">
+               <div class="latest-stories-list"> <a href="/stories/2022/04/28/ucr-among-best-value-colleges" class="lal-link-url"> 
+                 <div class="lal-background-image"> <picture> 
+                   <source srcset="/sites/g/files/rcwecm2196/files/styles/news_article_latest_l/public/2022-04/2022-04-20%20Campus%20Nooner.jpg?h=686c9ac4&amp;itok=7DTJS3qF 1x" media="all and (min-width: 1401px)" type="image/jpeg"> 
+                   <source srcset="/sites/g/files/rcwecm2196/files/styles/news_article_latest_l/public/2022-04/2022-04-20%20Campus%20Nooner.jpg?h=686c9ac4&amp;itok=7DTJS3qF 1x" media="all and (min-width: 1025px) and (max-width: 1400px)" type="image/jpeg"> 
+                   <source srcset="/sites/g/files/rcwecm2196/files/styles/news_article_latest_m/public/2022-04/2022-04-20%20Campus%20Nooner.jpg?h=686c9ac4&amp;itok=NoQzHc7s 1x" media="all and (min-width: 768px) and (max-width: 1024px)" type="image/jpeg"> 
+                   <source srcset="/sites/g/files/rcwecm2196/files/styles/news_article_latest_s/public/2022-04/2022-04-20%20Campus%20Nooner.jpg?h=686c9ac4&amp;itok=elji5-qW 1x" type="image/jpeg"> 
+                   <img src="/sites/g/files/rcwecm2196/files/styles/news_article_latest_l/public/2022-04/2022-04-20%20Campus%20Nooner.jpg?h=686c9ac4&amp;itok=7DTJS3qF" alt="student at nooners" typeof="foaf:Image"> 
+                  </picture> 
+                 </div> 
+                 <div class="lal-background-cover" style="background-color: "></div> <!--
+    <div class="lal-category-display">
+      <div class="category-box"></div>
+    </div>
+    --> 
+                 <div class="lal-title-content"> 
+                  <h3>UCR among ‘Best Value Colleges’</h3> 
+                  <p>Campus ranked No. 23 among public universities</p> 
+                  <div>
+                   <span class="lal-title-author">By Imran Ghori</span> | <span class="lal-title-date">April 28, 2022</span>
+                  </div> 
+                 </div> </a> 
+               </div> 
+              </div> 
+             </div> 
+             <div class="grid-x grid-padding-y grid-margin-y align-center-middle text-center"> 
+              <div class="cell margin-bottom-0"> <a href="/stories" class="btn-ucr btn-ucr-outline btn-ucr-news">All Stories</a> 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+         <div id="block-latestevents" data-block-plugin-id="block_content:35ab861c-646c-4181-aa15-d15917b6cde7" class="ucr-custom-block"> 
+          <div class="grid-container full"> 
+           <div class="grid-x grid-padding-x"> 
+            <div class="cell margin-top-1"> 
+             <h3 class="una-stories-titles">Latest Events</h3> 
+             <div class="una-stories-titles-icon">
+              <span class="una-ati-border"><i class="mdi mdi-calendar"></i></span>
+             </div> 
+            </div> 
+            <div class="cell localist-events-container"> 
+             <script type="text/javascript" src="https://events.ucr.edu/widget/view?schools=ucr&amp;days=31&amp;num=4&amp;tags=insideucr&amp;template=card-ucr-version"></script> 
+            </div> 
+            <div class="cell text-center padding-vertical-1 margin-top-1"> <a href="https://events.ucr.edu" target="_blank" class="btn-ucr btn-ucr-outline btn-ucr-news">Events Calendar</a> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+         <div class="views-element-container ucr-custom-block" id="block-views-block-news-announce-views-ucr-news-announce-latest" data-block-plugin-id="views_block:news_announce_views-ucr_news_announce_latest"> 
+          <div>
+           <div class="js-view-dom-id-38d882273fb9e5ba82ccea9102b6ee51ccc2bb1946f7106e9e1b82d79b7549d3"> 
+            <div class="grid-container full margin-bottom-2"> 
+             <div class="grid-x grid-margin-y"> 
+              <div class="cell margin-bottom-0"> 
+               <h3 class="una-stories-titles">Announcements</h3> 
+               <div class="una-stories-titles-icon">
+                <span class="una-ati-border"><i class="mdi mdi-microphone"></i></span>
+               </div> 
+              </div> 
+             </div> 
+             <div class="grid-x grid-padding-x grid-margin-y small-up-1 una-announce-latest"> 
+              <div class="cell">
+               <a href="/announcements/2022/05/06/second-systemwide-review-presidential-policy-abusive-conduct-workplace" class="lal-link-url"> 
+                <div class="latest-announce-list"> <!--
+  <div class="lal-category-display">
+    <div class="category-box"></div>
+  </div>
+  --> 
+                 <div class="lal-content-area"> 
+                  <div class="grid-container full"> 
+                   <div class="grid-x grid-padding-x"> 
+                    <div class="cell small-12"> 
+                     <h3 class="lal-header">Second Systemwide Review: Presidential Policy on Abusive Conduct in the Workplace</h3> 
+                     <p>The University of California Office of the President invites comments on the proposed Presidential Policy on Abusive Conduct in the Workplace. The proposed policy covers abusive conduct and retaliation in the workplace. The proposed policy is going through a second systemwide review.</p> 
+                    </div> 
+                    <div class="cell small-12 medium-6"> 
+                     <div class="lal-date">
+                      May 6, 2022
+                     </div> 
+                    </div> 
+                    <div class="cell small-12 medium-6"> 
+                     <div class="lal-read-more" aria-label="Read more about Second Systemwide Review: Presidential Policy on Abusive Conduct in the Workplace">
+                      Read More »
+                     </div> 
+                    </div> 
+                   </div> 
+                  </div> 
+                 </div> 
+                </div> </a> 
+              </div> 
+              <div class="cell">
+               <a href="/announcements/2022/05/04/town-hall-5182022-new-travel-system-deployment" class="lal-link-url"> 
+                <div class="latest-announce-list"> <!--
+  <div class="lal-category-display">
+    <div class="category-box"></div>
+  </div>
+  --> 
+                 <div class="lal-content-area"> 
+                  <div class="grid-container full"> 
+                   <div class="grid-x grid-padding-x"> 
+                    <div class="cell small-12"> 
+                     <h3 class="lal-header">Town Hall 5/18/2022– New Travel System Deployment</h3> 
+                     <p>Dear Colleagues,</p> 
+                    </div> 
+                    <div class="cell small-12 medium-6"> 
+                     <div class="lal-date">
+                      May 4, 2022
+                     </div> 
+                    </div> 
+                    <div class="cell small-12 medium-6"> 
+                     <div class="lal-read-more" aria-label="Read more about Town Hall 5/18/2022– New Travel System Deployment">
+                      Read More »
+                     </div> 
+                    </div> 
+                   </div> 
+                  </div> 
+                 </div> 
+                </div> </a> 
+              </div> 
+              <div class="cell">
+               <a href="/announcements/2022/05/04/may-mental-health-matters-month" class="lal-link-url"> 
+                <div class="latest-announce-list"> <!--
+  <div class="lal-category-display">
+    <div class="category-box"></div>
+  </div>
+  --> 
+                 <div class="lal-content-area"> 
+                  <div class="grid-container full"> 
+                   <div class="grid-x grid-padding-x"> 
+                    <div class="cell small-12"> 
+                     <h3 class="lal-header">May is Mental Health Matters Month</h3> 
+                     <p>Dear Colleagues and Community Partners, Every month should be a month we are paying attention to our mental health, right? But with May as Mental Health Matters Month, we have a special focus on getting the word out about what you can do to take action for your mental health and for everyone in your community.</p> 
+                    </div> 
+                    <div class="cell small-12 medium-6"> 
+                     <div class="lal-date">
+                      May 4, 2022
+                     </div> 
+                    </div> 
+                    <div class="cell small-12 medium-6"> 
+                     <div class="lal-read-more" aria-label="Read more about May is Mental Health Matters Month">
+                      Read More »
+                     </div> 
+                    </div> 
+                   </div> 
+                  </div> 
+                 </div> 
+                </div> </a> 
+              </div> 
+             </div> 
+             <div class="grid-x grid-padding-y grid-margin-y align-center-middle text-center"> 
+              <div class="cell margin-bottom-0"> <a href="/announcements" class="btn-ucr btn-ucr-outline btn-ucr-news">More Announcements</a> 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+         <div class="views-element-container ucr-custom-block" id="block-views-block-news-awards-views-ucr-news-awards-latest" data-block-plugin-id="views_block:news_awards_views-ucr_news_awards_latest"> 
+          <div>
+           <div class="js-view-dom-id-38cfa56190f66b7fcb47b0bcb1ea876b8b002c18f5851bfbcdb79db38907cc8e"> 
+            <div class="grid-container full margin-bottom-2"> 
+             <div class="grid-x grid-margin-y"> 
+              <div class="cell margin-bottom-0"> 
+               <h3 class="una-stories-titles">Awards</h3> 
+               <div class="una-stories-titles-icon">
+                <span class="una-ati-border"><i class="mdi mdi-trophy-variant"></i></span>
+               </div> 
+              </div> 
+             </div> 
+             <div class="grid-x grid-padding-x grid-margin-y small-up-1 una-awards-latest"> 
+              <div class="cell">
+               <a href="/awards/2022/05/04/ucr-researchers-win-climate-resilience-and-community-access-grant" class="lal-link-url"> 
+                <div class="latest-awards-list"> <!--
+  <div class="lal-category-display">
+    <div class="category-box"></div>
+  </div>
+  --> 
+                 <div class="lal-content-area"> 
+                  <div class="grid-container full"> 
+                   <div class="grid-x grid-padding-x"> 
+                    <div class="cell small-12"> 
+                     <h3 class="lal-header">UCR researchers win Climate Resilience and Community Access grant</h3> 
+                     <p>The Center for Conservation Biology at UC Riverside is among eight recipients of Coachella Valley Mountains Conservancy's new Climate Resilience and Community Access grant program. The $400,000 grant will aid efforts to study climate resilience and improve the capacity to respond to climate change and outdoor equity.</p> 
+                    </div> 
+                    <div class="cell small-12 medium-6"> 
+                     <div class="lal-date">
+                      May 4, 2022
+                     </div> 
+                    </div> 
+                    <div class="cell small-12 medium-6"> 
+                     <div class="lal-read-more" aria-label="Read more about UCR researchers win Climate Resilience and Community Access grant">
+                      Read More »
+                     </div> 
+                    </div> 
+                   </div> 
+                  </div> 
+                 </div> 
+                </div> </a> 
+              </div> 
+              <div class="cell">
+               <a href="/awards/2022/04/26/student-researcher-wins-ecological-society-award" class="lal-link-url"> 
+                <div class="latest-awards-list"> <!--
+  <div class="lal-category-display">
+    <div class="category-box"></div>
+  </div>
+  --> 
+                 <div class="lal-content-area"> 
+                  <div class="grid-container full"> 
+                   <div class="grid-x grid-padding-x"> 
+                    <div class="cell small-12"> 
+                     <h3 class="lal-header">Student researcher wins ecological society award</h3> 
+                     <p>UC Riverside’s Chris Cosma, a doctoral student studying evolution, ecology, and organismal biology, is one of the winners of the 2022 Ecological Society of America awards. </p> 
+                    </div> 
+                    <div class="cell small-12 medium-6"> 
+                     <div class="lal-date">
+                      April 26, 2022
+                     </div> 
+                    </div> 
+                    <div class="cell small-12 medium-6"> 
+                     <div class="lal-read-more" aria-label="Read more about Student researcher wins ecological society award">
+                      Read More »
+                     </div> 
+                    </div> 
+                   </div> 
+                  </div> 
+                 </div> 
+                </div> </a> 
+              </div> 
+              <div class="cell">
+               <a href="/awards/2022/04/25/ucr-history-professor-wins-grant-digital-humanities-project" class="lal-link-url"> 
+                <div class="latest-awards-list"> <!--
+  <div class="lal-category-display">
+    <div class="category-box"></div>
+  </div>
+  --> 
+                 <div class="lal-content-area"> 
+                  <div class="grid-container full"> 
+                   <div class="grid-x grid-padding-x"> 
+                    <div class="cell small-12"> 
+                     <h3 class="lal-header">UCR history professor wins grant for digital humanities project</h3> 
+                     <p>UC Riverside's Catherine Gudis, professor of history and Teresa and Byron Pollitt Endowed Term Chair for Interdisciplinary Research and Learning in the Humanities &amp; Social Sciences, has been awarded a $100,000 grant by the Social Science Research Council-National Endowment for the Humanities Sustaining Humanities Infrastructure Program.&nbsp;</p> 
+                    </div> 
+                    <div class="cell small-12 medium-6"> 
+                     <div class="lal-date">
+                      April 25, 2022
+                     </div> 
+                    </div> 
+                    <div class="cell small-12 medium-6"> 
+                     <div class="lal-read-more" aria-label="Read more about UCR history professor wins grant for digital humanities project">
+                      Read More »
+                     </div> 
+                    </div> 
+                   </div> 
+                  </div> 
+                 </div> 
+                </div> </a> 
+              </div> 
+             </div> 
+             <div class="grid-x grid-padding-y grid-margin-y align-center-middle text-center"> 
+              <div class="cell margin-bottom-0"> <a href="/awards" class="btn-ucr btn-ucr-outline btn-ucr-news">More Awards</a> 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+         <div class="views-element-container ucr-custom-block" id="block-views-block-ucr-scotmemo-ucr-scotmemo-latest" data-block-plugin-id="views_block:ucr_scotmemo-ucr_scotmemo_latest"> 
+          <div>
+           <div class="js-view-dom-id-b3697163d838e3898536d7d5fbf3929174493f9c4e872ce619dfbf489a428131"> 
+            <div class="grid-container full margin-bottom-2"> 
+             <div class="grid-x grid-margin-y"> 
+              <div class="cell margin-bottom-0"> 
+               <h3 class="una-stories-titles">ScotMemos</h3> 
+               <div class="una-stories-titles-icon">
+                <span class="una-ati-border"><i class="mdi mdi-email"></i></span>
+               </div> 
+              </div> 
+             </div> 
+             <div class="grid-x grid-padding-x grid-margin-y small-up-1 una-announce-latest"> 
+              <div class="cell">
+               <a href="/scotmemos/2022/05/04/post-message-class-2022" class="lal-link-url"> 
+                <div class="latest-announce-list"> <!--
+        <div class="lal-category-display">
+          <div class="category-box"></div>
+        </div>
+        --> 
+                 <div class="lal-content-area"> 
+                  <div class="grid-container full"> 
+                   <div class="grid-x grid-padding-x"> 
+                    <div class="cell small-12"> 
+                     <h3 class="lal-header">Post a Message for the Class of 2022</h3> 
+                     <p>As we close out another great academic year at UCR, it’s time to say congrats and farewell to the students who have completed their Highlander journey. We invite you to take a moment to share your memories, appreciation, and shout outs on this Kudoboard, which will be shared with all Highlanders.</p> 
+                    </div> 
+                    <div class="cell small-12 medium-6"> 
+                     <div class="lal-date">
+                      May 4, 2022
+                     </div> 
+                    </div> 
+                    <div class="cell small-12 medium-6"> 
+                     <div class="lal-read-more" aria-label="Read more about Post a Message for the Class of 2022">
+                      Read More »
+                     </div> 
+                    </div> 
+                   </div> 
+                  </div> 
+                 </div> 
+                </div> </a> 
+              </div> 
+              <div class="cell">
+               <a href="/scotmemos/2022/04/25/call-program-ideas-fleap-summer-2024" class="lal-link-url"> 
+                <div class="latest-announce-list"> <!--
+        <div class="lal-category-display">
+          <div class="category-box"></div>
+        </div>
+        --> 
+                 <div class="lal-content-area"> 
+                  <div class="grid-container full"> 
+                   <div class="grid-x grid-padding-x"> 
+                    <div class="cell small-12"> 
+                     <h3 class="lal-header">Call for program ideas: FLEAP Summer 2024</h3> 
+                     <p>Dear UCR Faculty Colleagues, &nbsp; The UCR Education Abroad&nbsp;office is seeking your help </p> 
+                    </div> 
+                    <div class="cell small-12 medium-6"> 
+                     <div class="lal-date">
+                      April 25, 2022
+                     </div> 
+                    </div> 
+                    <div class="cell small-12 medium-6"> 
+                     <div class="lal-read-more" aria-label="Read more about Call for program ideas: FLEAP Summer 2024">
+                      Read More »
+                     </div> 
+                    </div> 
+                   </div> 
+                  </div> 
+                 </div> 
+                </div> </a> 
+              </div> 
+              <div class="cell">
+               <a href="/scotmemos/2022/04/19/promotional-opportunity-assistant-director-cnas-personnel-service-center" class="lal-link-url"> 
+                <div class="latest-announce-list"> <!--
+        <div class="lal-category-display">
+          <div class="category-box"></div>
+        </div>
+        --> 
+                 <div class="lal-content-area"> 
+                  <div class="grid-container full"> 
+                   <div class="grid-x grid-padding-x"> 
+                    <div class="cell small-12"> 
+                     <h3 class="lal-header">Promotional Opportunity: Assistant Director in CNAS Personnel Service Center</h3> 
+                     <p>Under the general direction of the Director of the Academic Personnel Services Unit (APSU) in the Ha</p> 
+                    </div> 
+                    <div class="cell small-12 medium-6"> 
+                     <div class="lal-date">
+                      April 19, 2022
+                     </div> 
+                    </div> 
+                    <div class="cell small-12 medium-6"> 
+                     <div class="lal-read-more" aria-label="Read more about Promotional Opportunity: Assistant Director in CNAS Personnel Service Center">
+                      Read More »
+                     </div> 
+                    </div> 
+                   </div> 
+                  </div> 
+                 </div> 
+                </div> </a> 
+              </div> 
+             </div> 
+             <div class="grid-x grid-padding-y grid-margin-y align-center-middle text-center"> 
+              <div class="cell margin-bottom-0"> <a href="/scotmemos" class="btn-ucr btn-ucr-outline btn-ucr-news">More ScotMemos</a> 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="grid-x grid-padding-x"> 
+        <div class="cell large-auto small-order-3 medium-order-3 large-order-2 pca-content"> 
+         <div> 
+          <div id="block-ucr-news-main-content" data-block-plugin-id="system_main_block"> 
+           <div class="views-element-container">
+            <div class="js-view-dom-id-b82350066f32ff8259c055c3737ba2e88784603a8162422d489bc40077a0946a"> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </main> 
+    <footer> 
+     <div class="footer-container"> 
+      <div class="footer-content-area"> 
+       <div class="grid-container"> 
+        <div class="grid-x grid-padding-x align-center"> 
+         <div id="block-ucr-news-footer-search" data-block-plugin-id="ucr_global_footer_search" class="cell show-for-medium footer-search"> 
+          <section class="google-search"> <button class="button footer-search-button" data-open="gscSearchFormModal">Search</button> 
+          </section> 
+         </div> 
+        </div> 
+        <div class="grid-x grid-padding-x footer-columns"> 
+         <div class="cell medium-auto"> 
+          <section class="footer-item ucr-footer-info"> <span class="footer-logo"><span class="show-for-sr">University of California, Riverside</span></span> 
+           <address> <p>900 University Ave.<br> Riverside, CA 92521</p> <p>Tel: (951) 827-1012</p> </address> 
+           <ul class="footer-links"> 
+            <li><a href="https://library.ucr.edu/" target="_blank">UCR Library</a></li> 
+            <li><a href="https://campusstatus.ucr.edu/" target="_blank">Campus Status</a></li> 
+            <li><a href="https://ucr.bncollege.com/shop/ucr/home" target="_blank">Campus Store</a></li> 
+            <li><a href="https://jobs.ucr.edu" target="_blank">Career Opportunities</a></li> 
+            <li><a href="https://diversity.ucr.edu/" target="_blank">Diversity</a></li> 
+            <li><a href="https://campusmap.ucr.edu/" target="_blank">Maps and Directions</a></li> 
+            <li><a href="https://www.ucr.edu/about/visitors" target="_blank">Visit UCR</a></li> 
+           </ul> 
+          </section> 
+         </div> 
+         <div class="cell medium-auto"> 
+          <section id="block-ucr-news-footer-dept" data-block-plugin-id="ucr_global_footer_dept_info" class="footer-item footer-dept-info"> 
+           <h2>University of California, Riverside</h2> 
+           <address class="address_2"> <p> <a href="https://campusmap.ucr.edu" target="_blank"> 900 University Ave. <br>Riverside, CA 92521 </a></p> <p> tel: (951) 827-0000<br> email: <a href="mailto:webmaster@ucr.edu">webmaster@ucr.edu</a> </p> </address> 
+           <p> <a class="link-img link-img-location" href="https://campusmap.ucr.edu" target="_blank"> Find Us<br><br> <img src="/themes/custom/ucr_default/images/googlemap.png" alt="Campus map image"></a> </p> 
+          </section> 
+          <div id="block-footersocialmediafull" data-block-plugin-id="block_content:4a386e2e-4c53-43de-82ce-889d967f0819" class="ucr-custom-block"> 
+           <div class="grid-container full"> 
+            <div class="grid-x grid-padding-x"> 
+             <div class="cell"> 
+              <section class="footer-item"> 
+               <p class="social-title">Follow Us:</p> 
+               <div class="social-link" style="display: inline-flex; margin-left:0px;">
+                <a alt="Facebook" href="https://www.facebook.com/UCRiverside" style="text-decoration: none !important; color: rgba(0, 0, 0, 0.0); display: inline-flex;" target="_blank" title="Facebook"><span class="mdi mdi-facebook-box" onmouseout="this.style.color='#FFB81C'" onmouseover="this.style.color='#ffffff'" onmouseup="this.style.color='#7A8FAB'" style="color:#FFB81C; font-size: 3em;">&nbsp;</span></a> <a alt="Twitter" href="https://twitter.com/UCRiverside" style="text-decoration: none !important; color: rgba(0, 0, 0, 0.0); display: inline-flex;" target="_blank" title="Twitter"><span class="mdi mdi-twitter-box" onmouseout="this.style.color='#FFB81C'" onmouseover="this.style.color='#ffffff'" onmouseup="this.style.color='#7A8FAB'" style="color:#FFB81C; font-size: 3em;">&nbsp;</span></a> <a alt="Youtube" href="https://www.youtube.com/UCRiverside" style="text-decoration: none !important; color: rgba(0, 0, 0, 0.0); display: inline-flex;" target="_blank" title="Youtube"><span class="mdi mdi-youtube-play" onmouseout="this.style.color='#FFB81C'" onmouseover="this.style.color='#ffffff'" onmouseup="this.style.color='#7A8FAB'" style="color:#FFB81C; font-size: 3em;">&nbsp;</span></a> <a alt="Instagram" href="https://www.instagram.com/ucriversideofficial" style="text-decoration: none !important; color: rgba(0, 0, 0, 0.0); display: inline-flex;" target="_blank" title="Instagram"><span class="mdi mdi-instagram" onmouseout="this.style.color='#FFB81C'" onmouseover="this.style.color='#ffffff'" onmouseup="this.style.color='#7A8FAB'" style="color:#FFB81C; font-size: 3em;">&nbsp;</span></a> <a alt="LinkedIn" href="https://www.linkedin.com/school/university-of-california-riverside/mycompany/" style="text-decoration: none !important; color: rgba(0, 0, 0, 0.0); display: inline-flex;" target="_blank" title="LinkedIn"><span class="mdi mdi-linkedin-box" onmouseout="this.style.color='#FFB81C'" onmouseover="this.style.color='#ffffff'" onmouseup="this.style.color='#7A8FAB'" style="color:#FFB81C; font-size: 3em;">&nbsp;</span></a> <a alt="TikTok" href="https://www.tiktok.com/@ucriverside?" style="text-decoration: none !important; color: rgba(0, 0, 0, 0.0); display: inline-flex;" target="_blank" title="TikTok"><span class="mdi mdi-music-box" onmouseout="this.style.color='#FFB81C'" onmouseover="this.style.color='#ffffff'" onmouseup="this.style.color='#7A8FAB'" style="color:#FFB81C; font-size: 3em;">&nbsp;</span></a>
+               </div> 
+              </section> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+         <div class="cell medium-auto"> 
+          <section id="block-ucr-news-related-links" data-block-plugin-id="system_menu_block:ucr-news-related-links" class="footer-item footer-related-links"> 
+           <h3>Related Links</h3> 
+           <nav role="navigation" aria-labelledby="general-navigation"> 
+            <ul class="vertical menu"> 
+             <li><a href="https://news.ucr.edu">UCR News</a> </li> 
+             <li><a href="https://insideucr.ucr.edu/tag/research-blog">Research Blog</a> </li> 
+             <li><a href="https://ucrtoday.ucr.edu/category/inside-ucr" target="_blank">Inside UCR Archive</a> </li> 
+             <li><a href="https://hr.ucr.edu" target="_blank">Human Resources</a> </li> 
+             <li><a href="https://ucpath.universityofcalifornia.edu/" target="_blank">UC Path Portal</a> </li> 
+             <li><a href="https://staffassembly.ucr.edu/" target="_blank">Staff Assembly</a> </li> 
+             <li><a href="https://www.universityofcalifornia.edu/news/" target="_blank">UC Newsroom</a> </li> 
+            </ul> 
+           </nav> 
+          </section> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="site-legal-footer"> 
+       <div class="grid-container"> 
+        <div class="grid-x grid-padding-x"> 
+         <div class="cell"> 
+          <ul> 
+           <li><a href="http://www.ucr.edu/privacy.html">Privacy and Accessibility</a></li> 
+           <li><a href="http://www.ucr.edu/terms.html">Terms and Conditions</a></li> 
+           <li>© 2022 Regents of the University of California</li> 
+          </ul> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </footer> 
+   </div> 
+   <div class="large reveal" id="gscSearchFormModal" role="search" data-reveal data-animation-in="fade-in" data-animation-out="fade-out"> 
+    <div class="gsc-modal-top"> <span>Search</span> <button class="close-button" data-close aria-label="Close Search Window" type="button"><span aria-hidden="true">×</span></button> 
+    </div> 
+    <form id="audience-search-form" name="gsc-search-form" action="/results"> 
+     <div class="gsc-modal-body"> 
+      <div class="grid-container full"> 
+       <div class="grid-x grid-padding-x grid-padding-y align-center-middle text-center"> 
+        <div class="gsc-text-wrapper"> <span class="gsc-welcome-text">Let us help you with your search</span> 
+        </div> 
+        <div class="cell"> <label id="searchbox-label" class="hidden" aria-label="Enter your Search Criteria.">Enter your Search Criteria.</label> 
+         <input type="text" maxlength="255" id="audience-search" name="q" value="" aria-labelledby="searchbox-label" placeholder="Search for..."> 
+        </div> 
+        <div class="cell medium-4"> <button class="button gsc-modal-button-submit" type="submit" name="search-by" value="all">Search All UCR</button> 
+        </div> 
+        <div class="cell medium-4"> <button class="button gsc-modal-button-submit" type="submit" name="search-by" value="insideucr.ucr.edu">Search This Site</button> 
+        </div> 
+        <div class="cell medium-4"> <button type="button" class="button gsc-modal-button-close" data-close>Cancel</button> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </form> 
+   </div> 
+  </div> 
+  <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node","currentPathIsAdmin":false,"isFront":true,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"bu":{"notify_ie":-2,"notify_firefox":-2,"notify_opera":-2,"notify_safari":-2,"notify_chrome":-2,"insecure":true,"unsupported":false,"mobile":true,"position":"top","visibility_type":"hide","visibility_pages":"admin\/*","test_mode":false,"new_window":true,"no_close":false,"text_override":"","reminder":6,"reminder_closed":6,"url":"","source":"\/\/browser-update.org\/update.min.js","show_source":""},"google_analytics":{"account":{},"trackOutbound":true,"trackMailto":true,"trackTel":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"ajax":[],"user":{"uid":0,"permissionsHash":"a4f1ae83b42b27b9faf65be7e114962c6ea056ba28e352d53c45afb458a82ce5"}}</script> 
+  <script src="/sites/g/files/rcwecm2196/files/js/js_ahlmMxvm-EcTG4BO57SeeTj_vvzYshnZazi7JuHIRKA.js"></script> 
+  <script src="https://static.addtoany.com/menu/page.js" async></script> 
+  <script src="/sites/g/files/rcwecm2196/files/js/js_2Eux_CH8vIm3xBH3_BJU4XCLMim0xrLGubMv4pE1Tc8.js"></script> 
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"07d404edfe","applicationID":"837425331","transactionName":"MVZSYRNWCxBZB0wIWggccVYVXgoNFyBKFEUHX2xDCFISEGQ2VxRBD11XaTdeABRoBV8EdgldREcOWwkGSkkGCVQIV1xQ","queueTime":0,"applicationTime":526,"atts":"HRFRF1tMGB4=","errorBeacon":"bam-cell.nr-data.net","agent":""}</script> 
+ </body>
+</html>

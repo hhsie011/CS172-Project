@@ -1,0 +1,1 @@
+© RideAmigos, all rights reserved {{!!contrastEnabled ? 'Disable' : 'Enable'}} High Contrast Mode Privacy Policy Terms & Conditions {{CONFIG.footerSupportLanguage}} FAQs

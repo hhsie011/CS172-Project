@@ -1,0 +1,966 @@
+<!doctype html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# " class="no-js"> 
+ <head> 
+  <meta charset="utf-8">
+  <script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam-cell.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"07d404edfe",applicationID:"837425331"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script> 
+  <noscript>
+   <style>form.antibot * :not(.antibot-message) { display: none !important; }</style> 
+  </noscript>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-502002-2"></script> 
+  <script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments)};gtag("js", new Date());gtag("set", "developer_id.dMDhkMT", true);gtag("config", "UA-502002-2", {"groups":"default","anonymize_ip":true,"page_placeholder":"PLACEHOLDER_page_path","allow_ad_personalization_signals":false});</script> 
+  <link rel="canonical" href="https://studentaffairs.ucr.edu/"> 
+  <link rel="shortlink" href="https://studentaffairs.ucr.edu/"> 
+  <meta name="description" content=""> 
+  <meta property="og:site_name" content="Student Affairs"> 
+  <meta property="og:url" content="https://studentaffairs.ucr.edu/"> 
+  <meta property="og:title" content="Student Affairs"> 
+  <meta property="og:description" content=""> 
+  <meta name="twitter:card" content="summary"> 
+  <meta name="twitter:description" content=""> 
+  <meta name="twitter:title" content="Home | Student Affairs"> 
+  <meta name="twitter:url" content="https://studentaffairs.ucr.edu/"> 
+  <meta name="Generator" content="Drupal 9 (https://www.drupal.org)"> 
+  <meta name="MobileOptimized" content="width"> 
+  <meta name="HandheldFriendly" content="true"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="shortcut icon" href="/themes/custom/ucr_design_1/favicon.ico" type=""> 
+  <link rel="revision" href="https://studentaffairs.ucr.edu/vcsa-home"> 
+  <script>window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overlays=[];a2a_config.templates={};</script> 
+  <title>Home | Student Affairs | University of California, Riverside</title> 
+  <link rel="stylesheet" media="all" href="/sites/g/files/rcwecm3051/files/css/css_W-m-ozlFIs84OTZougJyou-Y8iGQ3BemJDDMZIDnDdY.css"> 
+  <link rel="stylesheet" media="all" href="https://fonts.googleapis.com/css?family=Montserrat:700|Roboto+Slab:400,700|Roboto:400,700"> 
+  <link rel="stylesheet" media="all" href="/sites/g/files/rcwecm3051/files/css/css_Q2v2UQ8QFjyJWvHcsMKGY_tqvguQmAupujMsVlANjGc.css"> 
+  <style type="text/css">
+    <!--
+     a[href*="//"]:after {
+    display: none;
+}
+
+.home-bg {
+    background: linear-gradient(RGBA(255,255,255,0.8),RGBA(255,255,255,0.8));
+    background-size: cover;
+    border-top: 8px solid #7f2444;
+}
+
+.vcsa-padding {
+    padding: 2rem!important;
+}
+
+.hia-title {
+display: none;
+}
+
+div.embedded-entity {
+width: fit-content !important;
+}     -->
+    </style> 
+ </head> 
+ <body class="layout path-frontpage node--type-page"> 
+  <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas> 
+   <div class="webpage-content"> 
+    <header role="banner" data-sticky-container> 
+     <div class="header-sticky-container" data-ucr-sticky="0" data-ucr-mobile-sticky="0"> 
+      <div class="grid-container full"> 
+       <div class="grid-x"> 
+        <div class="cell text-center ucr-site-alerts"> 
+         <div id="block-coronavirusalert" data-block-plugin-id="block_content:ca8cf622-4f0a-42df-b538-d722de91f739" class="ucr-custom-block"> 
+          <div class="grid-container full"> 
+           <div class="grid-x"> 
+            <div class="cell"> 
+             <div class="ucr-custom-block ucr-custom-alerts callout warning" data-closable> 
+              <div>
+               <p>Student Affairs departments are open for full or partial in-person services this fall. Please check the <strong><a href="https://studentaffairs.ucr.edu/" rel=" noopener" target="_blank" title="Student Affairs Homepage">Student Affairs homepage</a></strong> for hours, service offerings, and contact methods. For the latest campus reopening plans, safety guidelines, and requirements, visit <strong><a href="https://campusreturn.ucr.edu/" rel=" noopener" target="_blank" title="Campus Return Website">Campus Return</a></strong>.</p> 
+              </div> <button class="close-button" aria-label="Dismiss alert" type="button" data-close> <span aria-hidden="true">×</span> </button> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="grid-x"> 
+        <div class="cell small-order-2 medium-order-1 audience-container"> 
+         <div class="grid-container audience-menu-bar"> 
+          <div class="grid-x align-middle"> 
+           <div class="cell medium-shrink show-for-medium global-header-menu"> <a class="skip-main" href="#main">Skip to main content</a> 
+            <nav aria-label="global header menu"> 
+             <ul class="menu"> 
+              <li><a href="https://www.ucr.edu/alpha" target="_blank">A to Z Listing</a></li> 
+              <li><a href="https://campusmap.ucr.edu" target="_blank">Campus Map</a></li> 
+              <li><a href="https://profiles.ucr.edu" target="_blank">Find People</a></li> 
+              <li><a href="https://news.ucr.edu" target="_blank">News</a></li> 
+              <li><a href="https://www.ucr.edu" target="_blank">UCR Home</a></li> 
+             </ul> 
+            </nav> 
+           </div> 
+           <div id="block-ucr-design-1-organizationname" data-block-plugin-id="ucr_global_organization_name" class="cell auto hide-for-medium org-name"> <a class="skip-main" href="#main">Skip to main content</a> 
+            <p class="parent-org-title"> <a href="https://ucr.edu">University of California, Riverside</a> </p> 
+           </div> 
+           <div id="block-ucr-design-1-ucriversideaudiencesearchblock" data-block-plugin-id="ucr_global_audience_search" class="cell medium-shrink show-for-medium"> 
+            <section class="google-search"> <button class="button audience-search-button" data-open="gscSearchFormModal">Search</button> 
+            </section> 
+           </div> 
+           <div class="cell shrink hide-for-medium" data-responsive-toggle="main-menu-container" data-hide-for="medium"> <button class="mdi mdi-menu button mobile-menu-expander" id="mobile-menu-expander" type="button" data-toggle="main-menu-container"> </button> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="cell small-order-1 medium-order-2 masthead-container"> 
+         <div class="grid-container"> 
+          <div class="grid-x align-middle"> 
+           <div class="cell shrink"> <a class="masthead-logo-line" href="/"> <span class="show-for-sr">UC Riverside</span> </a> 
+           </div> 
+           <div class="cell auto"> 
+            <h1 class="masthead-title"> <a href="/"> Student Affairs </a> </h1> 
+           </div> 
+           <div class="cell auto show-for-medium"> 
+            <p class="slogan"> </p> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="cell small-order-3 medium-order-3 main-nav-bar"> 
+         <div class="grid-container" id="main-menu-container" data-animate="fade-in fade-out"> 
+          <div class="grid-x"> 
+           <div id="block-ucr-design-1-ucriversideaudiencesearchblock-2" data-block-plugin-id="ucr_global_audience_search" class="cell hide-for-medium"> 
+            <section class="google-search"> <button class="button audience-search-button" data-open="gscSearchFormModal">Search</button> 
+            </section> 
+           </div> 
+           <div id="block-ucr-design-1-main-menu" data-block-plugin-id="menu_block:main" class="cell main-menu-cell"> 
+            <nav id="primary-site-menu" aria-labelledby="primary-site-menu"> 
+             <ul class="standard-menu vertical medium-horizontal menu align-center-middle" data-responsive-menu="accordion medium-dropdown" data-closing-time="200"> 
+              <li> <a href="/vcsa-home" target="_self" data-drupal-link-system-path="node/271" class="is-active">Home</a> </li> 
+              <li> <a href="/our-mission" title="About Us" data-drupal-link-system-path="node/226">About Us</a> 
+               <ul class="vertical menu submenu"> 
+                <li> <a href="/policies" title="Policies" data-drupal-link-system-path="node/231">Policies</a> </li> 
+                <li> <a href="/student-affairs-staff" title="Staff" data-drupal-link-system-path="node/326">Staff</a> </li> 
+                <li> <a href="/jobs" title="Job Openings" data-drupal-link-system-path="node/306">Job Openings</a> </li> 
+                <li> <a href="https://studentdocs.ucr.edu/student-affairs/uc-riverside_student-affairs-strategic-plan-brochure.pdf" target="_blank" title="Division of Student Affairs Strategic Plan Brochure">Student Affairs Strategic Plan</a> </li> 
+                <li> <a href="https://vcsahr.ucr.edu" title="VCSA Human Resources">VCSA Human Resources</a> </li> 
+               </ul> </li> 
+              <li> <a href="/campus-life" title="Campus Life" data-drupal-link-system-path="node/236">Campus Life</a> 
+               <ul class="vertical menu submenu"> 
+                <li> <a href="https://asucr.ucr.edu" target="_blank" title="Associated Students of UCR (ASUCR)">Associated Students of UCR (ASUCR)</a> </li> 
+                <li> <a href="https://aspb.ucr.edu" target="_blank" title="Associated Students Program Board (ASPB)">Associated Students Program Board (ASPB)</a> </li> 
+                <li> <a href="https://orientation.ucr.edu" target="_blank" title="Highlander Orientation">Highlander Orientation</a> </li> 
+                <li> <a href="https://hub.ucr.edu" target="_blank" title="Highlander Union Building">Highlander Union Building</a> </li> 
+                <li> <a href="https://www.highlandernews.org" target="_blank" title="The Highlander Newspaper">The Highlander Newspaper</a> </li> 
+                <li> <a href="https://kucr.org" target="_blank" title="KUCR Radio ">KUCR Radio</a> </li> 
+                <li> <a href="https://events.ucr.edu/group/rside" target="_blank" title="R’Side Campus Events">R’Side Campus Events</a> </li> 
+                <li> <a href="https://housing.ucr.edu/residential-life" target="_blank" title="Residential Life">Residential Life</a> </li> 
+                <li> <a href="https://studentlife.ucr.edu" target="_blank" title="Student Life">Student Life</a> </li> 
+                <li> <a href="https://recreation.ucr.edu" target="_blank" title="Student Recreation Center">Student Recreation Center</a> </li> 
+                <li> <a href="https://well.ucr.edu" target="_blank" title="The Well">The Well</a> </li> 
+               </ul> </li> 
+              <li> <a href="/emergency-services" title="Crisis" data-drupal-link-system-path="node/316">Crisis</a> 
+               <ul class="vertical menu submenu"> 
+                <li> <a href="/emergency-services" title="Emergency Services" data-drupal-link-system-path="node/316">Emergency Services</a> </li> 
+                <li> <a href="/crisis" title="Students in Crisis" data-drupal-link-system-path="node/251">Students in Crisis</a> </li> 
+                <li> <a href="https://deanofstudents.ucr.edu/emergency-help" target="_blank" title="Get Help">Get Help</a> </li> 
+                <li> <a href="https://basicneeds.ucr.edu" target="_blank" title="Basic Needs Support">Basic Needs Support</a> </li> 
+                <li> <a href="https://care.ucr.edu" target="_blank" title="Campus Advocacy, Resources &amp; Education (CARE)">Campus Advocacy, Resources &amp; Education (CARE)</a> </li> 
+                <li> <a href="https://counseling.ucr.edu" target="_blank" title="Counseling &amp; Psychological Services (CAPS)">Counseling &amp; Psychological Services (CAPS)</a> </li> 
+                <li> <a href="https://casemanagement.ucr.edu" target="_blank" title="Student Affairs Case Management">Student Affairs Case Management</a> </li> 
+                <li> <a href="https://studenthealth.ucr.edu" target="_blank" title="Student Health Services (SHS)">Student Health Services (SHS)</a> </li> 
+                <li> <a href="https://police.ucr.edu" target="_blank" title="UC Police Department (UCPD)">UC Police Department (UCPD)</a> </li> 
+               </ul> </li> 
+              <li> <a href="/student-services" title="Resources" data-drupal-link-system-path="node/246">Resources</a> 
+               <ul class="vertical menu submenu"> 
+                <li> <a href="https://deanofstudents.ucr.edu" target="_blank" title="Dean of Students ">Dean of Students</a> </li> 
+                <li> <a href="/covid-19" title="Health and Safety Resources" data-drupal-link-system-path="node/346">Health and Safety Resources</a> </li> 
+                <li> <a href="/pledge" title="Keep Highlanders Healthy Pledge" data-drupal-link-system-path="node/341">Keep Highlanders Healthy Pledge</a> </li> 
+                <li> <a href="https://saar.ucr.edu" target="_blank" title="Student Affairs Assessment &amp; Research (SAAR)">Student Affairs Assessment &amp; Research (SAAR)</a> </li> 
+                <li> <a href="https://conduct.ucr.edu" target="_blank" title="Student Conduct &amp; Academic Integrity Programs (SCAIP)">Student Conduct &amp; Academic Integrity Programs (SCAIP)</a> </li> 
+                <li> <a href="https://well.ucr.edu" target="_blank" title="The Well">The Well</a> </li> 
+               </ul> </li> 
+              <li> <a href="/diversity" title="Student Centers" data-drupal-link-system-path="node/256">Student Centers</a> 
+               <ul class="vertical menu submenu"> 
+                <li> <a href="https://asp.ucr.edu" target="_blank" title="African Student Programs (ASP)">African Student Programs (ASP)</a> </li> 
+                <li> <a href="https://apsp.ucr.edu" target="_blank" title="Asian Pacific Student Programs (APSP)">Asian Pacific Student Programs (APSP)</a> </li> 
+                <li> <a href="https://csp.ucr.edu" target="_blank" title="Chicano Student Programs (CSP) ">Chicano Student Programs (CSP)</a> </li> 
+                <li> <a href="https://out.ucr.edu" target="_blank" title="LGBT Resource Center (LGBTRC)">LGBT Resource Center (LGBTRC)</a> </li> 
+                <li> <a href="https://mesc.ucr.edu" target="_blank" title="Middle Eastern Student Center (MESC)">Middle Eastern Student Center (MESC)</a> </li> 
+                <li> <a href="https://nasp.ucr.edu" target="_blank" title="Native American Student Programs (NASP)">Native American Student Programs (NASP)</a> </li> 
+                <li> <a href="https://fosteryouth.ucr.edu" target="_blank" title="Office of Foster Youth Support Services">Office of Foster Youth Support Services</a> </li> 
+                <li> <a href="https://sdrc.ucr.edu" target="_blank" title="Student Disability Resource Center (SDRC)">Student Disability Resource Center (SDRC)</a> </li> 
+                <li> <a href="https://usp.ucr.edu" target="_blank" title="Undocumented Student Programs (USP)">Undocumented Student Programs (USP)</a> </li> 
+                <li> <a href="https://veterans.ucr.edu" target="_blank" title="Veterans Resources">Veterans Resources</a> </li> 
+                <li> <a href="https://wrc.ucr.edu" target="_blank" title="Women’s Resource Center (WRC)">Women’s Resource Center (WRC)</a> </li> 
+               </ul> </li> 
+             </ul> 
+            </nav> 
+           </div> 
+           <div class="cell global-header-menu show-for-small-only"> 
+            <nav aria-label="global header menu"> 
+             <ul class="menu"> 
+              <li class="ucr-home-link-mobile "><a href="https://www.ucr.edu" target="_blank">UCR Home</a></li> 
+             </ul> 
+            </nav> 
+           </div> 
+           <div id="audience-links-mobile-view" data-block-plugin-id="system_menu_block:ucr-audience-menu" class="cell hide-for-medium audience-links-mobile" aria-label="Audience Links mobile view"> 
+            <nav class="audience-links"> 
+             <ul class="vertical medium-horizontal menu" data-responsive-menu="accordion medium-dropdown" data-closing-time="100" data-alignment="left"> 
+              <li class="audience-button is-dropdown-submenu-parent"> <a href="http://studentaffairs.ucr.edu" target="_self">Student Affairs Departments</a> 
+               <ul class="vertical menu"> 
+                <li> <a href="https://asp.ucr.edu/" target="_blank">African Student Programs (ASP)</a> </li> 
+                <li> <a href="https://apsp.ucr.edu/" target="_blank">Asian Pacific Student Programs (APSP)</a> </li> 
+                <li> <a href="https://aspb.ucr.edu/" target="_blank">Associated Students Program Board (ASUCR)</a> </li> 
+                <li> <a href="https://deanofstudents.ucr.edu/" target="_blank">AVC Dean of Students (AVC DOS)</a> </li> 
+                <li> <a href="https://casemanagement.ucr.edu/" target="_blank" title="Case Management">Case Management (CM)</a> </li> 
+                <li> <a href="https://care.ucr.edu/" target="_blank" title="CARE (Campus Advocacy, Resources &amp; Education)">Campus Advocacy, Resources &amp; Education (CARE)</a> </li> 
+                <li> <a href="/our-mission" data-drupal-link-system-path="node/226">Central Office</a> </li> 
+                <li> <a href="https://csp.ucr.edu/" target="_blank" title="Chicano Student Programs">Chicano Student Programs (CSP)</a> </li> 
+                <li> <a href="https://counseling.ucr.edu/" target="_blank" title="Counseling and Psychological Services (CAPS)">Counseling and Psychological Services (CAPS)</a> </li> 
+                <li> <a href="https://studentwellness.ucr.edu/" title="Health &amp; Wellness Services">Health and Wellness</a> </li> 
+                <li> <a href="https://hub.ucr.edu/" title="Highlander Union Building">Highlander Union</a> </li> 
+                <li> <a href="http://kucr.org/" target="_blank" title="KUCR Radio">KUCR Radio</a> </li> 
+                <li> <a href="https://out.ucr.edu/" target="_blank" title="LGBT Resource Center">LGBT Resource Center</a> </li> 
+                <li> <a href="https://mesc.ucr.edu/" target="_blank" title="Middle Eastern Student Center (MESC)">Middle Eastern Student Center (MESC)</a> </li> 
+                <li> <a href="https://nasp.ucr.edu/" target="_blank" title="Native American Student Programs">Native American Student Programs (NASP)</a> </li> 
+                <li> <a href="https://guardianscholars.ucr.edu" target="_blank" title="Office of Foster Youth Support Services">Office of Foster Youth Support Services</a> </li> 
+                <li> <a href="https://basicneeds.ucr.edu/rpantry" target="_blank" title="R'Pantry">R'Pantry</a> </li> 
+                <li> <a href="http://housing.ucr.edu/residential-life/index.html" target="_blank" title="Residential Life">Residential Life</a> </li> 
+                <li> <a href="https://conduct.ucr.edu/" target="_blank" title="Student Conduct &amp; Academic Integrity Programs (SCAIP)">Student Conduct &amp; Academic Integrity Programs (SCAIP)</a> </li> 
+                <li> <a href="https://sdrc.ucr.edu/" target="_blank" title="Student Disability Resource Center (SDRC)">Student Disability Resource Center (SDRC)</a> </li> 
+                <li> <a href="https://studenthealth.ucr.edu/" target="_blank" title="Student Health Services (SHS)">Student Health Services (SHS)</a> </li> 
+                <li> <a href="https://studentlife.ucr.edu/" target="_blank" title="Student Life">Student Life</a> </li> 
+                <li> <a href="https://recreation.ucr.edu" target="_blank" title="Student Recreation Center (SRC)">Student Recreation Center (SRC)</a> </li> 
+                <li> <a href="https://well.ucr.edu" target="_blank">The WELL Student Mental Health</a> </li> 
+                <li> <a href="https://veterans.ucr.edu/">Student Veterans</a> </li> 
+                <li> <a href="https://wrc.ucr.edu" target="_blank" title="Women's Resource Center (WRC)">Women's Resource Center (WRC)</a> </li> 
+               </ul> </li> 
+             </ul> 
+            </nav> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </header> 
+    <main> 
+     <div id="content-container"> 
+      <div id="hero-panel-area"> 
+       <div id="block-homeslider" data-block-plugin-id="block_content:a7535b47-0f99-439b-afaf-73ca155cd988"> 
+        <div class="grid-container full"> 
+         <div class="grid-x"> 
+          <div class="cell"> 
+           <div data-blazy="" class="slick blazy slick--field slick--field-sliders slick--field-sliders--hero-slider-medium slick--skin--grid slick--optionset--hero-slider-ui" id="slick-block-content-carousel-slider-sliders-hero-slider-medium-666-1"> 
+            <div id="slick-block-content-carousel-slider-sliders-hero-slider-medium-666-1-slider" data-slick="{&quot;mobileFirst&quot;:true,&quot;adaptiveHeight&quot;:true,&quot;autoplay&quot;:true,&quot;autoplaySpeed&quot;:10000,&quot;dots&quot;:true,&quot;draggable&quot;:false,&quot;lazyLoad&quot;:&quot;blazy&quot;}" class="slick__slider"> 
+             <div class="slick__slide slide slide--0"> 
+              <div class="paragraph paragraph--type--carousel-slider paragraph--view-mode--hero-slider-medium hero-slider hs-medium"> <picture> 
+                <source srcset="/sites/g/files/rcwecm3051/files/styles/hero_slider_medium_wide/public/VCSA-COVID-19-Resource_header.png?h=c9e5ca45&amp;itok=c9o-4439 1x" media="all and (min-width: 1401px)" type="image/png"> 
+                <source srcset="/sites/g/files/rcwecm3051/files/styles/hero_slider_medium_narrow/public/VCSA-COVID-19-Resource_header.png?h=c9e5ca45&amp;itok=TlMinJPv 1x" media="all and (min-width: 1025px) and (max-width: 1400px)" type="image/png"> 
+                <source srcset="/sites/g/files/rcwecm3051/files/styles/hero_slider_medium_tablet/public/VCSA-COVID-19-Resource_header.png?h=c9e5ca45&amp;itok=4h2yOPLZ 1x" media="all and (min-width: 768px) and (max-width: 1024px)" type="image/png"> 
+                <source srcset="/sites/g/files/rcwecm3051/files/styles/hero_slider_medium_mobile/public/VCSA-COVID-19-Resource_header.png?h=c9e5ca45&amp;itok=CgbJTDul 1x" type="image/png"> 
+                <img src="/sites/g/files/rcwecm3051/files/styles/hero_slider_medium_wide/public/VCSA-COVID-19-Resource_header.png?h=c9e5ca45&amp;itok=c9o-4439" alt="COVID-19 Resources" typeof="foaf:Image"> 
+               </picture> 
+              </div> 
+             </div> 
+             <div class="slick__slide slide slide--1"> 
+              <div class="paragraph paragraph--type--carousel-slider paragraph--view-mode--hero-slider-medium hero-slider hs-medium"> <picture> 
+                <source srcset="/sites/g/files/rcwecm3051/files/styles/hero_slider_medium_wide/public/VCSA_home-slider_basic-needs.jpg?h=c9e5ca45&amp;itok=GVPQ2Qze 1x" media="all and (min-width: 1401px)" type="image/jpeg"> 
+                <source srcset="/sites/g/files/rcwecm3051/files/styles/hero_slider_medium_narrow/public/VCSA_home-slider_basic-needs.jpg?h=c9e5ca45&amp;itok=wm5hMX5A 1x" media="all and (min-width: 1025px) and (max-width: 1400px)" type="image/jpeg"> 
+                <source srcset="/sites/g/files/rcwecm3051/files/styles/hero_slider_medium_tablet/public/VCSA_home-slider_basic-needs.jpg?h=c9e5ca45&amp;itok=GqUJvcDD 1x" media="all and (min-width: 768px) and (max-width: 1024px)" type="image/jpeg"> 
+                <source srcset="/sites/g/files/rcwecm3051/files/styles/hero_slider_medium_mobile/public/VCSA_home-slider_basic-needs.jpg?h=c9e5ca45&amp;itok=rdi_Jh0C 1x" type="image/jpeg"> 
+                <img src="/sites/g/files/rcwecm3051/files/styles/hero_slider_medium_wide/public/VCSA_home-slider_basic-needs.jpg?h=c9e5ca45&amp;itok=GVPQ2Qze" alt="Basic Needs: Resources to Help You Survive &amp; Thrive" typeof="foaf:Image"> 
+               </picture> 
+              </div> 
+             </div> 
+             <div class="slick__slide slide slide--2"> 
+              <div class="paragraph paragraph--type--carousel-slider paragraph--view-mode--hero-slider-medium hero-slider hs-medium"> <picture> 
+                <source srcset="/sites/g/files/rcwecm3051/files/styles/hero_slider_medium_wide/public/VCSA_home-slider_student-life_1.jpg?h=c9e5ca45&amp;itok=lTVdxAcO 1x" media="all and (min-width: 1401px)" type="image/jpeg"> 
+                <source srcset="/sites/g/files/rcwecm3051/files/styles/hero_slider_medium_narrow/public/VCSA_home-slider_student-life_1.jpg?h=c9e5ca45&amp;itok=ciYKhrhq 1x" media="all and (min-width: 1025px) and (max-width: 1400px)" type="image/jpeg"> 
+                <source srcset="/sites/g/files/rcwecm3051/files/styles/hero_slider_medium_tablet/public/VCSA_home-slider_student-life_1.jpg?h=c9e5ca45&amp;itok=UqNCSfNf 1x" media="all and (min-width: 768px) and (max-width: 1024px)" type="image/jpeg"> 
+                <source srcset="/sites/g/files/rcwecm3051/files/styles/hero_slider_medium_mobile/public/VCSA_home-slider_student-life_1.jpg?h=c9e5ca45&amp;itok=aujpgR3v 1x" type="image/jpeg"> 
+                <img src="/sites/g/files/rcwecm3051/files/styles/hero_slider_medium_wide/public/VCSA_home-slider_student-life_1.jpg?h=c9e5ca45&amp;itok=lTVdxAcO" alt="Student Life" typeof="foaf:Image"> 
+               </picture> 
+              </div> 
+             </div> 
+             <div class="slick__slide slide slide--3"> 
+              <div class="paragraph paragraph--type--carousel-slider paragraph--view-mode--hero-slider-medium hero-slider hs-medium"> <picture> 
+                <source srcset="/sites/g/files/rcwecm3051/files/styles/hero_slider_medium_wide/public/VCSA_home-slider_caps_2.jpg?h=c9e5ca45&amp;itok=abs3Udje 1x" media="all and (min-width: 1401px)" type="image/jpeg"> 
+                <source srcset="/sites/g/files/rcwecm3051/files/styles/hero_slider_medium_narrow/public/VCSA_home-slider_caps_2.jpg?h=c9e5ca45&amp;itok=Ns7gRtS3 1x" media="all and (min-width: 1025px) and (max-width: 1400px)" type="image/jpeg"> 
+                <source srcset="/sites/g/files/rcwecm3051/files/styles/hero_slider_medium_tablet/public/VCSA_home-slider_caps_2.jpg?h=c9e5ca45&amp;itok=D4UyISM1 1x" media="all and (min-width: 768px) and (max-width: 1024px)" type="image/jpeg"> 
+                <source srcset="/sites/g/files/rcwecm3051/files/styles/hero_slider_medium_mobile/public/VCSA_home-slider_caps_2.jpg?h=c9e5ca45&amp;itok=8NPWvlnn 1x" type="image/jpeg"> 
+                <img src="/sites/g/files/rcwecm3051/files/styles/hero_slider_medium_wide/public/VCSA_home-slider_caps_2.jpg?h=c9e5ca45&amp;itok=abs3Udje" alt="Counseling &amp; Psychological Services (CAPS)" typeof="foaf:Image"> 
+               </picture> 
+              </div> 
+             </div> 
+             <div class="slick__slide slide slide--4"> 
+              <div class="paragraph paragraph--type--carousel-slider paragraph--view-mode--hero-slider-medium hero-slider hs-medium"> <picture> 
+                <source srcset="/sites/g/files/rcwecm3051/files/styles/hero_slider_medium_wide/public/VCSA_home-slider_ethnic-gender_0.jpg?h=c9e5ca45&amp;itok=vJFZcgSS 1x" media="all and (min-width: 1401px)" type="image/jpeg"> 
+                <source srcset="/sites/g/files/rcwecm3051/files/styles/hero_slider_medium_narrow/public/VCSA_home-slider_ethnic-gender_0.jpg?h=c9e5ca45&amp;itok=DCt1dp1r 1x" media="all and (min-width: 1025px) and (max-width: 1400px)" type="image/jpeg"> 
+                <source srcset="/sites/g/files/rcwecm3051/files/styles/hero_slider_medium_tablet/public/VCSA_home-slider_ethnic-gender_0.jpg?h=c9e5ca45&amp;itok=DdzgZfXq 1x" media="all and (min-width: 768px) and (max-width: 1024px)" type="image/jpeg"> 
+                <source srcset="/sites/g/files/rcwecm3051/files/styles/hero_slider_medium_mobile/public/VCSA_home-slider_ethnic-gender_0.jpg?h=c9e5ca45&amp;itok=omafhKe0 1x" type="image/jpeg"> 
+                <img src="/sites/g/files/rcwecm3051/files/styles/hero_slider_medium_wide/public/VCSA_home-slider_ethnic-gender_0.jpg?h=c9e5ca45&amp;itok=vJFZcgSS" alt="Ethnic &amp; Gender" typeof="foaf:Image"> 
+               </picture> 
+              </div> 
+             </div> 
+             <div class="slick__slide slide slide--5"> 
+              <div class="paragraph paragraph--type--carousel-slider paragraph--view-mode--hero-slider-medium hero-slider hs-medium"> <picture> 
+                <source srcset="/sites/g/files/rcwecm3051/files/styles/hero_slider_medium_wide/public/VCSA_home-slider_student-health-services_1.jpg?h=c9e5ca45&amp;itok=MamQ6oX9 1x" media="all and (min-width: 1401px)" type="image/jpeg"> 
+                <source srcset="/sites/g/files/rcwecm3051/files/styles/hero_slider_medium_narrow/public/VCSA_home-slider_student-health-services_1.jpg?h=c9e5ca45&amp;itok=hb47gF6R 1x" media="all and (min-width: 1025px) and (max-width: 1400px)" type="image/jpeg"> 
+                <source srcset="/sites/g/files/rcwecm3051/files/styles/hero_slider_medium_tablet/public/VCSA_home-slider_student-health-services_1.jpg?h=c9e5ca45&amp;itok=5r2FVTSZ 1x" media="all and (min-width: 768px) and (max-width: 1024px)" type="image/jpeg"> 
+                <source srcset="/sites/g/files/rcwecm3051/files/styles/hero_slider_medium_mobile/public/VCSA_home-slider_student-health-services_1.jpg?h=c9e5ca45&amp;itok=1o4AT8aN 1x" type="image/jpeg"> 
+                <img src="/sites/g/files/rcwecm3051/files/styles/hero_slider_medium_wide/public/VCSA_home-slider_student-health-services_1.jpg?h=c9e5ca45&amp;itok=MamQ6oX9" alt="Student Health Services" typeof="foaf:Image"> 
+               </picture> 
+              </div> 
+             </div> 
+             <div class="slick__slide slide slide--6"> 
+              <div class="paragraph paragraph--type--carousel-slider paragraph--view-mode--hero-slider-medium hero-slider hs-medium"> <picture> 
+                <source srcset="/sites/g/files/rcwecm3051/files/styles/hero_slider_medium_wide/public/VCSA_home-slider_residential-life_1.jpg?h=c9e5ca45&amp;itok=jBLf05pi 1x" media="all and (min-width: 1401px)" type="image/jpeg"> 
+                <source srcset="/sites/g/files/rcwecm3051/files/styles/hero_slider_medium_narrow/public/VCSA_home-slider_residential-life_1.jpg?h=c9e5ca45&amp;itok=Eb_jsrBB 1x" media="all and (min-width: 1025px) and (max-width: 1400px)" type="image/jpeg"> 
+                <source srcset="/sites/g/files/rcwecm3051/files/styles/hero_slider_medium_tablet/public/VCSA_home-slider_residential-life_1.jpg?h=c9e5ca45&amp;itok=qd8zajAH 1x" media="all and (min-width: 768px) and (max-width: 1024px)" type="image/jpeg"> 
+                <source srcset="/sites/g/files/rcwecm3051/files/styles/hero_slider_medium_mobile/public/VCSA_home-slider_residential-life_1.jpg?h=c9e5ca45&amp;itok=NqZgY_aB 1x" type="image/jpeg"> 
+                <img src="/sites/g/files/rcwecm3051/files/styles/hero_slider_medium_wide/public/VCSA_home-slider_residential-life_1.jpg?h=c9e5ca45&amp;itok=jBLf05pi" alt="Residential Life" typeof="foaf:Image"> 
+               </picture> 
+              </div> 
+             </div> 
+            </div> 
+            <nav role="navigation" class="slick__arrow"> <button type="button" data-role="none" class="slick-prev" aria-label="Previous" tabindex="0">Previous</button> <button type="button" data-role="none" class="slick-next" aria-label="Next" tabindex="0">Next</button> 
+            </nav> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="views-element-container" id="block-ucr-design-1-head-image-title-block" data-block-plugin-id="views_block:content_views-content_head_image_title_block"> 
+        <div>
+         <div class="js-view-dom-id-d953f9b7cc1d9282b3fdbc5313034c47c1f3144aca9377a5f41ea40ac8a93171"> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="grid-container"> 
+       <div class="grid-x grid-padding-x grid-padding-y primary-content-header"> 
+        <div id="block-ucr-design-1-breadcrumbs" data-block-plugin-id="system_breadcrumb_block" class="cell"> 
+         <div>
+          <span id="system-breadcrumb" class="visually-hidden">Breadcrumb</span>
+         </div> 
+         <div class="grid-container full"> 
+          <div class="grid-x breadcrumb-container"> 
+           <div class="shrink cell breadcrumb-home"> <a href="/"><span class="mdi mdi-home breadcrumb-home-icon" aria-label="Redirects to the homepage of this site."></span></a> 
+           </div> 
+           <div class="auto cell breadcrumb-list"> 
+            <nav aria-labelledby="system-breadcrumb"> 
+             <ul class="breadcrumbs"> 
+              <li class="list-no-display"><span>&nbsp;</span></li> 
+             </ul> 
+            </nav> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+        <div id="block-ucr-design-1-page-title" data-block-plugin-id="page_title_block" class="cell"> 
+         <h1 class="page-title"><span>Home </span> </h1> 
+        </div> 
+       </div> 
+       <div class="grid-x grid-padding-x system-admin-controls"> 
+       </div> 
+      </div> 
+      <div id="main" class="grid-container full primary-content-area"> 
+       <div class="grid-x"> 
+        <div class="cell large-auto small-order-3 medium-order-3 large-order-2 pca-content"> 
+         <div> 
+          <div id="block-ucr-design-1-content" data-block-plugin-id="system_main_block"> 
+           <article role="article" about="/vcsa-home"> 
+            <div> 
+             <div class="layout layout-one-col grid-container"> 
+              <div class="grid-x"> 
+               <div class="cell"> 
+                <div class="layout__region layout__region--main"> 
+                 <div data-block-plugin-id="block_content:c3fd0ad7-5bbe-4e73-8f35-6dc80f4724fb" class="ucr-custom-block ucr-custom-block-custom-paddings padding-top-1" style="background: linear-gradient(rgba(255,184,28,1),rgba(255,184,28,1)); background-size: cover;"> 
+                  <div class="grid-container full"> 
+                   <div class="grid-x grid-padding-x"> 
+                    <div class="cell">
+                     <h2>Campus-Based Student Fee Refunds FAQ</h2>
+                    </div> 
+                    <div class="cell"> 
+                     <p><strong>For the latest information on the Spring 2020 Student Fee Refunds, view the <a data-entity-substitution="canonical" data-entity-type="media" data-entity-uuid="02d974c1-31a5-4c1a-acbc-ead0718adb1f" href="/document/campus-based-refunds-faq" title="Campus Based Refunds FAQ">campus-wide FAQ</a></strong>.&nbsp;</p> 
+                    </div> 
+                   </div> 
+                  </div> 
+                 </div> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+             <div class="layout layout-two-col grid-container"> 
+              <div class="grid-x grid-padding-x"> 
+               <div class="cell medium-8"> 
+                <div class="layout__region layout__region--column-1"> 
+                 <div data-block-plugin-id="block_content:80c6f48f-af30-40fc-b857-6c8c02b43dc8" class="ucr-custom-block"> 
+                  <div class="grid-container full"> 
+                   <div class="grid-x grid-padding-x"> 
+                    <div class="cell"> 
+                     <div alt="Vice Chancellor Brian L. Haynes, Ph.D." data-embed-button="media_browser" data-entity-embed-display="media_image" data-entity-embed-display-settings="content_header_medium" data-entity-type="media" data-entity-uuid="29375294-1420-404d-a250-b0055460901b" data-langcode="en" title="Vice Chancellor Brian L. Haynes, Ph.D." class="embedded-entity align-center"> 
+                      <img src="/sites/g/files/rcwecm3051/files/styles/content_header_medium/public/Vice_Chancellor_Brian_Haynes.jpg?h=c5bc4bfd&amp;itok=mxPqPuPN" width="1024" height="400" alt="Vice Chancellor Brian L. Haynes, Ph.D." title="Vice Chancellor Brian L. Haynes, Ph.D." loading="lazy" typeof="foaf:Image">
+                     </div> 
+                     <h4><br> Hello, and Welcome Highlanders to UC Riverside!</h4> 
+                     <p><strong>My name is Brian Haynes, vice chancellor for student affairs.</strong> It is my privilege to welcome you all to our university. I hope each of you will discover the extraordinary beauty of our campus and its profound resources designed to help you excel in the academic journey.<br><br> This is your time to explore, collaborate, and unite with your peers, faculty, and staff. Don’t let anything or anyone hold you back. You are taking the next step in your academic career and it is one that you should be very proud of. Each of you have the ability to transform the world for the better, and make a positive difference in the communities you serve as global change agents.<br><br> Please take a moment to review the following student services that are available to you virtually during this time. Many of our offices are available through online appointments and can be accessed via email, Zoom, or through social media.<br><br> If you have any questions or concerns, please feel free to reach out at <a href="mailto:vcsa@ucr.edu">vcsa@ucr.edu</a>. I’d be happy to connect with you.<br><br> Take care and stay safe.<br><br><span style="color:#000000;">Best Regards,<br> Brian L. Haynes, Ph.D.<br> Vice Chancellor for Student Affairs</span></p> 
+                    </div> 
+                   </div> 
+                  </div> 
+                 </div> 
+                 <div data-block-plugin-id="block_content:5e9066ed-7e6c-4ebc-8a8f-5810c32d4f79" class="ucr-custom-block"> 
+                  <div class="grid-container full"> 
+                   <div class="grid-x grid-padding-x"> 
+                    <div class="cell"> 
+                     <div class="grid-container"> 
+                      <div class="grid-x grid-margin-x grid-margin-y" id="virtual" name="virtual"> 
+                       <p>&nbsp;</p> 
+                      </div> 
+                     </div> 
+                    </div> 
+                   </div> 
+                  </div> 
+                 </div> 
+                </div> 
+               </div> 
+               <div class="cell medium-4"> 
+                <div class="layout__region layout__region--column-2"> 
+                 <div data-block-plugin-id="block_content:3e3352a3-9883-4dd4-954f-74a51893c24d" class="ucr-custom-block"> 
+                  <div class="grid-container full"> 
+                   <div class="grid-x grid-padding-x"> 
+                    <div class="cell"> 
+                     <div style="background-color: #e9f2fb; padding: 30px 30px 30px 30px"> 
+                      <h5><span style="color:#000000;"><strong>Emergency Resources</strong></span></h5> 
+                      <p>Information regarding emergencies that affect the campus will be shared through:</p> 
+                      <ul>
+                       <li><a href="http://ucr.edu/" target="_blank" title="UCR Home">UCR.edu</a></li> 
+                       <li><a href="http://campusstatus.ucr.edu/" target="_blank" title="UCR Home">UCR Campus Status</a></li> 
+                       <li><a href="http://police.ucr.edu/" target="_blank" title="UCR Police">UC&nbsp;Police Department (UCPD)</a></li> 
+                       <li><a href="http://ehs.ucr.edu/" target="_blank" title="Environmental Health &amp; Safety">UCR Environmental Health &amp; Safety</a></li> 
+                       <li>(951) 827-5528</li> 
+                       <li><a href="https://emergency.ucr.edu/ENS" target="_blank" title="UCR Home">UCR Emergency Notification System</a></li> 
+                       <li><a href="http://kucr.org/" target="_blank" title="KUCR 88.3FM">UCR Campus Radio KUCR 88.3FM</a></li> 
+                       <li>Riverside Area News &amp; Information Radio&nbsp;<br> KFRG 95.1FM, KGGI 99.1FM, KFI 640AM, or KNX 1070AM</li> 
+                       <li>Riverside Area Emergency Information&nbsp;</li> 
+                       <li>Charter Cable Channel 32 or 33</li> 
+                      </ul>
+                      <h5><span style="color:#000000;"><strong>Local Hospitals</strong></span></h5> 
+                      <p><a href="http://www.rchc.org/" target="_blank" title="Riverside Community Hospital">Riverside Community Hospital</a><br> (951) 788-3000<br> 4445 Magnolia Ave.&nbsp;|&nbsp;Riverside, CA 92501</p> 
+                      <p><a href="http://www.ruhealth.org/en-us" target="_blank" title="Riverside County Regional Medical Center">Riverside University Health System</a><br> (951) 486-4000<br> 26520 Cactus Ave.&nbsp;|&nbsp;Moreno Valley, CA 92555</p> 
+                      <p><a href="http://www.pchmc.org/" target="_blank" title="Parkview Community Hospital">Parkview Community Hospital</a><br> (951) 688-2211<br> 3865 Jackson Ave. |&nbsp;Riverside, CA 92503</p> 
+                     </div> 
+                    </div> 
+                   </div> 
+                  </div> 
+                 </div> 
+                 <div data-block-plugin-id="block_content:25978c8c-fc21-4492-846a-e54bc34380d5" class="ucr-custom-block"> 
+                  <div class="grid-container full"> 
+                   <div class="grid-x grid-padding-x"> 
+                    <div class="cell"> 
+                     <p><a href="https://give.communityfunded.com/o/university-of-california-riverside/i/beyond-brilliant-giving-page" target="_blank"><img alt="Beyond Brilliant Supporting UCR Students" src="/sites/g/files/rcwecm3051/files/ucr-beyond-1-web-badge.jpg"></a></p> 
+                    </div> 
+                   </div> 
+                  </div> 
+                 </div> 
+                 <div data-block-plugin-id="block_content:9022382b-6cb5-45ec-b3d6-9c64940513fc" class="ucr-custom-block"> 
+                  <div class="grid-container full"> 
+                   <div class="grid-x grid-padding-x"> 
+                    <div class="cell"> 
+                     <div style="background-color: #003da5; padding: 30px 30px 30px 30px; border-top: 10px solid #ffb81c;"> 
+                      <p><span style="color:#ffffff;">Protect Yourself, Your Family, School, and Community</span></p> 
+                      <h4><span style="color:#ffffff;"><strong>Take the Pledge to Keep Highlanders Healthy</strong></span></h4> 
+                      <p><a class="btn-ucr-gold" href="http://studentaffairs.ucr.edu/pledge " target="_blank">Read the pledge</a></p> 
+                     </div> 
+                    </div> 
+                   </div> 
+                  </div> 
+                 </div> 
+                 <div data-block-plugin-id="block_content:5cf576f2-ed10-4eb5-b4e2-4f9fc7a7dbbe" class="ucr-custom-block"> 
+                  <div class="grid-container full"> 
+                   <div class="grid-x grid-padding-x"> 
+                    <div class="cell"> 
+                     <div style="background-color: #c9e3f7; padding: 30px 30px 30px 30px; border-top: 10px solid #234674;"> 
+                      <h4><span style="color:#234674;"><strong>Gold Medal Service Award</strong></span></h4> 
+                      <p><span style="color:#234674;">Nominate a Student Affairs staff member for this monthly award that recognizes great work in service to the division, the UCR campus, and UCR students.</span></p> 
+                      <p><a class="btn-ucr-orange" href="https://vcsahr.ucr.edu/gold-medal-service-award-nomination" target="_blank" title="Gold Medal Service Award Nomination">Submit a Nomination!</a></p> 
+                     </div> 
+                    </div> 
+                   </div> 
+                  </div> 
+                 </div> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+             <div class="layout layout-one-col grid-container"> 
+              <div class="grid-x grid-padding-x"> 
+               <div class="cell"> 
+                <div class="layout__region layout__region--main"> 
+                 <div data-block-plugin-id="block_content:f8060b2e-7599-4d42-b338-aef13e02bfac" class="ucr-custom-block ucr-custom-block-custom-margins ucr-custom-block-custom-paddings margin-0 padding-vertical-2 padding-horizontal-0" style="background: linear-gradient(rgba(233,237,242,1),rgba(233,237,242,1)); background-size: cover;"> 
+                  <div class="grid-container full"> 
+                   <div class="grid-x grid-padding-x"> 
+                    <div class="cell"> 
+                     <div class="grid-container"> 
+                      <div class="grid-x grid-margin-x grid-margin-y" id="urgent" name="urgent"> 
+                       <div class="cell small-12"> 
+                        <h6 class="text-align-center"><strong><a href="#urgent">Health, Well-being &amp; Safety</a> | <a href="#campus">Campus Life</a> | <a href="#ethnic">Ethnic &amp; Gender Centers</a><br><br><a href="#student">Student Affairs Events</a> | <a href="#support">Support Fellow Highlanders</a></strong></h6> 
+                       </div> 
+                      </div> 
+                     </div> 
+                    </div> 
+                   </div> 
+                  </div> 
+                 </div> 
+                 <div data-block-plugin-id="block_content:5f1904ca-6ead-498e-ac36-1b351a93d0ae" class="ucr-custom-block ucr-custom-block-custom-margins ucr-custom-block-custom-paddings margin-0 padding-top-2 padding-bottom-4 padding-horizontal-0" style="background: linear-gradient(rgba(233,237,242,0.7),rgba(233,237,242,0.7)); background-size: cover;"> 
+                  <div class="grid-container full"> 
+                   <div class="grid-x grid-padding-x"> 
+                    <div class="cell"> 
+                     <div class="grid-container"> 
+                      <div class="cell small-12" style="padding: 0px 0px 40px 0px;"> 
+                       <h3 class="separator-line-before"><span style="color:#1d3a61;"><strong>Health, Well-being &amp; Safety</strong></span></h3> 
+                       <p>These offices are available to support your physical and mental health and well-being.</p> 
+                      </div> 
+                      <div class="grid-x grid-margin-x grid-margin-y"> 
+                       <div class="cell large-6 small-12 vcsa-padding home-bg"> 
+                        <h6><span style="color:#1d3a61;"><strong>Basic Needs</strong></span></h6> 
+                        <p><span class="mdi mdi-24px mdi-earth">&nbsp;</span><span class="mdi mdi-24px mdi-account-multiple">&nbsp;</span><br> Office: 110 Costo Hall<br> R'Pantry: HUB 269 <a href="https://rpantry.youcanbook.me" title="rpantry.youcanbook.me">By Appointment Only</a></p> 
+                        <p>(951) 827-3663 |&nbsp;<a href="https://basicneeds.ucr.edu" target="_blank" title="Basic Needs Website">basicneeds.ucr.edu</a>&nbsp;| <a href="mailto:basicneeds@ucr.edu" target="_blank" title="Email: basicneeds@ucr.edu ">basicneeds@ucr.edu</a><br><a href="https://basicneeds.ucr.edu/rpantry" target="_blank" title="R'Pantry Website">rpantry.ucr.edu</a>&nbsp;| <a href="https://basicneeds.ucr.edu/resources" target="_blank" title="Basic Needs Assistance">Basic Needs Assistance</a><br><br> Basic Needs provides support for students experiencing basic need challenges, such as food insecurity, housing displacement/homelessness, or financial crisis.</p> 
+                       </div> 
+                       <div class="cell large-6 small-12 vcsa-padding home-bg"> 
+                        <h6><span style="color:#1d3a61;"><strong>Campus Advocacy, Resources &amp; Education (CARE)</strong></span></h6> <span class="mdi mdi-24px mdi-cellphone-iphone">&nbsp;</span><span class="mdi mdi-24px mdi-email">&nbsp;</span><span class="mdi mdi-24px mdi-earth">&nbsp;</span><span class="mdi mdi-24px mdi-account-multiple">&nbsp;</span><span class="mdi mdi-24px mdi-message-video">&nbsp;</span>
+                        <br> Office: HUB 377
+                        <br> (951) 827-6225 |&nbsp;<a href="mailto:advocate@ucr.edu" target="_blank" title="Email: advocate@ucr.edu">advocate@ucr.edu</a>&nbsp;| <a href="http://care.ucr.edu" target="_blank" title="UCR CARE Website">care.ucr.edu</a>
+                        <br><a href="https://care.ucr.edu/get-help/make-an-appointment" target="_blank" title="Schedule an Appointment">Schedule an Appointment</a>
+                        <br>
+                        <br> Office Hours: Tuesdays and Wednesdays, 9 a.m.&nbsp;–&nbsp;4:30 p.m.
+                        <br>
+                        <br> CARE is an advocacy and prevention center committed to ending sexual and relationship violence at UC Riverside by providing trauma-informed primary prevention, direct advocacy and resources related to experiences of sexual assault, relationship violence and stalking.
+                       </div> 
+                       <div class="cell large-6 small-12 vcsa-padding home-bg"> 
+                        <h6><span style="color:#1d3a61;"><strong>Counseling &amp; Psychological Services (CAPS)</strong></span></h6> <span class="mdi mdi-24px mdi-cellphone-iphone">&nbsp;</span><span class="mdi mdi-24px mdi-account-multiple">&nbsp;</span><span class="mdi mdi-24px mdi-message-video">&nbsp;</span>
+                        <br> Office: Student Health Services Building, North Wing&nbsp;
+                        <br> (951) 827-5531 or&nbsp;(951) UCR-TALK&nbsp;|&nbsp;<a href="https://counseling.ucr.edu" target="_blank" title="UCR CAPS Website">counseling.ucr.edu</a> 
+                        <p><br> Office Hours (closed 12–1 p.m. daily)<br> M, T, W &amp; F: 8 a.m.&nbsp;–&nbsp;5 p.m.<br> TH: 9 a.m. – 5 p.m.</p> 
+                        <p>Walk-in Consultation (closed 12–1 p.m. daily)<br> M, T, W &amp; F: 8:30 a.m. – 4:30 p.m.<br> TH: 9 a.m. – 4:30 p.m.</p> 
+                        <p>Speak to a Counselor 24/7<br> (951) UCR-TALK (827-8255)</p> 
+                        <p>Make an Appointment: (951) 827-5531<br> (Appointment line is only active during office hours.)</p> 
+                       </div> 
+                       <div class="cell large-6 small-12 vcsa-padding home-bg"> 
+                        <h6><span style="color:#1d3a61;"><strong>Student Affairs Case Management</strong></span></h6> 
+                        <p><span class="mdi mdi-24px mdi-cellphone-iphone">&nbsp;</span><span class="mdi mdi-24px mdi-email">&nbsp;</span><span class="mdi mdi-24px mdi-account-multiple">&nbsp;</span><span class="mdi mdi-24px mdi-message-video">&nbsp;</span><br> Office: 125 Costo Hall<br> Case Management: (951) 827-5000<br> Respondent Services: (951) 827-9359<br><a href="mailto:casemanager@ucr.edu " title="Email Case management">casemanager@ucr.edu</a> | <a href="https://casemanagement.ucr.edu" target="_blank" title="UCR SACM Website">casemanagement.ucr.edu</a><br><br> Monday&nbsp;–&nbsp;Friday 8 a.m.&nbsp;–&nbsp;5 p.m.<br><br> Staff is available by phone and email to schedule Zoom Meetings.&nbsp;</p> 
+                        <p>We are path-clearers and problem-solvers for UCR students dealing with mental health, academic, relationship, food insecurity and other stressful crises. By providing resources, linkage, education, and expertise, we empower students to break down barriers, clarify needs and navigate complex processes to get back on track to reach their goals.</p> 
+                       </div> 
+                       <div class="cell large-6 small-12 vcsa-padding home-bg"> 
+                        <h6><span style="color:#1d3a61;"><strong>Student Disability Resource Center (SDRC)</strong></span></h6> 
+                        <p><span class="mdi mdi-24px mdi-cellphone-iphone">&nbsp;</span><span class="mdi mdi-24px mdi-email">&nbsp;</span><span class="mdi mdi-24px mdi-earth">&nbsp;</span><span class="mdi mdi-24px mdi-account-multiple">&nbsp;</span><span class="mdi mdi-24px mdi-message-video">&nbsp;</span><br> Office: 1228 Student Services Building<br> (951) 827-3861 |&nbsp;<a href="https://sdrc.ucr.edu" target="_blank" title="UCR SDRC Website">sdrc.ucr.edu</a> |&nbsp;<a href="mailto:sdrc@ucr.edu" title="Email: sdrc@ucr.edu">sdrc@ucr.edu</a></p> 
+                        <p>Monday–Friday 8 a.m.–5 p.m.</p> 
+                        <p>Services available to regularly enrolled UCR students may include information and referral to on- and off-campus services, mobility assistance, and academic support services. Students wishing to receive disability accommodations should contact SDRC. Accommodations are individually designed to meet the documented disability-related needs of each student.</p> 
+                        <p>Call or email to schedule a Zoom or phone appointment; for quick questions or information, students may RSVP to attend drop-in hours, Monday – Friday, 1 p.m – 2 p.m.</p> 
+                       </div> 
+                       <div class="cell large-6 small-12 vcsa-padding home-bg"> 
+                        <h6><span style="color:#1d3a61;"><strong>Student Health Services</strong></span></h6> 
+                        <p><span class="mdi mdi-24px mdi-cellphone-iphone">&nbsp;</span><span class="mdi mdi-24px mdi-account-multiple">&nbsp;</span><span class="mdi mdi-24px mdi-message-video">&nbsp;</span><br> Office: Student Health Services Building<br> Before coming in, please call (951) 827-3031 to set up an appointment.<br> (951) 827-3031 | <a href="https://studenthealth.ucr.edu" target="_blank" title="UCR Student Health Website">studenthealth.ucr.edu</a></p> 
+                        <p>M, T, W &amp; F: 8 a.m.–12 p.m. and 1–4 p.m.<br> TH: 9 a.m.–12 p.m. and 1–4 p.m.<br> (Closed for lunch daily from 12–1 p.m.)</p> 
+                        <p>NurseLine (877) 351-3457 is available 24 hours a day, seven days a week.</p> 
+                        <p>Student Health Services is offering in-person services and video consultations by appointment only. Please call to be screened and triaged by a nurse or staff member, and to schedule an appointment.</p> 
+                       </div> 
+                       <div class="cell large-6 small-12 vcsa-padding home-bg"> 
+                        <h6><span style="color:#1d3a61;"><strong>UC Police</strong></span></h6> 
+                        <p><span class="mdi mdi-24px mdi-cellphone-iphone">&nbsp;</span><span class="mdi mdi-24px mdi-email">&nbsp;</span><span class="mdi mdi-24px mdi-earth">&nbsp;</span><span class="mdi mdi-24px mdi-account-multiple">&nbsp;</span><span class="mdi mdi-24px mdi-message-video">&nbsp;</span><br> Office: 3500 Canyon Crest Drive, Riverside, CA 92521&nbsp;<br> (951) 827-5222 |&nbsp;<a href="https://police.ucr.edu" target="_blank" title="UC Police Website">police.ucr.edu</a> |&nbsp;<a href="mailto:ucpdgeneralmail@ucr.edu" title="Email: ucpdgeneralmail@ucr.edu">ucpdgeneralmail@ucr.edu</a></p> 
+                        <p>Lobby Hours: 7 a.m.–9 p.m.</p> 
+                        <p>The Police Department is a professional police agency staffed by individuals who cherish and preserve the highest standards of conduct and performance.</p> 
+                       </div> 
+                       <div class="cell large-6 small-12 vcsa-padding home-bg"> 
+                        <h6><span style="color:#1d3a61;"><strong>The Well</strong></span></h6> <span class="mdi mdi-24px mdi-cellphone-iphone">&nbsp;</span><span class="mdi mdi-24px mdi-email">&nbsp;</span><span class="mdi mdi-24px mdi-earth">&nbsp;</span><span class="mdi mdi-24px mdi-account-multiple">&nbsp;</span>
+                        <br> Office: HUB 248 | (951) 827-9355
+                        <br><a href="mailto:thewell@ucr.edu" target="_blank" title="Email The Well">thewell@ucr.edu</a> | <a href="https://well.ucr.edu" target="_blank" title="APSP Website">well.ucr.edu</a>
+                        <br>
+                        <br> Monday–Friday 8 a.m.–5 p.m.
+                        <br>
+                        <br> The Well provides health education and health promotion resources for UCR students' overall well-being, and coordinates basic needs services, including R'Pantry and the Economic Crisis Response Team. Staff is available by phone and email to schedule Zoom meetings.
+                       </div> 
+                       <div id="campus" name="campus">
+                        &nbsp;
+                       </div> 
+                      </div> 
+                     </div> 
+                    </div> 
+                   </div> 
+                  </div> 
+                 </div> 
+                 <div data-block-plugin-id="block_content:17a651d9-9c44-4a29-9f97-767a6651c4b9" class="ucr-custom-block ucr-custom-block-custom-margins ucr-custom-block-custom-paddings margin-0 padding-top-2 padding-bottom-4 padding-horizontal-0" style="background: linear-gradient(rgba(29,54,97,0.15),rgba(29,54,97,0.15)); background-size: cover;"> 
+                  <div class="grid-container full"> 
+                   <div class="grid-x grid-padding-x"> 
+                    <div class="cell"> 
+                     <div class="grid-container"> 
+                      <div class="grid-x grid-margin-x grid-margin-y"> 
+                       <div class="cell small-12" style="padding: 0px 0px 40px 0px;"> 
+                        <h3 class="separator-line-before"><span style="color:#1d3a61;"><strong>Campus Life</strong></span></h3> 
+                        <p>These offices are available to keep you connected to campus activities, organizations, supportive programming, and news.</p> 
+                       </div> 
+                      </div> 
+                      <div class="grid-x grid-margin-x grid-margin-y"> 
+                       <div class="cell large-6 small-12 vcsa-padding home-bg"> 
+                        <h6><span style="color:#1d3a61;"><strong>ASPB (Associated Students Program Board)</strong></span></h6> <span class="mdi mdi-24px mdi-cellphone-iphone">&nbsp;</span><span class="mdi mdi-24px mdi-email">&nbsp;</span>
+                        <br> (951) 827-3615
+                        <br><a href="mailto:geovanny.perez@ucr.edu" target="_blank" title="Email Geovanny Perez">geovanny.perez@ucr.edu</a> | <a href="https://aspb.ucr.edu" target="_blank" title="UCR ASPB Website">aspb.ucr.edu</a>
+                        <br>
+                        <br> Monday–Friday 8 a.m.–5 p.m.
+                        <br>
+                        <br> Staff and student representatives are available by phone and email.&nbsp;ASPB provides campus entertainment to all UCR undergraduate students.
+                       </div> 
+                       <div class="cell large-6 small-12 vcsa-padding home-bg"> 
+                        <h6><span style="color:#1d3a61;"><strong>Associated Students (ASUCR)</strong></span></h6> <span class="mdi mdi-24px mdi-cellphone-iphone">&nbsp;</span><span class="mdi mdi-24px mdi-email">&nbsp;</span>
+                        <br> (951) 827-3621
+                        <br><a href="mailto:asucr@ucr.edu" target="_blank" title="Email ASUCR">asucr@ucr.edu</a> | <a href="https://asucr.ucr.edu" target="_blank" title="ASUCR Website">asucr.ucr.edu</a>
+                        <br>
+                        <br> Monday–Friday 8 a.m.–5 p.m.
+                        <br>
+                        <br> ASUCR staff and student representatives are available by phone and email.
+                       </div> 
+                       <div class="cell large-6 small-12 vcsa-padding home-bg"> 
+                        <h6><span style="color:#1d3a61;"><strong>Dean of Students</strong></span></h6> <span class="mdi mdi-24px mdi-email">&nbsp;</span>
+                        <br><a href="mailto:deanofstudents@ucr.edu" target="_blank" title="Email Dean of Students">deanofstudents@ucr.edu</a> | <a href="https://deanofstudents.ucr.edu" target="_blank" title="UCR Dean of Students Website">deanofstudents.ucr.edu</a>
+                        <br>
+                        <br> Please email for assistance.
+                       </div> 
+                       <div class="cell large-6 small-12 vcsa-padding home-bg"> 
+                        <h6><span style="color:#1d3a61;"><strong>Graduate Students Association (GSA)</strong></span></h6> <span class="mdi mdi-24px mdi-cellphone-iphone">&nbsp;</span><span class="mdi mdi-24px mdi-email">&nbsp;</span>
+                        <br> (951) 827-3141
+                        <br><a href="mailto:gsaucr@ucr.edu" target="_blank" title="Email Graduate Students Association">gsaucr@ucr.edu</a> | <a href="https://gsa.ucr.edu" target="_blank" title="Graduate Students Association (GSA) Website">gsa.ucr.edu</a>
+                        <br>
+                        <br> Monday–Friday 8 a.m.–5 p.m.
+                        <br>
+                        <br> GSA staff and student representatives are available by phone and email.
+                       </div> 
+                       <div class="cell large-6 small-12 vcsa-padding home-bg"> 
+                        <h6><span style="color:#1d3a61;"><strong><em>The Highlander</em> Newspaper</strong></span></h6> <span class="mdi mdi-24px mdi-cellphone-iphone">&nbsp;</span><span class="mdi mdi-24px mdi-email">&nbsp;</span><span class="mdi mdi-24px mdi-earth">&nbsp;</span>
+                        <br> (951) 827-3457
+                        <br><a href="mailto:editorinchief@highlandernews.org" target="_blank" title="Email the Editor in Chief">editorinchief@highlandernews.org</a> | <a href="https://www.highlandernews.org/" target="_blank" title="The Highlander Newspaper Website">highlandernews.org</a>
+                        <br>
+                        <br> Monday–Friday 8 a.m.–5 p.m.
+                        <br>
+                        <br> Student staff available by phone/email.
+                       </div> 
+                       <div class="cell large-6 small-12 vcsa-padding home-bg"> 
+                        <h6><span style="color:#1d3a61;"><strong>Highlander Union Building (HUB)</strong></span></h6> <span class="mdi mdi-24px mdi-cellphone-iphone">&nbsp;</span><span class="mdi mdi-24px mdi-email">&nbsp;</span><span class="mdi mdi-24px mdi-message-video">&nbsp;</span>
+                        <br> (951) 827-5778
+                        <br><a href="mailto:hub@ucr.edu" target="_blank" title="Email The HUB">hub@ucr.edu</a> | <a href="https://hub.ucr.edu" target="_blank" title="UCR HUB Website">hub.ucr.edu</a>
+                        <br>
+                        <br> Monday–Friday 8 a.m.–5 p.m.
+                        <br>
+                        <br> The Highlander Union Building's mission is to enhance the educational, recreational and social experiences of the campus community. We accomplish this by developing a comfortable, inclusive environment that fosters student development, community outreach and open discourse. Staff is available by email to schedule Zoom appointments or calls.
+                       </div> 
+                       <div class="cell large-6 small-12 vcsa-padding home-bg"> 
+                        <h6><span style="color:#1d3a61;"><strong>KUCR</strong></span></h6> <span class="mdi mdi-24px mdi-cellphone-iphone">&nbsp;</span><span class="mdi mdi-24px mdi-earth">&nbsp;</span>
+                        <br> KUCR Studio Phone: (951) 827-5827
+                        <br> KUCR Studio Business: (951) 827-3838 or (951) 827-3737
+                        <br> KUCR Administration: (951) 827-3140
+                        <br><a href="https://kucr.org" target="_blank" title="KUCR Website">kucr.org</a>
+                        <br>
+                        <br> KUCR programming can be heard 24/7 on FM radio at 88.3 in Riverside, San Bernardino, and other neighboring cities. A live stream is available on the station's website.
+                       </div> 
+                       <div class="cell large-6 small-12 vcsa-padding home-bg"> 
+                        <h6><span style="color:#1d3a61;"><strong>Residential Life</strong></span></h6> <span class="mdi mdi-24px mdi-cellphone-iphone">&nbsp;</span><span class="mdi mdi-24px mdi-email">&nbsp;</span>
+                        <br><a href="mailto:reslife@ucr.edu" target="_blank" title="Email Residential Life">reslife@ucr.edu</a> | <a href="https://housing.ucr.edu/residential-life" target="_blank" title="UCR Residential Life Website">General Information</a> | <a href="https://housing.ucr.edu/about-us/residential-life-staff" target="_blank" title="Contact UCR Residential Life">Contact Information</a>
+                        <br>
+                        <br> 24/7: Office Hours: Monday–Friday, 8 a.m.–5 p.m.
+                        <br>
+                        <br> UCR Residential Life is committed to the development of a safe and inclusive, living and learning community, which holistically fosters academic, social, cultural, and personal growth.
+                       </div> 
+                       <div class="cell large-6 small-12 vcsa-padding home-bg"> 
+                        <h6><span style="color:#1d3a61;"><strong>Student Conduct &amp; Academic Integrity Programs (SCAIP)</strong></span></h6> <span class="mdi mdi-24px mdi-cellphone-iphone">&nbsp;</span><span class="mdi mdi-24px mdi-email">&nbsp;</span><span class="mdi mdi-24px mdi-message-video">&nbsp;</span>
+                        <br> (951) 827-4208
+                        <br><a href="mailto:conduct@ucr.edu" target="_blank" title="Email Student Conduct">conduct@ucr.edu</a> | <a href="https://conduct.ucr.edu" target="_blank" title="UCR SCAIP Website">conduct.ucr.edu</a>
+                        <br>
+                        <br> Monday–Friday 8 a.m.–5 p.m.
+                        <br>
+                        <br> SCAIP responds to reports of student behavior that allegedly violates campus expectations for academic integrity and other conduct. We provide information about the process to campus affiliates and oversee educational sanctions intended to prevent a recurrence of behavior of concern. Staff is available by email to schedule Zoom appointments or calls.
+                       </div> 
+                       <div class="cell large-6 small-12 vcsa-padding home-bg"> 
+                        <h6><span style="color:#1d3a61;"><strong>Student Life</strong></span></h6> <span class="mdi mdi-24px mdi-cellphone-iphone">&nbsp;</span><span class="mdi mdi-24px mdi-email">&nbsp;</span><span class="mdi mdi-24px mdi-message-video">&nbsp;</span>
+                        <br> (951) 827-7344
+                        <br><a href="mailto:ucrlife@ucr.edu" target="_blank" title="Email Student Life">ucrlife@ucr.edu</a> | <a href="https://studentlife.ucr.edu" target="_blank" title="UCR Student Life Website">studentlife.ucr.edu</a>
+                        <br>
+                        <br> Monday–Friday 8 a.m.–5 p.m.
+                        <br>
+                        <br> Student Life is dedicated to the education and development of UCR's diverse student body by providing a meaningful co-curricular experience through involvement, leadership, community building, creative expression, and the fostering of campus pride. Offering opportunities for learning, leadership, community building, and creative expression. Please call or email to schedule a Zoom appointment.
+                       </div> 
+                       <div class="cell large-6 small-12 vcsa-padding home-bg"> 
+                        <h6><span style="color:#1d3a61;"><strong>Recreation and the Student Recreation Center (SRC)</strong></span></h6> 
+                        <p><span class="mdi mdi-24px mdi-cellphone-iphone">&nbsp;</span><span class="mdi mdi-24px mdi-email">&nbsp;</span><span class="mdi mdi-24px mdi-earth">&nbsp;</span><br> (951) 827-5738<br><a href="mailto:recinfo@ucr.edu" target="_blank" title="Email Recreation">recinfo@ucr.edu</a> | <a href="https://recreation.ucr.edu" target="_blank" title="UCR Recreation Website">recreation.ucr.edu</a><br><br> Recreation Office Hours<br> Monday–Friday 8 a.m.–5 p.m.</p> 
+                        <p>SRC Hours<br> Monday–Thursday 6:30 a.m.–11 p.m.<br> Friday 6:30 am.– 7 p.m.<br> Saturday 3–7 p.m. | Sunday 3–11 p.m.<br><br> Besides offering a variety of health and nutrition programs, all UCR students are automatically members of the Student Recreation Center (SRC), a 155,000 square foot exercise, sport, and recreational facility.</p> 
+                       </div> 
+                       <div class="cell large-6 small-12 vcsa-padding home-bg"> 
+                        <h6><span style="color:#1d3a61;"><strong>Veterans Resource Center (VRC) </strong></span></h6> 
+                        <p><span class="mdi mdi-24px mdi-cellphone-iphone">&nbsp;</span><br> Office: 125 Costo Hall | (951) 827-2099<br><a href="mailto:tamara.thacker@ucr.edu" target="_blank" title="Email Tami Thacker">tamara.thacker@ucr.edu</a> | <a href="https://veterans.ucr.edu" target="_blank" title="UCR Veterans Website">veterans.ucr.edu</a><br><br> Monday–Thursday 7 a.m.–7 p.m.<br> Friday 7 a.m.–5 p.m.</p> 
+                        <p>The Veterans Resource Center is a place for UCR veteran and military-affiliated students to find (and give) support, camaraderie, and understanding and to connect to campus and community resources.</p> 
+                       </div> 
+                       <div class="cell large-6 small-12 vcsa-padding home-bg"> 
+                        <h6><span style="color:#1d3a61;"><strong>Vice Chancellor of Student Affairs (VCSA)</strong></span></h6> <span class="mdi mdi-24px mdi-email">&nbsp;</span>
+                        <br><a href="mailto:vcsa@ucr.edu" target="_blank" title="Email VCSA">vcsa@ucr.edu</a>
+                        <br>
+                        <br> Please email for assistance<em>.</em>
+                       </div> 
+                       <div id="ethnic" name="ethnic">
+                        <em>&nbsp;</em>
+                       </div> 
+                      </div> 
+                     </div> 
+                    </div> 
+                   </div> 
+                  </div> 
+                 </div> 
+                 <div data-block-plugin-id="block_content:7f9a7c69-26de-4108-9bf7-94c195d8549c" class="ucr-custom-block ucr-custom-block-custom-margins ucr-custom-block-custom-paddings margin-0 padding-top-2 padding-bottom-4 padding-horizontal-0" style="background: linear-gradient(rgba(233,237,242,0.7),rgba(233,237,242,0.7)); background-size: cover;"> 
+                  <div class="grid-container full"> 
+                   <div class="grid-x grid-padding-x"> 
+                    <div class="cell"> 
+                     <div class="grid-container"> 
+                      <div class="grid-x grid-margin-x grid-margin-y"> 
+                       <div class="cell small-12" style="padding: 0px 0px 40px 0px;"> 
+                        <h3 class="separator-line-before"><span style="color:#1d3a61;"><strong>Ethnic &amp; Gender Centers</strong></span></h3> 
+                        <p>UCR's Ethnic &amp; Gender Centers &nbsp;are fully committed to an academic culture that provides opportunities for all UCR students to develop multi-cultural competencies and be prepared to lead and succeed in a diverse world. Learn more at <a href="https://inclusion.ucr.edu" rel=" noopener" target="_blank" title="UCR Inclusion Website">inclusion.ucr.edu</a>.</p> 
+                       </div> 
+                      </div> 
+                      <div class="grid-x grid-margin-x grid-margin-y"> 
+                       <div class="cell large-6 small-12 vcsa-padding home-bg"> 
+                        <h6><span style="color:#1d3a61;"><strong>African Student Programs (ASP)</strong></span></h6> <span class="mdi mdi-24px mdi-cellphone-iphone">&nbsp;</span><span class="mdi mdi-24px mdi-email">&nbsp;</span><span class="mdi mdi-24px mdi-account-multiple">&nbsp;</span><span class="mdi mdi-24px mdi-message-video">&nbsp;</span>
+                        <br> Office: 133 Costo Hall
+                        <br> (951) 827-4576
+                        <br><a href="mailto:aspucr@ucr.edu" target="_blank" title="Email African Student Programs (ASP)">aspucr@ucr.edu</a> | <a href="https://asp.ucr.edu" target="_blank" title="UCR ASP Website">asp.ucr.edu</a>
+                        <br>
+                        <br> Monday–Friday 8 a.m.–5 p.m.
+                        <br>
+                        <br> African Student Programs is a resource center that promotes academic excellence by providing opportunities for Black Scholars in their development as role models, leaders, scholars and professionals.&nbsp;Staff is available by email to schedule a Zoom appointment or call.
+                       </div> 
+                       <div class="cell large-6 small-12 vcsa-padding home-bg"> 
+                        <h6><span style="color:#1d3a61;"><strong>Asian Pacific Student Programs (APSP)</strong></span></h6> <span class="mdi mdi-24px mdi-cellphone-iphone">&nbsp;</span><span class="mdi mdi-24px mdi-email">&nbsp;</span><span class="mdi mdi-24px mdi-account-multiple">&nbsp;</span><span class="mdi mdi-24px mdi-message-video">&nbsp;</span>
+                        <br> Office: 244 Costo Hall
+                        <br> (951) 827-7272
+                        <br><a href="mailto:apsp@ucr.edu" target="_blank" title="Email Asian Pacific Student Programs (APSP)">apsp@ucr.edu</a> | <a href="https://apsp.ucr.edu" target="_blank" title="APSP Website">apsp.ucr.edu</a>
+                        <br>
+                        <br> Monday–Friday 8 a.m.–5 p.m.
+                        <br>
+                        <br><span style="font-size: inherit;">Asian Pacific Student Programs is a resource that provides support, education and advocacy for AAPI students and those interested in learning about AAPI history, culture, and current issues.&nbsp;</span><span style="font-size: inherit;">Staff is available by email to schedule a Zoom appointment or call.</span>
+                       </div> 
+                       <div class="cell large-6 small-12 vcsa-padding home-bg"> 
+                        <h6><span style="color:#1d3a61;"><strong>Chicano Student Programs (CSP)</strong></span></h6> <span class="mdi mdi-24px mdi-cellphone-iphone">&nbsp;</span><span class="mdi mdi-24px mdi-email">&nbsp;</span><span class="mdi mdi-24px mdi-account-multiple">&nbsp;</span><span class="mdi mdi-24px mdi-message-video">&nbsp;</span>
+                        <br> Office: 145 Costo Hall
+                        <br> (951) 827-3821
+                        <br><a href="mailto:alice.chavez@ucr.edu" target="_blank" title="Email Alice Chavez">alice.chavez@ucr.edu</a> | <a href="mailto:arlene.cano@ucr.edu" target="_blank" title="Email Arlene Cano">arlene.cano@ucr.edu </a> | <a href="mailto:estella.acuna@ucr.edu" target="_blank" title="Email Estella Acuna">estella.acuna@ucr.edu </a> | <a href="https://csp.ucr.edu" target="_blank" title="UCR CSP Website">csp.ucr.edu</a>
+                        <br>
+                        <br> Monday–Friday 8 a.m.–5 p.m.
+                        <br>
+                        <br> CSP staff is offering Zoom appointments. Please call or email to schedule an appointment.
+                       </div> 
+                       <div class="cell large-6 small-12 vcsa-padding home-bg"> 
+                        <h6><span style="color:#1d3a61;"><strong>LGBT Resource Center (LGBTRC)</strong></span></h6> 
+                        <p><span class="mdi mdi-24px mdi-cellphone-iphone">&nbsp;</span><span class="mdi mdi-24px mdi-email">&nbsp;</span><span class="mdi mdi-24px mdi-account-multiple">&nbsp;</span><span class="mdi mdi-24px mdi-message-video">&nbsp;</span><br> Office: 245 Costo Hall<br> (951) 827-2267<br><a href="mailto:out@ucr.edu" target="_blank" title="Email LGBT Resource Center (LGBTRC)">out@ucr.edu</a> | <a href="https://out.ucr.edu" target="_blank" title="LGBT Resource Center (LGBTRC) Website">out.ucr.edu</a> | <a href="https://out.ucr.edu/who-we-are/our-staff" target="_blank" title="LGBT Resource Center (LGBTRC) Our Staff Webpage">Center Staff Contact Info</a><br><br> Monday–Thursday 9 a.m.–8 p.m.&nbsp;<br> Fridays 9 a.m.–6 p.m.<br><br> LGBTRC staff is available via email, including to set Zoom appointments, weekdays from 9 a.m.–5 p.m.</p> 
+                        <p>The LGBT Resource Center provides support, education, and advocacy regarding sexual orientation and gender identity for the UCR campus community.</p> 
+                       </div> 
+                       <div class="cell large-6 small-12 vcsa-padding home-bg"> 
+                        <h6><span style="color:#1d3a61;"><strong>Middle Eastern Student Center (MESC)</strong></span></h6> <span class="mdi mdi-24px mdi-cellphone-iphone">&nbsp;</span><span class="mdi mdi-24px mdi-email">&nbsp;</span><span class="mdi mdi-24px mdi-account-multiple">&nbsp;</span><span class="mdi mdi-24px mdi-message-video">&nbsp;</span>
+                        <br> Office: 111 Costo Hall
+                        <br> (951) 827-7233
+                        <br><a href="mailto:oaziz@ucr.edu" target="_blank" title="Email Omar Aziz">oaziz@ucr.edu</a> | <a href="mailto:ali.saadat@ucr.edu" target="_blank" title="Email Ali Saadat">ali.saadat@ucr.edu </a> | <a href="https://mesc.ucr.edu" target="_blank" title="UCR MESC Website">mesc.ucr.edu</a>
+                        <br>
+                        <br> Monday–Friday 8 a.m.–5 p.m.
+                        <br>
+                        <br> The MESC is a place to unite in friendship, celebrate Middle Eastern culture with our campus community and find common ground. Ultimately, it’s a place to serve the needs of Middle Eastern students and create an even more inclusive and respectful atmosphere at UCR. Follow us on instagram @mescucr for all the latest updates and information! Staff is available by email to schedule Zoom appointments or calls.
+                       </div> 
+                       <div class="cell large-6 small-12 vcsa-padding home-bg"> 
+                        <h6><span style="color:#1d3a61;"><strong>Native American Student Programs (NASP)</strong></span></h6> <span class="mdi mdi-24px mdi-email">&nbsp;</span><span class="mdi mdi-24px mdi-account-multiple">&nbsp;</span>
+                        <br> Office: 229 Costo Hall
+                        <br><a href="mailto:joshuag@ucr.edu" target="_blank" title="Email Joshua Gonzales">joshuag@ucr.edu</a> | <a href="https://nasp.ucr.edu" target="_blank" title="UCR NASP Website">nasp.ucr.edu</a>
+                        <br>
+                        <br>
+                        <br> Please email for assistance.
+                       </div> 
+                       <div class="cell large-6 small-12 vcsa-padding home-bg"> 
+                        <h6><span style="color:#1d3a61;"><strong>The Office of Foster Youth Support Services (OFYSS)</strong></span></h6> <span class="mdi mdi-24px mdi-email">&nbsp;</span><span class="mdi mdi-24px mdi-account-multiple">&nbsp;</span><span class="mdi mdi-24px mdi-mdi-message-video">&nbsp;</span>
+                        <br> Office: 3637 Canyon Crest Dr. #K101
+                        <br><a href="https://fosteryouth.ucr.edu" target="_blank" title="UCR OFYSS Website">fosteryouth.ucr.edu</a>
+                        <br>
+                        <br> OFYSS staff is offering Zoom appointments and hosting virtual gatherings. Please email to schedule an appointment.
+                       </div> 
+                       <div class="cell large-6 small-12 vcsa-padding home-bg"> 
+                        <h6><span style="color:#1d3a61;"><strong>Undocumented Student Programs (USP)</strong></span></h6> <span class="mdi mdi-24px mdi-earth">&nbsp;</span><span class="mdi mdi-24px mdi-account-multiple">&nbsp;</span>
+                        <br> Office: 224 Costo Hall
+                        <br><a href="mailto:ana.coria@ucr.edu" target="_blank" title="Email Ana Coria">ana.coria@ucr.edu</a> | <a href="https://usp.ucr.edu" target="_blank" title="UCR USP Website">usp.ucr.edu</a> | <a href="https://ana-usp-ucr.youcanbook.me/" target="_blank" title="Schedule an Appointment">Schedule an Appointment</a>
+                        <br>
+                        <br> Monday–Friday 9 a.m.–5 p.m.
+                        <br>
+                        <br> USP staff is available via appointment. Please schedule an appointment <a href="https://ana-usp-ucr.youcanbook.me/" target="_blank" title="Schedule an Appointment">online</a>.
+                       </div> 
+                       <div class="cell large-6 small-12 vcsa-padding home-bg"> 
+                        <h6><span style="color:#1d3a61;"><strong>Women's Resource Center (WRC)</strong></span></h6> <span class="mdi mdi-24px mdi-email">&nbsp;</span><span class="mdi mdi-24px mdi-account-multiple">&nbsp;</span>
+                        <br> 260 Costo Hall
+                        <br> (951) 827-3337
+                        <br><a href="mailto:ddavis@ucr.edu" target="_blank" title="Email Denise Davis">ddavis@ucr.edu</a> | <a href="mailto:moniquef@ucr.edu" target="_blank" title="Email Monique Pierce">moniquef@ucr.edu </a> | <a href="mailto:katiee@ucr.edu" target="_blank" title="Email Katie Alison Estrella">katiee@ucr.edu</a> | <a href="https://wrc.ucr.edu" target="_blank" title="UCR WRC Website">wrc.ucr.edu</a>
+                        <br>
+                        <br> Monday–Friday 8 a.m.–5 p.m.
+                        <br> Staff is available by email to schedule an appointment.
+                        <br>
+                        <br> Offering campus safety programs, sexual assault and domestic violence support, student leadership opportunities, and special events connected to women's and gender issues.
+                       </div> 
+                       <div id="student" name="student">
+                        &nbsp;
+                       </div> 
+                      </div> 
+                     </div> 
+                    </div> 
+                   </div> 
+                  </div> 
+                 </div> 
+                 <div data-block-plugin-id="block_content:8e3cf28d-ad07-48af-a5a9-d0d2e62e1c7f" class="ucr-custom-block ucr-custom-block-custom-margins ucr-custom-block-custom-paddings margin-0 padding-vertical-2 padding-horizontal-0" style="background: linear-gradient(rgba(29,54,97,0.15),rgba(29,54,97,0.15)); background-size: cover;"> 
+                  <div class="grid-container full"> 
+                   <div class="grid-x grid-padding-x"> 
+                    <div class="cell"> 
+                     <div class="grid-container"> 
+                      <div class="grid-x grid-margin-x"> 
+                       <div class="small-auto"> 
+                        <h3 class="text-align-center" style="padding-bottom:20px;"><span style="color:#1d3a61;"><strong>Student Affairs Events</strong></span></h3> 
+                        <div class="localist-widget" id="localist-widget-11226709">
+                         &nbsp;
+                        </div> 
+                        <script defer type="text/javascript" src="https://events.ucr.edu/widget/view?schools=ucr&amp;groups=rside&amp;days=31&amp;num=5&amp;hide_past=1&amp;container=localist-widget-11226709&amp;template=card"></script>
+                        <p class="text-align-center"><a class="btn-ucr" href="https://events.ucr.edu/group/rside" target="_blank" title="Events">See Events Calendar</a></p> 
+                        <div id="support" name="support">
+                         &nbsp;
+                        </div> 
+                       </div> 
+                      </div> 
+                     </div> 
+                    </div> 
+                   </div> 
+                  </div> 
+                 </div> 
+                 <div data-block-plugin-id="block_content:e7d1f698-74c9-4749-9b82-4cac482f7827" class="ucr-custom-block ucr-custom-block-custom-paddings padding-top-2 padding-bottom-4"> 
+                  <div class="grid-container full"> 
+                   <div class="grid-x grid-padding-x"> 
+                    <div class="cell"> 
+                     <div class="grid-x grid-margin-x grid-margin-y"> 
+                      <div class="cell small-12"> 
+                       <h3 class="separator-line-before"><span style="color:#1d3a61;"><strong>Support Fellow Highlanders</strong></span></h3> 
+                       <p>These funds have been established to support UCR students who need assistance with housing, technology, food, and more throughout the campus closure and beyond.</p> 
+                      </div> 
+                      <div class="cell small-12 large-4"> 
+                       <h6><span style="color:#1d3a61;"><strong>R’Pantry</strong></span></h6> 
+                       <p>The emergency food pantry is providing UCR undergraduate and graduate students with grab-and-go grocery bags or grocery store gift cards. Online donations enable <a href="https://basicneeds.ucr.edu/rpantry" target="_blank" title="R'Pantry Website">R’Pantry</a> to assist students in need.</p> 
+                       <p><a class="btn-ucr-alt" href="https://myadv.ucr.edu/" target="_blank" title="Support R'Pantry">Donate</a></p> 
+                      </div> 
+                      <div class="cell small-12 large-4"> 
+                       <h6><span style="color:#1d3a61;"><strong>Support Students Impacted by COVID-19</strong></span></h6> 
+                       <p>Lead by Vice Chancellor Haynes, this crowdfunding campaign enables members of the UCR community to support students. Online donations will help students meet critical needs like food, housing, transportation, and technology</p> 
+                       <p><a class="btn-ucr-alt" href="http://c-fund.us/r9r" target="_blank" title="Support Students Impacted by COVID-19 ">Donate</a></p> 
+                      </div> 
+                      <div class="cell small-12 large-4"> 
+                       <h6><span style="color:#1d3a61;"><strong>Tikkun Olam Fund for UCR Foster Youth </strong></span></h6> 
+                       <p>This fund was created to provide current and former foster youth students with essential educational supplies and basic resources, including emergency health services, housing, and food. For more information on the fund, and the services available at UCR for current and former foster youth, please contact the <a href="https://fosteryouth.ucr.edu" target="_blank" title="Office of Foster Youth Support Services">Office of Foster Youth Support Services</a>.</p> 
+                       <p><a class="btn-ucr-alt" href="https://myadv.ucr.edu/20AGSPWB1/200895" target="_blank" title="Donate the Tikkun Olam Fund for UCR Foster Youth">Donate</a></p> 
+                      </div> 
+                     </div> 
+                    </div> 
+                   </div> 
+                  </div> 
+                 </div> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+            </div> 
+           </article> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </main> 
+    <footer> 
+     <div class="footer-container"> 
+      <div class="footer-content-area"> 
+       <div class="grid-container"> 
+        <div class="grid-x grid-padding-x align-center"> 
+         <div id="block-ucr-design-1-ucriversidefootersearchblock" data-block-plugin-id="ucr_global_footer_search" class="cell show-for-medium footer-search"> 
+          <section class="google-search"> <button class="button footer-search-button" data-open="gscSearchFormModal">Search</button> 
+          </section> 
+         </div> 
+        </div> 
+        <div class="grid-x grid-padding-x footer-columns"> 
+         <div class="cell medium-auto"> 
+          <section class="footer-item ucr-footer-info"> <span class="footer-logo"><span class="show-for-sr">University of California, Riverside</span></span> 
+           <address> <p>900 University Ave.<br> Riverside, CA 92521</p> <p>Tel: (951) 827-1012</p> </address> 
+           <ul class="footer-links"> 
+            <li><a href="https://library.ucr.edu/" target="_blank">UCR Library</a></li> 
+            <li><a href="https://campusstatus.ucr.edu/" target="_blank">Campus Status</a></li> 
+            <li><a href="https://ucr.bncollege.com/shop/ucr/home" target="_blank">Campus Store</a></li> 
+            <li><a href="https://jobs.ucr.edu" target="_blank">Career Opportunities</a></li> 
+            <li><a href="https://diversity.ucr.edu/" target="_blank">Diversity</a></li> 
+            <li><a href="https://campusmap.ucr.edu/" target="_blank">Maps and Directions</a></li> 
+            <li><a href="https://www.ucr.edu/about/visitors" target="_blank">Visit UCR</a></li> 
+           </ul> 
+          </section> 
+          <div id="block-tobaccosmokefree" data-block-plugin-id="block_content:f286b858-bb35-4d41-953e-27fc1ccabe13" class="ucr-custom-block"> 
+           <p><a href="http://tobaccofree.ucr.edu/" style="text-decoration: none !important; color: rgba(0, 0, 0, 0.0); display: inline-flex;" target="blank"><img alt="UCR is tobacco &amp; smoke free" src="https://www.ucr.edu/sites/g/files/rcwecm986/files/UCR-TOBACCO-SMOKE-FREE.png"></a></p> 
+          </div> 
+         </div> 
+         <div class="cell medium-auto"> 
+          <section id="block-ucr-design-1-ucriversidefooterdeptinformationblock" data-block-plugin-id="ucr_global_footer_dept_info" class="footer-item footer-dept-info"> 
+           <h2>Student Affairs</h2> 
+           <address class="address_2"> <p> <a href="https://campusmap.ucr.edu/?find=P5480" target="_blank"> 2108 Hinderaker Hall <br>Riverside, CA 92521 </a></p> <p> tel: (951) 827-4641<br> </p> </address> 
+           <p> <a class="link-img link-img-location" href="https://campusmap.ucr.edu/?find=P5480" target="_blank"> Find Us<br><br> <img src="/themes/custom/ucr_default/images/googlemap.png" alt="Campus map image"></a> </p> 
+          </section> 
+          <div id="block-disclaimer" data-block-plugin-id="block_content:66646bcd-9d55-4fa2-94de-10e1c2e24834" class="ucr-custom-block"> 
+           <section class="footer-item">
+            <p class="social-title">Disclaimer:</p> 
+            <p>This information is accurate and reliable at time of posting, but may change without notice. Please contact the department for the most up-to-date information.&nbsp;UC Riverside complies with the Jeanne Clery Act, and provides safety information and publishes crime statistics for the most-recent three-year period. <a href="http://go.ucr.edu/cleryact" target="_blank">View the full report here</a>.<em><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</strong></em></p> 
+           </section> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="site-legal-footer"> 
+       <div class="grid-container"> 
+        <div class="grid-x grid-padding-x"> 
+         <div class="cell"> 
+          <ul> 
+           <li><a href="http://www.ucr.edu/privacy.html">Privacy and Accessibility</a></li> 
+           <li><a href="http://www.ucr.edu/terms.html">Terms and Conditions</a></li> 
+           <li>© 2022 Regents of the University of California</li> 
+          </ul> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </footer> 
+   </div> 
+   <div class="large reveal" id="gscSearchFormModal" role="search" data-reveal data-animation-in="fade-in" data-animation-out="fade-out"> 
+    <div class="gsc-modal-top"> <button class="close-button" data-close aria-label="Close Search Window" type="button"><span aria-hidden="true">×</span></button> 
+    </div> 
+    <form id="audience-search-form" name="gsc-search-form" action="/results"> 
+     <div class="gsc-modal-body"> 
+      <div class="grid-container full"> 
+       <div class="grid-x grid-padding-x grid-padding-y align-center-middle text-center"> 
+        <div class="gsc-text-wrapper"> <span class="gsc-welcome-text">Let us help you with your search</span> 
+        </div> 
+        <div class="cell"> <label id="searchbox-label" class="hidden" aria-label="Enter your Search Criteria.">Enter your Search Criteria.</label> 
+         <input type="text" maxlength="255" id="audience-search" name="q" value="" aria-labelledby="searchbox-label" placeholder="Search for..."> 
+        </div> 
+        <div class="cell medium-4"> <button class="button gsc-modal-button-submit" type="submit" name="search-by" value="all">Search All UCR</button> 
+        </div> 
+        <div class="cell medium-4"> <button class="button gsc-modal-button-submit" type="submit" name="search-by" value="https://financialaid.ucr.edu">Search This Site</button> 
+        </div> 
+        <div class="cell medium-4"> <button type="button" class="button gsc-modal-button-close" data-close>Cancel</button> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </form> 
+   </div> 
+  </div> 
+  <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/271","currentPathIsAdmin":false,"isFront":true,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"bu":{"notify_ie":-2,"notify_firefox":-2,"notify_opera":-2,"notify_safari":-2,"notify_chrome":-2,"insecure":true,"unsupported":false,"mobile":true,"position":"top","visibility_type":"hide","visibility_pages":"admin\/*","test_mode":false,"new_window":true,"no_close":false,"text_override":"","reminder":6,"reminder_closed":6,"url":"","source":"\/\/browser-update.org\/update.min.js","show_source":""},"google_analytics":{"account":{},"trackOutbound":true,"trackMailto":true,"trackTel":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"blazy":{"loadInvisible":false,"offset":100,"saveViewportOffsetDelay":50,"loader":true,"unblazy":null},"blazyIo":{"disconnect":false,"rootMargin":"0px","threshold":[0,0.25,0.5,0.75,1]},"slick":{"accessibility":true,"adaptiveHeight":false,"autoplay":false,"autoplaySpeed":3000,"pauseOnHover":true,"pauseOnDotsHover":false,"arrows":true,"downArrow":false,"downArrowTarget":"","downArrowOffset":0,"centerMode":false,"centerPadding":"50px","dots":false,"dotsClass":"slick-dots","draggable":true,"fade":false,"focusOnSelect":false,"infinite":true,"initialSlide":0,"lazyLoad":"ondemand","mouseWheel":false,"randomize":false,"rtl":false,"rows":1,"slidesPerRow":1,"slide":"","slidesToShow":1,"slidesToScroll":1,"speed":500,"swipe":true,"swipeToSlide":false,"edgeFriction":0.34999999999999998,"touchMove":true,"touchThreshold":5,"useCSS":true,"cssEase":"ease","cssEaseBezier":"","cssEaseOverride":"","useTransform":true,"easing":"linear","variableWidth":false,"vertical":false,"verticalSwiping":false,"waitForAnimate":true,"pauseOnFocus":true},"ajax":[],"user":{"uid":0,"permissionsHash":"56242286375121e6a2fbc252146606f4ce88d984170050d4a778514ee8c1d976"}}</script> 
+  <script src="/sites/g/files/rcwecm3051/files/js/js_r_tvmcRfssEz7gjoYj_82F-X-lk8EWp6DkIYRmwUKcM.js"></script> 
+  <script src="https://static.addtoany.com/menu/page.js" async></script> 
+  <script src="/sites/g/files/rcwecm3051/files/js/js_PaQCdIIQD0knvQWKjZ1HS9WZGZklaLKq60eSWa0sohA.js"></script> 
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"07d404edfe","applicationID":"837425331","transactionName":"MVZSYRNWCxBZB0wIWggccVYVXgoNFxRZBlA5UFFWCVI=","queueTime":0,"applicationTime":53,"atts":"HRFRF1tMGB4=","errorBeacon":"bam-cell.nr-data.net","agent":""}</script> 
+ </body>
+</html>

@@ -1,0 +1,1 @@
+PAGE_NAVIGATOR_FIELD Turn on JavaScript JavaScript has been disabled in your web browser. IBM Forms Experience Builder requires JavaScript in order to function. Once you have turned it on, please refresh the page. Refresh the page to continue. Loading... Student Login Form

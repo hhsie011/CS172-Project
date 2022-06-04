@@ -1,0 +1,1 @@
+Log In Loading login session information from the browser... Since your browser does not support JavaScript, you must press the Continue button once to proceed. For your security, please log out and exit your web browser when you are done accessing services that require authentication. NU Password Reset

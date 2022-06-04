@@ -1,0 +1,525 @@
+<!doctype html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# " class="no-js"> 
+ <head> 
+  <meta charset="utf-8">
+  <script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam-cell.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"07d404edfe",applicationID:"837425331"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script> 
+  <noscript>
+   <style>form.antibot * :not(.antibot-message) { display: none !important; }</style> 
+  </noscript>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-3051875-1"></script> 
+  <script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments)};gtag("js", new Date());gtag("set", "developer_id.dMDhkMT", true);gtag("config", "UA-3051875-1", {"groups":"default","anonymize_ip":true,"page_placeholder":"PLACEHOLDER_page_path","allow_ad_personalization_signals":false});</script> 
+  <link rel="canonical" href="https://giving.ucr.edu/"> 
+  <link rel="shortlink" href="https://giving.ucr.edu/"> 
+  <meta property="og:site_name" content="Giving"> 
+  <meta property="og:url" content="https://giving.ucr.edu/"> 
+  <meta property="og:title" content="Giving"> 
+  <meta name="twitter:card" content="summary"> 
+  <meta name="twitter:title" content="Donate | Giving"> 
+  <meta name="twitter:url" content="https://giving.ucr.edu/"> 
+  <meta name="Generator" content="Drupal 9 (https://www.drupal.org)"> 
+  <meta name="MobileOptimized" content="width"> 
+  <meta name="HandheldFriendly" content="true"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="shortcut icon" href="/themes/custom/ucr_design_1/favicon.ico" type=""> 
+  <link rel="revision" href="https://giving.ucr.edu/home"> 
+  <script>window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overlays=[];a2a_config.templates={};</script> 
+  <title>Giving |</title> 
+  <link rel="stylesheet" media="all" href="/sites/g/files/rcwecm3101/files/css/css_aKJ1DBwxtxuEPMWSeoy5F6nce2tGprTL1gQKJkkrkco.css"> 
+  <link rel="stylesheet" media="all" href="https://fonts.googleapis.com/css?family=Montserrat:700|Roboto+Slab:400,700|Roboto:400,700"> 
+  <link rel="stylesheet" media="all" href="/sites/g/files/rcwecm3101/files/css/css_Q2v2UQ8QFjyJWvHcsMKGY_tqvguQmAupujMsVlANjGc.css"> 
+  <style type="text/css">
+    <!--
+     div.embedded-entity {
+width: fit-content !important;
+}     -->
+    </style> 
+ </head> 
+ <body class="layout path-frontpage node--type-page"> 
+  <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas> 
+   <div class="webpage-content"> 
+    <header role="banner" data-sticky-container> 
+     <div class="header-sticky-container" data-ucr-sticky="1" data-ucr-mobile-sticky="0"> 
+      <div class="grid-container full"> 
+       <div class="grid-x"> 
+        <div class="cell small-order-2 medium-order-1 audience-container"> 
+         <div class="grid-container audience-menu-bar"> 
+          <div class="grid-x align-middle"> 
+           <div class="cell medium-shrink show-for-medium global-header-menu"> <a class="skip-main" href="#main">Skip to main content</a> 
+            <nav aria-label="global header menu"> 
+             <ul class="menu"> 
+              <li><a href="https://www.ucr.edu/alpha" target="_blank">A to Z Listing</a></li> 
+              <li><a href="https://campusmap.ucr.edu" target="_blank">Campus Map</a></li> 
+              <li><a href="https://profiles.ucr.edu" target="_blank">Find People</a></li> 
+              <li><a href="https://news.ucr.edu" target="_blank">News</a></li> 
+              <li><a href="https://www.ucr.edu" target="_blank">UCR Home</a></li> 
+             </ul> 
+            </nav> 
+           </div> 
+           <div id="block-ucr-design-1-organizationname" data-block-plugin-id="ucr_global_organization_name" class="cell auto hide-for-medium org-name"> <a class="skip-main" href="#main">Skip to main content</a> 
+            <p class="parent-org-title"> <a href="https://ucr.edu">University of California, Riverside</a> </p> 
+           </div> 
+           <div id="block-ucr-design-1-ucriversideaudiencesearchblock" data-block-plugin-id="ucr_global_audience_search" class="cell medium-shrink show-for-medium"> 
+            <section class="google-search"> <button class="button audience-search-button" data-open="gscSearchFormModal">Search</button> 
+            </section> 
+           </div> 
+           <div class="cell shrink hide-for-medium" data-responsive-toggle="main-menu-container" data-hide-for="medium"> <button class="mdi mdi-menu button mobile-menu-expander" id="mobile-menu-expander" type="button" data-toggle="main-menu-container"> </button> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="cell small-order-1 medium-order-2 masthead-container"> 
+         <div class="grid-container"> 
+          <div class="grid-x align-middle"> 
+           <div class="cell shrink"> <a class="masthead-logo" href="/"> <span class="show-for-sr">UC Riverside</span> </a> 
+           </div> 
+           <div class="cell auto hide-for-medium"> 
+            <h1 class="masthead-title"> <a href="/"> Giving </a> </h1> 
+           </div> 
+           <div class="cell auto show-for-medium"> 
+            <h1 class="slogan-bold"> Giving </h1> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="cell small-order-3 medium-order-3 main-nav-bar"> 
+         <div class="grid-container" id="main-menu-container" data-animate="fade-in fade-out"> 
+          <div class="grid-x"> 
+           <div id="block-ucr-design-1-ucriversideaudiencesearchblock-2" data-block-plugin-id="ucr_global_audience_search" class="cell hide-for-medium"> 
+            <section class="google-search"> <button class="button audience-search-button" data-open="gscSearchFormModal">Search</button> 
+            </section> 
+           </div> 
+           <div id="block-ucr-design-1-meganav-main" data-block-plugin-id="menu_block:meganav-main" class="cell main-menu-cell"> 
+            <ul id="main-menu"> 
+             <li> <a href="/" data-drupal-link-system-path="<front>" class="is-active">Home</a> </li> 
+             <li> <a href="/ways-give" data-drupal-link-system-path="node/21">Ways to Give</a> </li> 
+             <li> <a href="/giving-societies" data-drupal-link-system-path="node/31">Giving Societies</a> </li> 
+             <li> <a href="/beyond-brilliant" data-drupal-link-system-path="node/86">Beyond Brilliant</a> </li> 
+             <li> <a href="https://give.communityfunded.com/o/university-of-california-riverside/i/beyond-brilliant-giving-page" target="_blank">Give Now</a> </li> 
+            </ul> 
+           </div> 
+           <div id="block-ucr-design-1-meganav-main-mobile" data-block-plugin-id="menu_block:meganav-main" class="cell main-menu-mobile-cell"> 
+            <ul id="meganav-main-menu-mobile" class="vertical medium-horizontal menu align-center-middle" data-responsive-menu="accordion medium-dropdown" data-closing-time="100"> 
+             <li> <a href="/" data-drupal-link-system-path="<front>" class="is-active">Home</a> </li> 
+             <li> <a href="/ways-give" data-drupal-link-system-path="node/21">Ways to Give</a> </li> 
+             <li> <a href="/giving-societies" data-drupal-link-system-path="node/31">Giving Societies</a> </li> 
+             <li> <a href="/beyond-brilliant" data-drupal-link-system-path="node/86">Beyond Brilliant</a> </li> 
+             <li> <a href="https://give.communityfunded.com/o/university-of-california-riverside/i/beyond-brilliant-giving-page" target="_blank">Give Now</a> </li> 
+            </ul> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </header> 
+    <main> 
+     <div id="content-container"> 
+      <div id="hero-panel-area"> 
+       <div class="views-element-container" id="block-ucr-design-1-head-image-title-block" data-block-plugin-id="views_block:content_views-content_head_image_title_block"> 
+        <div>
+         <div class="js-view-dom-id-d9ee6d63f7cd4da33f44522f2289ea27c70def3f06ad13aae2c76e9f5f97950e"> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="block-beyondbrilliantgivingpagebanner" data-block-plugin-id="block_content:c7511b62-01b9-4b47-8433-fe5b52120f5d" class="ucr-custom-block ucr-custom-block-custom-margins ucr-custom-block-custom-paddings" style="background: url(/sites/g/files/rcwecm3101/files/BB-Giving-HomeBanner_2000x600_1.png); background-size: cover;"> 
+        <div class="grid-container margin-0 padding-0"> 
+         <div class="grid-x grid-padding-x"> 
+          <div class="cell"> 
+           <div style="margin:0px 0px 0px 0px;">
+            <a class="" data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="8c3a055f-c16d-4538-8a68-425e1b3e0b2a" href="/beyond-brilliant" id="" rel="" target="" title=""> 
+             <div alt="Beyond Brilliant Supporting UCR Students" data-embed-button="media_browser" data-entity-embed-display="media_image" data-entity-type="media" data-entity-uuid="9ac55c5b-c223-4de9-b099-bce164f8a235" data-langcode="en" title="Beyond Brilliant Supporting UCR Students" class="embedded-entity"> 
+              <img src="/sites/g/files/rcwecm3101/files/BB-Giving-logo_2000x600.png" alt="Beyond Brilliant Supporting UCR Students" title="Beyond Brilliant Supporting UCR Students" typeof="foaf:Image">
+             </div> </a>
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="grid-container"> 
+       <div class="grid-x grid-padding-x grid-padding-y primary-content-header"> 
+        <div id="block-ucr-design-1-breadcrumbs" data-block-plugin-id="system_breadcrumb_block" class="cell"> 
+         <div>
+          <span id="system-breadcrumb" class="visually-hidden">Breadcrumb</span>
+         </div> 
+         <div class="grid-container full"> 
+          <div class="grid-x breadcrumb-container"> 
+           <div class="shrink cell breadcrumb-home"> <a href="/"><span class="mdi mdi-home breadcrumb-home-icon" aria-label="Redirects to the homepage of this site."></span></a> 
+           </div> 
+           <div class="auto cell breadcrumb-list"> 
+            <nav aria-labelledby="system-breadcrumb"> 
+             <ul class="breadcrumbs"> 
+              <li class="list-no-display"><span>&nbsp;</span></li> 
+             </ul> 
+            </nav> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="grid-x grid-padding-x system-admin-controls"> 
+       </div> 
+      </div> 
+      <div id="main" class="grid-container full primary-content-area"> 
+       <div class="grid-x"> 
+        <div class="cell large-auto small-order-3 medium-order-3 large-order-2 pca-content"> 
+         <div> 
+          <div id="block-ucr-design-1-content" data-block-plugin-id="system_main_block"> 
+           <article role="article" about="/home"> 
+            <div> 
+             <div class="layout layout-one-col grid-container full"> 
+              <div class="grid-x"> 
+               <div class="cell"> 
+                <div class="layout__region layout__region--main"> 
+                 <div data-block-plugin-id="inline_block:ucr_columns" class="ucr-custom-block ucr-custom-block-custom-margins ucr-custom-block-custom-paddings"> 
+                  <div class="dynamic-columns dc-centered dc-standard margin-top-3 margin-bottom-0 padding-right-3" style="overflow:hidden; background: url(/sites/g/files/rcwecm3101/files/giving-bg-homepage-notext-1920_0.png); background-size:auto;"> 
+                   <div class="grid-container"> 
+                    <div class="grid-x grid-padding-x grid-padding-y small-up-1 medium-up-2 large-up-2 align-center"> 
+                     <div class="paragraph paragraph--type--ucr-columns paragraph--view-mode--default cell" style=""> 
+                      <div style="margin: 32px 0px 0px 0px;"> 
+                       <p style="font-size:24px;line-height:120%;font-weight:100; color:#3f3f3f;">Acclaimed as <span style="color:#329af0;"><strong>America’s fastest rising university</strong></span>&nbsp;and a proud member of the world’s most prestigious public university system, UC Riverside&nbsp;both embodies and empowers the <span style="color:#329af0;"><strong>California Dream</strong></span>.</p> 
+                      </div> 
+                      <div style="margin:0px 0px 0px 0px;"> 
+                       <p style="font-size:24px;line-height:120%;font-weight:100; color:#3f3f3f;"><span style="color:#329af0;"><strong>Today</strong></span> UCR attracts an ambitious new generation of <span style="color:#329af0;"><strong>bold thinkers</strong>.</span></p> 
+                      </div> 
+                      <div style="margin: 0px 0px 0px 0px;"> 
+                       <p style="font-size:24px;line-height:120%;font-weight:100; color:#3f3f3f;"><span style="color:#329af0;"><strong>Here</strong></span> at UCR, students test and hone their talents as members of an exceptional community defined by <span style="color:#329af0;"><strong>authenticity</strong></span>, <span style="color:#329af0;"><strong>radical<span style="color:#f6952c;"><strong> </strong></span>connectivity</strong></span>, and <span style="color:#329af0;"><strong>academic rigor</strong></span>.</p> 
+                      </div> 
+                      <div style="margin: 0px 0px 0px 0px;"> 
+                       <p style="font-size:24px;line-height:120%;font-weight:100; color:#3f3f3f;"><span style="color:#329af0;"><strong>Here</strong></span> they learn to respect differences, embrace <span style="color:#329af0;"><strong>new perspectives</strong></span>, and value <span style="color:#329af0;"><strong>collective insight</strong></span>.&nbsp;</p> 
+                      </div> 
+                      <div style="margin: 0px 0px 48px 0px;"> 
+                       <p style="font-size:24px;line-height:120%;font-weight:100; color:#3f3f3f;"><span style="color:#329af0;"><strong>Here</strong></span> they find their voice and empower their rise as <span style="color:#329af0;"><strong>next-gen<strong> </strong>explorers</strong></span>, <span style="color:#329af0;"><strong>activists</strong></span>, <span style="color:#329af0;"><strong>leaders</strong></span>, and <span style="color:#329af0;"><strong>entrepreneurs</strong></span>.</p> 
+                      </div> 
+                     </div> 
+                     <div class="paragraph paragraph--type--ucr-columns paragraph--view-mode--default cell" style=""> 
+                      <div alt="Two students hugging Scotty" data-embed-button="media_browser" data-entity-embed-display="media_image" data-entity-type="media" data-entity-uuid="cf3667d5-6aef-40b8-9800-0713c69388bb" data-langcode="en" title="giving homepage circles 01" class="embedded-entity"> 
+                       <img src="/sites/g/files/rcwecm3101/files/giving-homepage-circles-01.png" alt="Two students hugging Scotty" title="giving homepage circles 01" typeof="foaf:Image">
+                      </div> 
+                     </div> 
+                    </div> 
+                   </div> 
+                  </div> 
+                 </div> 
+                 <div data-block-plugin-id="inline_block:basic" class="ucr-custom-block ucr-custom-block-custom-margins ucr-custom-block-custom-paddings"> 
+                  <div class="grid-container margin-vertical-0 padding-vertical-0 padding-left-0"> 
+                   <div class="grid-x grid-padding-x"> 
+                    <div class="cell"> 
+                     <div style="margin: 0px 0px 0px 0px;"> 
+                      <p class="text-align-center"><span style="font-size:24px;line-height:100%;">And <span style="color:#329af0;"><strong>here</strong></span> is where you come in:</span></p> 
+                     </div> 
+                     <div style="margin: 0px 0px 32px 0px;"> 
+                      <p class="text-align-center"><span style="color:#329af0;"><strong><span style="font-size:32px;line-height:120%;">Make your gift today to empower the next generation of Highlanders.</span></strong></span></p> 
+                     </div> 
+                     <p class="text-align-center"><a class="btn-ucr-alt" href="https://give.communityfunded.com/o/university-of-california-riverside/i/ucr-impact">Give Now</a></p> 
+                    </div> 
+                   </div> 
+                  </div> 
+                 </div> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+             <div class="layout layout-one-col grid-container full"> 
+              <div class="grid-x"> 
+               <div class="cell"> 
+                <div class="layout__region layout__region--main"> 
+                 <div data-block-plugin-id="inline_block:basic" class="ucr-custom-block ucr-custom-block-custom-margins ucr-custom-block-custom-paddings margin-top-3 margin-bottom-0 medium-margin-horizontal-0 padding-top-6 padding-bottom-0 padding-horizontal-0" style="background: url(/sites/g/files/rcwecm3101/files/top-wave-grey01-bg.png); background-size: cover;"> 
+                  <div class="grid-container full"> 
+                   <div class="grid-x grid-padding-x"> 
+                    <div class="cell"> 
+                    </div> 
+                   </div> 
+                  </div> 
+                 </div> 
+                 <div data-block-plugin-id="inline_block:ucr_columns" class="ucr-custom-block ucr-custom-block-custom-margins ucr-custom-block-custom-paddings"> 
+                  <div class="dynamic-columns dc-centered dc-standard margin-0 padding-top-2 padding-bottom-4 padding-left-0 padding-right-2" style="overflow:hidden; background: linear-gradient(rgba(233,237,242,1),rgba(233,237,242,1)); background-size:cover;"> 
+                   <div class="grid-container"> 
+                    <div class="grid-x grid-padding-x grid-padding-y small-up-1 medium-up-2 large-up-2 align-center"> 
+                     <div class="paragraph paragraph--type--ucr-columns paragraph--view-mode--default cell" style=""> 
+                      <div data-embed-button="media_browser" data-entity-embed-display="view_mode:media.embedded" data-entity-type="media" data-entity-uuid="4c7958b3-6ecb-4f68-b488-a67691651d0c" data-langcode="en" class="embedded-entity">
+                       <article>
+                        <div class="video-embed-field-provider-youtube video-embed-field-responsive-video">
+                         <iframe width="854" height="480" frameborder="0" allowfullscreen src="https://www.youtube.com/embed/rrgTm8GT04g?autoplay=0&amp;start=0&amp;rel=0"></iframe> 
+                        </div> 
+                       </article>
+                      </div> 
+                     </div> 
+                     <div class="paragraph paragraph--type--ucr-columns paragraph--view-mode--default cell" style=""> 
+                      <h5 class="separator-line-before"><strong>“You are our American dream.”</strong></h5> 
+                      <p>We asked 11 first-generation graduates what being the first in their family to earn a college diploma meant to them. Then we opened up the question to their families. See what happens when the students read their families’ responses for the first time (grab the tissues!).</p> 
+                      <p style="margin:0px 0px 32px 0px;"><strong>You can create lifechanging impact for first-generation students when you make a gift to UC Riverside today.</strong></p> 
+                      <p><a class="btn-ucr-alt" href="https://give.communityfunded.com/o/university-of-california-riverside/i/ucr-impact" target="_blank">Give Now</a></p> 
+                     </div> 
+                    </div> 
+                   </div> 
+                  </div> 
+                 </div> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+             <div class="layout layout-one-col grid-container full"> 
+              <div class="grid-x"> 
+               <div class="cell"> 
+                <div class="layout__region layout__region--main"> 
+                 <div data-block-plugin-id="inline_block:ucr_columns" class="ucr-custom-block ucr-custom-block-custom-margins ucr-custom-block-custom-paddings margin-top-0 margin-bottom-2 medium-margin-horizontal-0 padding-top-3 padding-bottom-2 padding-horizontal-0 dc-standard" style="background: url(/sites/g/files/rcwecm3101/files/Impact%20Stories%20Bg%402x.jpg); background-size:cover;"> 
+                  <div class="grid-container margin-bottom-1"> 
+                   <div class="grid-x grid-padding-x"> 
+                    <div class="cell"> 
+                     <h2 class="text-align-center"><span style="color:#ffffff;">Learn about the inspiring students you support when you give to UCR</span></h2> 
+                    </div> 
+                   </div> 
+                  </div> 
+                  <div class="dynamic-columns dc-centered"> 
+                   <div class="grid-container"> 
+                    <div class="grid-x grid-padding-x grid-padding-y small-up-1 medium-up-2 large-up-4 align-center"> 
+                     <div class="paragraph paragraph--type--ucr-columns paragraph--view-mode--default cell" style=""> 
+                      <div> 
+                       <div alt="Roseanne Carmen Rosenthal" data-embed-button="media_browser" data-entity-embed-display="media_image" data-entity-type="media" data-entity-uuid="15f6b8d2-7f5f-44c7-b1f7-cb874a95e198" data-langcode="en" title="impact sories Rosenthal small" class="embedded-entity align-center"> 
+                        <img src="/sites/g/files/rcwecm3101/files/impact-story-round-Samantha_Park-thumbnails.png" alt="Roseanne Carmen Rosenthal" title="impact sories Rosenthal small" typeof="foaf:Image">
+                       </div> 
+                       <p class="text-align-center" style="font-size: 16px; margin: 0px 0px 0px 0px"><span style="color:#ffffff;"><strong>Writing Her Future</strong></span></p> 
+                       <p class="text-align-center" style="font-size: 13px; margin: 0px 0px 24px 0px"><span style="color:#ffffff;"><strong>Third-year poet channels her ambitions and passion for writing at UCR.</strong></span></p> 
+                       <p class="text-align-center" style="font-size: 12px; margin: 8px 0px 16px 0px"><a class="btn-ucr-lt-blue" href="https://magazine.ucr.edu/winter-2021-bell-tower-buzz" target="_blank"><span style="color:#ffffff;"><strong>Read&nbsp;Story</strong></span></a></p> 
+                       <div alt="line and circle 160px" data-embed-button="media_browser" data-entity-embed-display="media_image" data-entity-type="media" data-entity-uuid="763229b8-56ba-427d-8094-4c3286a471e7" data-langcode="en" title="line and circle 160px" class="embedded-entity align-center"> 
+                        <img src="/sites/g/files/rcwecm3101/files/lineandcircle-160px.png" alt="line and circle 160px" title="line and circle 160px" typeof="foaf:Image">
+                       </div> 
+                      </div> 
+                     </div> 
+                     <div class="paragraph paragraph--type--ucr-columns paragraph--view-mode--default cell" style=""> 
+                      <div> 
+                       <div alt="Ramón Leija" data-embed-button="media_browser" data-entity-embed-display="media_image" data-entity-type="media" data-entity-uuid="a9f4e5c5-3131-4880-a089-86c5ba9f0cca" data-langcode="en" title="impact stories Leija" class="embedded-entity align-center"> 
+                        <img src="/sites/g/files/rcwecm3101/files/impact-story-round-Alyssa_Carranza-thumbnails.png" alt="Ramón Leija" title="impact stories Leija" typeof="foaf:Image">
+                       </div> 
+                       <p class="text-align-center" style="font-size: 16px; margin: 0px 0px 0px 0px"><span style="color:#ffffff;"><strong>Deep Roots</strong></span></p> 
+                       <p class="text-align-center" style="font-size: 13px; margin: 0px 0px 24px 0px"><span style="color:#ffffff;"><strong>Aspiring dentist and student-athlete aims to make her parents proud.</strong></span></p> 
+                       <p class="text-align-center" style="font-size: 14px; margin: 8px 0px 16px 0px"><a class="btn-ucr-lt-blue" href="https://magazine.ucr.edu/winter-2021-highlander-highlight" target="_blank"><span style="color:#ffffff;"><strong>Read story</strong></span></a></p> 
+                       <div alt="line and circle 160px" data-embed-button="media_browser" data-entity-embed-display="media_image" data-entity-type="media" data-entity-uuid="763229b8-56ba-427d-8094-4c3286a471e7" data-langcode="en" title="line and circle 160px" class="embedded-entity align-center"> 
+                        <img src="/sites/g/files/rcwecm3101/files/lineandcircle-160px.png" alt="line and circle 160px" title="line and circle 160px" typeof="foaf:Image">
+                       </div> 
+                      </div> 
+                     </div> 
+                     <div class="paragraph paragraph--type--ucr-columns paragraph--view-mode--default cell" style=""> 
+                      <div> 
+                       <div alt="Hurnan Vongsachang" data-embed-button="media_browser" data-entity-embed-display="media_image" data-entity-type="media" data-entity-uuid="5bde27c7-83cb-4c58-af0e-0dc7287d1616" data-langcode="en" title="impact stories Hurnan" class="embedded-entity align-center"> 
+                        <img src="/sites/g/files/rcwecm3101/files/impact-story-round-Alma_Esparza-thumbnails.png" alt="Hurnan Vongsachang" title="impact stories Hurnan" typeof="foaf:Image">
+                       </div> 
+                       <p class="text-align-center" style="font-size: 16px; margin: 0px 0px 0px 0px"><span style="color:#ffffff;"><strong>Booster Shot</strong></span></p> 
+                       <p class="text-align-center" style="font-size: 13px; margin: 0px 0px 24px 0px"><span style="color:#ffffff;"><strong>Medical school scholarships and pipeline programs give students a chance to serve their communities.</strong></span></p> 
+                       <p class="text-align-center" style="font-size: 14px; margin: 8px 0px 16px 0px"><a class="btn-ucr-lt-blue" href="https://magazine.ucr.edu/winter-2021-booster-shot" target="_blank"><span style="color:#ffffff;"><strong>Read story</strong></span></a></p> 
+                       <div alt="line and circle 160px" data-embed-button="media_browser" data-entity-embed-display="media_image" data-entity-type="media" data-entity-uuid="763229b8-56ba-427d-8094-4c3286a471e7" data-langcode="en" title="line and circle 160px" class="embedded-entity align-center"> 
+                        <img src="/sites/g/files/rcwecm3101/files/lineandcircle-160px.png" alt="line and circle 160px" title="line and circle 160px" typeof="foaf:Image">
+                       </div> 
+                      </div> 
+                     </div> 
+                     <div class="paragraph paragraph--type--ucr-columns paragraph--view-mode--default cell" style=""> 
+                      <div> 
+                       <div alt="Cebrina Nolan" data-embed-button="media_browser" data-entity-embed-display="media_image" data-entity-type="media" data-entity-uuid="8d5e02ef-c465-4732-81f7-ab144adeef87" data-langcode="en" title="impact stories cebrina" class="embedded-entity align-center"> 
+                        <img src="/sites/g/files/rcwecm3101/files/impact-story-round-rocky-thumbnails.png" alt="Cebrina Nolan" title="impact stories cebrina" typeof="foaf:Image">
+                       </div> 
+                       <p class="text-align-center" style="font-size: 16px; margin: 0px 0px 0px 0px"><span style="color:#ffffff;"><strong>‘Rocky’ in Riverside</strong></span></p> 
+                       <p class="text-align-center" style="font-size: 13px; margin: 0px 0px 24px 0px"><span style="color:#ffffff;"><strong>UCR alums and students deliver a one-two punch to help local at-risk youth.</strong></span></p> 
+                       <p class="text-align-center" style="font-size: 14px; margin: 8px 0px 16px 0px"><a class="btn-ucr-lt-blue" href="https://news.ucr.edu/articles/2020/02/18/rocky-riverside" target="_blank"><span style="color:#ffffff;"><strong>Read story</strong></span></a></p> 
+                       <div alt="line and circle 160px" data-embed-button="media_browser" data-entity-embed-display="media_image" data-entity-type="media" data-entity-uuid="763229b8-56ba-427d-8094-4c3286a471e7" data-langcode="en" title="line and circle 160px" class="embedded-entity align-center"> 
+                        <img src="/sites/g/files/rcwecm3101/files/lineandcircle-160px.png" alt="line and circle 160px" title="line and circle 160px" typeof="foaf:Image">
+                       </div> 
+                      </div> 
+                     </div> 
+                    </div> 
+                   </div> 
+                  </div> 
+                 </div> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+             <div class="layout layout-one-col grid-container"> 
+              <div class="grid-x grid-padding-x"> 
+               <div class="cell"> 
+                <div class="layout__region layout__region--main"> 
+                 <div data-block-plugin-id="inline_block:accordions" class="ucr-custom-block ucr-custom-block-custom-margins margin-bottom-3 medium-margin-horizontal-4"> 
+                  <div class="grid-container"> 
+                   <div class="grid-x grid-padding-x"> 
+                    <div class="cell"> 
+                     <div style="margin:0px 0px 32px 0px;"> 
+                      <h3 class="text-align-center"><strong>Areas to Support</strong></h3> 
+                     </div> 
+                    </div> 
+                    <div class="cell"> 
+                     <ul class="accordion ucr-accordion" data-accordion data-multi-expand="true" data-allow-all-closed="true" data-deep-link="true" data-update-history="true" id="accordion-f1059fc0e9e91c1b64b6a9e8685110f1"> 
+                      <li class="paragraph paragraph--type--accordion paragraph--view-mode--default accordion-item" data-accordion-item> <a href="#university_greatest_needs" class="accordion-title"> University Greatest Needs </a> 
+                       <div class="accordion-content" data-tab-content id="university_greatest_needs"> 
+                        <p>Allowing university leaders to support needs and commitments that arise during the school year, the Living the Promise Fund is an unrestricted fund supported by gifts raised through direct mail and e-philanthropy.</p> 
+                        <p><a class="btn-ucr-alt" href="https://myadv.ucr.edu/WEB/%22Living%20the%20Promise%22" target="_blank">Give Now</a></p> 
+                       </div> </li> 
+                      <li class="paragraph paragraph--type--accordion paragraph--view-mode--default accordion-item" data-accordion-item> <a href="#student_scholarships" class="accordion-title"> Student Scholarships </a> 
+                       <div class="accordion-content" data-tab-content id="student_scholarships"> 
+                        <p>Gifts towards UCR scholarship funds play a critical role in enabling the best and brightest students to reach their potential and achieve their dreams.</p> 
+                        <p><a class="btn-ucr-alt" href="https://myadv.ucr.edu/WEB/%22Student%20Scholarships%22" target="_blank">Give Now</a></p> 
+                       </div> </li> 
+                      <li class="paragraph paragraph--type--accordion paragraph--view-mode--default accordion-item" data-accordion-item> <a href="#college_of_humanities_arts_and_social_sciences" class="accordion-title"> College of Humanities, Arts, and Social Sciences </a> 
+                       <div class="accordion-content" data-tab-content id="college_of_humanities_arts_and_social_sciences"> 
+                        <p>A combination of the arts, humanities, and social sciences create a unique environment to examine diverse dimensions of social and historical life and human meaning.</p> 
+                        <p><a class="btn-ucr-alt" href="https://myadv.ucr.edu/CHASS/CHASS" target="_blank">Give Now</a></p> 
+                       </div> </li> 
+                      <li class="paragraph paragraph--type--accordion paragraph--view-mode--default accordion-item" data-accordion-item> <a href="#college_of_natural_and_agricultural_sciences" class="accordion-title"> College of Natural and Agricultural Sciences </a> 
+                       <div class="accordion-content" data-tab-content id="college_of_natural_and_agricultural_sciences"> 
+                        <p>Evolving out of the Citrus Experiment Station, the College of Natural and Agricultural Sciences brings together the study of agricultural, life, physical, and mathematical sciences for collaboration.</p> 
+                        <p><a class="btn-ucr-alt" href="https://myadv.ucr.edu/CNAS/CNAS" target="_blank">Give Now</a></p> 
+                       </div> </li> 
+                      <li class="paragraph paragraph--type--accordion paragraph--view-mode--default accordion-item" data-accordion-item> <a href="#graduate_school_of_education_" class="accordion-title"> Graduate School of Education </a> 
+                       <div class="accordion-content" data-tab-content id="graduate_school_of_education_"> 
+                        <p>A professional school responsible for linking research, instruction, and service in the field of education, programs help educators at all levels take on today’s toughest education challenges.</p> 
+                        <p><a class="btn-ucr-alt" href="https://myadv.ucr.edu/GSOE/GSOE" target="_blank">Give Now</a><br> &nbsp;</p> 
+                       </div> </li> 
+                      <li class="paragraph paragraph--type--accordion paragraph--view-mode--default accordion-item" data-accordion-item> <a href="#marlan_and_rosemary_bourns_college_of_engineering_" class="accordion-title"> Marlan and Rosemary Bourns College of Engineering </a> 
+                       <div class="accordion-content" data-tab-content id="marlan_and_rosemary_bourns_college_of_engineering_"> 
+                        <p>Producing engineers with the knowledge to serve rapidly-changing technology and conducting cutting-edge research, Bourns College of Engineering is a catalyst for industrial growth in Inland Southern California, the state, and the world.</p> 
+                        <p><a class="btn-ucr-alt" href="https://myadv.ucr.edu/BCOE/%22Bourns%20College%20of%20Engineering%22" target="_blank">Give Now</a><br> &nbsp;</p> 
+                       </div> </li> 
+                      <li class="paragraph paragraph--type--accordion paragraph--view-mode--default accordion-item" data-accordion-item> <a href="#school_of_business" class="accordion-title"> School of Business </a> 
+                       <div class="accordion-content" data-tab-content id="school_of_business"> 
+                        <p>Preparing students for management and leadership roles in today’s global landscape, the School of Business offers MBA and Ph.D. programs, and the largest undergraduate program in the UC system.</p> 
+                        <p><a class="btn-ucr-alt" href="https://myadv.ucr.edu/SB/200602" target="_blank">Give Now</a></p> 
+                       </div> </li> 
+                      <li class="paragraph paragraph--type--accordion paragraph--view-mode--default accordion-item" data-accordion-item> <a href="#school_of_medicine" class="accordion-title"> School of Medicine </a> 
+                       <div class="accordion-content" data-tab-content id="school_of_medicine"> 
+                        <p>Opened in 2013, the UC Riverside School of Medicine is expanding and diversifying the region’s physician workforce and developing research and health care delivery programs to improve the health of medically underserved populations.&nbsp;</p> 
+                        <p><a class="btn-ucr-alt" href=" https://myadv.ucr.edu/SOM/SOM" target="_blank">Give Now</a><br> &nbsp;</p> 
+                       </div> </li> 
+                      <li class="paragraph paragraph--type--accordion paragraph--view-mode--default accordion-item" data-accordion-item> <a href="#school_of_public_policy_" class="accordion-title"> School of Public Policy </a> 
+                       <div class="accordion-content" data-tab-content id="school_of_public_policy_"> 
+                        <p>Working in partnership with policy makers, entrepreneurs, and business leaders in our area and around the world, faculty and students in the UCR School of Public Policy address complex issues facing growing communities today.</p> 
+                        <p><a class="btn-ucr-alt" href="https://myadv.ucr.edu/SPP/%22Public%20Policy%20Scholarship%20Fund%22" target="_blank">Give Now</a></p> 
+                       </div> </li> 
+                      <li class="paragraph paragraph--type--accordion paragraph--view-mode--default accordion-item" data-accordion-item> <a href="#ucr_arts" class="accordion-title"> UCR Arts </a> 
+                       <div class="accordion-content" data-tab-content id="ucr_arts"> 
+                        <p>Comprising California Museum of Photography, Sweeney Art Gallery, and The Barbara and Art Culver Center of the Arts on a single city block of downtown Riverside’s bustling Main Street pedestrian plaza, UCR Arts is an internationally-recognized visual and performing arts center that serves as a cultural anchor for the university and the region.</p> 
+                        <p><a class="btn-ucr-alt" href="https://myadv.ucr.edu/CHASS/%22UCR%20ARTS%22" target="_blank">Give Now</a></p> 
+                       </div> </li> 
+                      <li class="paragraph paragraph--type--accordion paragraph--view-mode--default accordion-item" data-accordion-item> <a href="#ucr_athletics" class="accordion-title"> UCR Athletics </a> 
+                       <div class="accordion-content" data-tab-content id="ucr_athletics"> 
+                        <p>The Highlanders compete in 17 sports at the NCAA Division I level, the highest level of collegiate competition in the country. Proud members of the Big West Conference, a group of nine schools all based within the state of California, the Athletics program at UCR enhances the reputation of the university and provides student-athletes with the opportunity for growth outside the classroom.</p> 
+                        <p><a class="btn-ucr-alt" href="https://myadv.ucr.edu/Ath/athletics" target="_blank">Give Now</a><br> &nbsp;</p> 
+                       </div> </li> 
+                      <li class="paragraph paragraph--type--accordion paragraph--view-mode--default accordion-item" data-accordion-item> <a href="#ucr_botanic_gardens" class="accordion-title"> UCR Botanic Gardens </a> 
+                       <div class="accordion-content" data-tab-content id="ucr_botanic_gardens"> 
+                        <p>Nestled in the foothills of the Box Springs Mountains on the east side of campus, the UCR Botanic Gardens cover 40 hilly acres, connecting people with nature. As a living classroom without walls, the gardens provide a wide assortment of materials for courses at UCR as well as other local schools, ranging from botany and anthropology to entomology and photography. Visitors to campus come to explore the four miles of scenic trails, view our more than 3,500 plant species from around the world, or just relax on a bench and enjoy the beauty.</p> 
+                        <p><a class="btn-ucr-alt" href="https://myadv.ucr.edu/UCRBG/Botanic%20Gardens" target="_blank">Give Now</a><br> &nbsp;</p> 
+                       </div> </li> 
+                      <li class="paragraph paragraph--type--accordion paragraph--view-mode--default accordion-item" data-accordion-item> <a href="#ucr_extension" class="accordion-title"> UCR Extension </a> 
+                       <div class="accordion-content" data-tab-content id="ucr_extension"> 
+                        <p>For more than 50 years, UCR Extension has provided educational opportunities to people of all ages seeking professional advancement, personal fulfillment, and fun ways to learn new skills. UC Riverside Extension operates independently as a nonprofit division of UCR.</p> 
+                        <p><a class="btn-ucr-alt" href="https://myadv.ucr.edu/UNEX/UNEX" target="_blank">Give Now</a></p> 
+                       </div> </li> 
+                      <li class="paragraph paragraph--type--accordion paragraph--view-mode--default accordion-item" data-accordion-item> <a href="#ucr_library" class="accordion-title"> UCR Library </a> 
+                       <div class="accordion-content" data-tab-content id="ucr_library"> 
+                        <p>With three million volumes, 28,000 print and electronic serial subscriptions, 1.7 million microforms, 300,000 government information sources, and access to 500,000 e-books, music, and media collections, the UCR Library serves the research and teaching needs of the campus and also serves the community as the regional research library for the Inland Empire.</p> 
+                        <p><a class="btn-ucr-alt" href="https://myadv.ucr.edu/LIB/200362" target="_blank">Give Now</a></p> 
+                       </div> </li> 
+                      <li class="paragraph paragraph--type--accordion paragraph--view-mode--default accordion-item" data-accordion-item> <a href="#ucr_palm_desert_center" class="accordion-title"> UCR Palm Desert Center </a> 
+                       <div class="accordion-content" data-tab-content id="ucr_palm_desert_center"> 
+                        <p>UCR Palm Desert Center is Coachella Valley’s site where students, faculty, supporters, and friends gather to advance knowledge and wisdom, tackle society’s challenges, and pursue intellectual and personal fulfillment.</p> 
+                        <p><a class="btn-ucr-alt" href="https://myadv.ucr.edu/forms/PalmDesertMembership" target="_blank">Give Now</a></p> 
+                       </div> </li> 
+                     </ul> 
+                    </div> 
+                   </div> 
+                  </div> 
+                 </div> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+            </div> 
+           </article> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </main> 
+    <footer> 
+     <div class="footer-container"> 
+      <div class="footer-content-area"> 
+       <div class="grid-container"> 
+        <div class="grid-x grid-padding-x align-center"> 
+         <div id="block-ucr-design-1-ucriversidefootersearchblock" data-block-plugin-id="ucr_global_footer_search" class="cell show-for-medium footer-search"> 
+          <section class="google-search"> <button class="button footer-search-button" data-open="gscSearchFormModal">Search</button> 
+          </section> 
+         </div> 
+        </div> 
+        <div class="grid-x grid-padding-x footer-columns"> 
+         <div class="cell medium-auto"> 
+          <section class="footer-item ucr-footer-info"> <span class="footer-logo"><span class="show-for-sr">University of California, Riverside</span></span> 
+           <address> <p>900 University Ave.<br> Riverside, CA 92521</p> <p>Tel: (951) 827-1012</p> </address> 
+           <ul class="footer-links"> 
+            <li><a href="https://library.ucr.edu/" target="_blank">UCR Library</a></li> 
+            <li><a href="https://campusstatus.ucr.edu/" target="_blank">Campus Status</a></li> 
+            <li><a href="https://ucr.bncollege.com/shop/ucr/home" target="_blank">Campus Store</a></li> 
+            <li><a href="https://jobs.ucr.edu" target="_blank">Career Opportunities</a></li> 
+            <li><a href="https://diversity.ucr.edu/" target="_blank">Diversity</a></li> 
+            <li><a href="https://campusmap.ucr.edu/" target="_blank">Maps and Directions</a></li> 
+            <li><a href="https://www.ucr.edu/about/visitors" target="_blank">Visit UCR</a></li> 
+           </ul> 
+          </section> 
+         </div> 
+         <div class="cell medium-auto"> 
+          <section id="block-ucr-design-1-ucriversidefooterdeptinformationblock" data-block-plugin-id="ucr_global_footer_dept_info" class="footer-item footer-dept-info"> 
+           <h2>University of California, Riverside</h2> 
+           <address class="address_2"> <p> <a href="https://campusmap.ucr.edu" target="_blank"> 900 University Ave. <br>Riverside, CA 92521 </a></p> <p> tel: (951) 827-1012<br> email: <a href="mailto:webmaster@ucr.edu">webmaster@ucr.edu</a> </p> </address> 
+          </section> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="site-legal-footer"> 
+       <div class="grid-container"> 
+        <div class="grid-x grid-padding-x"> 
+         <div class="cell"> 
+          <ul> 
+           <li><a href="http://www.ucr.edu/privacy.html">Privacy and Accessibility</a></li> 
+           <li><a href="http://www.ucr.edu/terms.html">Terms and Conditions</a></li> 
+           <li>© 2022 Regents of the University of California</li> 
+          </ul> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </footer> 
+   </div> 
+   <div class="large reveal" id="gscSearchFormModal" role="search" data-reveal data-animation-in="fade-in" data-animation-out="fade-out"> 
+    <div class="gsc-modal-top"> <button class="close-button" data-close aria-label="Close Search Window" type="button"><span aria-hidden="true">×</span></button> 
+    </div> 
+    <form id="audience-search-form" name="gsc-search-form" action="/results"> 
+     <div class="gsc-modal-body"> 
+      <div class="grid-container full"> 
+       <div class="grid-x grid-padding-x grid-padding-y align-center-middle text-center"> 
+        <div class="gsc-text-wrapper"> <span class="gsc-welcome-text">Let us help you with your search</span> 
+        </div> 
+        <div class="cell"> <label id="searchbox-label" class="hidden" aria-label="Enter your Search Criteria.">Enter your Search Criteria.</label> 
+         <input type="text" maxlength="255" id="audience-search" name="q" value="" aria-labelledby="searchbox-label" placeholder="Search for..."> 
+        </div> 
+        <div class="cell medium-4"> <button class="button gsc-modal-button-submit" type="submit" name="search-by" value="all">Search All UCR</button> 
+        </div> 
+        <div class="cell medium-4"> <button class="button gsc-modal-button-submit" type="submit" name="search-by" value="giving.ucr.edu">Search This Site</button> 
+        </div> 
+        <div class="cell medium-4"> <button type="button" class="button gsc-modal-button-close" data-close>Cancel</button> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </form> 
+   </div> 
+  </div> 
+  <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/1","currentPathIsAdmin":false,"isFront":true,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"bu":{"notify_ie":-2,"notify_firefox":-2,"notify_opera":-2,"notify_safari":-2,"notify_chrome":-2,"insecure":true,"unsupported":false,"mobile":true,"position":"top","visibility_type":"hide","visibility_pages":"admin\/*","test_mode":false,"new_window":true,"no_close":false,"text_override":"","reminder":6,"reminder_closed":6,"url":"","source":"\/\/browser-update.org\/update.min.js","show_source":""},"google_analytics":{"account":{},"trackOutbound":true,"trackMailto":true,"trackTel":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"ajax":[],"user":{"uid":0,"permissionsHash":"6e10e7de70b3ccc3b08a0460348ea950ffbedf1bcb8320e2e1da2c293e00da5e"}}</script> 
+  <script src="/sites/g/files/rcwecm3101/files/js/js_dM5mp5TKBJtXvAw2vuwnL0gCqP4MHsQofCzcm21klk0.js"></script> 
+  <script src="https://static.addtoany.com/menu/page.js" async></script> 
+  <script src="/sites/g/files/rcwecm3101/files/js/js_nSo_BluoJ8wxbZo_mB9_btqx0-axJsmvrWDXqX_FK5A.js"></script> 
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"07d404edfe","applicationID":"837425331","transactionName":"MVZSYRNWCxBZB0wIWggccVYVXgoNFxRZBlA5UFFWCVI=","queueTime":0,"applicationTime":64,"atts":"HRFRF1tMGB4=","errorBeacon":"bam-cell.nr-data.net","agent":""}</script> 
+ </body>
+</html>

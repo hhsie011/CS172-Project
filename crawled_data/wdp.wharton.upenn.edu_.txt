@@ -1,0 +1,535 @@
+This website does not support versions of Internet Explorer below version 9. Please try updating your version of Internet Explorer or using another browser. Thank You. Bookstore Authors Wharton School Press Authors All Authors Become an Author Special Offers Blog About FAQs Contact Sign Up Wharton School Press Newsletter Name* First Last Email* Topics Of Interest: Entrepreneurship Leadership Public Policy Finance Management Social Impact Innovation Marketing Technology Consent I agree to the privacy policy. Phone This field is for validation purposes and should be left unchanged. The Zola buy anywhere buttons are not enable on Internet Explorer 9. Please update Internet Explorer or try again with a different browser. Returning to the Office? Explore the pros and cons of remote work, as well as how we can navigate a new office world. Learn more The Latest from Wharton School Press Featuring Wharton School Press books—research-driven, fast-reading, and actionable guides that fit your busy life Other Featured Faculty Selections A curated selection of important books authored by Wharton School professors and Press authors from other leading publishers Sign Up Today Subscribe to the Wharton School Press newsletter and receive book news, free ebooks, and more in your inbox. Submit Featured Author Lele Sang Lele Sang is Global Fellow at the Wharton School of the University of Pennsylvania. A former journalist and editor, she has worked for the Beijing News and Caijing Magazine covering business and politics and has interviewed world leaders from prime ministers to Fortune 500 company CEOs. Winning in China In Winning in China: 8 Stories of Success and Failure in the World’s Largest Economy, Wharton experts Lele Sang and Karl Ulrich explore the success and failure of several well-known companies, including Hyundai, LinkedIn, Sequoia Capital, and InMobi, as more and more businesses look to reap profits from the demand of 1.4 billion people. From the Blog September 1, 2021 Returning to the Office? by Wharton Digital Press August 5, 2021 The Wharton School Press Summer 2021 Reading List by Wharton Digital Press January 12, 2021 Meet the Authors Series by Wharton Digital Press View More In the Media September 8, 2020 Why Human Brains Are Bad at Assessing the Risks of Pandemics from The Washington Post August 28, 2020 Leading Successful Change from Happiness at Work May 29, 2020 Kirkus Review: The Unicorn's Shadow from Kirkus Reviews View More Follow Us @WhartonPress Be the first to learn about new releases, special offers, and more. Array
+(
+    [0] => Array
+        (
+            [created_at] => Tue May 31 13:07:03 +0000 2022
+            [id] => 1531623292007616513
+            [id_str] => 1531623292007616513
+            [text] => Advice for Aspiring Writers From Two @Wharton Alumnae Authors, @SandraShpilberg and @EricaDhawan
+ https://t.co/V9xgjsgJH7
+            [truncated] => 
+            [entities] => Array
+                (
+                    [hashtags] => Array
+                        (
+                        )
+
+                    [symbols] => Array
+                        (
+                        )
+
+                    [user_mentions] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [screen_name] => Wharton
+                                    [name] => The Wharton School
+                                    [id] => 7717612
+                                    [id_str] => 7717612
+                                    [indices] => Array
+                                        (
+                                            [0] => 37
+                                            [1] => 45
+                                        )
+
+                                )
+
+                            [1] => Array
+                                (
+                                    [screen_name] => SandraShpilberg
+                                    [name] => Sandra Shpilberg
+                                    [id] => 919813494
+                                    [id_str] => 919813494
+                                    [indices] => Array
+                                        (
+                                            [0] => 63
+                                            [1] => 79
+                                        )
+
+                                )
+
+                            [2] => Array
+                                (
+                                    [screen_name] => ericadhawan
+                                    [name] => Erica Dhawan
+                                    [id] => 16505786
+                                    [id_str] => 16505786
+                                    [indices] => Array
+                                        (
+                                            [0] => 84
+                                            [1] => 96
+                                        )
+
+                                )
+
+                        )
+
+                    [urls] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [url] => https://t.co/V9xgjsgJH7
+                                    [expanded_url] => https://magazine.wharton.upenn.edu/digital/advice-for-aspiring-writers-from-two-wharton-alumnae-authors/
+                                    [display_url] => magazine.wharton.upenn.edu/digital/advice…
+                                    [indices] => Array
+                                        (
+                                            [0] => 98
+                                            [1] => 121
+                                        )
+
+                                )
+
+                        )
+
+                )
+
+            [source] => Twitter Web App
+            [in_reply_to_status_id] => 
+            [in_reply_to_status_id_str] => 
+            [in_reply_to_user_id] => 
+            [in_reply_to_user_id_str] => 
+            [in_reply_to_screen_name] => 
+            [user] => Array
+                (
+                    [id] => 278620896
+                    [id_str] => 278620896
+                )
+
+            [geo] => 
+            [coordinates] => 
+            [place] => 
+            [contributors] => 
+            [is_quote_status] => 
+            [retweet_count] => 1
+            [favorite_count] => 3
+            [favorited] => 
+            [retweeted] => 
+            [possibly_sensitive] => 
+            [lang] => en
+        )
+
+    [1] => Array
+        (
+            [created_at] => Fri May 27 15:13:52 +0000 2022
+            [id] => 1530205652827533313
+            [id_str] => 1530205652827533313
+            [text] => Aiming for the C-suite? Here are 3 practices to get you there by @c_frangos via @MITSloan 
+https://t.co/0G846AED4x
+            [truncated] => 
+            [entities] => Array
+                (
+                    [hashtags] => Array
+                        (
+                        )
+
+                    [symbols] => Array
+                        (
+                        )
+
+                    [user_mentions] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [screen_name] => c_frangos
+                                    [name] => Cassandra Frangos
+                                    [id] => 34437051
+                                    [id_str] => 34437051
+                                    [indices] => Array
+                                        (
+                                            [0] => 65
+                                            [1] => 75
+                                        )
+
+                                )
+
+                            [1] => Array
+                                (
+                                    [screen_name] => MITSloan
+                                    [name] => MIT Sloan School of Management
+                                    [id] => 8724862
+                                    [id_str] => 8724862
+                                    [indices] => Array
+                                        (
+                                            [0] => 80
+                                            [1] => 89
+                                        )
+
+                                )
+
+                        )
+
+                    [urls] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [url] => https://t.co/0G846AED4x
+                                    [expanded_url] => https://mitsloan.mit.edu/ideas-made-to-matter/aiming-c-suite-here-are-3-practices-to-get-you-there
+                                    [display_url] => mitsloan.mit.edu/ideas-made-to-…
+                                    [indices] => Array
+                                        (
+                                            [0] => 91
+                                            [1] => 114
+                                        )
+
+                                )
+
+                        )
+
+                )
+
+            [source] => Twitter Web App
+            [in_reply_to_status_id] => 
+            [in_reply_to_status_id_str] => 
+            [in_reply_to_user_id] => 
+            [in_reply_to_user_id_str] => 
+            [in_reply_to_screen_name] => 
+            [user] => Array
+                (
+                    [id] => 278620896
+                    [id_str] => 278620896
+                )
+
+            [geo] => 
+            [coordinates] => 
+            [place] => 
+            [contributors] => 
+            [is_quote_status] => 
+            [retweet_count] => 0
+            [favorite_count] => 0
+            [favorited] => 
+            [retweeted] => 
+            [possibly_sensitive] => 
+            [lang] => en
+        )
+
+    [2] => Array
+        (
+            [created_at] => Wed Apr 20 18:57:00 +0000 2022
+            [id] => 1516853457155764231
+            [id_str] => 1516853457155764231
+            [text] => “When we have to stop being who we are or change who we are or adapt to who we think we need to be—because we are l… https://t.co/MSywhaM061
+            [truncated] => 1
+            [entities] => Array
+                (
+                    [hashtags] => Array
+                        (
+                        )
+
+                    [symbols] => Array
+                        (
+                        )
+
+                    [user_mentions] => Array
+                        (
+                        )
+
+                    [urls] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [url] => https://t.co/MSywhaM061
+                                    [expanded_url] => https://twitter.com/i/web/status/1516853457155764231
+                                    [display_url] => twitter.com/i/web/status/1…
+                                    [indices] => Array
+                                        (
+                                            [0] => 117
+                                            [1] => 140
+                                        )
+
+                                )
+
+                        )
+
+                )
+
+            [source] => Twitter Web App
+            [in_reply_to_status_id] => 
+            [in_reply_to_status_id_str] => 
+            [in_reply_to_user_id] => 
+            [in_reply_to_user_id_str] => 
+            [in_reply_to_screen_name] => 
+            [user] => Array
+                (
+                    [id] => 278620896
+                    [id_str] => 278620896
+                )
+
+            [geo] => 
+            [coordinates] => 
+            [place] => 
+            [contributors] => 
+            [is_quote_status] => 1
+            [quoted_status_id] => 1516827837390630914
+            [quoted_status_id_str] => 1516827837390630914
+            [quoted_status] => Array
+                (
+                    [created_at] => Wed Apr 20 17:15:12 +0000 2022
+                    [id] => 1516827837390630914
+                    [id_str] => 1516827837390630914
+                    [text] => One of the biggest misconceptions about burnout is that the cause is internal. In @JLindzon's article for… https://t.co/VbSfwFrdJU
+                    [truncated] => 1
+                    [entities] => Array
+                        (
+                            [hashtags] => Array
+                                (
+                                )
+
+                            [symbols] => Array
+                                (
+                                )
+
+                            [user_mentions] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [screen_name] => JLindzon
+                                            [name] => Jared Lindzon
+                                            [id] => 164708648
+                                            [id_str] => 164708648
+                                            [indices] => Array
+                                                (
+                                                    [0] => 82
+                                                    [1] => 91
+                                                )
+
+                                        )
+
+                                )
+
+                            [urls] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [url] => https://t.co/VbSfwFrdJU
+                                            [expanded_url] => https://twitter.com/i/web/status/1516827837390630914
+                                            [display_url] => twitter.com/i/web/status/1…
+                                            [indices] => Array
+                                                (
+                                                    [0] => 107
+                                                    [1] => 130
+                                                )
+
+                                        )
+
+                                )
+
+                        )
+
+                    [source] => Twitter Web App
+                    [in_reply_to_status_id] => 
+                    [in_reply_to_status_id_str] => 
+                    [in_reply_to_user_id] => 
+                    [in_reply_to_user_id_str] => 
+                    [in_reply_to_screen_name] => 
+                    [user] => Array
+                        (
+                            [id] => 69327888
+                            [id_str] => 69327888
+                        )
+
+                    [geo] => 
+                    [coordinates] => 
+                    [place] => 
+                    [contributors] => 
+                    [is_quote_status] => 
+                    [retweet_count] => 0
+                    [favorite_count] => 3
+                    [favorited] => 
+                    [retweeted] => 
+                    [possibly_sensitive] => 
+                    [lang] => en
+                )
+
+            [retweet_count] => 0
+            [favorite_count] => 0
+            [favorited] => 
+            [retweeted] => 
+            [possibly_sensitive] => 
+            [lang] => en
+        )
+
+    [3] => Array
+        (
+            [created_at] => Thu Apr 14 14:32:56 +0000 2022
+            [id] => 1514612676747423750
+            [id_str] => 1514612676747423750
+            [text] => "The term 'activist investor' ... is not the right term for what Elon Musk is doing," said @mikeuse. "In this circu… https://t.co/RLMjx9hsze
+            [truncated] => 1
+            [entities] => Array
+                (
+                    [hashtags] => Array
+                        (
+                        )
+
+                    [symbols] => Array
+                        (
+                        )
+
+                    [user_mentions] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [screen_name] => mikeuse
+                                    [name] => Mike Useem
+                                    [id] => 16053546
+                                    [id_str] => 16053546
+                                    [indices] => Array
+                                        (
+                                            [0] => 91
+                                            [1] => 99
+                                        )
+
+                                )
+
+                        )
+
+                    [urls] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [url] => https://t.co/RLMjx9hsze
+                                    [expanded_url] => https://twitter.com/i/web/status/1514612676747423750
+                                    [display_url] => twitter.com/i/web/status/1…
+                                    [indices] => Array
+                                        (
+                                            [0] => 117
+                                            [1] => 140
+                                        )
+
+                                )
+
+                        )
+
+                )
+
+            [source] => Twitter Web App
+            [in_reply_to_status_id] => 
+            [in_reply_to_status_id_str] => 
+            [in_reply_to_user_id] => 
+            [in_reply_to_user_id_str] => 
+            [in_reply_to_screen_name] => 
+            [user] => Array
+                (
+                    [id] => 278620896
+                    [id_str] => 278620896
+                )
+
+            [geo] => 
+            [coordinates] => 
+            [place] => 
+            [contributors] => 
+            [is_quote_status] => 
+            [retweet_count] => 0
+            [favorite_count] => 2
+            [favorited] => 
+            [retweeted] => 
+            [possibly_sensitive] => 
+            [lang] => en
+        )
+
+    [4] => Array
+        (
+            [created_at] => Fri Apr 08 13:37:41 +0000 2022
+            [id] => 1512424442160467968
+            [id_str] => 1512424442160467968
+            [text] => 5 Customer Retention Books You Must Read in 2022, including @faderp and @SarahEToms's #CustomerCentricityPlaybook https://t.co/zmUHxEQf0g
+            [truncated] => 
+            [entities] => Array
+                (
+                    [hashtags] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [text] => CustomerCentricityPlaybook
+                                    [indices] => Array
+                                        (
+                                            [0] => 86
+                                            [1] => 113
+                                        )
+
+                                )
+
+                        )
+
+                    [symbols] => Array
+                        (
+                        )
+
+                    [user_mentions] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [screen_name] => faderp
+                                    [name] => Peter Fader
+                                    [id] => 138271896
+                                    [id_str] => 138271896
+                                    [indices] => Array
+                                        (
+                                            [0] => 60
+                                            [1] => 67
+                                        )
+
+                                )
+
+                            [1] => Array
+                                (
+                                    [screen_name] => SarahEToms
+                                    [name] => Sarah Toms
+                                    [id] => 1408661366
+                                    [id_str] => 1408661366
+                                    [indices] => Array
+                                        (
+                                            [0] => 72
+                                            [1] => 83
+                                        )
+
+                                )
+
+                        )
+
+                    [urls] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [url] => https://t.co/zmUHxEQf0g
+                                    [expanded_url] => https://customerthink.com/5-customer-retention-books-you-must-read-in-2022/
+                                    [display_url] => customerthink.com/5-customer-ret…
+                                    [indices] => Array
+                                        (
+                                            [0] => 114
+                                            [1] => 137
+                                        )
+
+                                )
+
+                        )
+
+                )
+
+            [source] => Twitter Web App
+            [in_reply_to_status_id] => 
+            [in_reply_to_status_id_str] => 
+            [in_reply_to_user_id] => 
+            [in_reply_to_user_id_str] => 
+            [in_reply_to_screen_name] => 
+            [user] => Array
+                (
+                    [id] => 278620896
+                    [id_str] => 278620896
+                )
+
+            [geo] => 
+            [coordinates] => 
+            [place] => 
+            [contributors] => 
+            [is_quote_status] => 
+            [retweet_count] => 0
+            [favorite_count] => 1
+            [favorited] => 
+            [retweeted] => 
+            [possibly_sensitive] => 
+            [lang] => en
+        )
+
+)
+ Wharton School Press @WhartonPress - May 31 Advice for Aspiring Writers From Two @Wharton Alumnae Authors, @SandraShpilberg and @EricaDhawan https://t.co/V9xgjsgJH7 Wharton School Press @WhartonPress - May 27 Aiming for the C-suite? Here are 3 practices to get you there by @c_frangos via @MITSloan https://t.co/0G846AED4x Wharton School Press @WhartonPress - Apr 20 “When we have to stop being who we are or change who we are or adapt to who we think we need to be—because we are l… https://t.co/MSywhaM061 Wharton School Press @WhartonPress - Apr 14 "The term 'activist investor' ... is not the right term for what Elon Musk is doing," said @mikeuse. "In this circu… https://t.co/RLMjx9hsze Wharton School Press @WhartonPress - Apr 8 5 Customer Retention Books You Must Read in 2022, including @faderp and @SarahEToms's #CustomerCentricityPlaybook https://t.co/zmUHxEQf0g Quick Links Become an Author Newsletter FAQs Contact Privacy Policy Search Our Store Get In Touch facebook twitter Linked In Mail Copyright © 2022 Wharton School Press. All Rights Reserved. University Web Design by Push10.

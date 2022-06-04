@@ -1,0 +1,1 @@
+Business Ops () ← There are no visible live chat departments at this time. If you are the Setup Admin, create a department or set a department "Visible for Selection" at: Setup Admin > Departments Close

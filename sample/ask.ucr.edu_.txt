@@ -1,0 +1,1028 @@
+<!doctype html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# " class="no-js"> 
+ <head> 
+  <meta charset="utf-8">
+  <script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam-cell.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"07d404edfe",applicationID:"837425331"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script> 
+  <noscript>
+   <style>form.antibot * :not(.antibot-message) { display: none !important; }</style> 
+  </noscript>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-3051875-1"></script> 
+  <script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments)};gtag("js", new Date());gtag("set", "developer_id.dMDhkMT", true);gtag("config", "UA-3051875-1", {"groups":"default","anonymize_ip":true,"page_placeholder":"PLACEHOLDER_page_path","allow_ad_personalization_signals":false});</script> 
+  <link rel="canonical" href="https://ask.ucr.edu/"> 
+  <link rel="shortlink" href="https://ask.ucr.edu/"> 
+  <meta name="description" content="Your Student Resource Hub"> 
+  <meta property="og:site_name" content="AskUCR"> 
+  <meta property="og:url" content="https://ask.ucr.edu/"> 
+  <meta property="og:title" content="AskUCR"> 
+  <meta property="og:description" content="Your Student Resource Hub"> 
+  <meta name="twitter:card" content="summary"> 
+  <meta name="twitter:description" content="Your Student Resource Hub"> 
+  <meta name="twitter:title" content="ASK UCR | AskUCR"> 
+  <meta name="twitter:url" content="https://ask.ucr.edu/"> 
+  <meta name="Generator" content="Drupal 9 (https://www.drupal.org)"> 
+  <meta name="MobileOptimized" content="width"> 
+  <meta name="HandheldFriendly" content="true"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="shortcut icon" href="/themes/custom/ucr_default/favicon.ico" type=""> 
+  <link rel="revision" href="https://ask.ucr.edu/ask-ucr"> 
+  <script>window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overlays=[];a2a_config.templates={};</script> 
+  <title>ASK UCR | AskUCR</title> 
+  <link rel="stylesheet" media="all" href="/sites/g/files/rcwecm4656/files/css/css_1QtmoQ5SUoTgtWhukJ0QlCZG7OBoxCXk44YUqEQRL50.css"> 
+  <link rel="stylesheet" media="all" href="https://fonts.googleapis.com/css?family=Montserrat:700|Roboto+Slab:400,700|Roboto:400,700"> 
+  <link rel="stylesheet" media="all" href="/sites/g/files/rcwecm4656/files/css/css_NgxXcTZny615Vjab_G6ysMAubkGyrMX_I6eX-i7m2Vw.css"> 
+  <style type="text/css">
+    <!--
+     .embedded-entity {
+  width: -webkit-fit-content !important;
+  width: -moz-fit-content !important;
+  width: fit-content !important;
+}     -->
+    </style> 
+ </head> 
+ <body class="layout path-frontpage node--type-page"> 
+  <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas> 
+   <div class="webpage-content"> 
+    <header role="banner" data-sticky-container> 
+     <div class="header-sticky-container" data-ucr-sticky="0" data-ucr-mobile-sticky="0"> 
+      <div class="grid-container full"> 
+       <div class="grid-x"> 
+        <div class="cell small-order-2 medium-order-1 audience-container"> 
+         <div class="grid-container audience-menu-bar"> 
+          <div class="grid-x align-middle"> 
+           <div id="block-organizationname" data-block-plugin-id="ucr_global_organization_name" class="cell auto org-name"> <a class="skip-main" href="#main">Skip to main content</a> 
+            <p class="parent-org-title"> <a href="https://ucr.edu">University of California, Riverside</a> </p> 
+           </div> 
+           <div class="cell medium-shrink show-for-medium global-header-menu"> 
+            <nav aria-label="global header menu"> 
+             <ul class="menu"> 
+              <li class="ucr-home-link"><a href="https://www.ucr.edu" target="_blank">UCR Home</a></li> 
+             </ul> 
+            </nav> 
+           </div> 
+           <div id="audience-links-desktop-view" data-block-plugin-id="system_menu_block:ucr-audience-menu" class="cell medium-shrink show-for-medium audience-links-desktop" aria-label="Audience Links desktop view"> 
+            <nav class="audience-links"> 
+             <ul class="vertical medium-horizontal menu" data-responsive-menu="accordion medium-dropdown" data-closing-time="100" data-alignment="left"> 
+              <li class="audience-button is-dropdown-submenu-parent"> <a href="">Ask UCR Quicklinks...</a> 
+               <ul class="vertical menu"> 
+                <li> <a href="https://ue.ucr.edu/">Undergraduate Education</a> </li> 
+                <li> <a href="https://keeplearning.ucr.edu">Keep Learning</a> </li> 
+                <li> <a href="https://library.ucr.edu/" title="Library">Library</a> </li> 
+                <li> <a href="https://careers.ucr.edu/">Career Center</a> </li> 
+                <li> <a href="https://careers.ucr.edu/students/student-jobs" title="Student Jobs">Student Jobs</a> </li> 
+                <li> <a href="https://events.ucr.edu/" title="UCR Events">UCR Events</a> </li> 
+               </ul> </li> 
+             </ul> 
+            </nav> 
+           </div> 
+           <div id="block-ucriversideaudiencesearchblock" data-block-plugin-id="ucr_global_audience_search" class="cell medium-shrink show-for-medium"> 
+            <section class="google-search"> <button class="button audience-search-button" data-open="gscSearchFormModal">Search</button> 
+            </section> 
+           </div> 
+           <div class="cell shrink hide-for-medium" data-responsive-toggle="main-menu-container" data-hide-for="medium"> <button class="mdi mdi-menu button mobile-menu-expander" id="mobile-menu-expander" type="button" data-toggle="main-menu-container"> </button> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="cell small-order-1 medium-order-2 masthead-container"> 
+         <div class="grid-container"> 
+          <div class="grid-x align-middle"> 
+           <div class="cell shrink"> <a class="masthead-logo" href="/"> <span class="show-for-sr">UC Riverside</span> </a> 
+           </div> 
+           <div class="cell auto"> 
+            <h1 class="masthead-title" aria-label="Welcome to  AskUCR "> <a href="/"> AskUCR </a> </h1> 
+           </div> 
+           <div class="cell auto show-for-medium"> 
+            <p class="slogan">Your Student Resource Hub</p> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="cell small-order-3 medium-order-3 main-nav-bar"> 
+         <div class="grid-container" id="main-menu-container" data-animate="fade-in fade-out"> 
+          <div class="grid-x"> 
+           <div id="block-ucriversideaudiencesearchblock-2" data-block-plugin-id="ucr_global_audience_search" class="cell hide-for-medium"> 
+            <section class="google-search"> <button class="button audience-search-button" data-open="gscSearchFormModal">Search</button> 
+            </section> 
+           </div> 
+           <div id="block-ucr-default-main-menu" data-block-plugin-id="menu_block:main" class="cell main-menu-cell"> 
+            <nav id="primary-site-menu" aria-labelledby="primary-site-menu"> 
+             <ul class="standard-menu vertical medium-horizontal menu align-center-middle" data-responsive-menu="accordion medium-dropdown" data-closing-time="200"> 
+              <li> <a href="/" data-drupal-link-system-path="<front>" class="is-active">Home</a> </li> 
+              <li> <a href="/registration-and-records" data-drupal-link-system-path="node/21">Registration and Records</a> 
+               <ul class="vertical menu submenu"> 
+                <li> <a href="/academic-advising" data-drupal-link-system-path="node/46">Academic Advising</a> </li> 
+                <li> <a href="/transcripts" data-drupal-link-system-path="node/236">Transcripts</a> </li> 
+                <li> <a href="https://registrar.ucr.edu/registering" target="_blank">Registering for Classes</a> </li> 
+                <li> <a href="https://registrar.ucr.edu/registering/catalog" target="_blank">Catalog/ Course Schedule</a> </li> 
+                <li> <a href="https://registrar.ucr.edu/registering/plan-for-final-exams" target="_blank">Final Exams</a> </li> 
+                <li> <a href="/summer-sessions" data-drupal-link-system-path="node/61">Summer Sessions</a> </li> 
+                <li> <a href="/undergraduate-admissions" data-drupal-link-system-path="node/81">Undergraduate Admissions</a> </li> 
+                <li> <a href="/graduate-admissions" data-drupal-link-system-path="node/86">Graduate Admissions</a> </li> 
+               </ul> </li> 
+              <li> <a href="/managing-costs" data-drupal-link-system-path="node/26">Managing Costs</a> 
+               <ul class="vertical menu submenu"> 
+                <li> <a href="https://registrar.ucr.edu/tuition-fees">Tuition and Costs</a> </li> 
+                <li> <a href="https://financialaid.ucr.edu/" target="_blank">Financial Aid</a> </li> 
+                <li> <a href="/billing-and-payment" data-drupal-link-system-path="node/116">Billing and Payments</a> </li> 
+                <li> <a href="/grants" data-drupal-link-system-path="node/101">Grants</a> </li> 
+                <li> <a href="/loans" data-drupal-link-system-path="node/106">Loans</a> </li> 
+                <li> <a href="/scholarships" data-drupal-link-system-path="node/111">Scholarships</a> </li> 
+                <li> <a href="/financial-wellness" data-drupal-link-system-path="node/231">Financial Wellness</a> </li> 
+               </ul> </li> 
+              <li> <a href="/housing-and-health" data-drupal-link-system-path="node/31">Housing and Health</a> 
+               <ul class="vertical menu submenu"> 
+                <li> <a href="/coronavirus-resources" data-drupal-link-system-path="node/366">Coronavirus Resources</a> </li> 
+                <li> <a href="https://studentaffairs.ucr.edu/emergency-services" target="_blank">Student Emergency Services</a> </li> 
+                <li> <a href="https://housing.ucr.edu/residential-life" target="_blank">Residential Life</a> </li> 
+                <li> <a href="/housing-help-desk" data-drupal-link-system-path="node/136">Housing Help Desk</a> </li> 
+                <li> <a href="/ucr-halls-apartments" data-drupal-link-system-path="node/126">UCR Halls &amp; Apartments</a> </li> 
+                <li> <a href="/counseling-and-psychological-services-caps" data-drupal-link-system-path="node/146">Counseling and Psychological Services (CAPS)</a> </li> 
+                <li> <a href="/student-affairs-case-management" data-drupal-link-system-path="node/341">Student Affairs Case Management</a> </li> 
+                <li> <a href="/basic-needs" data-drupal-link-system-path="node/151">Basic Needs (Food, Housing)</a> </li> 
+                <li> <a href="/housing-health-well" data-drupal-link-system-path="node/346">The Well</a> </li> 
+                <li> <a href="/recreation" data-drupal-link-system-path="node/141">Recreation</a> </li> 
+                <li> <a href="/early-childhood-center" data-drupal-link-system-path="node/351">Early Childhood Center</a> </li> 
+               </ul> </li> 
+              <li> <a href="/student-involvement" data-drupal-link-system-path="node/41">Student Involvement</a> 
+               <ul class="vertical menu submenu"> 
+                <li> <a href="/student-government-0" data-drupal-link-system-path="node/181">Student Government</a> </li> 
+                <li> <a href="/programming-board" data-drupal-link-system-path="node/186">Programming Board</a> </li> 
+                <li> <a href="/student-organizations" data-drupal-link-system-path="node/161">Student Organizations</a> </li> 
+                <li> <a href="/leadership-and-service" data-drupal-link-system-path="node/166">Leadership and Service</a> </li> 
+                <li> <a href="/ethnic-and-gender-programs" data-drupal-link-system-path="node/171">Ethnic and Gender Programs</a> </li> 
+                <li> <a href="/teach-course-rcourses" data-drupal-link-system-path="node/191">Teach a Course (R'Courses)</a> </li> 
+                <li> <a href="/capitol-internships-ucdcuccs" data-drupal-link-system-path="node/196">Capitol Internships (UCDC/UCCS)</a> </li> 
+                <li> <a href="/undergraduate-research" data-drupal-link-system-path="node/201">Undergraduate Research</a> </li> 
+                <li> <a href="/career-readiness" data-drupal-link-system-path="node/241">Career Readiness</a> </li> 
+               </ul> </li> 
+              <li> <a href="/learning-support" data-drupal-link-system-path="node/36">Learning Support</a> 
+               <ul class="vertical menu submenu"> 
+                <li> <a href="/accessibility" data-drupal-link-system-path="node/206">Accessibility</a> </li> 
+                <li> <a href="/online-learning-support" data-drupal-link-system-path="node/211">Online Learning Support</a> </li> 
+                <li> <a href="/academic-resource-center-arc" data-drupal-link-system-path="node/226">Academic Resource Center (ARC)</a> </li> 
+                <li> <a href="/library" data-drupal-link-system-path="node/216">Library</a> </li> 
+                <li> <a href="/college-support-programs" data-drupal-link-system-path="node/356">College Support Programs</a> </li> 
+                <li> <a href="/peer-support" data-drupal-link-system-path="node/246">Peer Mentoring/Support</a> </li> 
+                <li> <a href="/grad-success" data-drupal-link-system-path="node/221">Grad Success</a> </li> 
+                <li> <a href="/first-generation" data-drupal-link-system-path="node/336">First Generation</a> </li> 
+               </ul> </li> 
+             </ul> 
+            </nav> 
+           </div> 
+           <div class="cell global-header-menu show-for-small-only"> 
+            <nav aria-label="global header menu"> 
+             <ul class="menu"> 
+              <li class="ucr-home-link-mobile "><a href="https://www.ucr.edu" target="_blank">UCR Home</a></li> 
+             </ul> 
+            </nav> 
+           </div> 
+           <div id="audience-links-mobile-view" data-block-plugin-id="system_menu_block:ucr-audience-menu" class="cell hide-for-medium audience-links-mobile" aria-label="Audience Links mobile view"> 
+            <nav class="audience-links"> 
+             <ul class="vertical medium-horizontal menu" data-responsive-menu="accordion medium-dropdown" data-closing-time="100" data-alignment="left"> 
+              <li class="audience-button is-dropdown-submenu-parent"> <a href="">Ask UCR Quicklinks...</a> 
+               <ul class="vertical menu"> 
+                <li> <a href="https://ue.ucr.edu/">Undergraduate Education</a> </li> 
+                <li> <a href="https://keeplearning.ucr.edu">Keep Learning</a> </li> 
+                <li> <a href="https://library.ucr.edu/" title="Library">Library</a> </li> 
+                <li> <a href="https://careers.ucr.edu/">Career Center</a> </li> 
+                <li> <a href="https://careers.ucr.edu/students/student-jobs" title="Student Jobs">Student Jobs</a> </li> 
+                <li> <a href="https://events.ucr.edu/" title="UCR Events">UCR Events</a> </li> 
+               </ul> </li> 
+             </ul> 
+            </nav> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </header> 
+    <main> 
+     <div id="content-container"> 
+      <div id="hero-panel-area"> 
+       <div class="views-element-container" id="block-ucr-default-head-image-title-block" data-block-plugin-id="views_block:content_views-content_head_image_title_block"> 
+        <div>
+         <div class="js-view-dom-id-33d76e98fa4d81d3772d9c1e2526dc066923e5ded2af76125f60723550c24aa7"> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="grid-container"> 
+       <div class="grid-x grid-padding-x grid-padding-y primary-content-header"> 
+       </div> 
+       <div class="grid-x grid-padding-x system-admin-controls"> 
+       </div> 
+      </div> 
+      <div id="main" class="grid-container full primary-content-area"> 
+       <div class="grid-x"> 
+        <div class="cell large-auto small-order-3 medium-order-3 large-order-2 pca-content"> 
+         <div> 
+          <div id="block-ucr-default-content" data-block-plugin-id="system_main_block"> 
+           <article role="article" about="/ask-ucr"> 
+            <div> 
+             <div class="layout layout-one-col grid-container full"> 
+              <div class="grid-x"> 
+               <div class="cell"> 
+                <div class="layout__region layout__region--main"> 
+                 <div data-block-plugin-id="block_content:8254ed13-0aa4-4c4d-81c3-7a801e7bf3f2" class="ucr-custom-block ucr-custom-block-custom-margins ucr-custom-block-custom-paddings margin-0 padding-top-0" style="background: url(/sites/g/files/rcwecm4656/files/2021-09/Sum20%20-%20WEb%20Headers%20-%20UE%20Website.png); background-size: cover;"> 
+                  <div class="grid-container full"> 
+                   <div class="grid-x grid-padding-x"> 
+                    <div class="cell"> 
+                     <div alt="ask logo" data-embed-button="media_browser" data-entity-embed-display="media_image" data-entity-type="media" data-entity-uuid="bf390ea3-4505-49f2-94b1-875282c4082f" data-langcode="en" title="ask logo" class="embedded-entity align-right"> 
+                      <img src="/sites/g/files/rcwecm4656/files/2020-09/Copy%20of%20ASK%20UCR%20DESIGN%20ELEMENTS%20%281%29.png" alt="ask logo" title="ask logo" typeof="foaf:Image">
+                     </div> 
+                     <p>&nbsp;</p> 
+                     <p>&nbsp;</p> 
+                     <p>&nbsp;</p> 
+                     <p>&nbsp;</p> 
+                     <p>&nbsp;</p> 
+                     <p>&nbsp;</p> 
+                     <p>&nbsp;</p> 
+                     <p>&nbsp;</p> 
+                    </div> 
+                   </div> 
+                  </div> 
+                 </div> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+             <div class="layout layout-one-col grid-container"> 
+              <div class="grid-x grid-padding-x grid-padding-y grid-margin-x grid-margin-y"> 
+               <div class="cell"> 
+                <div class="layout__region layout__region--main"> 
+                 <div data-block-plugin-id="block_content:5be203f9-ea13-4365-884f-46f4b9d6b016" class="ucr-custom-block ucr-custom-block-custom-margins ucr-custom-block-custom-paddings margin-top-1 margin-bottom-0 medium-margin-horizontal-4 padding-top-1 padding-bottom-0"> 
+                  <div class="grid-container full"> 
+                   <div class="grid-x grid-padding-x"> 
+                    <div class="cell"> 
+                     <p><b>AskUCR </b>is designed as a hub for student supports, services, and resources. The site uses jargon-free language, to help explain and connect students to major campus supports and engagement opportunities.</p> 
+                     <h5 class="text-align-center"><strong>If you don’t know,&nbsp;</strong><strong>AskUCR</strong>!</h5> 
+                    </div> 
+                   </div> 
+                  </div> 
+                 </div> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+             <div class="layout layout-one-col grid-container full"> 
+              <div class="grid-x"> 
+               <div class="cell"> 
+               </div> 
+              </div> 
+             </div> 
+             <div class="layout layout-two-col grid-container"> 
+              <div class="grid-x grid-padding-x"> 
+               <div class="cell medium-8"> 
+                <div class="layout__region layout__region--column-1"> 
+                 <div data-block-plugin-id="block_content:8a7386e9-4aab-403c-ac51-5f96789e0ffe" class="ucr-custom-block ucr-custom-block-custom-margins margin-vertical-0"> 
+                  <div class="grid-container full"> 
+                   <div class="grid-x grid-padding-x small-up-1 medium-up-2 large-up-3 cards num-cols-3 " data-equalizer data-equalize-on="medium" data-equalize-by-row="true"> 
+                    <div class="paragraph paragraph--type--expanding-card paragraph--view-mode--default cell card [ ] is-collapsed"> 
+                     <div class="card__inner [ js-expander ]" data-equalizer-watch> 
+                      <div class="expanding-card-background" style="background-color: #ffffff; "> <span> 
+                        <div alt="student involvement" data-embed-button="media_browser" data-entity-embed-display="media_image" data-entity-type="media" data-entity-uuid="0b60178d-3634-4d1d-8554-ce111d111607" data-langcode="en" title="student involvement" class="embedded-entity"> 
+                         <img src="/sites/g/files/rcwecm4656/files/2021-02/Sum20%20-%20Ask%20Website%20-%20Homepage%20Expanding%20card%20images_0.png" alt="student involvement" title="student involvement" typeof="foaf:Image">
+                        </div> </span> 
+                      </div> 
+                     </div> 
+                     <div class="card__expander"> <i class="fa fa-close [ js-collapser ]"></i> 
+                      <div class="card_expander_body"> 
+                       <p margin-top:0in="" style="color:#ffb81c>Getting involved in <strong>student organizations</strong>, <strong>undergraduate research</strong>, <strong>education abroad</strong>, <strong>community service</strong>, and <strong>leadership programs</strong>have been shown to benefit students such as; forming a greater connection to campus and faculty, earn higher grades, are more likely to graduate on time, and are more prepared for the workforce or grad school. Involvement also helps you build connections to other students, your community, and future employers.</p>
+
+<ul>
+	<li style="><strong><a _blank="" href="https://rcourses.ucr.edu" style="color:#ffb81c;target=">R'Courses </a>&nbsp;</strong><br> R'Courses at UCR are discussion classes created and taught by students to other students. They can be taken as electives</p> 
+                       <ul>
+                        <li style="margin-top:0in; margin-left:.25in; margin-bottom:.0001pt"><strong><a _blank="" href="https://studentlife.ucr.edu/student-organization-list" style="color:#ffb81c;target=">Clubs and Student Organization</a>&nbsp;</strong></li> 
+                        <li style="margin-top:0in; margin-left:.25in; margin-bottom:.0001pt"><strong><a _blank="" href="https://studentlife.ucr.edu/fraternity-and-sorority-life" style="color:#ffb81c;target=">Greek Life</a>&nbsp;</strong></li> 
+                        <li style="margin-top:0in; margin-left:.25in; margin-bottom:.0001pt"><strong><a _blank="" href="https://ucdc.ucr.edu" style="color:#ffb81c;target=">Academic Internships (UCDC/UCCS)</a>&nbsp;</strong><br> The University of California, Washington D. C. (UCDC) and University of California, Sacramento (UCCS) programs are designed to let students live and do internships in the state and nation's capitals.&nbsp;</li> 
+                        <li style="margin-top:0in; margin-left:.25in; margin-bottom:.0001pt"><strong><a _blank="" href="https://ugr.ucr.edu" style="color:#ffb81c;target=">Undergraduate Research</a></strong></li> 
+                        <li style="margin-top:0in; margin-left:.25in; margin-bottom:.0001pt"><strong><a _blank="" href="https://honors.ucr.edu" style="color:#ffb81c;target=">Honors</a></strong></li> 
+                        <li style="margin-top:0in; margin-left:.25in; margin-bottom:.0001pt"><strong><a _blank="" href="https://international.ucr.edu/abroad" style="color:#ffb81c;target=">Education Abroad</a></strong></li> 
+                        <li style="margin-top:0in; margin-left:.25in; margin-bottom:.0001pt"><strong><a _blank="" href="https://communityservice.ucr.edu" style="color:#ffb81c;target=">Community Service</a></strong></li> 
+                        <li style="margin-top:0in; margin-left:.25in; margin-bottom:.0001pt"><strong><a href="https://studentlife.ucr.edu/leadership" style="color:#ffb81c;target=">Leadership</a> </strong>programs</li> 
+                       </ul> 
+                      </div> 
+                     </div> 
+                    </div> 
+                    <div class="paragraph paragraph--type--expanding-card paragraph--view-mode--default cell card [ ] is-collapsed"> 
+                     <div class="card__inner [ js-expander ]" data-equalizer-watch> 
+                      <div class="expanding-card-background" style="background-color: #ffffff; "> <span> 
+                        <div alt="learning support" data-embed-button="media_browser" data-entity-embed-display="media_image" data-entity-type="media" data-entity-uuid="3b8346d6-e9bf-4a7a-bc19-3cfbbc3d14c1" data-langcode="en" title="learning support" class="embedded-entity"> 
+                         <img src="/sites/g/files/rcwecm4656/files/2021-02/Sum20%20-%20Ask%20Website%20-%20Homepage%20Expanding%20card%20images%20%281%29.png" alt="learning support" title="learning support" typeof="foaf:Image">
+                        </div> </span> 
+                      </div> 
+                     </div> 
+                     <div class="card__expander"> <i class="fa fa-close [ js-collapser ]"></i> 
+                      <div class="card_expander_body"> 
+                       <p>Here are some great resources to help you out with your academic needs. From all of the resources at <strong>UCR Library</strong>, tutoring assistance with the <strong>ARC</strong>, online learning support from the <strong>Keep Learning website</strong>, and finding <strong>accessibility assistance</strong> for all of your classes.</p> 
+                       <ul>
+                        <li style="margin-top:0in; margin-left:.25in; margin-bottom:.0001pt"><a _blank="" href="https://library.ucr.edu/" style="color:#ffb81c;target=">UCR Library</a></li> 
+                        <li style="margin-top:0in; margin-left:.25in; margin-bottom:.0001pt"><a _blank="" href="https://arc.ucr.edu" style="color:#ffb81c;target=">Academic Resource Center&nbsp;</a>(ARC)</li> 
+                        <li style="margin-top:0in; margin-left:.25in; margin-bottom:.0001pt"><a _blank="" href="https://graduate.ucr.edu/gradsuccess" style="color:#ffb81c;target=">Grad Success</a></li> 
+                        <li style="margin-top:0in; margin-left:.25in; margin-bottom:.0001pt"><a _blank="" href="https://conduct.ucr.edu/policies/academic-integrity-policies-and-procedures" style="color:#ffb81c;target=">Academic Integrity</a></li> 
+                        <li style="margin-top:0in; margin-left:.25in; margin-bottom:.0001pt"><a _blank="" href="https://keeplearning.ucr.edu" style="color:#ffb81c;target=">Keep Learning</a> (online learning support)</li> 
+                        <li style="margin-top:0in; margin-left:.25in; margin-bottom:.0001pt"><a _blank="" href="https://sdrc.ucr.edu" style="color:#ffb81c;target=">Accessibility</a>&nbsp;</li> 
+                        <li style="margin-top:0in; margin-left:.25in; margin-bottom:.0001pt"><a _blank="" href="https://firstgen.ucr.edu" style="color:#ffb81c;target=">First Generation</a></li> 
+                        <li style="margin-top:0in; margin-left:.25in; margin-bottom:.0001pt"><a _blank="" href="https://ask.ucr.edu/peer-support" style="color:#ffb81c;target=">Peer-Mentoring/Support</a></li> 
+                        <li style="margin-top:0in; margin-left:.25in; margin-bottom:.0001pt"><a _blank="" href="https://ask.ucr.edu/college-support-programs" style="color:#ffb81c;target=">College&nbsp;Support&nbsp;</a></li> 
+                       </ul> 
+                      </div> 
+                     </div> 
+                    </div> 
+                    <div class="paragraph paragraph--type--expanding-card paragraph--view-mode--default cell card [ ] is-collapsed"> 
+                     <div class="card__inner [ js-expander ]" data-equalizer-watch> 
+                      <div class="expanding-card-background" style="background-color: #ffffff; "> <span> 
+                        <div alt="advising, enrollment and records" data-embed-button="media_browser" data-entity-embed-display="media_image" data-entity-type="media" data-entity-uuid="06ab607e-63f5-46a6-a9cd-c1980c559056" data-langcode="en" title="advising, enrollment and records" class="embedded-entity"> 
+                         <img src="/sites/g/files/rcwecm4656/files/2021-02/Sum20%20-%20Ask%20Website%20-%20Homepage%20Expanding%20card%20images%20%282%29.png" alt="advising, enrollment and records" title="advising, enrollment and records" typeof="foaf:Image">
+                        </div> </span> 
+                      </div> 
+                     </div> 
+                     <div class="card__expander"> <i class="fa fa-close [ js-collapser ]"></i> 
+                      <div class="card_expander_body"> 
+                       <p>Find your <strong>academic advisor</strong> to plan out your academic career, <strong>enroll</strong> in courses,&nbsp;gain access to your <strong>student records</strong>,&nbsp;and find information about <strong>graduation and commencement ceremonies</strong>.</p> 
+                       <ul>
+                        <li style="margin-top:0in; margin-left:.25in; margin-bottom:.0001pt"><a _blank="" href="https://ask.ucr.edu/academic-advising" style="color:#ffb81c;target=">Campus Advising Offices</a></li> 
+                        <li style="margin-top:0in; margin-left:.25in; margin-bottom:.0001pt"><a _blank="" href="https://registrar.ucr.edu" style="color:#ffb81c;target=">Registrar's Office</a> (Enrollment, Student Records)</li> 
+                        <li style="margin-top:0in; margin-left:.25in; margin-bottom:.0001pt"><a _blank="" href="https://registrar.ucr.edu/graduation-guide" style="color:#ffb81c;target=">Graduation</a></li> 
+                       </ul> 
+                      </div> 
+                     </div> 
+                    </div> 
+                    <div class="paragraph paragraph--type--expanding-card paragraph--view-mode--default cell card [ ] is-collapsed"> 
+                     <div class="card__inner [ js-expander ]" data-equalizer-watch> 
+                      <div class="expanding-card-background" style="background-color: #ffffff; "> <span> 
+                        <div alt="tuition and financial aid" data-embed-button="media_browser" data-entity-embed-display="media_image" data-entity-type="media" data-entity-uuid="c7afc776-5e09-4252-a67b-86ff491db5e9" data-langcode="en" title="tuition and financial aid" class="embedded-entity"> 
+                         <img src="/sites/g/files/rcwecm4656/files/2021-02/sum20_-_ask_website_-_homepage_expanding_card_images_3.png" alt="tuition and financial aid" title="tuition and financial aid" typeof="foaf:Image">
+                        </div> </span> 
+                      </div> 
+                     </div> 
+                     <div class="card__expander"> <i class="fa fa-close [ js-collapser ]"></i> 
+                      <div class="card_expander_body"> 
+                       <p>Find information about <strong>funding your education</strong> through the Office of Financial Aid (student loans, grants, and scholarships), or where to <strong>make payments</strong> and get <strong>refunds</strong> through Student Business Services.</p> 
+                       <ul>
+                        <li style="margin-top:0in; margin-left:.25in; margin-bottom:.0001pt"><a _blank="" href="https://financialaid.ucr.edu/" style="color:#ffb81c;target=">Financial Aid</a> (loans, grants, scholarships)</li> 
+                        <li style="margin-top:0in; margin-left:.25in; margin-bottom:.0001pt"><a _blank="" href="https://sbs.ucr.edu" style="color:#ffb81c;target=">Student Business Services</a> (tuition, payments, refunds)</li> 
+                       </ul>
+                       <p>&nbsp;</p> 
+                      </div> 
+                     </div> 
+                    </div> 
+                    <div class="paragraph paragraph--type--expanding-card paragraph--view-mode--default cell card [ ] is-collapsed"> 
+                     <div class="card__inner [ js-expander ]" data-equalizer-watch> 
+                      <div class="expanding-card-background" style="background-color: #ffffff; "> <span> 
+                        <div alt="careers, jobs and internships" data-embed-button="media_browser" data-entity-embed-display="media_image" data-entity-type="media" data-entity-uuid="16d70106-96ce-4f01-8ca9-61e1379d82e8" data-langcode="en" title="careers, jobs and internships" class="embedded-entity"> 
+                         <img src="/sites/g/files/rcwecm4656/files/2021-02/Sum20%20-%20Ask%20Website%20-%20Homepage%20Expanding%20card%20images%20%284%29.png" alt="careers, jobs and internships" title="careers, jobs and internships" typeof="foaf:Image">
+                        </div> </span> 
+                      </div> 
+                     </div> 
+                     <div class="card__expander"> <i class="fa fa-close [ js-collapser ]"></i> 
+                      <div class="card_expander_body"> 
+                       <p>Find ways to <strong>explore careers</strong> through the Career Center, <strong>find a job</strong>, or do a quarter-long <strong>academic internship</strong> at the UC Washington Center (UCDC) or UC Center Sacramento (UCCS).</p> 
+                       <ul>
+                        <li style="margin-top:0in; margin-left:.25in; margin-bottom:.0001pt"><a _blank="" href="https://ucdc.ucr.edu" style="color:#ffb81c;target=">Academic Internships</a> (UCDC/UCCS)</li> 
+                        <li style="margin-top:0in; margin-left:.25in; margin-bottom:.0001pt"><a _blank="" href="https://careers.ucr.edu" style="color:#ffb81c;target=">Career Center</a>&nbsp;(Jobs/Internships)</li> 
+                        <li style="margin-top:0in; margin-left:.25in; margin-bottom:.0001pt"><a _blank="" href="https://graduate.ucr.edu/programs" style="color:#ffb81c;target=">Exploring Grad School</a></li> 
+                        <li style="margin-top:0in; margin-left:.25in; margin-bottom:.0001pt"><a _blank="" href="https://careers.ucr.edu/resources/career-planning" style="color:#ffb81c;target=">Career Paths</a></li> 
+                       </ul> 
+                      </div> 
+                     </div> 
+                    </div> 
+                    <div class="paragraph paragraph--type--expanding-card paragraph--view-mode--default cell card [ ] is-collapsed"> 
+                     <div class="card__inner [ js-expander ]" data-equalizer-watch> 
+                      <div class="expanding-card-background" style="background-color: #ffffff; "> <span> 
+                        <div alt="research" data-embed-button="media_browser" data-entity-embed-display="media_image" data-entity-type="media" data-entity-uuid="fe3e43a6-ac30-4d6a-ab66-fe6e8831feb3" data-langcode="en" title="research" class="embedded-entity"> 
+                         <img src="/sites/g/files/rcwecm4656/files/2021-02/sum20_-_ask_website_-_homepage_expanding_card_images_5.png" alt="research" title="research" typeof="foaf:Image">
+                        </div> </span> 
+                      </div> 
+                     </div> 
+                     <div class="card__expander"> <i class="fa fa-close [ js-collapser ]"></i> 
+                      <div class="card_expander_body"> 
+                       <p>As a Tier 1 Research University, UCR has plenty of <strong>research opportunities</strong> for undergraduates and grad students in any discipline or major.</p> 
+                       <ul>
+                        <li style="margin-top:0in; margin-left:.25in; margin-bottom:.0001pt"><a _blank="" href="https://ugr.ucr.edu" style="color:#ffb81c;target=">Undergraduate Research</a> 
+                         <ul>
+                          <li>Research Journal</li> 
+                          <li>Mini-Grants</li> 
+                          <li>Chancellor's Research Fellowship</li> 
+                          <li>Undergraduate Research Portal</li> 
+                          <li>Research Symposium</li> 
+                         </ul></li> 
+                        <li style="margin-top:0in; margin-left:.25in; margin-bottom:.0001pt"><a _blank="" href="https://www.ucr.edu/research/centers" style="color:#ffb81c;target=">Research Centers and Facilities</a></li> 
+                       </ul> 
+                      </div> 
+                     </div> 
+                    </div> 
+                    <div class="paragraph paragraph--type--expanding-card paragraph--view-mode--default cell card [ ] is-collapsed"> 
+                     <div class="card__inner [ js-expander ]" data-equalizer-watch> 
+                      <div class="expanding-card-background" style="background-color: #ffffff; "> <span> 
+                        <div alt="community and leadership" data-embed-button="media_browser" data-entity-embed-display="media_image" data-entity-type="media" data-entity-uuid="a9959499-1aef-4f30-ac02-a0ea2ee85bba" data-langcode="en" title="community and leadership" class="embedded-entity"> 
+                         <img src="/sites/g/files/rcwecm4656/files/2021-02/Sum20%20-%20Ask%20Website%20-%20Homepage%20Expanding%20card%20images%20%286%29.png" alt="community and leadership" title="community and leadership" typeof="foaf:Image">
+                        </div> </span> 
+                      </div> 
+                     </div> 
+                     <div class="card__expander"> <i class="fa fa-close [ js-collapser ]"></i> 
+                      <div class="card_expander_body"> 
+                       <p>Get involved in <strong>leadership</strong> and <strong>community service</strong> to turn your academic learning into&nbsp;real-world experiences.&nbsp;</p> 
+                       <ul>
+                        <li style="margin-top:0in; margin-left:.25in; margin-bottom:.0001pt"><a _blank="" href="https://studentlife.ucr.edu/leadership" style="color:#ffb81c;target=">Leadership&nbsp;</a></li> 
+                        <li style="margin-top:0in; margin-left:.25in; margin-bottom:.0001pt"><a _blank="" href="https://communityservice.ucr.edu" style="color:#ffb81c;target=">Community Service Portal</a></li> 
+                        <li style="margin-top:0in; margin-left:.25in; margin-bottom:.0001pt"><a _blank="" href="https://asucr.ucr.edu" style="color:#ffb81c;target=">ASUCR</a> (Student Governement)</li> 
+                        <li style="margin-top:0in; margin-left:.25in; margin-bottom:.0001pt">Student Communities 
+                         <ul>
+                          <li><a _blank="" href="https://international.ucr.edu" style="color:#ffb81c;target=">International Students</a></li> 
+                          <li><a _blank="" href="https://fosteryouth.ucr.edu/" style="color:#ffb81c;target=">Foster Youth</a></li> 
+                          <li><a _blank="" href="https://usp.ucr.edu" style="color:#ffb81c;target=">Undocumented Students</a></li> 
+                          <li><a _blank="" href="https://veterans.ucr.edu/" style="color:#ffb81c;target=">Veterans</a></li> 
+                          <li><a _blank="" href="https://deanofstudents.ucr.edu/diversity" style="color:#ffb81c;target=">Ethnic and Gender Programs</a></li> 
+                         </ul></li> 
+                       </ul> 
+                      </div> 
+                     </div> 
+                    </div> 
+                    <div class="paragraph paragraph--type--expanding-card paragraph--view-mode--default cell card [ ] is-collapsed"> 
+                     <div class="card__inner [ js-expander ]" data-equalizer-watch> 
+                      <div class="expanding-card-background" style="background-color: #ffffff; "> <span> 
+                        <div alt="health and basic needs" data-embed-button="media_browser" data-entity-embed-display="media_image" data-entity-type="media" data-entity-uuid="0b04776a-5066-4310-8949-908ee531c05c" data-langcode="en" title="health and basic needs" class="embedded-entity"> 
+                         <img src="/sites/g/files/rcwecm4656/files/2021-02/Sum20%20-%20Ask%20Website%20-%20Homepage%20Expanding%20card%20images%20%287%29.png" alt="health and basic needs" title="health and basic needs" typeof="foaf:Image">
+                        </div> </span> 
+                      </div> 
+                     </div> 
+                     <div class="card__expander"> <i class="fa fa-close [ js-collapser ]"></i> 
+                      <div class="card_expander_body"> 
+                       <p>Find campus resources related to <strong>health &amp; basic needs</strong> including <strong>mental health</strong> <strong>and</strong> <strong>counseling</strong>, <strong>housing</strong> <strong>and</strong> <strong>food needs</strong>, and <strong>exercise</strong> <strong>and wellness</strong>.</p> 
+                       <ul>
+                        <li style="margin-top:0in; margin-left:.25in; margin-bottom:.0001pt"><a _blank="" href="https://studenthealth.ucr.edu/" style="color:#ffb81c;target=">Student Health Services</a></li> 
+                        <li style="margin-top:0in; margin-left:.25in; margin-bottom:.0001pt"><a _blank="" href="https://counseling.ucr.edu" style="color:#ffb81c;target=">Counseling and Psychological Services</a> (CAPS)</li> 
+                        <li style="margin-top:0in; margin-left:.25in; margin-bottom:.0001pt"><a _blank="" href="https://casemanagement.ucr.edu/" style="color:#ffb81c;target=">Case Management</a></li> 
+                        <li style="margin-top:0in; margin-left:.25in; margin-bottom:.0001pt"><a _blank="" href="https://basicneeds.ucr.edu/" style="color:#ffb81c;target=">Basic Needs</a></li> 
+                        <li style="margin-top:0in; margin-left:.25in; margin-bottom:.0001pt"><a _blank="" href="https://well.ucr.edu" style="color:#ffb81c;target=">the Well</a></li> 
+                        <li style="margin-top:0in; margin-left:.25in; margin-bottom:.0001pt"><a _blank="" href="https://recreation.ucr.edu" style="color:#ffb81c;target=">Student Rec Center</a></li> 
+                       </ul> 
+                      </div> 
+                     </div> 
+                    </div> 
+                    <div class="paragraph paragraph--type--expanding-card paragraph--view-mode--default cell card [ ] is-collapsed"> 
+                     <div class="card__inner [ js-expander ]" data-equalizer-watch> 
+                      <div class="expanding-card-background" style="background-color: #ffffff; "> <span> 
+                        <div alt="arts and culture" data-embed-button="media_browser" data-entity-embed-display="media_image" data-entity-type="media" data-entity-uuid="d6d9956f-5286-4b4b-90ee-51eefd23e4f0" data-langcode="en" title="arts and culture" class="embedded-entity"> 
+                         <img src="/sites/g/files/rcwecm4656/files/2021-02/sum20_-_ask_website_-_homepage_expanding_card_images_8.png" alt="arts and culture" title="arts and culture" typeof="foaf:Image">
+                        </div> </span> 
+                      </div> 
+                     </div> 
+                     <div class="card__expander"> <i class="fa fa-close [ js-collapser ]"></i> 
+                      <div class="card_expander_body"> 
+                       <p>Find other ways to get involved on campus with <strong>arts and culture</strong>, <strong>theatre and dance</strong>, UCR's own <strong>radio station</strong> (KUCR), <strong>UCR&nbsp;Botanic Gardens</strong>, <strong>campus athletics</strong>, and activities through&nbsp;<strong>ethnic and gender programs</strong>.&nbsp;</p> 
+                       <ul>
+                        <li style="margin-top:0in; margin-left:.25in; margin-bottom:.0001pt"><a _blank="" href="https://events.ucr.edu/" style="color:#ffb81c;target=">Campus Event Calendar</a></li> 
+                        <li style="margin-top:0in; margin-left:.25in; margin-bottom:.0001pt"><a _blank="" href="https://deanofstudents.ucr.edu/diversity" style="color:#ffb81c;target=">Ethnic and Gender Programs</a></li> 
+                        <li style="margin-top:0in; margin-left:.25in; margin-bottom:.0001pt"><a _blank="" href="https://gardens.ucr.edu/" style="color:#ffb81c;target=">UCR Botanic Gardens</a></li> 
+                        <li style="margin-top:0in; margin-left:.25in; margin-bottom:.0001pt"><a _blank="" href="https://gohighlanders.com/" style="color:#ffb81c;target=">Athletics</a></li> 
+                        <li style="margin-top:0in; margin-left:.25in; margin-bottom:.0001pt"><a _blank="" href="https://ucrarts.ucr.edu/" style="color:#ffb81c;target=">ArtsBlock</a></li> 
+                        <li style="margin-top:0in; margin-left:.25in; margin-bottom:.0001pt"><a _blank="" href="https://international.ucr.edu/abroad" style="color:#ffb81c;target=">Education Abroad</a></li> 
+                        <li style="margin-top:0in; margin-left:.25in; margin-bottom:.0001pt"><a _blank="" href="https://kucr.org/" style="color:#ffb81c;target=">KUCR Radio</a></li> 
+                        <li style="margin-top:0in; margin-left:.25in; margin-bottom:.0001pt"><a _blank="" href="https://theatre.ucr.edu/" style="color:#ffb81c;target=">Theatre and Performing Events</a></li> 
+                       </ul> 
+                      </div> 
+                     </div> 
+                    </div> 
+                    <div class="paragraph paragraph--type--expanding-card paragraph--view-mode--default cell card [ ] is-collapsed"> 
+                     <div class="card__inner [ js-expander ]" data-equalizer-watch> 
+                      <div class="expanding-card-background" style="background-color: #ffffff; "> <span> 
+                        <div alt="housing and dining" data-embed-button="media_browser" data-entity-embed-display="media_image" data-entity-type="media" data-entity-uuid="15f6123d-fd16-4263-ba32-38165a477c3c" data-langcode="en" title="housing and dining" class="embedded-entity"> 
+                         <img src="/sites/g/files/rcwecm4656/files/2021-02/Sum20%20-%20Ask%20Website%20-%20Homepage%20Expanding%20card%20images%20%289%29.png" alt="housing and dining" title="housing and dining" typeof="foaf:Image">
+                        </div> </span> 
+                      </div> 
+                     </div> 
+                     <div class="card__expander"> <i class="fa fa-close [ js-collapser ]"></i> 
+                      <div class="card_expander_body"> 
+                       <p>Locate campus <strong>housing</strong> and <strong>dining</strong> resources.</p> 
+                       <ul>
+                        <li style="margin-top:0in; margin-left:.25in; margin-bottom:.0001pt"><a _blank="" href="https://housing.ucr.edu/" style="color:#ffb81c;target=">Campus Housing</a></li> 
+                        <li style="margin-top:0in; margin-left:.25in; margin-bottom:.0001pt"><a _blank="" href="https://housing.ucr.edu/ucr-housing-options/ucr-campus-apartments" style="color:#ffb81c;target=">Campus Apartments</a></li> 
+                        <li style="margin-top:0in; margin-left:.25in; margin-bottom:.0001pt"><a _blank="" href="https://housing.ucr.edu/residential-life" style="color:#ffb81c;target=">Residential Life</a></li> 
+                        <li style="margin-top:0in; margin-left:.25in; margin-bottom:.0001pt"><a _blank="" href="https://dining.ucr.edu/" style="color:#ffb81c;target=">Dining</a></li> 
+                       </ul> 
+                      </div> 
+                     </div> 
+                    </div> 
+                    <div class="paragraph paragraph--type--expanding-card paragraph--view-mode--default cell card [ ] is-collapsed"> 
+                     <div class="card__inner [ js-expander ]" data-equalizer-watch> 
+                      <div class="expanding-card-background" style="background-color: #ffffff; "> <span> 
+                        <div alt="campus safety" data-embed-button="media_browser" data-entity-embed-display="media_image" data-entity-type="media" data-entity-uuid="fb765ca2-d9e4-48f3-94c2-2a9bd6c34655" data-langcode="en" title="campus safety" class="embedded-entity"> 
+                         <img src="/sites/g/files/rcwecm4656/files/2021-02/Sum20%20-%20Ask%20Website%20-%20Homepage%20Expanding%20card%20images%20%2810%29.png" alt="campus safety" title="campus safety" typeof="foaf:Image">
+                        </div> </span> 
+                      </div> 
+                     </div> 
+                     <div class="card__expander"> <i class="fa fa-close [ js-collapser ]"></i> 
+                      <div class="card_expander_body"> 
+                       <p>Find resources to help keep you <strong>safe</strong> <strong>on campus</strong> or where to <strong>report a crime</strong> or other form of misconduct.</p> 
+                       <ul>
+                        <li style="margin-top:0in; margin-left:.25in; margin-bottom:.0001pt"><a _blank="" href="https://emergency.ucr.edu/" style="color:#ffb81c;target=">Emergency Notification System</a></li> 
+                        <li style="margin-top:0in; margin-left:.25in; margin-bottom:.0001pt"><a _blank="" href="https://studentaffairs.ucr.edu/crisis" style="color:#ffb81c;target=">Students in Crisis</a></li> 
+                        <li style="margin-top:0in; margin-left:.25in; margin-bottom:.0001pt"><a _blank="" href="https://wrc.ucr.edu/programs/campus-safety-escort-service" style="color:#ffb81c;target=">Campus Safety Escort Service</a></li> 
+                        <li style="margin-top:0in; margin-left:.25in; margin-bottom:.0001pt">Reporting Misconduct (<a _blank="" href="https://help.ucr.edu/" style="color:#ffb81c;target=">Help.ucr.edu</a> and <a _blank="" href="https://deanofstudents.ucr.edu/" style="color:#ffb81c;target=">Dean of Students</a>) 
+                         <ul>
+                          <li><a _blank="" href="https://conduct.ucr.edu/for-students/hazing-information#:~:text=Report%20hazing%20immediately%20to%3A,(951)%20827%2D4208." style="color:#ffb81c;target=">Hazing</a></li> 
+                          <li><a _blank="" href="https://conduct.ucr.edu/policies/reporting-sexual-assault" style="color:#ffb81c;target=">Sexual Assault</a></li> 
+                          <li><a _blank="" href="https://compliance.ucr.edu/equal-opportunity-and-civil-rights#:~:text=If%20retaliation%20should%20occur%2C%20please,or%20titleix%40ucr.edu.&amp;text=This%20link%20leads%20you%20to,including%20discrimination%2C%20harassment%20and%20retaliation." style="color:#ffb81c;target=">Discrimination/Harassment</a></li> 
+                          <li><a _blank="" href="https://conduct.ucr.edu/" style="color:#ffb81c;target=">Academic and/or Social Misconduct</a></li> 
+                          <li><a _blank="" href="https://compliance.ucr.edu/clery-act-compliance#clery_act_coordinator" style="color:#ffb81c;target=">Clery Act&nbsp;</a></li> 
+                          <li><a _blank="" href="https://help.ucr.edu/office-ombuds" style="color:#ffb81c;target=">Office of the Ombuds</a></li> 
+                         </ul></li> 
+                       </ul> 
+                      </div> 
+                     </div> 
+                    </div> 
+                    <div class="paragraph paragraph--type--expanding-card paragraph--view-mode--default cell card [ ] is-collapsed"> 
+                     <div class="card__inner [ js-expander ]" data-equalizer-watch> 
+                      <div class="expanding-card-background" style="background-color: #ffffff; "> <span> 
+                        <div alt="navigating campus" data-embed-button="media_browser" data-entity-embed-display="media_image" data-entity-type="media" data-entity-uuid="139a637b-7fdf-4f44-87e3-32fe642d1be4" data-langcode="en" title="navigating campus" class="embedded-entity"> 
+                         <img src="/sites/g/files/rcwecm4656/files/2021-02/sum20_-_ask_website_-_homepage_expanding_card_images_11.png" alt="navigating campus" title="navigating campus" typeof="foaf:Image">
+                        </div> </span> 
+                      </div> 
+                     </div> 
+                     <div class="card__expander"> <i class="fa fa-close [ js-collapser ]"></i> 
+                      <div class="card_expander_body"> 
+                       <p style="margin-top:0in; margin-left:.25in; margin-bottom:.0001pt">Resources to help you navigate campus and find information on <strong>parking</strong>, how to <strong>reserve a room in the HUB</strong>, and where to book a <strong>campus tour</strong>.</p> 
+                       <p style="margin-top:0in; margin-left:.25in; margin-bottom:.0001pt">&nbsp;</p> 
+                       <ul>
+                        <li style="margin-top:0in; margin-left:.25in; margin-bottom:.0001pt"><a _blank="" href="https://campusmap.ucr.edu/" style="color:#ffb81c;target=">Campus Map</a></li> 
+                        <li style="margin-top:0in; margin-left:.25in; margin-bottom:.0001pt"><a _blank="" href="https://transportation.ucr.edu/maps" style="color:#ffb81c;target=">Parking</a></li> 
+                        <li style="margin-top:0in; margin-left:.25in; margin-bottom:.0001pt">HUB (<a _blank="" href="https://hub.ucr.edu/scheduling/reservable" style="color:#ffb81c;target=">Room Reservations</a>)</li> 
+                        <li style="margin-top:0in; margin-left:.25in; margin-bottom:.0001pt"><a _blank="" href="https://www.ucr.edu/leadership" style="color:#ffb81c;target=">Campus Leadership&nbsp;</a></li> 
+                        <li style="margin-top:0in; margin-left:.25in; margin-bottom:.0001pt"><a _blank="" href="https://www.ucr.edu/alpha" style="color:#ffb81c;target=">A - Z Directory</a></li> 
+                        <li style="margin-top:0in; margin-left:.25in; margin-bottom:.0001pt"><a _blank="" href="https://profiles.ucr.edu/app/home" style="color:#ffb81c;target=">Find People&nbsp;</a></li> 
+                        <li style="margin-top:0in; margin-left:.25in; margin-bottom:.0001pt"><a _blank="" href="https://admissions.ucr.edu/visit" style="color:#ffb81c;target=">Campus Tours</a></li> 
+                        <li style="margin-top:0in; margin-left:.25in; margin-bottom:.0001pt"><a _blank="" href="https://www.ucr.edu/about/history" style="color:#ffb81c;target=">Campus History</a>, <a _blank="" href="https://studentlife.ucr.edu/ucr-traditions" style="color:#ffb81c;target=">Campus Traditions</a></li> 
+                       </ul> 
+                      </div> 
+                     </div> 
+                    </div> 
+                   </div> 
+                  </div> 
+                 </div> 
+                </div> 
+               </div> 
+               <div class="cell medium-4"> 
+                <div class="layout__region layout__region--column-2"> 
+                 <div data-block-plugin-id="block_content:ebab54f3-ccee-4259-8f10-67369cb99d58" class="ucr-custom-block ucr-custom-block-custom-margins ucr-custom-block-custom-paddings margin-top-3 margin-bottom-0 medium-margin-horizontal-0 padding-bottom-1 padding-left-1"> 
+                  <div class="grid-container full"> 
+                   <div class="grid-x grid-padding-x"> 
+                    <div class="cell"> 
+                     <h4><strong>Campus Deadlines&nbsp;</strong></h4> 
+                     <table border="1" cellpadding="1" cellspacing="1" class="no-stripes" style="width: 350px;">
+                      <thead></thead>
+                      <tbody>
+                       <tr>
+                        <td class="text-align-center" style="background-color: rgb(255, 184, 28); width: 68px;"><strong>May 6</strong></td> 
+                        <td style="width: 281px;"><a href="https://registrar.ucr.edu/registering" rel=" noopener" target="_blank">Last day</a> to withdraw from a course ($4 fee)</td> 
+                       </tr>
+                       <tr>
+                        <td class="text-align-center" style="background-color: rgb(255, 184, 28); width: 68px;"><strong>May 10</strong></td> 
+                        <td style="width: 281px;">Fall&nbsp;Housing contract and payment <a href="https://housing.ucr.edu/get-housing/important-dates-deadlines" rel=" noopener" target="_blank">deadline</a></td> 
+                       </tr>
+                       <tr>
+                        <td class="text-align-center" style="background-color: rgb(255, 184, 28); width: 68px;"><strong>May 17</strong></td> 
+                        <td style="width: 281px;">Deadline - Intent to participate during spring <a href="https://commencement.ucr.edu/" rel=" noopener" target="_blank">commencement</a></td> 
+                       </tr>
+                       <tr>
+                        <td class="text-align-center" style="background-color: rgb(255, 184, 28); width: 68px;"><strong>May 30</strong></td> 
+                        <td style="width: 281px;">Memorial Day Holiday (no classes)</td> 
+                       </tr>
+                       <tr>
+                        <td class="text-align-center" style="background-color: rgb(255, 184, 28); width: 68px;"><strong>June 1</strong></td> 
+                        <td style="width: 281px;"><a href="https://commencement.ucr.edu/" rel=" noopener" target="_blank">Deadline </a>to submit photo and message for spring commencement</td> 
+                       </tr>
+                       <tr>
+                        <td class="text-align-center" style="background-color: rgb(255, 184, 28); width: 68px;"><strong>June 1</strong></td> 
+                        <td style="width: 281px;">Application <a href="https://graduate.ucr.edu/deadlines" rel=" noopener" target="_blank">deadline</a> - UCR graduate school (non-medical)</td> 
+                       </tr>
+                       <tr>
+                        <td class="text-align-center" style="background-color: rgb(255, 184, 28); width: 68px;"><strong>June 3</strong></td> 
+                        <td style="width: 281px;"><a href="https://studentdocs.ucr.edu/registrar/UCR_Registrar_Academic-Calendar.pdf" rel=" noopener" target="_blank">Last day</a> of instruction</td> 
+                       </tr>
+                       <tr>
+                        <td class="text-align-center" style="background-color: rgb(255, 184, 28); width: 68px;"><strong>June 4-10</strong></td> 
+                        <td style="width: 281px;"><a href="https://registrar.ucr.edu/registering/plan-for-final-exams" rel=" noopener" target="_blank">Final Examinations</a></td> 
+                       </tr>
+                       <tr>
+                        <td class="text-align-center" style="background-color: rgb(255, 184, 28); width: 68px;"><strong>June 10</strong></td> 
+                        <td style="width: 281px;"><a href="https://studentdocs.ucr.edu/registrar/UCR_Registrar_Academic-Calendar.pdf" rel=" noopener" target="_blank">Last day</a> of the quarter</td> 
+                       </tr>
+                       <tr>
+                        <td class="text-align-center" style="background-color: rgb(255, 184, 28); width: 68px;"><strong>June 10-13</strong></td> 
+                        <td style="width: 281px;">UCR <a href="https://commencement.ucr.edu/" rel=" noopener" target="_blank">commencement</a> celebrations</td> 
+                       </tr>
+                       <tr>
+                        <td class="text-align-center" style="background-color: rgb(255, 184, 28); width: 68px;"><strong>July 1</strong></td> 
+                        <td style="width: 281px;">Summer 2021 Undergraduate Graduation application <a href="https://registrar.ucr.edu/graduation-guide/deadline" rel=" noopener" target="_blank">deadline</a> - 4pm</td> 
+                       </tr>
+                       <tr>
+                        <td class="text-align-center" style="background-color: rgb(255, 184, 28); width: 68px;"><strong>July 4</strong></td> 
+                        <td style="width: 281px;">Independence Day Holiday (no classes)</td> 
+                       </tr>
+                       <tr>
+                        <td class="text-align-center" style="background-color: rgb(255, 184, 28); width: 68px;"><strong>Aug 30 - Sept. 8</strong></td> 
+                        <td style="width: 281px;"><a href="https://registrationssb.ucr.edu/StudentRegistrationSsb/ssb/term/termSelection?mode=search" rel=" noopener" target="_blank">Transfer Students Registration</a> opens</td> 
+                       </tr>
+                       <tr>
+                        <td colspan="2"><sub><span style="color:null;">*Deadlines above are intended as reminders only and must be verified with the coordinating office.&nbsp;</span></sub>
+                         <ul>
+                          <li><a href="https://registrar.ucr.edu/calendar"><sub><span style="color:null;">Academic Calendar - Registrar</span></sub></a></li> 
+                          <li><sub><a href="https://housing.ucr.edu/get-housing/important-dates-deadlines" target="_blank">Housing</a></sub></li> 
+                          <li><a href="https://se.ucr.edu/events-calendar"><sub>Student Engagement</sub></a></li> 
+                          <li><a href="https://financialaid.ucr.edu/apply/how-to-apply#undergraduate_students"><sub>Financial Aid</sub></a></li> 
+                         </ul></td> 
+                       </tr>
+                      </tbody>
+                     </table> 
+                    </div> 
+                   </div> 
+                  </div> 
+                 </div> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+             <div class="layout layout-one-col grid-container full"> 
+              <div class="grid-x"> 
+               <div class="cell"> 
+                <div class="layout__region layout__region--main"> 
+                 <div data-block-plugin-id="block_content:1b4bde8a-2657-41a0-a246-c88ea0ff9eb3" class="ucr-custom-block ucr-custom-block-custom-margins ucr-custom-block-custom-paddings"> 
+                  <div class="dynamic-columns dc-full dc-standard margin-bottom-0 medium-margin-horizontal-0 padding-top-3 padding-bottom-0 padding-left-1 padding-right-4" style="overflow:hidden; background: linear-gradient(rgba(233,237,242,1),rgba(233,237,242,1)); background-size:cover;"> 
+                   <div class="grid-container full"> 
+                    <div class="grid-x grid-margin-x grid-margin-y grid-padding-x grid-padding-y small-up-1 medium-up-2 large-up-2 align-center"> 
+                     <div class="paragraph paragraph--type--ucr-columns paragraph--view-mode--default cell" style=""> 
+                      <div alt="student image" data-embed-button="media_browser" data-entity-embed-display="media_image" data-entity-embed-display-settings="scale_733" data-entity-type="media" data-entity-uuid="da7fe861-5063-4f60-827f-686517bb07cc" data-langcode="en" title="student image" class="embedded-entity align-right"> 
+                       <img src="/sites/g/files/rcwecm4656/files/styles/scale_733/public/2021-03/2018_03_12_UCR_day1_post-106.JPG?itok=vy6O4R3q" alt="student image" title="student image" typeof="foaf:Image">
+                      </div> 
+                     </div> 
+                     <div class="paragraph paragraph--type--ucr-columns paragraph--view-mode--default cell" style=""> 
+                      <h4><strong>Learning Resources</strong></h4> 
+                      <p>These UCR resources are here to support you toward your academic goals including the Academic Resource Center (ARC), the Library,&nbsp;Grad Success, and Keep Learning.</p> 
+                      <p><strong><a class="btn-ucr-dk-blue" href="https://arc.ucr.edu/" target="_blank">ACADEMIC RESOURCE CENTER</a></strong></p> 
+                      <ul>
+                       <li>The&nbsp;<strong><a href="https://arc.ucr.edu/tap" target="_blank">Tutoring Assistance Program</a></strong>&nbsp;offers peer, small group tutoring in a variety of STEM, humanities, and social sciences subjects and disciplines</li> 
+                       <li><strong><a href="https://arc.ucr.edu/si" target="_blank">Supplemental Instruction</a></strong>&nbsp;(SI) offers student-led mentoring&nbsp;available to&nbsp;students in traditionally difficult subjects</li> 
+                       <li><a href="https://arc.ucr.edu/rsuccess" target="_blank"><strong>R'Success Workshops</strong></a>&nbsp;cover&nbsp;a variety of study and life skills topics with each workshop offered several times each quarter</li> 
+                       <li><a href="https://arc.ucr.edu/ace" target="_blank"><strong>Assistance, Coaching, and Encouragement</strong></a>&nbsp;(ACE) is a customized academic support program for students encountering academic difficulty</li> 
+                       <li><a href="https://arc.ucr.edu/writing" target="_blank"><strong>Writing Support Program</strong></a>&nbsp;supports UCR undergraduate students through writing consultations and workshops</li> 
+                      </ul>
+                      <p><a class="btn-ucr-dk-blue" href="https://library.ucr.edu/" target="_blank"><b>LIBRARY.UCR.EDU</b></a></p> 
+                      <ul>
+                       <li><a href="https://library.ucr.edu/research-services" target="_blank"><strong>Research Services</strong></a>&nbsp;to&nbsp;learn how to find and manage resources,&nbsp;write strong academic papers,&nbsp;utilize our services, and learn tools of the research trade</li> 
+                       <li><a href="https://library.ucr.edu/instructional-support" target="_blank"><strong>Instructional Support</strong></a>&nbsp;to provide&nbsp;and support&nbsp;information literacy and research instruction for the entire campus community</li> 
+                      </ul>
+                      <p><strong><a class="btn-ucr-dk-blue" href="https://keeplearning.ucr.edu/">KEEPLEARNING.UCR.EDU</a></strong></p> 
+                      <ul>
+                       <li>Tutorials for online learning technology</li> 
+                       <li>Assistance with&nbsp;<strong><a href="https://keeplearning.ucr.edu/quick-guide-remote-learning">remote learning</a></strong>&nbsp;and&nbsp;<strong><a href="https://keeplearning.ucr.edu/exams">online assignments and exams</a></strong></li> 
+                       <li>Laptop and hot spot&nbsp;loan programs as well as free software for students</li> 
+                      </ul>
+                      <p><strong><a class="btn-ucr-dk-blue" href="https://graduate.ucr.edu/gradsuccess">GRADUATE.UCR.EDU/GRADSUCCESS</a></strong></p> 
+                      <ul>
+                       <li><strong><a href="https://gsrc.ucr.edu/">Graduate Student Resource Center</a></strong>&nbsp;academic development, career support, and community</li> 
+                       <li><strong><a href="https://gradmentors.ucr.edu/">Graduate Student Mentorship Program</a></strong>&nbsp;peer and faculty mentors for&nbsp;grad students</li> 
+                       <li><strong><a href="https://gwc.ucr.edu/">Graduate Writing Support</a></strong>&nbsp;Supports all stages of the writing process - abstracts, grants, journals, CV, and more</li> 
+                       <li><strong><a href="https://gradquant.ucr.edu/" title="GradSuccess: Grad Quant">GradQuant</a></strong>&nbsp;Quantitative methodology, computer programming, and research&nbsp;support</li> 
+                      </ul> 
+                     </div> 
+                    </div> 
+                   </div> 
+                  </div> 
+                 </div> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+             <div class="layout layout-one-col grid-container full"> 
+              <div class="grid-x"> 
+               <div class="cell"> 
+                <div class="layout__region layout__region--main"> 
+                 <div data-block-plugin-id="block_content:e7d9bd93-2ab3-4ed1-b17c-00eaf49740c9" class="ucr-custom-block ucr-custom-block-custom-margins ucr-custom-block-custom-paddings ucr-custom-block-font-white medium-margin-horizontal-0 padding-0" style="background: url(/sites/g/files/rcwecm4656/files/2022-02/EXCEL%2B%20-%20Web%20%28W22%29%20%281920%20%C3%97%20250%20px%29.png); background-size: cover;"> 
+                  <div class="grid-container full"> 
+                   <div class="grid-x grid-padding-x"> 
+                    <div class="cell"> 
+                     <p style="margin:10px 10px 0px 55%">Earn points towards career competency digital badges for participation in activities on campus that you are probably already involved in such as:</p> 
+                     <ul style="margin:0px 10px 0px 58%">
+                      <li>courses</li> 
+                      <li>student clubs and orgs</li> 
+                      <li>ASUCR</li> 
+                      <li>research</li> 
+                      <li>and much, much more</li> 
+                     </ul>
+                     <p style="margin:0px 0px 10px 55%">Visit our website at <a href="https://excel.ucr.edu" rel=" noopener" style="color:#ffb81c;target=">excel.ucr.edu</a> to find more information and sign-up today!</p> 
+                    </div> 
+                   </div> 
+                  </div> 
+                 </div> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+             <div class="layout layout-one-col grid-container"> 
+              <div class="grid-x"> 
+               <div class="cell"> 
+                <div class="layout__region layout__region--main"> 
+                 <div data-block-plugin-id="block_content:4d9afaa8-aeb7-4eb7-b451-7c3352968ea4" class="ucr-custom-block ucr-custom-block-custom-margins ucr-custom-block-custom-paddings margin-top-2 margin-bottom-1 medium-margin-horizontal-0 padding-top-1 padding-bottom-2 padding-horizontal-1"> 
+                  <div class="grid-container full"> 
+                   <div class="grid-x grid-padding-x"> 
+                    <div class="cell"> 
+                     <div alt="Tech Support Image" data-embed-button="media_browser" data-entity-embed-display="media_image" data-entity-embed-display-settings="scale_550" data-entity-type="media" data-entity-uuid="5a289bce-0a37-4aff-90ec-1fbd89732144" data-langcode="en" title="Tech Support Image" class="embedded-entity align-right"> 
+                      <img src="/sites/g/files/rcwecm4656/files/styles/scale_550/public/2021-06/2018_03_12_UCR_day1_post-14_0.JPG?itok=M826UDkn" alt="Tech Support Image" title="Tech Support Image" typeof="foaf:Image">
+                     </div> 
+                     <h4><strong>Tech Support</strong></h4> 
+                     <p>UCR Information Technology Solutions (ITS) provides resources to help students:</p> 
+                     <ul>
+                      <li>Free <strong><a href="http://mysoftware.ucr.edu/">Software for Students</a></strong></li> 
+                      <li>Online <strong>tech support</strong> <strong><u><a href="https://ucrsupport.service-now.com/ucr_portal/?id=sc_cat_item&amp;sys_id=d10c39ee0f348300138942bce1050e8b" target="_blank" title="https://ucrsupport.service-now.com/ucr_portal/?id=sc_cat_item&amp;sys_id=d10c39ee0f348300138942bce1050e8b">ticket</a></u></strong>&nbsp;<strong>system</strong></li> 
+                      <li>Browse the&nbsp;<strong><u><a href="https://ucrsupport.service-now.com/ucr_portal/?id=knowledge" target="_blank" title="https://ucrsupport.service-now.com/ucr_portal/?id=knowledge">ITS Knowledge Base</a></u></strong>&nbsp;for <strong>self-help articles</strong></li> 
+                      <li>Apply for a<strong> <a href="https://its.ucr.edu/loan2learn" target="_blank">loaner laptop</a></strong>&nbsp;or WiFi hotspot</li> 
+                     </ul>
+                     <p><strong>Phone:</strong> (951) 827-IT4U (4848)</p> 
+                     <p>&nbsp;</p> 
+                     <p>Let us know how your classes are going!</p> 
+                     <p><a class="btn-ucr-gold" href="https://ue.ucr.edu/form/comments-on-instruction#no-back" target="_blank">Remote Teaching Feedback</a></p> 
+                    </div> 
+                   </div> 
+                  </div> 
+                 </div> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+             <div class="layout layout-one-col grid-container full"> 
+              <div class="grid-x"> 
+               <div class="cell"> 
+                <div class="layout__region layout__region--main"> 
+                 <div data-block-plugin-id="block_content:085dfe50-4347-44ab-86af-9cd3ff489209" class="ucr-custom-block ucr-custom-block-custom-margins ucr-custom-block-custom-paddings ucr-custom-block-font-white margin-top-0 margin-bottom-1 medium-margin-horizontal-0 padding-0" style="background: url(/sites/g/files/rcwecm4656/files/2020-12/FreshmanCollective%20Text-based%20peer%20mentoring%20%284%29.png); background-size: cover;"> 
+                  <div class="grid-container full"> 
+                   <div class="grid-x grid-padding-x"> 
+                    <div class="cell"> 
+                     <h5 class="text-align-center">&nbsp;</h5> 
+                     <p>&nbsp;</p> 
+                     <h6 class="text-align-center"><strong>Are you a&nbsp;freshman or&nbsp;transfer student? </strong></h6> 
+                     <h4 class="text-align-center"><strong><a _blank="" href="https://ue.ucr.edu/mentoring" style="color:#ffb81c;target=">Get a Mentor</a></strong><br> &nbsp;</h4> 
+                     <p class="text-align-center">&nbsp;</p> 
+                    </div> 
+                   </div> 
+                  </div> 
+                 </div> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+             <div class="layout layout-one-col grid-container"> 
+              <div class="grid-x grid-padding-x"> 
+               <div class="cell"> 
+                <div class="layout__region layout__region--main"> 
+                 <div data-block-plugin-id="block_content:330a54f3-9911-4eb0-8cd5-97e646b2a886" class="ucr-custom-block ucr-custom-block-custom-paddings padding-horizontal-1 dc-columnborder" style=""> 
+                  <div class="grid-container full margin-bottom-1"> 
+                   <div class="grid-x grid-padding-x"> 
+                    <div class="cell"> 
+                     <h4><strong>UCR Videos</strong></h4> 
+                    </div> 
+                   </div> 
+                  </div> 
+                  <div class="dynamic-columns dc-full"> 
+                   <div class="grid-container full"> 
+                    <div class="grid-x grid-margin-x grid-margin-y grid-padding-x grid-padding-y small-up-1 medium-up-2 large-up-3 align-center"> 
+                     <div class="paragraph paragraph--type--ucr-columns paragraph--view-mode--default cell" style=""> 
+                      <h6 class="text-align-center"><strong>10 things to know about fall quarter at UC Riverside 2021</strong></h6> 
+                      <div data-embed-button="media_browser" data-entity-embed-display="view_mode:media.embedded" data-entity-type="media" data-entity-uuid="6af6edbd-a997-4e5e-a11a-311820e740d9" data-langcode="en" class="embedded-entity align-center">
+                       <article>
+                        <div data-video-embed-field-lazy="<div class=&quot;video-embed-field-provider-youtube video-embed-field-responsive-video&quot;><iframe width=&quot;854&quot; height=&quot;480&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;allowfullscreen&quot; src=&quot;https://www.youtube.com/embed/BbGcrb00vII?autoplay=0&amp;amp;start=0&amp;amp;rel=0&quot;></iframe>
+</div>
+" class="video-embed-field-lazy">
+                         <img src="/sites/g/files/rcwecm4656/files/video_thumbnails/BbGcrb00vII.jpg" alt="" typeof="foaf:Image"><button class="video-embed-field-lazy-play" aria-label="Play video"></button> 
+                        </div> 
+                       </article>
+                      </div> 
+                     </div> 
+                     <div class="paragraph paragraph--type--ucr-columns paragraph--view-mode--default cell" style=""> 
+                      <h6 class="text-align-center"><strong>How to take the Covid-19 test at UC Riverside</strong></h6> 
+                      <div data-embed-button="media_browser" data-entity-embed-display="view_mode:media.embedded" data-entity-type="media" data-entity-uuid="cab652dd-4c29-428f-8c6c-ef0b57fcea31" data-langcode="en" class="embedded-entity align-center">
+                       <article>
+                        <div data-video-embed-field-lazy="<div class=&quot;video-embed-field-provider-youtube video-embed-field-responsive-video&quot;><iframe width=&quot;854&quot; height=&quot;480&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;allowfullscreen&quot; src=&quot;https://www.youtube.com/embed/wgXo1FSPr10?autoplay=0&amp;amp;start=0&amp;amp;rel=0&quot;></iframe>
+</div>
+" class="video-embed-field-lazy">
+                         <img src="/sites/g/files/rcwecm4656/files/video_thumbnails/wgXo1FSPr10.jpg" alt="" typeof="foaf:Image"><button class="video-embed-field-lazy-play" aria-label="Play video"></button> 
+                        </div> 
+                       </article>
+                      </div> 
+                      <div contenteditable="false" tabindex="-1"> <drupal-entity></drupal-entity>
+                      </div> 
+                     </div> 
+                     <div class="paragraph paragraph--type--ucr-columns paragraph--view-mode--default cell" style=""> 
+                      <h5 class="text-align-center"><span style="color:null;"><strong>Introduction to UCR ITS</strong></span></h5> 
+                      <div data-embed-button="media_browser" data-entity-embed-display="view_mode:media.embedded" data-entity-type="media" data-entity-uuid="68c4aaa7-bbc2-4b86-930f-a170dbfe0d8d" data-langcode="en" class="embedded-entity align-center">
+                       <article>
+                        <div data-video-embed-field-lazy="<div class=&quot;video-embed-field-provider-youtube video-embed-field-responsive-video&quot;><iframe width=&quot;854&quot; height=&quot;480&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;allowfullscreen&quot; src=&quot;https://www.youtube.com/embed/RglVZEl1cz0?autoplay=0&amp;amp;start=0&amp;amp;rel=0&quot;></iframe>
+</div>
+" class="video-embed-field-lazy">
+                         <img src="/sites/g/files/rcwecm4656/files/video_thumbnails/RglVZEl1cz0.jpg" alt="" typeof="foaf:Image"><button class="video-embed-field-lazy-play" aria-label="Play video"></button> 
+                        </div> 
+                       </article>
+                      </div> 
+                     </div> 
+                     <div class="paragraph paragraph--type--ucr-columns paragraph--view-mode--default cell" style=""> 
+                      <h6 class="text-align-center"><strong>Health &amp; Wellness Services</strong></h6> 
+                      <div data-embed-button="media_browser" data-entity-embed-display="view_mode:media.embedded" data-entity-type="media" data-entity-uuid="ee8e99e2-0df4-41ba-82c1-73fa9cf5521f" data-langcode="en" class="embedded-entity align-center">
+                       <article>
+                        <div data-video-embed-field-lazy="<div class=&quot;video-embed-field-provider-youtube video-embed-field-responsive-video&quot;><iframe width=&quot;854&quot; height=&quot;480&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;allowfullscreen&quot; src=&quot;https://www.youtube.com/embed/8w02XCW6cS4?autoplay=0&amp;amp;start=0&amp;amp;rel=0&quot;></iframe>
+</div>
+" class="video-embed-field-lazy">
+                         <img src="/sites/g/files/rcwecm4656/files/video_thumbnails/8w02XCW6cS4.jpg" alt="" typeof="foaf:Image"><button class="video-embed-field-lazy-play" aria-label="Play video"></button> 
+                        </div> 
+                       </article>
+                      </div> 
+                     </div> 
+                     <div class="paragraph paragraph--type--ucr-columns paragraph--view-mode--default cell" style=""> 
+                      <h6 class="text-align-center"><strong>&nbsp;How to: Boost Your Mental Health</strong></h6> 
+                      <div data-embed-button="media_browser" data-entity-embed-display="view_mode:media.embedded" data-entity-type="media" data-entity-uuid="a7a34dae-07d4-46a9-98b5-d34f6364e623" data-langcode="en" class="embedded-entity align-center">
+                       <article>
+                        <div data-video-embed-field-lazy="<div class=&quot;video-embed-field-provider-youtube video-embed-field-responsive-video&quot;><iframe width=&quot;854&quot; height=&quot;480&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;allowfullscreen&quot; src=&quot;https://www.youtube.com/embed/tw2qYMWqQCE?autoplay=0&amp;amp;start=12&amp;amp;rel=0&quot;></iframe>
+</div>
+" class="video-embed-field-lazy">
+                         <img src="/sites/g/files/rcwecm4656/files/video_thumbnails/tw2qYMWqQCE.jpg" alt="" typeof="foaf:Image"><button class="video-embed-field-lazy-play" aria-label="Play video"></button> 
+                        </div> 
+                       </article>
+                      </div> 
+                     </div> 
+                    </div> 
+                   </div> 
+                  </div> 
+                 </div> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+             <div class="layout layout-one-col grid-container full"> 
+              <div class="grid-x"> 
+               <div class="cell"> 
+                <div class="layout__region layout__region--main"> 
+                 <div data-block-plugin-id="block_content:9f29244f-c9fd-480f-8940-e3754d4beabe" class="ucr-custom-block ucr-custom-block-custom-margins ucr-custom-block-custom-paddings margin-top-0 medium-margin-horizontal-0 padding-horizontal-0" style="background: url(/sites/g/files/rcwecm4656/files/2020-06/S20%20-%20Website%20Breaks%20and%20Footers%20%282%29.png); background-size: cover;"> 
+                  <div class="grid-container full"> 
+                   <div class="grid-x grid-padding-x"> 
+                    <div class="cell"> 
+                     <h2 class="text-align-center">&nbsp;</h2> 
+                     <h2 class="text-align-center"><font color="#ffb81c"><strong>Campus Resources</strong></font></h2> 
+                     <p>&nbsp;</p> 
+                    </div> 
+                   </div> 
+                  </div> 
+                 </div> 
+                 <div data-block-plugin-id="block_content:f5d43191-f21c-4454-aa56-c043c0d69f4e" class="ucr-custom-block"> 
+                  <div class="grid-container full"> 
+                   <div class="grid-x grid-padding-x"> 
+                    <div class="cell"> 
+                     <script type="text/javascript" src="https://ai.ocelotbot.com/embed/standard/caf13cf6-2c33-4087-b3f8-067d3646c092?ha=right&amp;hv=16px&amp;va=bottom&amp;vv=16px&amp;ts=0&amp;bs=simple&amp;av=1"></script> 
+                    </div> 
+                   </div> 
+                  </div> 
+                 </div> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+             <div class="layout layout-one-col grid-container"> 
+              <div class="grid-x grid-padding-x"> 
+               <div class="cell"> 
+                <div class="layout__region layout__region--main"> 
+                 <div data-block-plugin-id="block_content:f98584f4-703f-4c54-9d14-15add8053967" class="ucr-custom-block ucr-custom-block-custom-margins ucr-custom-block-custom-paddings"> 
+                  <div class="dynamic-columns dc-full dc-columnborder margin-bottom-0 padding-bottom-0" style="overflow:hidden; "> 
+                   <div class="grid-container full"> 
+                    <div class="grid-x grid-margin-x grid-margin-y grid-padding-x grid-padding-y small-up-1 medium-up-3 large-up-3 align-center"> 
+                     <div class="paragraph paragraph--type--ucr-columns paragraph--view-mode--default cell" style=""> 
+                      <p><strong>ACADEMIC PROGRAMS AND ASSISTANCE</strong></p> 
+                      <p><a href="https://www.engr.ucr.edu/" target="_blank">Bourns College of Engineering</a><br><a href="https://business.ucr.edu/" target="_blank">School of Business</a><br><a href="https://chass.ucr.edu/" target="_blank">College of Humanities, Arts and Social Services</a><br><a href="https://cnas.ucr.edu/" target="_blank">College of Natural &amp; Agricultural Sciences</a><br><a href="https://education.ucr.edu/" target="_blank">Graduate School of Education</a><br><a href="https://honors.ucr.edu/" target="_blank">University Honors</a><br><a href="https://international.ucr.edu/studentsandscholars" target="_blank">International Students and Scholars</a>&nbsp;<br><a href="https://international.ucr.edu/abroad" target="_blank">Education Abroad</a><br><a href="https://summer.ucr.edu/" target="_blank">Summer Sessions</a><br><a href="https://se.ucr.edu/" target="_blank">Student Engagement</a>&nbsp;(Undergraduate Research, Prestigious Scholarships, R'Courses, UCDC/UCCS)<br><a href="https://hpac.ucr.edu/" target="_blank">Health Professions Advising Center</a><br><a href="https://arc.ucr.edu/" target="_blank">Academic Resource Center</a>(Tutoring, Placement Testing)<br><a href="https://uwp.ucr.edu/" target="_blank">University Writing Program</a><br><a href="https://registrar.ucr.edu/registering/catalog" target="_blank">UCR General Catalog</a></p> 
+                     </div> 
+                     <div class="paragraph paragraph--type--ucr-columns paragraph--view-mode--default cell" style=""> 
+                      <p><strong>STUDENT SERVICES</strong></p> 
+                      <p><a href="https://hoss.ucr.edu/" target="_blank">Highlander One Stop Shop</a>&nbsp;(Admissions, Registration, Financial Aid, Student Business Services)<br><a href="https://graduate.ucr.edu/admissions" target="_blank">Graduate Admissions</a><br><a href="https://ucrcard.ucr.edu/" target="_blank">Card Services</a><br><a href="https://cnc.ucr.edu/scs/?_ga=2.122189128.25103662.1587578079-1087492981.1565392969" target="_blank">Student Computing Services</a><br><a href="https://library.ucr.edu/?_ga=2.80246100.25103662.1587578079-1087492981.1565392969&amp;_ga=2.80246100.25103662.1587578079-1087492981.1565392969" target="_blank">UCR Libraries</a><br><a href="https://ucr.bncollege.com/shop/ucr/home" target="_blank">B&amp;N Campus Bookstore</a><br><a href="https://careers.ucr.edu/" target="_blank">Career Center</a><br><a href="https://events.ucr.edu/?_ga=2.109408582.25103662.1587578079-1087492981.1565392969" target="_blank">Events Calendar</a><br><a href="https://foundation.ucr.edu/scholarships" target="_blank">Scholarships, Fellowships, and Award</a><br><a href="https://studentlife.ucr.edu/secret-your-first-year" target="_blank">First-Year Resources</a><br><a href="https://orientation.ucr.edu/" target="_blank">Orientation (Freshmen and Transfers)</a><br><a href="https://studentlife.ucr.edu/fraternity-and-sorority-life" target="_blank">Fraternities and Sororities</a><br><a href="https://studentlife.ucr.edu/get-involved-start-student-organization" target="_blank">Student Organizations</a></p> 
+                     </div> 
+                     <div class="paragraph paragraph--type--ucr-columns paragraph--view-mode--default cell" style=""> 
+                      <p><strong>CAMPUS SAFETY AND ADVOCACY PROGRAMS</strong></p> 
+                      <p><a href="https://police.ucr.edu/" target="_blank">UCPD</a><br><a href="https://care.ucr.edu/" target="_blank">Campus Advocacy, Resources &amp; Education</a><br><a href="https://wrc.ucr.edu/programs/campus-safety-escort-service" target="_blank">Campus Safety Escort Service</a><br><a href="https://conduct.ucr.edu/" target="_blank">Student Conduct &amp; Academic Integrity Programs</a><br><a href="https://ombudsperson.ucr.edu/?_ga=2.85489626.25103662.1587578079-1087492981.1565392969" target="_blank">Office of the Ombuds</a><br><a href="https://deanofstudents.ucr.edu/diversity">Ethnic &amp; Gender Programs</a><br><a href="https://firstgen.ucr.edu/" target="_blank">First Gen</a></p> 
+                      <p><strong>HEALTH AND WELLNESS</strong></p> 
+                      <p><a href="https://counseling.ucr.edu/" target="_blank">Counseling and Psychological Services</a><br><a href="https://studenthealth.ucr.edu/" target="_blank">Student Health Services</a><br><a href="https://well.ucr.edu/" target="_blank">The Well</a><br><a href="https://basicneeds.ucr.edu/" target="_blank">Basic Needs</a>&nbsp;(Food, Housing, Transportation)<br><a href="https://recreation.ucr.edu/" target="_blank">Student Recreation Center</a></p> 
+                     </div> 
+                    </div> 
+                   </div> 
+                  </div> 
+                 </div> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+            </div> 
+           </article> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </main> 
+    <footer> 
+     <div class="footer-container"> 
+      <div class="footer-content-area"> 
+       <div class="grid-container"> 
+        <div class="grid-x grid-padding-x align-center"> 
+         <div id="block-ucriversidefootersearchblock" data-block-plugin-id="ucr_global_footer_search" class="cell show-for-medium footer-search"> 
+          <section class="google-search"> <button class="button footer-search-button" data-open="gscSearchFormModal">Search</button> 
+          </section> 
+         </div> 
+        </div> 
+        <div class="grid-x grid-padding-x footer-columns"> 
+         <div class="cell medium-auto"> 
+          <section class="footer-item ucr-footer-info"> <span class="footer-logo"><span class="show-for-sr">University of California, Riverside</span></span> 
+           <address> <p>900 University Ave.<br> Riverside, CA 92521</p> <p>Tel: (951) 827-1012</p> </address> 
+           <ul class="footer-links"> 
+            <li><a href="https://library.ucr.edu/" target="_blank">UCR Library</a></li> 
+            <li><a href="https://campusstatus.ucr.edu/" target="_blank">Campus Status</a></li> 
+            <li><a href="https://ucr.bncollege.com/shop/ucr/home" target="_blank">Campus Store</a></li> 
+            <li><a href="https://jobs.ucr.edu" target="_blank">Career Opportunities</a></li> 
+            <li><a href="https://diversity.ucr.edu/" target="_blank">Diversity</a></li> 
+            <li><a href="https://campusmap.ucr.edu/" target="_blank">Maps and Directions</a></li> 
+            <li><a href="https://www.ucr.edu/about/visitors" target="_blank">Visit UCR</a></li> 
+           </ul> 
+          </section> 
+         </div> 
+         <div class="cell medium-auto"> 
+          <section id="block-ucriversidefooterdeptinformationblock" data-block-plugin-id="ucr_global_footer_dept_info" class="footer-item footer-dept-info"> 
+           <h2>University of California, Riverside</h2> 
+           <address class="address_2"> <p> <a href="https://campusmap.ucr.edu" target="_blank"> 1100 Hinderaker Hall <br>900 University Ave. <br>Riverside, CA 92521 </a></p> </address> 
+           <p> <a class="link-img link-img-location" href="https://campusmap.ucr.edu" target="_blank"> Find Us<br><br> <img src="/themes/custom/ucr_default/images/googlemap.png" alt="Campus map image"></a> </p> 
+          </section> 
+         </div> 
+         <div class="cell medium-auto"> 
+          <section id="block-ucriversiderelatedlinks" data-block-plugin-id="system_menu_block:ucr-related-links-menu" class="footer-item footer-related-links"> 
+           <h3>Related Links</h3> 
+           <nav role="navigation" aria-labelledby="related-links-menu"> 
+            <ul class="vertical menu"> 
+             <li><a href="https://careers.ucr.edu/">Career Center</a> </li> 
+             <li><a href="https://finaid.ucr.edu/" title="Financial Aid">Financial Aid</a> </li> 
+             <li><a href="https://housing.ucr.edu/" title="Housing">Housing</a> </li> 
+             <li><a href="https://library.ucr.edu/">Library</a> </li> 
+             <li><a href="https://registrar.ucr.edu/" title="Registrar">Registrar</a> </li> 
+             <li><a href="https://studentaffairs.ucr.edu/">Student Affairs</a> </li> 
+             <li><a href="https://se.ucr.edu/" title="Student Engagement">Student Engagement</a> </li> 
+             <li><a href="https://sbs.ucr.edu/" title="Student Business Services">Student Business Services</a> </li> 
+             <li><a href="https://ue.ucr.edu/" title="Undergraduate Education">Undergraduate Education</a> </li> 
+            </ul> 
+           </nav> 
+          </section> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="site-legal-footer"> 
+       <div class="grid-container"> 
+        <div class="grid-x grid-padding-x"> 
+         <div class="cell"> 
+          <ul> 
+           <li><a href="http://www.ucr.edu/privacy.html">Privacy and Accessibility</a></li> 
+           <li><a href="http://www.ucr.edu/terms.html">Terms and Conditions</a></li> 
+           <li>© 2022 Regents of the University of California</li> 
+          </ul> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </footer> 
+   </div> 
+   <div class="large reveal" id="gscSearchFormModal" role="search" data-reveal data-animation-in="fade-in" data-animation-out="fade-out"> 
+    <div class="gsc-modal-top"> <button class="close-button" data-close aria-label="Close Search Window" type="button"><span aria-hidden="true">×</span></button> 
+    </div> 
+    <form id="audience-search-form" name="gsc-search-form" action="/results"> 
+     <div class="gsc-modal-body"> 
+      <div class="grid-container full"> 
+       <div class="grid-x grid-padding-x grid-padding-y align-center-middle text-center"> 
+        <div class="gsc-text-wrapper"> <span class="gsc-welcome-text">Let us help you with your search</span> 
+        </div> 
+        <div class="cell"> <label id="searchbox-label" class="hidden" aria-label="Enter your Search Criteria.">Enter your Search Criteria.</label> 
+         <input type="text" maxlength="255" id="audience-search" name="q" value="" aria-labelledby="searchbox-label" placeholder="Search for..."> 
+        </div> 
+        <div class="cell medium-4"> <button class="button gsc-modal-button-submit" type="submit" name="search-by" value="all">Search All UCR</button> 
+        </div> 
+        <div class="cell medium-4"> <button class="button gsc-modal-button-submit" type="submit" name="search-by" value="ask.ucr.edu">Search This Site</button> 
+        </div> 
+        <div class="cell medium-4"> <button type="button" class="button gsc-modal-button-close" data-close>Cancel</button> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </form> 
+   </div> 
+  </div> 
+  <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/51","currentPathIsAdmin":false,"isFront":true,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"bu":{"notify_ie":-2,"notify_firefox":-2,"notify_opera":-2,"notify_safari":-2,"notify_chrome":-2,"insecure":true,"unsupported":false,"mobile":true,"position":"top","visibility_type":"hide","visibility_pages":"admin\/*","test_mode":false,"new_window":true,"no_close":false,"text_override":"","reminder":6,"reminder_closed":6,"url":"","source":"\/\/browser-update.org\/update.min.js","show_source":""},"google_analytics":{"account":{},"trackOutbound":true,"trackMailto":true,"trackTel":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"ajax":[],"user":{"uid":0,"permissionsHash":"f91db88d2820fd811be813e80912e49c1f11a07aa2d1c5d3034d5d359210417c"}}</script> 
+  <script src="/sites/g/files/rcwecm4656/files/js/js_dM5mp5TKBJtXvAw2vuwnL0gCqP4MHsQofCzcm21klk0.js"></script> 
+  <script src="https://static.addtoany.com/menu/page.js" async></script> 
+  <script src="/sites/g/files/rcwecm4656/files/js/js_kx9sHM4Vb0V9stJsV0kRx2SHme0ZBLyOmIfeU46CAvs.js"></script> 
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"07d404edfe","applicationID":"837425331","transactionName":"MVZSYRNWCxBZB0wIWggccVYVXgoNFxRZBlA5UFFWCVI=","queueTime":0,"applicationTime":79,"atts":"HRFRF1tMGB4=","errorBeacon":"bam-cell.nr-data.net","agent":""}</script> 
+ </body>
+</html>
