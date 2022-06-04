@@ -26,17 +26,13 @@ public class Searcher {
 
   /** Simple command-line based search demo. */
   public static void main(String[] args) throws Exception {
-    String usage =
-      "Usage:\tjava org.apache.lucene.demo.SearchFiles [-index dir] [-field f] [-repeat n] [-queries file] [-query string] [-raw] [-paging hitsPerPage]\n\nSee http://lucene.apache.org/core/4_1_0/demo/ for details.";
     if (args.length > 0 && ("-h".equals(args[0]) || "-help".equals(args[0]))) {
-      System.out.println(usage);
       System.exit(0);
     }
-
+    // input local file location of folder containing indexed files created from Indexer.java
     String index = "C:\\Users\\stude\\Desktop\\sample\\Index";
     String field = "contents";
     String queries = null;
-    //int repeat = 0;
     boolean raw = false;
     // regular search
 //    String queryString = "computer";
@@ -55,7 +51,7 @@ public class Searcher {
 
 
     //boosted search
-    String queryString = "cultural";
+    String queryString = "bernardino";
     
     int hitsPerPage = 10;
     IndexReader reader = DirectoryReader.open(FSDirectory.open(Paths.get(index)));

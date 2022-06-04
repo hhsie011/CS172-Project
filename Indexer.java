@@ -36,8 +36,9 @@ public class Indexer {
 
   /** Index all text files under a directory. */
  public static void main(String[] args) {
-	 
+	 // input index directory path - where all newly created index files will go
     String indexPath = "C:\\Users\\stude\\Desktop\\sample\\Index";
+  // input data directory path - all html files data
     String docsPath = "C:\\Users\\stude\\Desktop\\sample\\Data";
     boolean create = true;
 
@@ -96,13 +97,6 @@ public class Indexer {
   /**
    * Indexes the given file using the given writer, or if a directory is given,
    * recurses over files and directories found under the given directory.
-   * 
-   * NOTE: This method indexes one document per input file.  This is slow.  For good
-   * throughput, put multiple documents into your input file(s).  An example of this is
-   * in the benchmark module, which can create "line doc" files, one document per line,
-   * using the
-   * <a href="../../../../../contrib-benchmark/org/apache/lucene/benchmark/byTask/tasks/WriteLineDocTask.html"
-   * >WriteLineDocTask</a>.
    *  
    * @param writer Writer to the index where the given file/dir info will be stored
    * @param path The file to index, or the directory to recurse into to find files to index
@@ -138,15 +132,6 @@ public class Indexer {
       // or positional information:
       Field pathField = new StringField("path", file.toString(), Field.Store.YES);
       doc.add(pathField);
-      
-      // Add the last modified date of the file a field named "modified".
-      // Use a LongField that is indexed (i.e. efficiently filterable with
-      // NumericRangeFilter).  This indexes to milli-second resolution, which
-      // is often too fine.  You could instead create a number based on
-      // year/month/day/hour/minutes/seconds, down the resolution you require.
-      // For example the long value 2011021714 would mean
-      // February 17, 2011, 2-3 PM.
-      //doc.add(new LongPoint("modified", lastModified, Field.Store.NO));
       
       // Add the contents of the file to a field named "contents".  Specify a Reader,
       // so that the text of the file is tokenized and indexed, but not stored.
